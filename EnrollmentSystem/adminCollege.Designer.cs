@@ -32,25 +32,27 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.delete = new System.Windows.Forms.PictureBox();
             this.add = new System.Windows.Forms.PictureBox();
             this.edit = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.search = new System.Windows.Forms.PictureBox();
-            this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.delete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edit)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(22, 73);
             this.panel1.Name = "panel1";
@@ -83,6 +85,25 @@
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 20, 20, 0);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(676, 67);
             this.flowLayoutPanel1.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.search);
+            this.panel2.Controls.Add(this.searchTxtbox);
+            this.panel2.Location = new System.Drawing.Point(127, 23);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(409, 35);
+            this.panel2.TabIndex = 4;
+            // 
+            // searchTxtbox
+            // 
+            this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTxtbox.Location = new System.Drawing.Point(0, 4);
+            this.searchTxtbox.Name = "searchTxtbox";
+            this.searchTxtbox.Size = new System.Drawing.Size(409, 26);
+            this.searchTxtbox.TabIndex = 3;
             // 
             // delete
             // 
@@ -125,16 +146,6 @@
             this.edit.MouseLeave += new System.EventHandler(this.edit_MouseLeave);
             this.edit.MouseHover += new System.EventHandler(this.edit_MouseHover);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.search);
-            this.panel2.Controls.Add(this.searchTxtbox);
-            this.panel2.Location = new System.Drawing.Point(127, 23);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(409, 35);
-            this.panel2.TabIndex = 4;
-            // 
             // search
             // 
             this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -147,15 +158,6 @@
             this.search.TabStop = false;
             this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
             this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
-            // 
-            // searchTxtbox
-            // 
-            this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxtbox.Location = new System.Drawing.Point(0, 4);
-            this.searchTxtbox.Name = "searchTxtbox";
-            this.searchTxtbox.Size = new System.Drawing.Size(409, 26);
-            this.searchTxtbox.TabIndex = 3;
             // 
             // adminCollege
             // 
@@ -171,11 +173,11 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.delete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.add)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edit)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
             this.ResumeLayout(false);
 

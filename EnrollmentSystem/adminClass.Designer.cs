@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminClass));
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.subject = new System.Windows.Forms.PictureBox();
             this.delete = new System.Windows.Forms.PictureBox();
             this.add = new System.Windows.Forms.PictureBox();
@@ -39,7 +39,9 @@
             this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.subject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.add)).BeginInit();
@@ -48,28 +50,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // flowLayoutPanel2
             // 
-            this.flowLayoutPanel1.Controls.Add(this.subject);
-            this.flowLayoutPanel1.Controls.Add(this.delete);
-            this.flowLayoutPanel1.Controls.Add(this.add);
-            this.flowLayoutPanel1.Controls.Add(this.edit);
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 40, 40, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(849, 97);
-            this.flowLayoutPanel1.TabIndex = 10;
+            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel2.Controls.Add(this.subject);
+            this.flowLayoutPanel2.Controls.Add(this.delete);
+            this.flowLayoutPanel2.Controls.Add(this.add);
+            this.flowLayoutPanel2.Controls.Add(this.edit);
+            this.flowLayoutPanel2.Controls.Add(this.panel2);
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 65);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 10, 40, 0);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(865, 58);
+            this.flowLayoutPanel2.TabIndex = 10;
             // 
             // subject
             // 
             this.subject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.subject.Image = ((System.Drawing.Image)(resources.GetObject("subject.Image")));
-            this.subject.Location = new System.Drawing.Point(774, 43);
+            this.subject.Location = new System.Drawing.Point(790, 13);
             this.subject.Name = "subject";
             this.subject.Size = new System.Drawing.Size(32, 35);
             this.subject.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -83,7 +88,7 @@
             // 
             this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
-            this.delete.Location = new System.Drawing.Point(736, 43);
+            this.delete.Location = new System.Drawing.Point(752, 13);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(32, 35);
             this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -96,7 +101,7 @@
             // 
             this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
-            this.add.Location = new System.Drawing.Point(698, 43);
+            this.add.Location = new System.Drawing.Point(714, 13);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(32, 35);
             this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -110,7 +115,7 @@
             // 
             this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-            this.edit.Location = new System.Drawing.Point(657, 43);
+            this.edit.Location = new System.Drawing.Point(673, 13);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(35, 35);
             this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -124,7 +129,7 @@
             // 
             this.panel2.Controls.Add(this.search);
             this.panel2.Controls.Add(this.searchTxtbox);
-            this.panel2.Location = new System.Drawing.Point(242, 43);
+            this.panel2.Location = new System.Drawing.Point(258, 13);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.panel2.Size = new System.Drawing.Size(409, 35);
@@ -154,11 +159,13 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(56, 103);
+            this.panel1.Location = new System.Drawing.Point(49, 129);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(750, 348);
+            this.panel1.Size = new System.Drawing.Size(773, 387);
             this.panel1.TabIndex = 9;
             // 
             // dataGridView1
@@ -171,21 +178,43 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(750, 348);
+            this.dataGridView1.Size = new System.Drawing.Size(773, 387);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.label1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(40, 20, 0, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(865, 59);
+            this.flowLayoutPanel1.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(43, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 31);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CLASSES";
             // 
             // adminClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 502);
+            this.ClientSize = new System.Drawing.Size(865, 541);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "adminClass";
             this.Text = "adminClass";
             this.Load += new System.EventHandler(this.adminClass_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.subject)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.delete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.add)).EndInit();
@@ -195,13 +224,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.PictureBox delete;
         private System.Windows.Forms.PictureBox add;
         private System.Windows.Forms.PictureBox edit;
@@ -211,5 +242,7 @@
         private System.Windows.Forms.PictureBox search;
         private System.Windows.Forms.TextBox searchTxtbox;
         private System.Windows.Forms.PictureBox subject;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label1;
     }
 }

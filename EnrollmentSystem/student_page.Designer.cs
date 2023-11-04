@@ -1,6 +1,6 @@
 ﻿namespace EnrollmentSystem
 {
-    partial class admin_page
+    partial class student_page
     {
         /// <summary>
         /// Required designer variable.
@@ -28,58 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin_page));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(student_page));
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnHome = new System.Windows.Forms.Panel();
-            this.pnEnroll = new System.Windows.Forms.Panel();
-            this.infoContainer = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnInfo = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.pnCourse = new System.Windows.Forms.Panel();
-            this.pnClass = new System.Windows.Forms.Panel();
-            this.pnProfile = new System.Windows.Forms.Panel();
-            this.pnLogout = new System.Windows.Forms.Panel();
-            this.infoTransition = new System.Windows.Forms.Timer(this.components);
-            this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.hamburger = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.userFname = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnHome = new System.Windows.Forms.Panel();
             this.homeBtn = new System.Windows.Forms.Button();
+            this.pnEnroll = new System.Windows.Forms.Panel();
             this.enrollmentBtn = new System.Windows.Forms.Button();
-            this.infoBtn = new System.Windows.Forms.Button();
-            this.studentBtn = new System.Windows.Forms.Button();
-            this.profBtn = new System.Windows.Forms.Button();
+            this.pnCourse = new System.Windows.Forms.Panel();
             this.courseBtn = new System.Windows.Forms.Button();
+            this.pnClass = new System.Windows.Forms.Panel();
             this.classBtn = new System.Windows.Forms.Button();
+            this.pnProfile = new System.Windows.Forms.Panel();
             this.profileBtn = new System.Windows.Forms.Button();
+            this.pnLogout = new System.Windows.Forms.Panel();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.pnHome.SuspendLayout();
             this.pnEnroll.SuspendLayout();
-            this.infoContainer.SuspendLayout();
-            this.pnInfo.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.pnCourse.SuspendLayout();
             this.pnClass.SuspendLayout();
             this.pnProfile.SuspendLayout();
             this.pnLogout.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hamburger)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
             // 
             this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
             this.sidebar.Controls.Add(this.panel1);
+            this.sidebar.Controls.Add(this.panel2);
             this.sidebar.Controls.Add(this.pnHome);
             this.sidebar.Controls.Add(this.pnEnroll);
-            this.sidebar.Controls.Add(this.infoContainer);
             this.sidebar.Controls.Add(this.pnCourse);
             this.sidebar.Controls.Add(this.pnClass);
             this.sidebar.Controls.Add(this.pnProfile);
@@ -90,7 +77,7 @@
             this.sidebar.Name = "sidebar";
             this.sidebar.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.sidebar.Size = new System.Drawing.Size(220, 576);
-            this.sidebar.TabIndex = 0;
+            this.sidebar.TabIndex = 1;
             // 
             // panel1
             // 
@@ -99,133 +86,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(219, 106);
             this.panel1.TabIndex = 1;
-            // 
-            // pnHome
-            // 
-            this.pnHome.Controls.Add(this.homeBtn);
-            this.pnHome.Location = new System.Drawing.Point(3, 120);
-            this.pnHome.Name = "pnHome";
-            this.pnHome.Size = new System.Drawing.Size(219, 40);
-            this.pnHome.TabIndex = 1;
-            // 
-            // pnEnroll
-            // 
-            this.pnEnroll.Controls.Add(this.enrollmentBtn);
-            this.pnEnroll.Location = new System.Drawing.Point(3, 166);
-            this.pnEnroll.Name = "pnEnroll";
-            this.pnEnroll.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
-            this.pnEnroll.Size = new System.Drawing.Size(219, 40);
-            this.pnEnroll.TabIndex = 1;
-            // 
-            // infoContainer
-            // 
-            this.infoContainer.Controls.Add(this.pnInfo);
-            this.infoContainer.Controls.Add(this.panel6);
-            this.infoContainer.Controls.Add(this.panel8);
-            this.infoContainer.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.infoContainer.Location = new System.Drawing.Point(3, 212);
-            this.infoContainer.Name = "infoContainer";
-            this.infoContainer.Size = new System.Drawing.Size(219, 40);
-            this.infoContainer.TabIndex = 2;
-            // 
-            // pnInfo
-            // 
-            this.pnInfo.Controls.Add(this.infoBtn);
-            this.pnInfo.Location = new System.Drawing.Point(3, 3);
-            this.pnInfo.Name = "pnInfo";
-            this.pnInfo.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
-            this.pnInfo.Size = new System.Drawing.Size(227, 40);
-            this.pnInfo.TabIndex = 1;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.studentBtn);
-            this.panel6.Location = new System.Drawing.Point(236, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(35, 10, 10, 10);
-            this.panel6.Size = new System.Drawing.Size(227, 40);
-            this.panel6.TabIndex = 1;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.profBtn);
-            this.panel8.Location = new System.Drawing.Point(469, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Padding = new System.Windows.Forms.Padding(35, 10, 10, 10);
-            this.panel8.Size = new System.Drawing.Size(225, 40);
-            this.panel8.TabIndex = 1;
-            // 
-            // pnCourse
-            // 
-            this.pnCourse.Controls.Add(this.courseBtn);
-            this.pnCourse.Location = new System.Drawing.Point(3, 258);
-            this.pnCourse.Name = "pnCourse";
-            this.pnCourse.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
-            this.pnCourse.Size = new System.Drawing.Size(219, 40);
-            this.pnCourse.TabIndex = 1;
-            // 
-            // pnClass
-            // 
-            this.pnClass.Controls.Add(this.classBtn);
-            this.pnClass.Location = new System.Drawing.Point(3, 304);
-            this.pnClass.Name = "pnClass";
-            this.pnClass.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
-            this.pnClass.Size = new System.Drawing.Size(219, 40);
-            this.pnClass.TabIndex = 1;
-            // 
-            // pnProfile
-            // 
-            this.pnProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnProfile.Controls.Add(this.profileBtn);
-            this.pnProfile.Location = new System.Drawing.Point(3, 350);
-            this.pnProfile.Name = "pnProfile";
-            this.pnProfile.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
-            this.pnProfile.Size = new System.Drawing.Size(219, 40);
-            this.pnProfile.TabIndex = 1;
-            // 
-            // pnLogout
-            // 
-            this.pnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnLogout.Controls.Add(this.logoutBtn);
-            this.pnLogout.Location = new System.Drawing.Point(3, 396);
-            this.pnLogout.Name = "pnLogout";
-            this.pnLogout.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
-            this.pnLogout.Size = new System.Drawing.Size(219, 40);
-            this.pnLogout.TabIndex = 1;
-            // 
-            // infoTransition
-            // 
-            this.infoTransition.Interval = 10;
-            this.infoTransition.Tick += new System.EventHandler(this.infoTransition_Tick);
-            // 
-            // sidebarTransition
-            // 
-            this.sidebarTransition.Interval = 10;
-            this.sidebarTransition.Tick += new System.EventHandler(this.sidebarTransition_Tick);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
-            this.flowLayoutPanel1.Controls.Add(this.hamburger);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(220, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(808, 35);
-            this.flowLayoutPanel1.TabIndex = 2;
-            // 
-            // hamburger
-            // 
-            this.hamburger.BackColor = System.Drawing.SystemColors.Control;
-            this.hamburger.Image = ((System.Drawing.Image)(resources.GetObject("hamburger.Image")));
-            this.hamburger.Location = new System.Drawing.Point(3, 3);
-            this.hamburger.Name = "hamburger";
-            this.hamburger.Size = new System.Drawing.Size(30, 30);
-            this.hamburger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.hamburger.TabIndex = 3;
-            this.hamburger.TabStop = false;
-            this.hamburger.Click += new System.EventHandler(this.hamburger_Click);
-            this.hamburger.MouseLeave += new System.EventHandler(this.hamburger_MouseLeave);
-            this.hamburger.MouseHover += new System.EventHandler(this.hamburger_MouseHover);
             // 
             // pictureBox1
             // 
@@ -239,6 +99,59 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.userFname);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(3, 120);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(219, 44);
+            this.panel2.TabIndex = 1;
+            // 
+            // userFname
+            // 
+            this.userFname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userFname.AutoSize = true;
+            this.userFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userFname.ForeColor = System.Drawing.Color.White;
+            this.userFname.Location = new System.Drawing.Point(59, 21);
+            this.userFname.Name = "userFname";
+            this.userFname.Size = new System.Drawing.Size(91, 20);
+            this.userFname.TabIndex = 0;
+            this.userFname.Text = "STUDENT";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(146, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(14, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "!";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(50, -3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "WELCOME ";
+            // 
+            // pnHome
+            // 
+            this.pnHome.Controls.Add(this.homeBtn);
+            this.pnHome.Location = new System.Drawing.Point(3, 170);
+            this.pnHome.Name = "pnHome";
+            this.pnHome.Size = new System.Drawing.Size(219, 40);
+            this.pnHome.TabIndex = 1;
             // 
             // homeBtn
             // 
@@ -262,6 +175,15 @@
             this.homeBtn.UseVisualStyleBackColor = false;
             this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
             // 
+            // pnEnroll
+            // 
+            this.pnEnroll.Controls.Add(this.enrollmentBtn);
+            this.pnEnroll.Location = new System.Drawing.Point(3, 216);
+            this.pnEnroll.Name = "pnEnroll";
+            this.pnEnroll.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
+            this.pnEnroll.Size = new System.Drawing.Size(219, 40);
+            this.pnEnroll.TabIndex = 1;
+            // 
             // enrollmentBtn
             // 
             this.enrollmentBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -284,70 +206,14 @@
             this.enrollmentBtn.UseVisualStyleBackColor = false;
             this.enrollmentBtn.Click += new System.EventHandler(this.enrollmentBtn_Click);
             // 
-            // infoBtn
+            // pnCourse
             // 
-            this.infoBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.infoBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
-            this.infoBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
-            this.infoBtn.FlatAppearance.BorderSize = 2;
-            this.infoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.infoBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoBtn.Image = ((System.Drawing.Image)(resources.GetObject("infoBtn.Image")));
-            this.infoBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.infoBtn.Location = new System.Drawing.Point(0, 0);
-            this.infoBtn.Name = "infoBtn";
-            this.infoBtn.Padding = new System.Windows.Forms.Padding(6, 5, 10, 5);
-            this.infoBtn.Size = new System.Drawing.Size(227, 40);
-            this.infoBtn.TabIndex = 3;
-            this.infoBtn.Text = "      INFORMATION";
-            this.infoBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.infoBtn.UseVisualStyleBackColor = false;
-            this.infoBtn.Click += new System.EventHandler(this.infoBtn_Click);
-            // 
-            // studentBtn
-            // 
-            this.studentBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.studentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
-            this.studentBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
-            this.studentBtn.FlatAppearance.BorderSize = 2;
-            this.studentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.studentBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentBtn.Image = ((System.Drawing.Image)(resources.GetObject("studentBtn.Image")));
-            this.studentBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.studentBtn.Location = new System.Drawing.Point(41, 0);
-            this.studentBtn.Name = "studentBtn";
-            this.studentBtn.Padding = new System.Windows.Forms.Padding(5, 5, 10, 5);
-            this.studentBtn.Size = new System.Drawing.Size(186, 40);
-            this.studentBtn.TabIndex = 3;
-            this.studentBtn.Text = "    STUDENT";
-            this.studentBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.studentBtn.UseVisualStyleBackColor = false;
-            this.studentBtn.Click += new System.EventHandler(this.studentBtn_Click);
-            // 
-            // profBtn
-            // 
-            this.profBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.profBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
-            this.profBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
-            this.profBtn.FlatAppearance.BorderSize = 2;
-            this.profBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profBtn.Image = ((System.Drawing.Image)(resources.GetObject("profBtn.Image")));
-            this.profBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.profBtn.Location = new System.Drawing.Point(41, 0);
-            this.profBtn.Name = "profBtn";
-            this.profBtn.Padding = new System.Windows.Forms.Padding(5, 5, 10, 5);
-            this.profBtn.Size = new System.Drawing.Size(184, 40);
-            this.profBtn.TabIndex = 3;
-            this.profBtn.Text = "    PROFESSOR";
-            this.profBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.profBtn.UseVisualStyleBackColor = false;
-            this.profBtn.Click += new System.EventHandler(this.profBtn_Click);
+            this.pnCourse.Controls.Add(this.courseBtn);
+            this.pnCourse.Location = new System.Drawing.Point(3, 262);
+            this.pnCourse.Name = "pnCourse";
+            this.pnCourse.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
+            this.pnCourse.Size = new System.Drawing.Size(219, 40);
+            this.pnCourse.TabIndex = 1;
             // 
             // courseBtn
             // 
@@ -371,6 +237,15 @@
             this.courseBtn.UseVisualStyleBackColor = false;
             this.courseBtn.Click += new System.EventHandler(this.courseBtn_Click);
             // 
+            // pnClass
+            // 
+            this.pnClass.Controls.Add(this.classBtn);
+            this.pnClass.Location = new System.Drawing.Point(3, 308);
+            this.pnClass.Name = "pnClass";
+            this.pnClass.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
+            this.pnClass.Size = new System.Drawing.Size(219, 40);
+            this.pnClass.TabIndex = 1;
+            // 
             // classBtn
             // 
             this.classBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -392,6 +267,16 @@
             this.classBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.classBtn.UseVisualStyleBackColor = false;
             this.classBtn.Click += new System.EventHandler(this.classBtn_Click);
+            // 
+            // pnProfile
+            // 
+            this.pnProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnProfile.Controls.Add(this.profileBtn);
+            this.pnProfile.Location = new System.Drawing.Point(3, 354);
+            this.pnProfile.Name = "pnProfile";
+            this.pnProfile.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
+            this.pnProfile.Size = new System.Drawing.Size(219, 40);
+            this.pnProfile.TabIndex = 1;
             // 
             // profileBtn
             // 
@@ -415,6 +300,16 @@
             this.profileBtn.UseVisualStyleBackColor = false;
             this.profileBtn.Click += new System.EventHandler(this.profileBtn_Click);
             // 
+            // pnLogout
+            // 
+            this.pnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnLogout.Controls.Add(this.logoutBtn);
+            this.pnLogout.Location = new System.Drawing.Point(3, 400);
+            this.pnLogout.Name = "pnLogout";
+            this.pnLogout.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
+            this.pnLogout.Size = new System.Drawing.Size(219, 40);
+            this.pnLogout.TabIndex = 1;
+            // 
             // logoutBtn
             // 
             this.logoutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -437,32 +332,27 @@
             this.logoutBtn.UseVisualStyleBackColor = false;
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
-            // admin_page
+            // student_page
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 576);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.sidebar);
             this.IsMdiContainer = true;
-            this.Name = "admin_page";
-            this.Text = "ENROLLMENT SYSTEM / ADMIN";
-            this.Load += new System.EventHandler(this.admin_page_Load);
+            this.Name = "student_page";
+            this.Text = "ENROLLMENT SYSTEM / STUDENT";
+            this.Load += new System.EventHandler(this.student_page_Load);
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.pnHome.ResumeLayout(false);
             this.pnEnroll.ResumeLayout(false);
-            this.infoContainer.ResumeLayout(false);
-            this.pnInfo.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
             this.pnCourse.ResumeLayout(false);
             this.pnClass.ResumeLayout(false);
             this.pnProfile.ResumeLayout(false);
             this.pnLogout.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.hamburger)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -478,22 +368,15 @@
         private System.Windows.Forms.Button enrollmentBtn;
         private System.Windows.Forms.Panel pnCourse;
         private System.Windows.Forms.Button courseBtn;
-        private System.Windows.Forms.Panel pnProfile;
-        private System.Windows.Forms.Button profileBtn;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button studentBtn;
-        private System.Windows.Forms.FlowLayoutPanel infoContainer;
-        private System.Windows.Forms.Panel pnInfo;
-        private System.Windows.Forms.Button infoBtn;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button profBtn;
-        private System.Windows.Forms.PictureBox hamburger;
-        private System.Windows.Forms.Timer infoTransition;
-        private System.Windows.Forms.Timer sidebarTransition;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel pnLogout;
-        private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.Panel pnClass;
         private System.Windows.Forms.Button classBtn;
+        private System.Windows.Forms.Panel pnProfile;
+        private System.Windows.Forms.Button profileBtn;
+        private System.Windows.Forms.Panel pnLogout;
+        private System.Windows.Forms.Button logoutBtn;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label userFname;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

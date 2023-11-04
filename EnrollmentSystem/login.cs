@@ -26,9 +26,38 @@ namespace EnrollmentSystem
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            admin_page dashboard = new admin_page();
-            dashboard.Show();
-            Visible = false;
+            string email = emailTxtbox.Text;
+            string pass = passwordTxtbox.Text;
+
+            string emailAdmin = "admin";
+            string passAdmin = "admin123";
+            string emailStud = "student";
+            string passStud = "student123";
+
+            if (email == emailAdmin && pass == passAdmin)
+            {
+                admin_page dashboard = new admin_page();
+                dashboard.Show();
+                Visible = false;
+            }
+            else if (email == emailAdmin && pass != passAdmin)
+            {
+                MessageBox.Show("Wrong password", "Can't login");
+            }
+            else if (email == emailStud && pass == passStud)
+            {
+                student_page dashboard = new student_page();
+                dashboard.Show();
+                Visible = false;
+            } 
+            else if (email == emailStud && pass != passStud)
+            {
+                MessageBox.Show("Wrong password", "Can't login");
+            }
+            else
+            {
+                MessageBox.Show("Account not found", "Error");
+            }
         }
 
         private void loginBtn_MouseHover(object sender, EventArgs e)

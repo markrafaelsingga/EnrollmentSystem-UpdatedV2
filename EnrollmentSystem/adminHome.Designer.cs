@@ -35,21 +35,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.semLbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.delete = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.semTxtbox = new System.Windows.Forms.TextBox();
-            this.add = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.edit = new System.Windows.Forms.PictureBox();
             this.syTxtbox = new System.Windows.Forms.TextBox();
             this.classLbl = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.delete = new System.Windows.Forms.PictureBox();
+            this.add = new System.Windows.Forms.PictureBox();
+            this.edit = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.delete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edit)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -62,13 +62,13 @@
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(30);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(608, 66);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(558, 66);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(33, 30);
             this.label1.Name = "label1";
@@ -122,20 +122,6 @@
             this.panel1.Size = new System.Drawing.Size(253, 190);
             this.panel1.TabIndex = 6;
             // 
-            // delete
-            // 
-            this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.delete.BackColor = System.Drawing.Color.White;
-            this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
-            this.delete.Location = new System.Drawing.Point(204, 143);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(32, 35);
-            this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.delete.TabIndex = 7;
-            this.delete.TabStop = false;
-            this.delete.MouseLeave += new System.EventHandler(this.delete_MouseLeave);
-            this.delete.MouseHover += new System.EventHandler(this.delete_MouseHover);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -157,20 +143,6 @@
             this.semTxtbox.Size = new System.Drawing.Size(219, 26);
             this.semTxtbox.TabIndex = 5;
             // 
-            // add
-            // 
-            this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.add.BackColor = System.Drawing.Color.White;
-            this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
-            this.add.Location = new System.Drawing.Point(166, 143);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(32, 35);
-            this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.add.TabIndex = 8;
-            this.add.TabStop = false;
-            this.add.MouseLeave += new System.EventHandler(this.add_MouseLeave);
-            this.add.MouseHover += new System.EventHandler(this.add_MouseHover);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -181,20 +153,6 @@
             this.label9.Size = new System.Drawing.Size(82, 20);
             this.label9.TabIndex = 4;
             this.label9.Text = "Semester:";
-            // 
-            // edit
-            // 
-            this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.edit.BackColor = System.Drawing.Color.White;
-            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-            this.edit.Location = new System.Drawing.Point(125, 143);
-            this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(35, 35);
-            this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.edit.TabIndex = 9;
-            this.edit.TabStop = false;
-            this.edit.MouseLeave += new System.EventHandler(this.edit_MouseLeave);
-            this.edit.MouseHover += new System.EventHandler(this.edit_MouseHover);
             // 
             // syTxtbox
             // 
@@ -221,17 +179,59 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(608, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(558, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 62, 30, 30);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(257, 541);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(307, 541);
             this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // delete
+            // 
+            this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.delete.BackColor = System.Drawing.Color.White;
+            this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
+            this.delete.Location = new System.Drawing.Point(204, 143);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(32, 35);
+            this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.delete.TabIndex = 7;
+            this.delete.TabStop = false;
+            this.delete.MouseLeave += new System.EventHandler(this.delete_MouseLeave);
+            this.delete.MouseHover += new System.EventHandler(this.delete_MouseHover);
+            // 
+            // add
+            // 
+            this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.add.BackColor = System.Drawing.Color.White;
+            this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
+            this.add.Location = new System.Drawing.Point(166, 143);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(32, 35);
+            this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.add.TabIndex = 8;
+            this.add.TabStop = false;
+            this.add.MouseLeave += new System.EventHandler(this.add_MouseLeave);
+            this.add.MouseHover += new System.EventHandler(this.add_MouseHover);
+            // 
+            // edit
+            // 
+            this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.edit.BackColor = System.Drawing.Color.White;
+            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
+            this.edit.Location = new System.Drawing.Point(125, 143);
+            this.edit.Name = "edit";
+            this.edit.Size = new System.Drawing.Size(35, 35);
+            this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.edit.TabIndex = 9;
+            this.edit.TabStop = false;
+            this.edit.MouseLeave += new System.EventHandler(this.edit_MouseLeave);
+            this.edit.MouseHover += new System.EventHandler(this.edit_MouseHover);
             // 
             // adminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(865, 541);
             this.Controls.Add(this.flowLayoutPanel2);
@@ -244,10 +244,10 @@
             this.flowLayoutPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.delete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.add)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edit)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

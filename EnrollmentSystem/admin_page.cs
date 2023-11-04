@@ -111,7 +111,7 @@ namespace EnrollmentSystem
 
         private void hamburger_MouseHover(object sender, EventArgs e)
         {
-            hamburger.BackColor = System.Drawing.Color.White;
+            hamburger.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
         }
 
         private void admin_page_Load(object sender, EventArgs e)
@@ -122,7 +122,7 @@ namespace EnrollmentSystem
 
         private void hamburger_MouseLeave(object sender, EventArgs e)
         {
-            hamburger.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
+            hamburger.BackColor = System.Drawing.SystemColors.Control;
         }
 
         private void homeBtn_Click(object sender, EventArgs e)
@@ -165,7 +165,6 @@ namespace EnrollmentSystem
                 home.Show();
 
                 changeColor(homeBtn);
-                formLbl.Text = "HOME";
                 home.Dock = DockStyle.Fill;
             }
             else
@@ -221,7 +220,6 @@ namespace EnrollmentSystem
                 enrollment.Show();
 
                 changeColor(enrollmentBtn);
-                formLbl.Text = "ENROLLMENT";
                 enrollment.Dock = DockStyle.Fill;
             }
             else
@@ -277,7 +275,6 @@ namespace EnrollmentSystem
                 student.Show();
 
                 changeColor(studentBtn);
-                formLbl.Text = "STUDENT INFORMATIONS";
                 student.Dock = DockStyle.Fill;
             }
             else
@@ -333,7 +330,6 @@ namespace EnrollmentSystem
                 professor.Show();
 
                 changeColor(profBtn);
-                formLbl.Text = "PROFESSOR INFORMATIONS";
                 professor.Dock = DockStyle.Fill;
             }
             else
@@ -389,7 +385,6 @@ namespace EnrollmentSystem
                 profile.Show();
 
                 changeColor(profileBtn);
-                formLbl.Text = "PROFILE";
                 profile.Dock = DockStyle.Fill;
             }
             else
@@ -445,7 +440,6 @@ namespace EnrollmentSystem
                 course.Show();
 
                 changeColor(courseBtn);
-                formLbl.Text = "COURSES OFFERED";
                 course.Dock = DockStyle.Fill;
             }
             else
@@ -501,7 +495,6 @@ namespace EnrollmentSystem
                 class1.Show();
 
                 changeColor(classBtn);
-                formLbl.Text = "CLASSES";
                 class1.Dock = DockStyle.Fill;
             }
             else

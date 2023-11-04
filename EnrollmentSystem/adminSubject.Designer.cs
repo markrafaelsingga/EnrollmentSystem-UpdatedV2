@@ -30,22 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminSubject));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.delete = new System.Windows.Forms.PictureBox();
-            this.add = new System.Windows.Forms.PictureBox();
-            this.edit = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.search = new System.Windows.Forms.PictureBox();
             this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.delete = new System.Windows.Forms.PictureBox();
+            this.add = new System.Windows.Forms.PictureBox();
+            this.edit = new System.Windows.Forms.PictureBox();
+            this.search = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edit)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -61,6 +61,49 @@
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 20, 20, 0);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(676, 67);
             this.flowLayoutPanel1.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.search);
+            this.panel2.Controls.Add(this.searchTxtbox);
+            this.panel2.Location = new System.Drawing.Point(127, 23);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(409, 35);
+            this.panel2.TabIndex = 4;
+            // 
+            // searchTxtbox
+            // 
+            this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTxtbox.Location = new System.Drawing.Point(0, 4);
+            this.searchTxtbox.Name = "searchTxtbox";
+            this.searchTxtbox.Size = new System.Drawing.Size(409, 26);
+            this.searchTxtbox.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Location = new System.Drawing.Point(22, 73);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(631, 307);
+            this.panel1.TabIndex = 8;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(631, 307);
+            this.dataGridView1.TabIndex = 0;
             // 
             // delete
             // 
@@ -103,16 +146,6 @@
             this.edit.MouseLeave += new System.EventHandler(this.edit_MouseLeave);
             this.edit.MouseHover += new System.EventHandler(this.edit_MouseHover);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.search);
-            this.panel2.Controls.Add(this.searchTxtbox);
-            this.panel2.Location = new System.Drawing.Point(127, 23);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(409, 35);
-            this.panel2.TabIndex = 4;
-            // 
             // search
             // 
             this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -125,37 +158,6 @@
             this.search.TabStop = false;
             this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
             this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
-            // 
-            // searchTxtbox
-            // 
-            this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxtbox.Location = new System.Drawing.Point(0, 4);
-            this.searchTxtbox.Name = "searchTxtbox";
-            this.searchTxtbox.Size = new System.Drawing.Size(409, 26);
-            this.searchTxtbox.TabIndex = 3;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(22, 73);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(631, 307);
-            this.panel1.TabIndex = 8;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(631, 307);
-            this.dataGridView1.TabIndex = 0;
             // 
             // adminSubject
             // 
@@ -170,14 +172,14 @@
             this.Name = "adminSubject";
             this.Text = "SUBJECT";
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.delete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.add)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edit)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -50,13 +50,13 @@
             this.lnameTxtbox = new System.Windows.Forms.TextBox();
             this.emailLbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.search = new System.Windows.Forms.PictureBox();
             this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.coursecomboBox = new System.Windows.Forms.ComboBox();
             this.collogecomboBox = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.search = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
@@ -133,6 +133,7 @@
             this.retypetextBox.Name = "retypetextBox";
             this.retypetextBox.Size = new System.Drawing.Size(215, 26);
             this.retypetextBox.TabIndex = 39;
+            this.retypetextBox.UseSystemPasswordChar = true;
             // 
             // label7
             // 
@@ -152,6 +153,7 @@
             this.passtextBox.Name = "passtextBox";
             this.passtextBox.Size = new System.Drawing.Size(215, 26);
             this.passtextBox.TabIndex = 37;
+            this.passtextBox.UseSystemPasswordChar = true;
             // 
             // label6
             // 
@@ -287,20 +289,6 @@
             this.panel2.Size = new System.Drawing.Size(210, 25);
             this.panel2.TabIndex = 11;
             // 
-            // search
-            // 
-            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.search.BackColor = System.Drawing.Color.White;
-            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
-            this.search.Location = new System.Drawing.Point(187, 3);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(19, 19);
-            this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.search.TabIndex = 5;
-            this.search.TabStop = false;
-            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
-            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
-            // 
             // searchTxtbox
             // 
             this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -361,6 +349,20 @@
             this.label10.Size = new System.Drawing.Size(66, 20);
             this.label10.TabIndex = 46;
             this.label10.Text = "College:";
+            // 
+            // search
+            // 
+            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.search.BackColor = System.Drawing.Color.White;
+            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
+            this.search.Location = new System.Drawing.Point(187, 3);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(19, 19);
+            this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.search.TabIndex = 5;
+            this.search.TabStop = false;
+            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
+            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
             // 
             // updateProfessor
             // 

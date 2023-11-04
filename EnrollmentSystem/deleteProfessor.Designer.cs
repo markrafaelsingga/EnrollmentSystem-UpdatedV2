@@ -33,10 +33,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.search = new System.Windows.Forms.PictureBox();
             this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.deleteBtn = new System.Windows.Forms.Button();
+            this.search = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -46,6 +46,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -57,7 +60,9 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Location = new System.Drawing.Point(21, 55);
             this.panel3.Name = "panel3";
@@ -79,12 +84,56 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.search);
             this.panel2.Controls.Add(this.searchTxtbox);
             this.panel2.Location = new System.Drawing.Point(193, 15);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(210, 25);
             this.panel2.TabIndex = 11;
+            // 
+            // searchTxtbox
+            // 
+            this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTxtbox.Location = new System.Drawing.Point(0, 0);
+            this.searchTxtbox.Multiline = true;
+            this.searchTxtbox.Name = "searchTxtbox";
+            this.searchTxtbox.Size = new System.Drawing.Size(210, 25);
+            this.searchTxtbox.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(17, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(170, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Search the ID number:";
+            // 
+            // deleteBtn
+            // 
+            this.deleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.Image = ((System.Drawing.Image)(resources.GetObject("deleteBtn.Image")));
+            this.deleteBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deleteBtn.Location = new System.Drawing.Point(457, 360);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(129, 40);
+            this.deleteBtn.TabIndex = 13;
+            this.deleteBtn.Text = "       DELETE";
+            this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.MouseLeave += new System.EventHandler(this.deleteBtn_MouseLeave);
+            this.deleteBtn.MouseHover += new System.EventHandler(this.deleteBtn_MouseHover);
             // 
             // search
             // 
@@ -99,41 +148,6 @@
             this.search.TabStop = false;
             this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
             this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
-            // 
-            // searchTxtbox
-            // 
-            this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxtbox.Location = new System.Drawing.Point(0, 0);
-            this.searchTxtbox.Multiline = true;
-            this.searchTxtbox.Name = "searchTxtbox";
-            this.searchTxtbox.Size = new System.Drawing.Size(210, 25);
-            this.searchTxtbox.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(17, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Search the ID number:";
-            // 
-            // deleteBtn
-            // 
-            this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteBtn.Image = ((System.Drawing.Image)(resources.GetObject("deleteBtn.Image")));
-            this.deleteBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.deleteBtn.Location = new System.Drawing.Point(457, 360);
-            this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(129, 40);
-            this.deleteBtn.TabIndex = 13;
-            this.deleteBtn.Text = "       DELETE";
-            this.deleteBtn.UseVisualStyleBackColor = true;
-            this.deleteBtn.MouseLeave += new System.EventHandler(this.deleteBtn_MouseLeave);
-            this.deleteBtn.MouseHover += new System.EventHandler(this.deleteBtn_MouseHover);
             // 
             // deleteProfessor
             // 

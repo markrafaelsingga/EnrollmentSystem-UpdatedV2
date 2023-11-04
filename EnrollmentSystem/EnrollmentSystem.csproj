@@ -63,6 +63,12 @@
     <Compile Include="addCourse.Designer.cs">
       <DependentUpon>addCourse.cs</DependentUpon>
     </Compile>
+    <Compile Include="addEnrollment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addEnrollment.Designer.cs">
+      <DependentUpon>addEnrollment.cs</DependentUpon>
+    </Compile>
     <Compile Include="addProfessor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,42 @@
     <Compile Include="sign_in.Designer.cs">
       <DependentUpon>sign_in.cs</DependentUpon>
     </Compile>
+    <Compile Include="studentClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentClass.Designer.cs">
+      <DependentUpon>studentClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentCourse.Designer.cs">
+      <DependentUpon>studentCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentEnrollment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentEnrollment.Designer.cs">
+      <DependentUpon>studentEnrollment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentHome.Designer.cs">
+      <DependentUpon>studentHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentProfile.Designer.cs">
+      <DependentUpon>studentProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="student_page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="student_page.Designer.cs">
+      <DependentUpon>student_page.cs</DependentUpon>
+    </Compile>
     <Compile Include="updateClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="addCourse.resx">
       <DependentUpon>addCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addEnrollment.resx">
+      <DependentUpon>addEnrollment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="addProfessor.resx">
       <DependentUpon>addProfessor.cs</DependentUpon>
@@ -296,6 +341,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sign_in.resx">
       <DependentUpon>sign_in.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentClass.resx">
+      <DependentUpon>studentClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentCourse.resx">
+      <DependentUpon>studentCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentEnrollment.resx">
+      <DependentUpon>studentEnrollment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentHome.resx">
+      <DependentUpon>studentHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentProfile.resx">
+      <DependentUpon>studentProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student_page.resx">
+      <DependentUpon>student_page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="updateClass.resx">
       <DependentUpon>updateClass.cs</DependentUpon>

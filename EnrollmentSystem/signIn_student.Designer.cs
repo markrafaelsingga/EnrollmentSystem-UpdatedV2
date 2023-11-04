@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(signIn_student));
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backBtn = new System.Windows.Forms.Button();
             this.signinBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -58,9 +57,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lnameTxtbox = new System.Windows.Forms.TextBox();
             this.emailLbl = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.yrTxtbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -74,17 +74,6 @@
             this.label1.TabIndex = 5;
             this.label1.Tag = "";
             this.label1.Text = "SIGN IN";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(355, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // backBtn
             // 
@@ -197,6 +186,7 @@
             this.retypetextBox.Name = "retypetextBox";
             this.retypetextBox.Size = new System.Drawing.Size(215, 26);
             this.retypetextBox.TabIndex = 15;
+            this.retypetextBox.UseSystemPasswordChar = true;
             // 
             // label7
             // 
@@ -216,6 +206,7 @@
             this.passtextBox.Name = "passtextBox";
             this.passtextBox.Size = new System.Drawing.Size(215, 26);
             this.passtextBox.TabIndex = 13;
+            this.passtextBox.UseSystemPasswordChar = true;
             // 
             // label6
             // 
@@ -386,6 +377,17 @@
             this.emailLbl.TabIndex = 2;
             this.emailLbl.Text = "Lastname:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(355, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(129, 112);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // signIn_student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,10 +402,10 @@
             this.MaximizeBox = false;
             this.Name = "signIn_student";
             this.Text = "ENROLLMENT / SIGN IN AS STUDENT";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.yrTxtbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

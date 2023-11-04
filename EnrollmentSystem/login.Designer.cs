@@ -34,8 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.loginBtn = new System.Windows.Forms.Button();
             this.forgotpassLink = new System.Windows.Forms.LinkLabel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.passwordTxtbox = new System.Windows.Forms.TextBox();
+            this.emailTxtbox = new System.Windows.Forms.TextBox();
             this.passwordLbl = new System.Windows.Forms.Label();
             this.emailLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,8 +51,8 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.loginBtn);
             this.panel1.Controls.Add(this.forgotpassLink);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.passwordTxtbox);
+            this.panel1.Controls.Add(this.emailTxtbox);
             this.panel1.Controls.Add(this.passwordLbl);
             this.panel1.Controls.Add(this.emailLbl);
             this.panel1.Location = new System.Drawing.Point(65, 159);
@@ -112,21 +112,22 @@
             this.forgotpassLink.MouseLeave += new System.EventHandler(this.forgotpassLink_MouseLeave);
             this.forgotpassLink.MouseHover += new System.EventHandler(this.forgotpassLink_MouseHover);
             // 
-            // textBox2
+            // passwordTxtbox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(113, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(215, 26);
-            this.textBox2.TabIndex = 1;
+            this.passwordTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTxtbox.Location = new System.Drawing.Point(113, 90);
+            this.passwordTxtbox.Name = "passwordTxtbox";
+            this.passwordTxtbox.Size = new System.Drawing.Size(215, 26);
+            this.passwordTxtbox.TabIndex = 1;
+            this.passwordTxtbox.UseSystemPasswordChar = true;
             // 
-            // textBox1
+            // emailTxtbox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(113, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(215, 26);
-            this.textBox1.TabIndex = 1;
+            this.emailTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTxtbox.Location = new System.Drawing.Point(113, 34);
+            this.emailTxtbox.Name = "emailTxtbox";
+            this.emailTxtbox.Size = new System.Drawing.Size(215, 26);
+            this.emailTxtbox.TabIndex = 1;
             // 
             // passwordLbl
             // 
@@ -201,8 +202,8 @@
         private System.Windows.Forms.Label emailLbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label passwordLbl;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox passwordTxtbox;
+        private System.Windows.Forms.TextBox emailTxtbox;
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.LinkLabel forgotpassLink;
         private System.Windows.Forms.LinkLabel signinLink;

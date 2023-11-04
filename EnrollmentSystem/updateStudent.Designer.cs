@@ -32,7 +32,6 @@
             this.saveBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.search = new System.Windows.Forms.PictureBox();
             this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.yrTxtbox = new System.Windows.Forms.NumericUpDown();
@@ -59,10 +58,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lnameTxtbox = new System.Windows.Forms.TextBox();
             this.emailLbl = new System.Windows.Forms.Label();
+            this.search = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yrTxtbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
             this.SuspendLayout();
             // 
             // saveBtn
@@ -119,20 +119,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(210, 25);
             this.panel2.TabIndex = 11;
-            // 
-            // search
-            // 
-            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.search.BackColor = System.Drawing.Color.White;
-            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
-            this.search.Location = new System.Drawing.Point(187, 3);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(19, 19);
-            this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.search.TabIndex = 5;
-            this.search.TabStop = false;
-            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
-            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
             // 
             // searchTxtbox
             // 
@@ -212,6 +198,7 @@
             this.retypetextBox.Name = "retypetextBox";
             this.retypetextBox.Size = new System.Drawing.Size(215, 26);
             this.retypetextBox.TabIndex = 40;
+            this.retypetextBox.UseSystemPasswordChar = true;
             // 
             // label7
             // 
@@ -231,6 +218,7 @@
             this.passtextBox.Name = "passtextBox";
             this.passtextBox.Size = new System.Drawing.Size(215, 26);
             this.passtextBox.TabIndex = 38;
+            this.passtextBox.UseSystemPasswordChar = true;
             // 
             // label6
             // 
@@ -401,6 +389,20 @@
             this.emailLbl.TabIndex = 21;
             this.emailLbl.Text = "Lastname:";
             // 
+            // search
+            // 
+            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.search.BackColor = System.Drawing.Color.White;
+            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
+            this.search.Location = new System.Drawing.Point(187, 3);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(19, 19);
+            this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.search.TabIndex = 5;
+            this.search.TabStop = false;
+            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
+            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
+            // 
             // updateStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,8 +419,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.yrTxtbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -32,11 +32,11 @@
             this.saveBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.search = new System.Windows.Forms.PictureBox();
             this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.crsdescTxtbox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.courseLbl = new System.Windows.Forms.Label();
+            this.search = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
@@ -44,6 +44,9 @@
             // 
             // saveBtn
             // 
+            this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.Location = new System.Drawing.Point(402, 270);
             this.saveBtn.Name = "saveBtn";
@@ -56,6 +59,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.crsdescTxtbox);
@@ -68,12 +74,65 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.search);
             this.panel2.Controls.Add(this.searchTxtbox);
             this.panel2.Location = new System.Drawing.Point(185, 25);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(194, 25);
             this.panel2.TabIndex = 23;
+            // 
+            // searchTxtbox
+            // 
+            this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTxtbox.Location = new System.Drawing.Point(0, 0);
+            this.searchTxtbox.Multiline = true;
+            this.searchTxtbox.Name = "searchTxtbox";
+            this.searchTxtbox.Size = new System.Drawing.Size(194, 25);
+            this.searchTxtbox.TabIndex = 3;
+            // 
+            // crsdescTxtbox
+            // 
+            this.crsdescTxtbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.crsdescTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crsdescTxtbox.Location = new System.Drawing.Point(18, 96);
+            this.crsdescTxtbox.Multiline = true;
+            this.crsdescTxtbox.Name = "crsdescTxtbox";
+            this.crsdescTxtbox.Size = new System.Drawing.Size(469, 124);
+            this.crsdescTxtbox.TabIndex = 22;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label9.Location = new System.Drawing.Point(14, 75);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 20);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Description:";
+            // 
+            // courseLbl
+            // 
+            this.courseLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.courseLbl.AutoSize = true;
+            this.courseLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.courseLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.courseLbl.Location = new System.Drawing.Point(14, 28);
+            this.courseLbl.Name = "courseLbl";
+            this.courseLbl.Size = new System.Drawing.Size(155, 20);
+            this.courseLbl.TabIndex = 19;
+            this.courseLbl.Text = "Search course code:";
             // 
             // search
             // 
@@ -88,47 +147,6 @@
             this.search.TabStop = false;
             this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
             this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
-            // 
-            // searchTxtbox
-            // 
-            this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxtbox.Location = new System.Drawing.Point(0, 0);
-            this.searchTxtbox.Multiline = true;
-            this.searchTxtbox.Name = "searchTxtbox";
-            this.searchTxtbox.Size = new System.Drawing.Size(194, 25);
-            this.searchTxtbox.TabIndex = 3;
-            // 
-            // crsdescTxtbox
-            // 
-            this.crsdescTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.crsdescTxtbox.Location = new System.Drawing.Point(18, 96);
-            this.crsdescTxtbox.Multiline = true;
-            this.crsdescTxtbox.Name = "crsdescTxtbox";
-            this.crsdescTxtbox.Size = new System.Drawing.Size(469, 124);
-            this.crsdescTxtbox.TabIndex = 22;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label9.Location = new System.Drawing.Point(14, 75);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 20);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Description:";
-            // 
-            // courseLbl
-            // 
-            this.courseLbl.AutoSize = true;
-            this.courseLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.courseLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.courseLbl.Location = new System.Drawing.Point(14, 28);
-            this.courseLbl.Name = "courseLbl";
-            this.courseLbl.Size = new System.Drawing.Size(155, 20);
-            this.courseLbl.TabIndex = 19;
-            this.courseLbl.Text = "Search course code:";
             // 
             // updateCourse
             // 

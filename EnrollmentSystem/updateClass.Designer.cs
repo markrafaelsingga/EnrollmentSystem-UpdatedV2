@@ -32,7 +32,6 @@
             this.saveBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.search = new System.Windows.Forms.PictureBox();
             this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.instructorcomboBox = new System.Windows.Forms.ComboBox();
             this.subjectcomboBox = new System.Windows.Forms.ComboBox();
@@ -50,7 +49,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.classLbl = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.sycomboBox = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.search = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
@@ -72,7 +72,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.sycomboBox);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.instructorcomboBox);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.subjectcomboBox);
@@ -102,20 +102,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(213, 25);
             this.panel2.TabIndex = 23;
-            // 
-            // search
-            // 
-            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.search.BackColor = System.Drawing.Color.White;
-            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
-            this.search.Location = new System.Drawing.Point(190, 3);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(19, 19);
-            this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.search.TabIndex = 5;
-            this.search.TabStop = false;
-            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
-            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
             // 
             // searchTxtbox
             // 
@@ -289,14 +275,28 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "SY and Sem:";
             // 
-            // sycomboBox
+            // comboBox1
             // 
-            this.sycomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sycomboBox.FormattingEnabled = true;
-            this.sycomboBox.Location = new System.Drawing.Point(128, 189);
-            this.sycomboBox.Name = "sycomboBox";
-            this.sycomboBox.Size = new System.Drawing.Size(468, 28);
-            this.sycomboBox.TabIndex = 19;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(128, 189);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(468, 28);
+            this.comboBox1.TabIndex = 19;
+            // 
+            // search
+            // 
+            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.search.BackColor = System.Drawing.Color.White;
+            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
+            this.search.Location = new System.Drawing.Point(190, 3);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(19, 19);
+            this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.search.TabIndex = 5;
+            this.search.TabStop = false;
+            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
+            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
             // 
             // updateClass
             // 
@@ -341,7 +341,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox search;
         private System.Windows.Forms.TextBox searchTxtbox;
-        private System.Windows.Forms.ComboBox sycomboBox;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label8;
     }
 }

@@ -35,5 +35,6 @@ namespace EnrollmentSystem
         {
             search.BackColor = System.Drawing.Color.White;
         }
+        
     }
 }
