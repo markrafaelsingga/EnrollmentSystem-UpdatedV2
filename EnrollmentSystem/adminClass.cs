@@ -12,14 +12,18 @@ namespace EnrollmentSystem
 {
     public partial class adminClass : Form
     {
-        public adminClass()
+        DataClasses1DataContext db = new DataClasses1DataContext();
+        private int verId;
+        public adminClass(int verId)
         {
             InitializeComponent();
+            this.verId = verId;
         }
 
         private void adminClass_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
+            display();
         }
 
         private void delete_MouseHover(object sender, EventArgs e)
@@ -80,14 +84,28 @@ namespace EnrollmentSystem
 
         private void add_Click(object sender, EventArgs e)
         {
-            addClass classadd = new addClass();
+            addClass classadd = new addClass(verId);
             classadd.ShowDialog();
         }
 
         private void edit_Click(object sender, EventArgs e)
         {
-            updateClass classupdate = new updateClass();
+            updateClass classupdate = new updateClass(verId);
             classupdate.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void display()
+        {
+            dataGridView1.DataSource = db.showClass();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            display();
         }
     }
 }

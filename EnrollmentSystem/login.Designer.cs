@@ -34,8 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.loginBtn = new System.Windows.Forms.Button();
             this.forgotpassLink = new System.Windows.Forms.LinkLabel();
-            this.passwordTxtbox = new System.Windows.Forms.TextBox();
-            this.emailTxtbox = new System.Windows.Forms.TextBox();
+            this.pword = new System.Windows.Forms.TextBox();
+            this.uname = new System.Windows.Forms.TextBox();
             this.passwordLbl = new System.Windows.Forms.Label();
             this.emailLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,8 +51,8 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.loginBtn);
             this.panel1.Controls.Add(this.forgotpassLink);
-            this.panel1.Controls.Add(this.passwordTxtbox);
-            this.panel1.Controls.Add(this.emailTxtbox);
+            this.panel1.Controls.Add(this.pword);
+            this.panel1.Controls.Add(this.uname);
             this.panel1.Controls.Add(this.passwordLbl);
             this.panel1.Controls.Add(this.emailLbl);
             this.panel1.Location = new System.Drawing.Point(65, 159);
@@ -67,7 +67,7 @@
             this.signinLink.Location = new System.Drawing.Point(223, 195);
             this.signinLink.Name = "signinLink";
             this.signinLink.Size = new System.Drawing.Size(39, 13);
-            this.signinLink.TabIndex = 5;
+            this.signinLink.TabIndex = 6;
             this.signinLink.TabStop = true;
             this.signinLink.Text = "Sign in";
             this.signinLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.signinLink_LinkClicked);
@@ -81,7 +81,7 @@
             this.label2.Location = new System.Drawing.Point(95, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 13);
-            this.label2.TabIndex = 4;
+            this.label2.TabIndex = 5;
             this.label2.Text = "Don\'t have an account?";
             // 
             // loginBtn
@@ -92,7 +92,7 @@
             this.loginBtn.Location = new System.Drawing.Point(113, 160);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(129, 32);
-            this.loginBtn.TabIndex = 3;
+            this.loginBtn.TabIndex = 4;
             this.loginBtn.Text = "LOGIN";
             this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
@@ -106,28 +106,28 @@
             this.forgotpassLink.Location = new System.Drawing.Point(237, 119);
             this.forgotpassLink.Name = "forgotpassLink";
             this.forgotpassLink.Size = new System.Drawing.Size(91, 13);
-            this.forgotpassLink.TabIndex = 2;
+            this.forgotpassLink.TabIndex = 3;
             this.forgotpassLink.TabStop = true;
             this.forgotpassLink.Text = "Forgot password?";
             this.forgotpassLink.MouseLeave += new System.EventHandler(this.forgotpassLink_MouseLeave);
             this.forgotpassLink.MouseHover += new System.EventHandler(this.forgotpassLink_MouseHover);
             // 
-            // passwordTxtbox
+            // pword
             // 
-            this.passwordTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTxtbox.Location = new System.Drawing.Point(113, 90);
-            this.passwordTxtbox.Name = "passwordTxtbox";
-            this.passwordTxtbox.Size = new System.Drawing.Size(215, 26);
-            this.passwordTxtbox.TabIndex = 1;
-            this.passwordTxtbox.UseSystemPasswordChar = true;
+            this.pword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pword.Location = new System.Drawing.Point(113, 90);
+            this.pword.Name = "pword";
+            this.pword.Size = new System.Drawing.Size(215, 26);
+            this.pword.TabIndex = 2;
+            this.pword.UseSystemPasswordChar = true;
             // 
-            // emailTxtbox
+            // uname
             // 
-            this.emailTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTxtbox.Location = new System.Drawing.Point(113, 34);
-            this.emailTxtbox.Name = "emailTxtbox";
-            this.emailTxtbox.Size = new System.Drawing.Size(215, 26);
-            this.emailTxtbox.TabIndex = 1;
+            this.uname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uname.Location = new System.Drawing.Point(113, 34);
+            this.uname.Name = "uname";
+            this.uname.Size = new System.Drawing.Size(215, 26);
+            this.uname.TabIndex = 1;
             // 
             // passwordLbl
             // 
@@ -147,9 +147,9 @@
             this.emailLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.emailLbl.Location = new System.Drawing.Point(27, 40);
             this.emailLbl.Name = "emailLbl";
-            this.emailLbl.Size = new System.Drawing.Size(52, 20);
+            this.emailLbl.Size = new System.Drawing.Size(87, 20);
             this.emailLbl.TabIndex = 0;
-            this.emailLbl.Text = "Email:";
+            this.emailLbl.Text = "Username:";
             // 
             // label1
             // 
@@ -159,7 +159,7 @@
             this.label1.Location = new System.Drawing.Point(204, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 25);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 7;
             this.label1.Tag = "";
             this.label1.Text = "LOGIN";
             // 
@@ -202,8 +202,8 @@
         private System.Windows.Forms.Label emailLbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label passwordLbl;
-        private System.Windows.Forms.TextBox passwordTxtbox;
-        private System.Windows.Forms.TextBox emailTxtbox;
+        private System.Windows.Forms.TextBox pword;
+        private System.Windows.Forms.TextBox uname;
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.LinkLabel forgotpassLink;
         private System.Windows.Forms.LinkLabel signinLink;

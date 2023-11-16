@@ -12,52 +12,70 @@ namespace EnrollmentSystem
 {
     public partial class login : Form
     {
+
+        private int id;
+        private int studId;
         public login()
         {
             InitializeComponent();
+            this.id = id;
+            this.studId = studId;
         }
 
+
+        DataClasses1DataContext db = new DataClasses1DataContext();
         private void signinLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            sign_in chooseUser = new sign_in();
+            signIn_student chooseUser = new signIn_student();
             chooseUser.Show();
             Visible = false;
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            string email = emailTxtbox.Text;
-            string pass = passwordTxtbox.Text;
+            string user = uname.Text;
+            string pass = pword.Text;
 
-            string emailAdmin = "admin";
-            string passAdmin = "admin123";
-            string emailStud = "student";
-            string passStud = "student123";
-
-            if (email == emailAdmin && pass == passAdmin)
+            var verId = db.logId(uname.Text, pword.Text).ToList();
+            var sId = db.studId(uname.Text, pword.Text).ToList();
+            
+            if (verId != null && verId.Any())
             {
-                admin_page dashboard = new admin_page();
-                dashboard.Show();
-                Visible = false;
+                foreach (var item in verId)
+                {
+                    int id = item.admin_id;                   
+                    if (id > 0)
+                    {
+                        admin_page dashboard = new admin_page(id);
+                        dashboard.Show();
+                        Visible = false;
+                        
+                    }
+                    else 
+                    {
+                        MessageBox.Show("WRONG KA BOGO", "UNDANG SKWELA!");
+                    }
+                }
             }
-            else if (email == emailAdmin && pass != passAdmin)
+            else if (sId != null && sId.Any())
             {
-                MessageBox.Show("Wrong password", "Can't login");
-            }
-            else if (email == emailStud && pass == passStud)
-            {
-                student_page dashboard = new student_page();
-                dashboard.Show();
-                Visible = false;
-            } 
-            else if (email == emailStud && pass != passStud)
-            {
-                MessageBox.Show("Wrong password", "Can't login");
+                foreach (var items in sId)
+                {
+                    studId = items.stud_id;
+                    if (studId > 0)
+                    {
+                        student_page dashboard = new student_page(studId);
+                        dashboard.Show();
+                        Visible = false;
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("Account not found", "Error");
+                MessageBox.Show("WALAY SULOD OI!", "UNDANG SKWELA!");
             }
+         
+
         }
 
         private void loginBtn_MouseHover(object sender, EventArgs e)

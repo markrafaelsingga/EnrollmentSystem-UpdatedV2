@@ -12,10 +12,13 @@ namespace EnrollmentSystem
 {
     public partial class addProfessor : Form
     {
-        public addProfessor()
+        private int verId;
+        public addProfessor(int verId)
         {
             InitializeComponent();
+            this.verId = verId;
         }
+        DataClasses1DataContext db = new DataClasses1DataContext();
 
         private void saveBtn_MouseHover(object sender, EventArgs e)
         {
@@ -26,6 +29,25 @@ namespace EnrollmentSystem
         {
             saveBtn.BackColor = System.Drawing.Color.White;
         }
-        
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            var result = db.adminID(verId).ToList();
+            if (result != null && result.Any())
+            {
+                foreach (var item in result)
+                {
+                    int adminID = item.admin_id;
+                    DateTime bd = birthdatePicker.Value;
+                    DateTime currdate = DateTime.Now;
+                    TimeSpan age_now = currdate - bd;
+                    int age = (int)(age_now.TotalDays / 365.25);
+                    string gen = gender.SelectedItem.ToString();
+                    db.addInstructor(fnameTxtbox.Text, miTxtbox.Text, lnameTxtbox.Text, bd, age, gen, phone.Text, emailtextBox.Text, adminID);
+                    MessageBox.Show("Professor Added!", "Successfull");
+                    Visible = false;
+                }
+            }
+        }
     }
 }

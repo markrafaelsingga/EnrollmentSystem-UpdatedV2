@@ -34,6 +34,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -147,6 +149,106 @@
     <Compile Include="admin_page.Designer.cs">
       <DependentUpon>admin_page.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="deleteProfessor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +260,12 @@
     </Compile>
     <Compile Include="deleteStudent.Designer.cs">
       <DependentUpon>deleteStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="createAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createAcc.Designer.cs">
+      <DependentUpon>createAcc.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -325,6 +433,9 @@
     <EmbeddedResource Include="deleteStudent.resx">
       <DependentUpon>deleteStudent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="createAcc.resx">
+      <DependentUpon>createAcc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -381,6 +492,223 @@
     <EmbeddedResource Include="updateSubject.resx">
       <DependentUpon>updateSubject.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet.xsc">
+      <DependentUpon>dbmsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet.xss">
+      <DependentUpon>dbmsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet1.xsc">
+      <DependentUpon>dbmsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet1.xss">
+      <DependentUpon>dbmsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet10.xsc">
+      <DependentUpon>dbmsDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet10.xss">
+      <DependentUpon>dbmsDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet11.xsc">
+      <DependentUpon>dbmsDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet11.xss">
+      <DependentUpon>dbmsDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet12.xsc">
+      <DependentUpon>dbmsDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet12.xss">
+      <DependentUpon>dbmsDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet13.xsc">
+      <DependentUpon>dbmsDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet13.xss">
+      <DependentUpon>dbmsDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet14.xsc">
+      <DependentUpon>dbmsDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet14.xss">
+      <DependentUpon>dbmsDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet15.xsc">
+      <DependentUpon>dbmsDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet15.xss">
+      <DependentUpon>dbmsDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet16.xsc">
+      <DependentUpon>dbmsDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet16.xss">
+      <DependentUpon>dbmsDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet17.xsc">
+      <DependentUpon>dbmsDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet17.xss">
+      <DependentUpon>dbmsDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet18.xsc">
+      <DependentUpon>dbmsDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet18.xss">
+      <DependentUpon>dbmsDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet2.xsc">
+      <DependentUpon>dbmsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet2.xss">
+      <DependentUpon>dbmsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet3.xsc">
+      <DependentUpon>dbmsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet3.xss">
+      <DependentUpon>dbmsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet4.xsc">
+      <DependentUpon>dbmsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet4.xss">
+      <DependentUpon>dbmsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet5.xsc">
+      <DependentUpon>dbmsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet5.xss">
+      <DependentUpon>dbmsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet6.xsc">
+      <DependentUpon>dbmsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet6.xss">
+      <DependentUpon>dbmsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet7.xsc">
+      <DependentUpon>dbmsDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet7.xss">
+      <DependentUpon>dbmsDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet8.xsc">
+      <DependentUpon>dbmsDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet8.xss">
+      <DependentUpon>dbmsDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet9.xsc">
+      <DependentUpon>dbmsDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet9.xss">
+      <DependentUpon>dbmsDataSet9.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -405,6 +733,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="pic\376385686_911369793743598_5686435448262035008_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,14 +12,22 @@ namespace EnrollmentSystem
 {
     public partial class adminCourse : Form
     {
-        public adminCourse()
+        private int verId;
+        DataClasses1DataContext db = new DataClasses1DataContext();
+        public adminCourse(int verId)
         {
             InitializeComponent();
+            this.verId = verId;
+            display();
+            this.Invalidate();
         }
 
         private void adminCourse_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dbmsDataSet15.showCrs' table. You can move, or remove it, as needed.
+            this.showCrsTableAdapter3.Fill(this.dbmsDataSet15.showCrs);      
             this.ControlBox = false;
+            display();
         }
 
         private void delete_MouseHover(object sender, EventArgs e)
@@ -80,14 +88,30 @@ namespace EnrollmentSystem
 
         private void add_Click(object sender, EventArgs e)
         {
-            addCourse courseadd = new addCourse();
+            addCourse courseadd = new addCourse(verId);
             courseadd.ShowDialog();
         }
 
         private void edit_Click(object sender, EventArgs e)
         {
-            updateCourse courseedit = new updateCourse();
+            updateCourse courseedit = new updateCourse(verId);
             courseedit.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void display()
+        {
+            dataGridView1.DataSource = db.showCrs();
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            display();
         }
     }
 }

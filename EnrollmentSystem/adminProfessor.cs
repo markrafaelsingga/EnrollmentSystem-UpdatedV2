@@ -12,14 +12,20 @@ namespace EnrollmentSystem
 {
     public partial class adminProfessor : Form
     {
-        public adminProfessor()
+        private int verId;
+        int adminId;
+        DataClasses1DataContext db = new DataClasses1DataContext();
+        public adminProfessor(int verId)
         {
             InitializeComponent();
+            this.verId = verId;
+            
         }
 
         private void adminProfessor_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
+            display();
         }
 
         private void delete_MouseHover(object sender, EventArgs e)
@@ -64,13 +70,13 @@ namespace EnrollmentSystem
 
         private void add_Click(object sender, EventArgs e)
         {
-            addProfessor addNewprofessor = new addProfessor();
+            addProfessor addNewprofessor = new addProfessor(verId);
             addNewprofessor.ShowDialog();
         }
 
         private void edit_Click(object sender, EventArgs e)
         {
-            updateProfessor editprofessor = new updateProfessor();
+            updateProfessor editprofessor = new updateProfessor(verId);
             editprofessor.ShowDialog();
         }
 
@@ -78,6 +84,29 @@ namespace EnrollmentSystem
         {
             deleteProfessor deleteprofessor = new deleteProfessor();
             deleteprofessor.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void display()
+        {
+            var adId = db.adminID(verId).ToList();
+            if (adId != null &&  adId.Any())
+            {
+                foreach(var item in adId)
+                {
+                    adminId = item.admin_id;
+                }
+            }
+            dataGridView1.DataSource = db.showInstructor(adminId);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            display();
         }
     }
 }

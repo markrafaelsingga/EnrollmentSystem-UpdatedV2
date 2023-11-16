@@ -67,6 +67,7 @@
             this.saveBtn.TabIndex = 8;
             this.saveBtn.Text = "SAVE";
             this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             this.saveBtn.MouseLeave += new System.EventHandler(this.saveBtn_MouseLeave);
             this.saveBtn.MouseHover += new System.EventHandler(this.saveBtn_MouseHover);
             // 

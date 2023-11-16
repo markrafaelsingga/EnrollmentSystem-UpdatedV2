@@ -12,10 +12,18 @@ namespace EnrollmentSystem
 {
     public partial class updateCourse : Form
     {
-        public updateCourse()
+        private int verId;
+       
+        public updateCourse(int verId)
         {
             InitializeComponent();
+            this.verId = verId;
+            
         }
+
+        
+
+        DataClasses1DataContext db = new DataClasses1DataContext();
 
         private void saveBtn_MouseHover(object sender, EventArgs e)
         {
@@ -36,6 +44,63 @@ namespace EnrollmentSystem
         {
             search.BackColor = System.Drawing.Color.White;
         }
-        
+
+        private void search_Click(object sender, EventArgs e)
+        {
+            var result = db.searchCrs(searchTxtbox.Text);
+            var resultList = result.ToList();
+            if (resultList != null && resultList.Any())
+            {
+                
+                foreach(var item in resultList)
+                {
+                    string crs_name = item.crs_name;
+                    string crs_desc = item.crs_desc;
+                    int crs_year = Convert.ToInt32(item.crs_year);
+                    crsName.Text = crs_name;
+                    crsdescTxtbox.Text = crs_desc;
+                    comboBox1.Text = crs_year.ToString();
+                    /*MessageBox.Show($"Name: {crs_name} Desc: {crs_desc} Year: {crs_year}");*/
+                }
+            }
+            else
+            {
+                MessageBox.Show("No courses found!");
+            }
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            var result = db.searchCrs(searchTxtbox.Text);
+            var resultList = result.ToList();
+            if (resultList != null && resultList.Any())
+            {
+
+                foreach (var item in resultList)
+                {
+                    int crs_id = item.crs_code;
+                   /* string crs_name = item.crs_name;
+                    string crs_desc = item.crs_desc;*/
+                    int crs_year = Convert.ToInt32(item.crs_year);
+                   /* crsName.Text = crs_name;
+                    crsdescTxtbox.Text = crs_desc;
+                    comboBox1.Text = crs_year.ToString();*/
+                    if (crs_id > 0)
+                    {
+                        db.updateCrs(crs_id,crsName.Text, crsdescTxtbox.Text, crs_year);
+                        MessageBox.Show("Updated Successfully!","Success");
+                        Visible = false;
+                    }
+                    /*MessageBox.Show($"Name: {crs_name} Desc: {crs_desc} Year: {crs_year}");*/
+                }
+            }
+            else
+            {
+                MessageBox.Show("No courses found!");
+            }
+
+        }
+
+
     }
 }

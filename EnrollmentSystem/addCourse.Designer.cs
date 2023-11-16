@@ -34,6 +34,8 @@
             this.crscodeTxtbox = new System.Windows.Forms.TextBox();
             this.courseLbl = new System.Windows.Forms.Label();
             this.saveBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,6 +45,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.crsdescTxtbox);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.crscodeTxtbox);
@@ -61,7 +65,7 @@
             this.crsdescTxtbox.Location = new System.Drawing.Point(18, 96);
             this.crsdescTxtbox.Multiline = true;
             this.crsdescTxtbox.Name = "crsdescTxtbox";
-            this.crsdescTxtbox.Size = new System.Drawing.Size(469, 124);
+            this.crsdescTxtbox.Size = new System.Drawing.Size(469, 61);
             this.crsdescTxtbox.TabIndex = 22;
             // 
             // label9
@@ -115,8 +119,37 @@
             this.saveBtn.TabIndex = 13;
             this.saveBtn.Text = "SAVE";
             this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             this.saveBtn.MouseLeave += new System.EventHandler(this.saveBtn_MouseLeave);
             this.saveBtn.MouseHover += new System.EventHandler(this.saveBtn_MouseHover);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(14, 172);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 20);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Year Level: ";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.comboBox1.Location = new System.Drawing.Point(18, 196);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 24;
             // 
             // addCourse
             // 
@@ -144,5 +177,7 @@
         private System.Windows.Forms.TextBox crscodeTxtbox;
         private System.Windows.Forms.Label courseLbl;
         private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

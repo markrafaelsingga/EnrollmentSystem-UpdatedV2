@@ -19,10 +19,13 @@ namespace EnrollmentSystem
         adminCourse course;
         adminClass class1;
         adminProfile profile;
-
-        public admin_page()
+        private int verId;
+        public admin_page(int verId)
         {
             InitializeComponent();
+            this.verId = verId;
+          
+
         }
 
         private void changeColor(Button colorBtn)
@@ -214,7 +217,7 @@ namespace EnrollmentSystem
 
             if (enrollment == null)
             {
-                enrollment = new adminEnrollment();
+                enrollment = new adminEnrollment(verId);
                 enrollment.FormClosed += Enrollment_FormClosed;
                 enrollment.MdiParent = this;
                 enrollment.Show();
@@ -269,7 +272,7 @@ namespace EnrollmentSystem
 
             if (student == null)
             {
-                student = new adminStudent();
+                student = new adminStudent(verId);
                 student.FormClosed += Student_FormClosed;
                 student.MdiParent = this;
                 student.Show();
@@ -324,7 +327,7 @@ namespace EnrollmentSystem
 
             if (professor == null)
             {
-                professor = new adminProfessor();
+                professor = new adminProfessor(verId);
                 professor.FormClosed += Professor_FormClosed;
                 professor.MdiParent = this;
                 professor.Show();
@@ -434,7 +437,7 @@ namespace EnrollmentSystem
 
             if (course == null)
             {
-                course = new adminCourse();
+                course = new adminCourse(verId);
                 course.FormClosed += Course_FormClosed;
                 course.MdiParent = this;
                 course.Show();
@@ -489,7 +492,7 @@ namespace EnrollmentSystem
 
             if (class1 == null)
             {
-                class1 = new adminClass();
+                class1 = new adminClass(verId);
                 class1.FormClosed += Class_FormClosed;
                 class1.MdiParent = this;
                 class1.Show();

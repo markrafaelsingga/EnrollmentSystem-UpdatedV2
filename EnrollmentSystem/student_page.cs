@@ -17,10 +17,12 @@ namespace EnrollmentSystem
         studentCourse course;
         studentClass class1;
         studentProfile profile;
-
-        public student_page()
+        private int studId;
+        public student_page(int studId)
         {
             InitializeComponent();
+            this.studId = studId;
+            MessageBox.Show($"ID: {studId}");
         }
 
         private void changeColor(Button colorBtn)
@@ -198,7 +200,7 @@ namespace EnrollmentSystem
 
             if (course == null)
             {
-                course = new studentCourse();
+                course = new studentCourse(studId);
                 course.FormClosed += Course_FormClosed;
                 course.MdiParent = this;
                 course.Show();
@@ -243,7 +245,7 @@ namespace EnrollmentSystem
 
             if (class1 == null)
             {
-                class1 = new studentClass();
+                class1 = new studentClass(studId);
                 class1.FormClosed += Class_FormClosed;
                 class1.MdiParent = this;
                 class1.Show();

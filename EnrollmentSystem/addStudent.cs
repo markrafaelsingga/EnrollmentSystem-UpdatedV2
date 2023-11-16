@@ -26,5 +26,10 @@ namespace EnrollmentSystem
         {
             saveBtn.BackColor = System.Drawing.Color.White;
         }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

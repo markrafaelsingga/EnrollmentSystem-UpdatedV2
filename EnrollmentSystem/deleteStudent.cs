@@ -12,9 +12,12 @@ namespace EnrollmentSystem
 {
     public partial class deleteStudent : Form
     {
-        public deleteStudent()
+        DataClasses1DataContext db = new DataClasses1DataContext();
+        private int verId;
+        public deleteStudent(int verId)
         {
             InitializeComponent();
+            this.verId = verId;
         }
         private void deleteBtn_MouseHover(object sender, EventArgs e)
         {
@@ -35,6 +38,20 @@ namespace EnrollmentSystem
         {
             search.BackColor = System.Drawing.Color.White;
         }
-        
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void display()
+        {
+            dataGridView1.DataSource = db.showStudent(verId);
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
