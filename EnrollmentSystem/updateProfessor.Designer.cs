@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.search = new System.Windows.Forms.PictureBox();
+            this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.emailLbl = new System.Windows.Forms.Label();
             this.lnameTxtbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,21 +44,11 @@
             this.miTxtbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.phone = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.addressTxtbox = new System.Windows.Forms.TextBox();
             this.emailtextBox = new System.Windows.Forms.TextBox();
             this.birthdatePicker = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.collogecomboBox = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dbmsDataSet7 = new EnrollmentSystem.dbmsDataSet7();
-            this.showInstructorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.showInstructorTableAdapter = new EnrollmentSystem.dbmsDataSet7TableAdapters.showInstructorTableAdapter();
-            this.dbmsDataSet8 = new EnrollmentSystem.dbmsDataSet8();
-            this.showInstructorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.showInstructorTableAdapter1 = new EnrollmentSystem.dbmsDataSet8TableAdapters.showInstructorTableAdapter();
             this.insidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.insnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.insfnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,15 +58,20 @@
             this.insageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.insphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.insemailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.searchTxtbox = new System.Windows.Forms.TextBox();
+            this.showInstructorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dbmsDataSet8 = new EnrollmentSystem.dbmsDataSet8();
+            this.dbmsDataSet7 = new EnrollmentSystem.dbmsDataSet7();
+            this.showInstructorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.showInstructorTableAdapter = new EnrollmentSystem.dbmsDataSet7TableAdapters.showInstructorTableAdapter();
+            this.showInstructorTableAdapter1 = new EnrollmentSystem.dbmsDataSet8TableAdapters.showInstructorTableAdapter();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showInstructorBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showInstructorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showInstructorBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // saveBtn
@@ -125,6 +121,16 @@
             this.search.TabStop = false;
             this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
             this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
+            // 
+            // searchTxtbox
+            // 
+            this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTxtbox.Location = new System.Drawing.Point(0, 0);
+            this.searchTxtbox.Multiline = true;
+            this.searchTxtbox.Name = "searchTxtbox";
+            this.searchTxtbox.Size = new System.Drawing.Size(469, 25);
+            this.searchTxtbox.TabIndex = 6;
             // 
             // emailLbl
             // 
@@ -180,7 +186,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label8.Location = new System.Drawing.Point(13, 219);
+            this.label8.Location = new System.Drawing.Point(13, 175);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 20);
             this.label8.TabIndex = 27;
@@ -199,7 +205,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(276, 219);
+            this.label4.Location = new System.Drawing.Point(276, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 20);
             this.label4.TabIndex = 29;
@@ -208,43 +214,24 @@
             // phone
             // 
             this.phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phone.Location = new System.Drawing.Point(280, 181);
+            this.phone.Location = new System.Drawing.Point(280, 146);
             this.phone.Name = "phone";
             this.phone.Size = new System.Drawing.Size(192, 26);
             this.phone.TabIndex = 33;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label9.Location = new System.Drawing.Point(15, 143);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 20);
-            this.label9.TabIndex = 30;
-            this.label9.Text = "Address:";
-            // 
-            // addressTxtbox
-            // 
-            this.addressTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressTxtbox.Location = new System.Drawing.Point(99, 137);
-            this.addressTxtbox.Name = "addressTxtbox";
-            this.addressTxtbox.Size = new System.Drawing.Size(546, 26);
-            this.addressTxtbox.TabIndex = 34;
-            // 
             // emailtextBox
             // 
             this.emailtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailtextBox.Location = new System.Drawing.Point(338, 260);
+            this.emailtextBox.Location = new System.Drawing.Point(19, 237);
             this.emailtextBox.Name = "emailtextBox";
-            this.emailtextBox.Size = new System.Drawing.Size(134, 26);
+            this.emailtextBox.Size = new System.Drawing.Size(215, 26);
             this.emailtextBox.TabIndex = 35;
             // 
             // birthdatePicker
             // 
             this.birthdatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.birthdatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.birthdatePicker.Location = new System.Drawing.Point(17, 181);
+            this.birthdatePicker.Location = new System.Drawing.Point(17, 146);
             this.birthdatePicker.Name = "birthdatePicker";
             this.birthdatePicker.Size = new System.Drawing.Size(177, 26);
             this.birthdatePicker.TabIndex = 40;
@@ -254,42 +241,18 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(276, 263);
+            this.label5.Location = new System.Drawing.Point(13, 266);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 20);
             this.label5.TabIndex = 44;
             this.label5.Text = "Email:";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label10.Location = new System.Drawing.Point(13, 260);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 20);
-            this.label10.TabIndex = 46;
-            this.label10.Text = "Gender: ";
-            // 
-            // collogecomboBox
-            // 
-            this.collogecomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.collogecomboBox.FormattingEnabled = true;
-            this.collogecomboBox.Location = new System.Drawing.Point(99, 252);
-            this.collogecomboBox.Name = "collogecomboBox";
-            this.collogecomboBox.Size = new System.Drawing.Size(93, 28);
-            this.collogecomboBox.TabIndex = 48;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
-            this.panel1.Controls.Add(this.collogecomboBox);
-            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.birthdatePicker);
             this.panel1.Controls.Add(this.emailtextBox);
-            this.panel1.Controls.Add(this.addressTxtbox);
-            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.phone);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.miTxtbox);
@@ -330,34 +293,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(865, 418);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // dbmsDataSet7
-            // 
-            this.dbmsDataSet7.DataSetName = "dbmsDataSet7";
-            this.dbmsDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // showInstructorBindingSource
-            // 
-            this.showInstructorBindingSource.DataMember = "showInstructor";
-            this.showInstructorBindingSource.DataSource = this.dbmsDataSet7;
-            // 
-            // showInstructorTableAdapter
-            // 
-            this.showInstructorTableAdapter.ClearBeforeFill = true;
-            // 
-            // dbmsDataSet8
-            // 
-            this.dbmsDataSet8.DataSetName = "dbmsDataSet8";
-            this.dbmsDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // showInstructorBindingSource1
-            // 
-            this.showInstructorBindingSource1.DataMember = "showInstructor";
-            this.showInstructorBindingSource1.DataSource = this.dbmsDataSet8;
-            // 
-            // showInstructorTableAdapter1
-            // 
-            this.showInstructorTableAdapter1.ClearBeforeFill = true;
             // 
             // insidDataGridViewTextBoxColumn
             // 
@@ -422,15 +357,33 @@
             this.insemailDataGridViewTextBoxColumn.Name = "insemailDataGridViewTextBoxColumn";
             this.insemailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // searchTxtbox
+            // showInstructorBindingSource1
             // 
-            this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxtbox.Location = new System.Drawing.Point(0, 0);
-            this.searchTxtbox.Multiline = true;
-            this.searchTxtbox.Name = "searchTxtbox";
-            this.searchTxtbox.Size = new System.Drawing.Size(469, 25);
-            this.searchTxtbox.TabIndex = 6;
+            this.showInstructorBindingSource1.DataMember = "showInstructor";
+            this.showInstructorBindingSource1.DataSource = this.dbmsDataSet8;
+            // 
+            // dbmsDataSet8
+            // 
+            this.dbmsDataSet8.DataSetName = "dbmsDataSet8";
+            this.dbmsDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dbmsDataSet7
+            // 
+            this.dbmsDataSet7.DataSetName = "dbmsDataSet7";
+            this.dbmsDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // showInstructorBindingSource
+            // 
+            this.showInstructorBindingSource.DataMember = "showInstructor";
+            this.showInstructorBindingSource.DataSource = this.dbmsDataSet7;
+            // 
+            // showInstructorTableAdapter
+            // 
+            this.showInstructorTableAdapter.ClearBeforeFill = true;
+            // 
+            // showInstructorTableAdapter1
+            // 
+            this.showInstructorTableAdapter1.ClearBeforeFill = true;
             // 
             // updateProfessor
             // 
@@ -451,10 +404,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showInstructorBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showInstructorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showInstructorBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -474,13 +427,9 @@
         private System.Windows.Forms.TextBox miTxtbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox phone;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox addressTxtbox;
         private System.Windows.Forms.TextBox emailtextBox;
         private System.Windows.Forms.DateTimePicker birthdatePicker;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox collogecomboBox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource showInstructorBindingSource;

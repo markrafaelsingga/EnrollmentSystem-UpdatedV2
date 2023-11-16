@@ -45,91 +45,73 @@ namespace EnrollmentSystem
         int id;
         private void backBtn_Click(object sender, EventArgs e)
         {
-            sign_in back_to = new sign_in();
-            back_to.Show();
-            Visible = false;
 
-            /*login back_login = new login();
+
+            login back_login = new login();
             back_login.Show();
-            Visible = false;*/
+            Visible = false;
         }
 
        private void check()
         {
-            
+            var studCheck = db.checkStud(fnameTxtbox.Text, lnameTxtbox.Text).ToList();
+            if(studCheck != null&& studCheck.Any())
+            {
+                foreach(var item in studCheck)
+                {
+                    studFname = item.stud_fname;
+                    studLname = item.stud_lname;
+                }
+            }
         }
         private void signinBtn_Click(object sender, EventArgs e)
         {
+            check();
             DateTime bd = birthdatePicker.Value;
             DateTime currDate = DateTime.Now;
             TimeSpan age_now = currDate - bd;
             int age = (int)(age_now.TotalDays / 365.25);
-
-            if (pword.Text == repword.Text)
+            if (studFname != fnameTxtbox.Text && studLname != lnameTxtbox.Text)
             {
-                db.createAcc(uname.Text, repword.Text);
-                var result = db.accId(uname.Text);
-
-                if (result != null)
+                if (pword.Text == repword.Text)
                 {
-                    // Assuming accId returns only one item, take the first one
-                    var item = result.First();
+                    db.createAcc(uname.Text, repword.Text);
+                    var result = db.accId(uname.Text);
 
-                    id = item.u_id;
-                    decimal grade = Convert.ToDecimal(gpa.Text);
-                    int prog_id = (int)program.SelectedValue;
-                    int batch_id = (int)batch.SelectedValue;
-                    string gen = gender.SelectedItem.ToString();
-                    int yrs = (int)yr.SelectedValue;
-
-                    db.enrollStudent(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, bd, age, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, yrs, grade, prog_id, id, 1, batch_id);
-                    MessageBox.Show("Successfully enrolled!", "Done");
-
-                    // Redirect to the login page
-                    login back = new login();
-                    back.Show();
-                    Visible = false;
-                }
-                else
-                {
-                    MessageBox.Show("Error retrieving user information", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Password didn't match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            /*DateTime bd = birthdatePicker.Value;
-            DateTime currDate = DateTime.Now;
-            TimeSpan age_now = currDate - bd;
-            int age = (int)(age_now.TotalDays / 365.25);
-            if(pword.Text == repword.Text)
-            {
-                db.createAcc(uname.Text, repword.Text);             
-                var result = db.accId(uname.Text);
-                if (result != null)
-                {
-                    foreach (var item in result)
+                    if (result != null)
                     {
+                        // Assuming accId returns only one item, take the first one
+                        var item = result.First();
+
                         id = item.u_id;
                         decimal grade = Convert.ToDecimal(gpa.Text);
                         int prog_id = (int)program.SelectedValue;
                         int batch_id = (int)batch.SelectedValue;
                         string gen = gender.SelectedItem.ToString();
                         int yrs = (int)yr.SelectedValue;
-                        db.enrollStudent(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, bd, age, addressTxtbox.Text, phone.Text, emailtextBox.Text,gen, yrs,grade, prog_id, id,1,batch_id);
-                        MessageBox.Show("Successfull", "Done");
+
+                        db.enrollStudent(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, bd, age, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, yrs, grade, prog_id, id, 1, batch_id);
+                        MessageBox.Show("Successfully enrolled!", "Done");
+
+                        // Redirect to the login page
                         login back = new login();
                         back.Show();
                         Visible = false;
-                        
                     }
+                    else
+                    {
+                        MessageBox.Show("Error retrieving user information", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Password didn't match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Password didn't match!","Warning", MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }*/
+                MessageBox.Show("Student already exist!","Warning!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
 
       

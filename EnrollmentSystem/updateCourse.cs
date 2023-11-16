@@ -56,7 +56,7 @@ namespace EnrollmentSystem
                 {
                     string crs_name = item.crs_name;
                     string crs_desc = item.crs_desc;
-                    int crs_year = Convert.ToInt32(item.crs_year);
+                    int crs_year = Convert.ToInt32(item.year_id);
                     crsName.Text = crs_name;
                     crsdescTxtbox.Text = crs_desc;
                     comboBox1.Text = crs_year.ToString();
@@ -81,7 +81,7 @@ namespace EnrollmentSystem
                     int crs_id = item.crs_code;
                    /* string crs_name = item.crs_name;
                     string crs_desc = item.crs_desc;*/
-                    int crs_year = Convert.ToInt32(item.crs_year);
+                    int crs_year = Convert.ToInt32(item.year_id);
                    /* crsName.Text = crs_name;
                     crsdescTxtbox.Text = crs_desc;
                     comboBox1.Text = crs_year.ToString();*/

@@ -16,6 +16,7 @@ namespace EnrollmentSystem
         private int verId;
         int adminId;
         int insId;
+        int classId;
         public addClass(int verid)
         {
             InitializeComponent();
@@ -45,6 +46,29 @@ namespace EnrollmentSystem
 
             return true;
         }
+
+      /*  private bool Check()
+        {
+            DateTime selectedTime = fromTime.Value;
+            TimeSpan ftime = selectedTime.TimeOfDay;
+
+            DateTime selectedTo = toTime.Value;
+            TimeSpan ttime = selectedTo.TimeOfDay;
+            var result = db.checkClass(section.Text, ftime, ttime, day.Text, Convert.ToInt32(subjectcomboBox.SelectedValue), Convert.ToInt32(room.SelectedValue)).ToList();
+            if(result != null && result.Any())
+            {
+                foreach(var item in result)
+                {
+                    classId = item.class_code;
+                  
+                }
+            }
+            return true;
+
+        }*/
+            
+
+     
         private void saveBtn_Click(object sender, EventArgs e)
         {
             try
@@ -71,7 +95,7 @@ namespace EnrollmentSystem
                 }
             }catch(Exception ex)
             {
-                MessageBox.Show($"An Error occured: {ex.Message}");
+                MessageBox.Show($"An error occured: {ex.Message}");
             }
         }
 
