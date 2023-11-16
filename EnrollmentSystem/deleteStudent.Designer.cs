@@ -33,6 +33,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.showStudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbmsDataSet18 = new EnrollmentSystem.dbmsDataSet18();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.search = new System.Windows.Forms.PictureBox();
+            this.searchTxtbox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.deleteBtn = new System.Windows.Forms.Button();
+            this.showStudentTableAdapter = new EnrollmentSystem.dbmsDataSet18TableAdapters.showStudentTableAdapter();
+            this.dbmsDataSet19 = new EnrollmentSystem.dbmsDataSet19();
+            this.showStudentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.showStudentTableAdapter1 = new EnrollmentSystem.dbmsDataSet19TableAdapters.showStudentTableAdapter();
             this.studidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studfnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,14 +58,6 @@
             this.prognameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studgpaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.batchyearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.showStudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dbmsDataSet18 = new EnrollmentSystem.dbmsDataSet18();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.search = new System.Windows.Forms.PictureBox();
-            this.searchTxtbox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.deleteBtn = new System.Windows.Forms.Button();
-            this.showStudentTableAdapter = new EnrollmentSystem.dbmsDataSet18TableAdapters.showStudentTableAdapter();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -62,6 +65,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet18)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -111,7 +116,7 @@
             this.prognameDataGridViewTextBoxColumn,
             this.studgpaDataGridViewTextBoxColumn,
             this.batchyearDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.showStudentBindingSource;
+            this.dataGridView1.DataSource = this.showStudentBindingSource1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -119,6 +124,103 @@
             this.dataGridView1.Size = new System.Drawing.Size(511, 252);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // showStudentBindingSource
+            // 
+            this.showStudentBindingSource.DataMember = "showStudent";
+            this.showStudentBindingSource.DataSource = this.dbmsDataSet18;
+            // 
+            // dbmsDataSet18
+            // 
+            this.dbmsDataSet18.DataSetName = "dbmsDataSet18";
+            this.dbmsDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.search);
+            this.panel2.Controls.Add(this.searchTxtbox);
+            this.panel2.Location = new System.Drawing.Point(193, 15);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(210, 25);
+            this.panel2.TabIndex = 11;
+            // 
+            // search
+            // 
+            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.search.BackColor = System.Drawing.Color.White;
+            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
+            this.search.Location = new System.Drawing.Point(187, 3);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(19, 19);
+            this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.search.TabIndex = 5;
+            this.search.TabStop = false;
+            this.search.Click += new System.EventHandler(this.search_Click);
+            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
+            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
+            // 
+            // searchTxtbox
+            // 
+            this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTxtbox.Location = new System.Drawing.Point(0, 0);
+            this.searchTxtbox.Multiline = true;
+            this.searchTxtbox.Name = "searchTxtbox";
+            this.searchTxtbox.Size = new System.Drawing.Size(210, 25);
+            this.searchTxtbox.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(17, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(170, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Search the ID number:";
+            // 
+            // deleteBtn
+            // 
+            this.deleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.Image = ((System.Drawing.Image)(resources.GetObject("deleteBtn.Image")));
+            this.deleteBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deleteBtn.Location = new System.Drawing.Point(456, 372);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(129, 40);
+            this.deleteBtn.TabIndex = 11;
+            this.deleteBtn.Text = "       DELETE";
+            this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
+            this.deleteBtn.MouseLeave += new System.EventHandler(this.deleteBtn_MouseLeave);
+            this.deleteBtn.MouseHover += new System.EventHandler(this.deleteBtn_MouseHover);
+            // 
+            // showStudentTableAdapter
+            // 
+            this.showStudentTableAdapter.ClearBeforeFill = true;
+            // 
+            // dbmsDataSet19
+            // 
+            this.dbmsDataSet19.DataSetName = "dbmsDataSet19";
+            this.dbmsDataSet19.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // showStudentBindingSource1
+            // 
+            this.showStudentBindingSource1.DataMember = "showStudent";
+            this.showStudentBindingSource1.DataSource = this.dbmsDataSet19;
+            // 
+            // showStudentTableAdapter1
+            // 
+            this.showStudentTableAdapter1.ClearBeforeFill = true;
             // 
             // studidDataGridViewTextBoxColumn
             // 
@@ -218,88 +320,6 @@
             this.batchyearDataGridViewTextBoxColumn.Name = "batchyearDataGridViewTextBoxColumn";
             this.batchyearDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // showStudentBindingSource
-            // 
-            this.showStudentBindingSource.DataMember = "showStudent";
-            this.showStudentBindingSource.DataSource = this.dbmsDataSet18;
-            // 
-            // dbmsDataSet18
-            // 
-            this.dbmsDataSet18.DataSetName = "dbmsDataSet18";
-            this.dbmsDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.search);
-            this.panel2.Controls.Add(this.searchTxtbox);
-            this.panel2.Location = new System.Drawing.Point(193, 15);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(210, 25);
-            this.panel2.TabIndex = 11;
-            // 
-            // search
-            // 
-            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.search.BackColor = System.Drawing.Color.White;
-            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
-            this.search.Location = new System.Drawing.Point(187, 3);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(19, 19);
-            this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.search.TabIndex = 5;
-            this.search.TabStop = false;
-            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
-            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
-            // 
-            // searchTxtbox
-            // 
-            this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxtbox.Location = new System.Drawing.Point(0, 0);
-            this.searchTxtbox.Multiline = true;
-            this.searchTxtbox.Name = "searchTxtbox";
-            this.searchTxtbox.Size = new System.Drawing.Size(210, 25);
-            this.searchTxtbox.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(17, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Search the ID number:";
-            // 
-            // deleteBtn
-            // 
-            this.deleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteBtn.Image = ((System.Drawing.Image)(resources.GetObject("deleteBtn.Image")));
-            this.deleteBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.deleteBtn.Location = new System.Drawing.Point(456, 372);
-            this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(129, 40);
-            this.deleteBtn.TabIndex = 11;
-            this.deleteBtn.Text = "       DELETE";
-            this.deleteBtn.UseVisualStyleBackColor = true;
-            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
-            this.deleteBtn.MouseLeave += new System.EventHandler(this.deleteBtn_MouseLeave);
-            this.deleteBtn.MouseHover += new System.EventHandler(this.deleteBtn_MouseHover);
-            // 
-            // showStudentTableAdapter
-            // 
-            this.showStudentTableAdapter.ClearBeforeFill = true;
-            // 
             // deleteStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,6 +341,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -335,6 +357,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.BindingSource showStudentBindingSource;
+        private dbmsDataSet18 dbmsDataSet18;
+        private dbmsDataSet18TableAdapters.showStudentTableAdapter showStudentTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn studidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studfnameDataGridViewTextBoxColumn;
@@ -349,8 +374,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn prognameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studgpaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn batchyearDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource showStudentBindingSource;
-        private dbmsDataSet18 dbmsDataSet18;
-        private dbmsDataSet18TableAdapters.showStudentTableAdapter showStudentTableAdapter;
+        private System.Windows.Forms.BindingSource showStudentBindingSource1;
+        private dbmsDataSet19 dbmsDataSet19;
+        private dbmsDataSet19TableAdapters.showStudentTableAdapter showStudentTableAdapter1;
     }
 }

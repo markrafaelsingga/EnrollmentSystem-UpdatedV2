@@ -15,6 +15,7 @@ namespace EnrollmentSystem
     public partial class signIn_student : Form
     {
         int adminId;
+        string insFname, insLname, studFname, studLname;
         public signIn_student()
         {
             InitializeComponent();
@@ -53,7 +54,10 @@ namespace EnrollmentSystem
             Visible = false;*/
         }
 
-       
+       private void check()
+        {
+            
+        }
         private void signinBtn_Click(object sender, EventArgs e)
         {
             DateTime bd = birthdatePicker.Value;

@@ -209,6 +209,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbmsDataSet18.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dbmsDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet19.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dbmsDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -620,6 +625,17 @@
     </None>
     <None Include="dbmsDataSet18.xss">
       <DependentUpon>dbmsDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet19.xsc">
+      <DependentUpon>dbmsDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet19.xss">
+      <DependentUpon>dbmsDataSet19.xsd</DependentUpon>
     </None>
     <None Include="dbmsDataSet2.xsc">
       <DependentUpon>dbmsDataSet2.xsd</DependentUpon>

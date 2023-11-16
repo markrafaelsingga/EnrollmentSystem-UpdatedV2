@@ -51,10 +51,6 @@ namespace EnrollmentSystem
                         Visible = false;
                         
                     }
-                    else 
-                    {
-                        MessageBox.Show("WRONG KA BOGO", "UNDANG SKWELA!");
-                    }
                 }
             }
             else if (sId != null && sId.Any())
@@ -72,7 +68,7 @@ namespace EnrollmentSystem
             }
             else
             {
-                MessageBox.Show("WALAY SULOD OI!", "UNDANG SKWELA!");
+                MessageBox.Show("Invalid Username or Password!","Warning",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
          
 

@@ -82,7 +82,7 @@ namespace EnrollmentSystem
 
         private void delete_Click(object sender, EventArgs e)
         {
-            deleteProfessor deleteprofessor = new deleteProfessor();
+            deleteProfessor deleteprofessor = new deleteProfessor(verId);
             deleteprofessor.ShowDialog();
         }
 

@@ -31,22 +31,48 @@ namespace EnrollmentSystem
         {
             saveBtn.BackColor = System.Drawing.Color.White;
         }
+        private bool AllRequiredFieldsFilled()
+        {
+            Control[] requiredControls = { prof,subjectcomboBox,room,fromTime,toTime,section,day };
 
+            foreach (Control control in requiredControls)
+            {
+                if (string.IsNullOrWhiteSpace(control.Text))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            int ins = (int)prof.SelectedValue;
-            int crs = (int)subjectcomboBox.SelectedValue;
-            int roomId = (int)room.SelectedValue;
+            try
+            {
+                if (AllRequiredFieldsFilled())
+                {
+                    int ins = (int)prof.SelectedValue;
+                    int crs = (int)subjectcomboBox.SelectedValue;
+                    int roomId = (int)room.SelectedValue;
 
-            DateTime selectedTime = fromTime.Value;
-            TimeSpan ftime = selectedTime.TimeOfDay;
+                    DateTime selectedTime = fromTime.Value;
+                    TimeSpan ftime = selectedTime.TimeOfDay;
 
-            DateTime selectedTo = toTime.Value;
-            TimeSpan ttime = selectedTo.TimeOfDay;
+                    DateTime selectedTo = toTime.Value;
+                    TimeSpan ttime = selectedTo.TimeOfDay;
 
-            db.assignClass(section.Text,ftime,ttime,day.Text,crs,ins,roomId);
-            MessageBox.Show("Added!", "Successfull");
-            Visible = false;
+                    db.assignClass(section.Text, ftime, ttime, day.Text, crs, ins, roomId);
+                    MessageBox.Show("Added!", "Successfull");
+                    Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Input fields!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show($"An Error occured: {ex.Message}");
+            }
         }
 
         private void addClass_Load(object sender, EventArgs e)
