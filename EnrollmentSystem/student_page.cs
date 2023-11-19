@@ -18,11 +18,15 @@ namespace EnrollmentSystem
         studentClass class1;
         studentProfile profile;
         private int studId;
+        DataClasses1DataContext db = new DataClasses1DataContext();
+
         public student_page(int studId)
         {
             InitializeComponent();
-            this.studId = studId;
-            MessageBox.Show($"ID: {studId}");
+            this.studId = studId;/*
+            MessageBox.Show($"ID: {studId}");*/
+            studName();
+            
         }
 
         private void changeColor(Button colorBtn)
@@ -39,6 +43,18 @@ namespace EnrollmentSystem
         {
             homeBtn_Click(sender, e);
             changeColor(homeBtn);
+        }
+
+        private void studName()
+        {
+            var result = db.studName(studId).ToList();
+            if(result!=null && result.Any())
+            {
+                foreach(var item in result)
+                {
+                    userFname.Text = item.Fullname;
+                }
+            }
         }
 
         private void homeBtn_Click(object sender, EventArgs e)
@@ -278,6 +294,12 @@ namespace EnrollmentSystem
         {
             homeBtn_Click(sender, e);
             changeColor(homeBtn);
+            
+        }
+
+        private void userFname_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

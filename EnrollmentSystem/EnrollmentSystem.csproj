@@ -219,6 +219,36 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbmsDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dbmsDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet25.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dbmsDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -647,6 +677,72 @@
     </None>
     <None Include="dbmsDataSet2.xss">
       <DependentUpon>dbmsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet20.xsc">
+      <DependentUpon>dbmsDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet20.xss">
+      <DependentUpon>dbmsDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet21.xsc">
+      <DependentUpon>dbmsDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet21.xss">
+      <DependentUpon>dbmsDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet22.xsc">
+      <DependentUpon>dbmsDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet22.xss">
+      <DependentUpon>dbmsDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet23.xsc">
+      <DependentUpon>dbmsDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet23.xss">
+      <DependentUpon>dbmsDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet24.xsc">
+      <DependentUpon>dbmsDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet24.xss">
+      <DependentUpon>dbmsDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet25.xsc">
+      <DependentUpon>dbmsDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet25.xss">
+      <DependentUpon>dbmsDataSet25.xsd</DependentUpon>
     </None>
     <None Include="dbmsDataSet3.xsc">
       <DependentUpon>dbmsDataSet3.xsd</DependentUpon>

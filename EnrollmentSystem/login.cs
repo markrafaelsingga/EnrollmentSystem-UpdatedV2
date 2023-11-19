@@ -31,6 +31,21 @@ namespace EnrollmentSystem
             Visible = false;
         }
 
+        private bool AllRequiredFieldsFilled()
+        {
+            Control[] requiredControls = {uname,pword };
+
+            foreach (Control control in requiredControls)
+            {
+                if (string.IsNullOrWhiteSpace(control.Text))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
         private void loginBtn_Click(object sender, EventArgs e)
         {
             string user = uname.Text;
@@ -38,37 +53,49 @@ namespace EnrollmentSystem
 
             var verId = db.logId(uname.Text, pword.Text).ToList();
             var sId = db.studId(uname.Text, pword.Text).ToList();
-            
-            if (verId != null && verId.Any())
+            try
             {
-                foreach (var item in verId)
+                if (AllRequiredFieldsFilled())
                 {
-                    int id = item.admin_id;                   
-                    if (id > 0)
+                    if (verId != null && verId.Any())
                     {
-                        admin_page dashboard = new admin_page(id);
-                        dashboard.Show();
-                        Visible = false;
-                        
+                        foreach (var item in verId)
+                        {
+                            int id = item.admin_id;
+                            if (id > 0)
+                            {
+                                admin_page dashboard = new admin_page(id);
+                                dashboard.Show();
+                                Visible = false;
+
+                            }
+                        }
+                    }
+                    else if (sId != null && sId.Any())
+                    {
+                        foreach (var items in sId)
+                        {
+                            studId = items.stud_id;
+                            if (studId > 0)
+                            {
+                                student_page dashboard = new student_page(studId);
+                                dashboard.Show();
+                                Visible = false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Username or Password!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-            }
-            else if (sId != null && sId.Any())
-            {
-                foreach (var items in sId)
+                else
                 {
-                    studId = items.stud_id;
-                    if (studId > 0)
-                    {
-                        student_page dashboard = new student_page(studId);
-                        dashboard.Show();
-                        Visible = false;
-                    }
+                    MessageBox.Show("Input fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            else
+            }catch(Exception ex)
             {
-                MessageBox.Show("Invalid Username or Password!","Warning",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show($"An error occured: {ex.Message}");
             }
          
 

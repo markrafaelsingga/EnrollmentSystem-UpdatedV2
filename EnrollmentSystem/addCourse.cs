@@ -34,11 +34,24 @@ namespace EnrollmentSystem
         private void saveBtn_Click(object sender, EventArgs e)
         {
             int year = Convert.ToInt32(comboBox1.SelectedItem);
-            db.addCrs(crscodeTxtbox.Text, crsdescTxtbox.Text, year);
-            MessageBox.Show("Added","Successfull");
+            int prog_id = (int)prog.SelectedValue;
+            db.addCrs(crscodeTxtbox.Text, crsdescTxtbox.Text, year,prog_id);
+            MessageBox.Show("Added", "Successfull");
             adminCourse ac = new adminCourse(verId);
-            ac.Show();
-            Visible = false;
+            
+            
+        }
+
+        private void progList()
+        {
+            prog.DataSource = db.progList();
+            prog.DisplayMember = "prog_name";
+            prog.ValueMember = "prog_id";
+        }
+
+        private void addCourse_Load(object sender, EventArgs e)
+        {
+            progList();
         }
     }
 }

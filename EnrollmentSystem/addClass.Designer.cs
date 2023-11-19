@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.prog = new System.Windows.Forms.ComboBox();
+            this.prof = new System.Windows.Forms.ComboBox();
+            this.day = new System.Windows.Forms.TextBox();
+            this.room = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.subjectcomboBox = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -41,11 +45,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.saveBtn = new System.Windows.Forms.Button();
             this.section = new System.Windows.Forms.TextBox();
-            this.room = new System.Windows.Forms.ComboBox();
-            this.day = new System.Windows.Forms.TextBox();
-            this.prof = new System.Windows.Forms.ComboBox();
+            this.saveBtn = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +57,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.prog);
             this.panel1.Controls.Add(this.prof);
             this.panel1.Controls.Add(this.day);
             this.panel1.Controls.Add(this.room);
@@ -75,6 +79,52 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(616, 252);
             this.panel1.TabIndex = 5;
+            // 
+            // prog
+            // 
+            this.prog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.prog.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.prog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prog.FormattingEnabled = true;
+            this.prog.Location = new System.Drawing.Point(395, 153);
+            this.prog.Name = "prog";
+            this.prog.Size = new System.Drawing.Size(200, 28);
+            this.prog.TabIndex = 23;
+            // 
+            // prof
+            // 
+            this.prof.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.prof.FormattingEnabled = true;
+            this.prof.Location = new System.Drawing.Point(111, 200);
+            this.prof.Name = "prof";
+            this.prof.Size = new System.Drawing.Size(484, 21);
+            this.prof.TabIndex = 22;
+            // 
+            // day
+            // 
+            this.day.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.day.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.day.Location = new System.Drawing.Point(87, 155);
+            this.day.Name = "day";
+            this.day.Size = new System.Drawing.Size(215, 26);
+            this.day.TabIndex = 21;
+            // 
+            // room
+            // 
+            this.room.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.room.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.room.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.room.FormattingEnabled = true;
+            this.room.Location = new System.Drawing.Point(266, 35);
+            this.room.Name = "room";
+            this.room.Size = new System.Drawing.Size(244, 28);
+            this.room.TabIndex = 20;
             // 
             // label8
             // 
@@ -240,6 +290,17 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Section:";
             // 
+            // section
+            // 
+            this.section.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.section.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.section.Location = new System.Drawing.Point(20, 35);
+            this.section.Name = "section";
+            this.section.Size = new System.Drawing.Size(215, 26);
+            this.section.TabIndex = 3;
+            // 
             // saveBtn
             // 
             this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -256,49 +317,19 @@
             this.saveBtn.MouseLeave += new System.EventHandler(this.saveBtn_MouseLeave);
             this.saveBtn.MouseHover += new System.EventHandler(this.saveBtn_MouseHover);
             // 
-            // section
+            // label9
             // 
-            this.section.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.section.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section.Location = new System.Drawing.Point(20, 35);
-            this.section.Name = "section";
-            this.section.Size = new System.Drawing.Size(215, 26);
-            this.section.TabIndex = 3;
-            // 
-            // room
-            // 
-            this.room.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.room.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.room.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.room.FormattingEnabled = true;
-            this.room.Location = new System.Drawing.Point(266, 35);
-            this.room.Name = "room";
-            this.room.Size = new System.Drawing.Size(244, 28);
-            this.room.TabIndex = 20;
-            // 
-            // day
-            // 
-            this.day.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.day.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.day.Location = new System.Drawing.Point(87, 155);
-            this.day.Name = "day";
-            this.day.Size = new System.Drawing.Size(215, 26);
-            this.day.TabIndex = 21;
-            // 
-            // prof
-            // 
-            this.prof.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.prof.FormattingEnabled = true;
-            this.prof.Location = new System.Drawing.Point(111, 200);
-            this.prof.Name = "prof";
-            this.prof.Size = new System.Drawing.Size(484, 21);
-            this.prof.TabIndex = 22;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label9.Location = new System.Drawing.Point(391, 132);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(77, 20);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Program: ";
             // 
             // addClass
             // 
@@ -338,5 +369,7 @@
         private System.Windows.Forms.TextBox section;
         private System.Windows.Forms.TextBox day;
         private System.Windows.Forms.ComboBox prof;
+        private System.Windows.Forms.ComboBox prog;
+        private System.Windows.Forms.Label label9;
     }
 }

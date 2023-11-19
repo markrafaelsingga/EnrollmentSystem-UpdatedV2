@@ -122,6 +122,7 @@
             this.userFname.Size = new System.Drawing.Size(91, 20);
             this.userFname.TabIndex = 0;
             this.userFname.Text = "STUDENT";
+            this.userFname.Click += new System.EventHandler(this.userFname_Click);
             // 
             // label2
             // 

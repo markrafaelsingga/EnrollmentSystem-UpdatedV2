@@ -40,10 +40,6 @@
             this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.crscodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.crsnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.crsdescDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yearlevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.showCrsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.dbmsDataSet15 = new EnrollmentSystem.dbmsDataSet15();
             this.showCrsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -59,6 +55,14 @@
             this.showCrsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.showCrsTableAdapter2 = new EnrollmentSystem.dbmsDataSet14TableAdapters.showCrsTableAdapter();
             this.showCrsTableAdapter3 = new EnrollmentSystem.dbmsDataSet15TableAdapters.showCrsTableAdapter();
+            this.dbmsDataSet21 = new EnrollmentSystem.dbmsDataSet21();
+            this.showCrsBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.showCrsTableAdapter4 = new EnrollmentSystem.dbmsDataSet21TableAdapters.showCrsTableAdapter();
+            this.crscodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.crsnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.crsdescDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yearlevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prognameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.college)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delete)).BeginInit();
@@ -77,6 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.showCrsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showCrsBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showCrsBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -203,8 +209,9 @@
             this.crscodeDataGridViewTextBoxColumn,
             this.crsnameDataGridViewTextBoxColumn,
             this.crsdescDataGridViewTextBoxColumn,
-            this.yearlevelDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.showCrsBindingSource3;
+            this.yearlevelDataGridViewTextBoxColumn,
+            this.prognameDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.showCrsBindingSource4;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -212,34 +219,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(772, 348);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // crscodeDataGridViewTextBoxColumn
-            // 
-            this.crscodeDataGridViewTextBoxColumn.DataPropertyName = "crs_code";
-            this.crscodeDataGridViewTextBoxColumn.HeaderText = "crs_code";
-            this.crscodeDataGridViewTextBoxColumn.Name = "crscodeDataGridViewTextBoxColumn";
-            this.crscodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // crsnameDataGridViewTextBoxColumn
-            // 
-            this.crsnameDataGridViewTextBoxColumn.DataPropertyName = "crs_name";
-            this.crsnameDataGridViewTextBoxColumn.HeaderText = "crs_name";
-            this.crsnameDataGridViewTextBoxColumn.Name = "crsnameDataGridViewTextBoxColumn";
-            this.crsnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // crsdescDataGridViewTextBoxColumn
-            // 
-            this.crsdescDataGridViewTextBoxColumn.DataPropertyName = "crs_desc";
-            this.crsdescDataGridViewTextBoxColumn.HeaderText = "crs_desc";
-            this.crsdescDataGridViewTextBoxColumn.Name = "crsdescDataGridViewTextBoxColumn";
-            this.crsdescDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // yearlevelDataGridViewTextBoxColumn
-            // 
-            this.yearlevelDataGridViewTextBoxColumn.DataPropertyName = "year_level";
-            this.yearlevelDataGridViewTextBoxColumn.HeaderText = "year_level";
-            this.yearlevelDataGridViewTextBoxColumn.Name = "yearlevelDataGridViewTextBoxColumn";
-            this.yearlevelDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // showCrsBindingSource3
             // 
@@ -328,6 +307,55 @@
             // 
             this.showCrsTableAdapter3.ClearBeforeFill = true;
             // 
+            // dbmsDataSet21
+            // 
+            this.dbmsDataSet21.DataSetName = "dbmsDataSet21";
+            this.dbmsDataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // showCrsBindingSource4
+            // 
+            this.showCrsBindingSource4.DataMember = "showCrs";
+            this.showCrsBindingSource4.DataSource = this.dbmsDataSet21;
+            // 
+            // showCrsTableAdapter4
+            // 
+            this.showCrsTableAdapter4.ClearBeforeFill = true;
+            // 
+            // crscodeDataGridViewTextBoxColumn
+            // 
+            this.crscodeDataGridViewTextBoxColumn.DataPropertyName = "crs_code";
+            this.crscodeDataGridViewTextBoxColumn.HeaderText = "crs_code";
+            this.crscodeDataGridViewTextBoxColumn.Name = "crscodeDataGridViewTextBoxColumn";
+            this.crscodeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // crsnameDataGridViewTextBoxColumn
+            // 
+            this.crsnameDataGridViewTextBoxColumn.DataPropertyName = "crs_name";
+            this.crsnameDataGridViewTextBoxColumn.HeaderText = "crs_name";
+            this.crsnameDataGridViewTextBoxColumn.Name = "crsnameDataGridViewTextBoxColumn";
+            this.crsnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // crsdescDataGridViewTextBoxColumn
+            // 
+            this.crsdescDataGridViewTextBoxColumn.DataPropertyName = "crs_desc";
+            this.crsdescDataGridViewTextBoxColumn.HeaderText = "crs_desc";
+            this.crsdescDataGridViewTextBoxColumn.Name = "crsdescDataGridViewTextBoxColumn";
+            this.crsdescDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // yearlevelDataGridViewTextBoxColumn
+            // 
+            this.yearlevelDataGridViewTextBoxColumn.DataPropertyName = "year_level";
+            this.yearlevelDataGridViewTextBoxColumn.HeaderText = "year_level";
+            this.yearlevelDataGridViewTextBoxColumn.Name = "yearlevelDataGridViewTextBoxColumn";
+            this.yearlevelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // prognameDataGridViewTextBoxColumn
+            // 
+            this.prognameDataGridViewTextBoxColumn.DataPropertyName = "prog_name";
+            this.prognameDataGridViewTextBoxColumn.HeaderText = "prog_name";
+            this.prognameDataGridViewTextBoxColumn.Name = "prognameDataGridViewTextBoxColumn";
+            this.prognameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // adminCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -362,6 +390,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.showCrsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showCrsBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showCrsBindingSource4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -393,9 +423,13 @@
         private dbmsDataSet15 dbmsDataSet15;
         private System.Windows.Forms.BindingSource showCrsBindingSource3;
         private dbmsDataSet15TableAdapters.showCrsTableAdapter showCrsTableAdapter3;
+        private dbmsDataSet21 dbmsDataSet21;
+        private System.Windows.Forms.BindingSource showCrsBindingSource4;
+        private dbmsDataSet21TableAdapters.showCrsTableAdapter showCrsTableAdapter4;
         private System.Windows.Forms.DataGridViewTextBoxColumn crscodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn crsnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn crsdescDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn yearlevelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prognameDataGridViewTextBoxColumn;
     }
 }

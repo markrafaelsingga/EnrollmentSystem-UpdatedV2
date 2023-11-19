@@ -30,23 +30,44 @@ namespace EnrollmentSystem
             saveBtn.BackColor = System.Drawing.Color.White;
         }
 
+        private bool AllRequiredFieldsFilled()
+        {
+            Control[] requiredControls = { birthdatePicker, gender,fnameTxtbox,miTxtbox,lnameTxtbox,phone,emailtextBox };
+
+            foreach (Control control in requiredControls)
+            {
+                if (string.IsNullOrWhiteSpace(control.Text))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
         private void saveBtn_Click(object sender, EventArgs e)
         {
             var result = db.adminID(verId).ToList();
-            if (result != null && result.Any())
+            if (AllRequiredFieldsFilled())
             {
-                foreach (var item in result)
+                if (result != null && result.Any())
                 {
-                    int adminID = item.admin_id;
-                    DateTime bd = birthdatePicker.Value;
-                    DateTime currdate = DateTime.Now;
-                    TimeSpan age_now = currdate - bd;
-                    int age = (int)(age_now.TotalDays / 365.25);
-                    string gen = gender.SelectedItem.ToString();
-                    db.addInstructor(fnameTxtbox.Text, miTxtbox.Text, lnameTxtbox.Text, bd, age, gen, phone.Text, emailtextBox.Text, adminID);
-                    MessageBox.Show("Professor Added!", "Successfull");
-                    Visible = false;
+                    foreach (var item in result)
+                    {
+                        int adminID = item.admin_id;
+                        DateTime bd = birthdatePicker.Value;
+                        DateTime currdate = DateTime.Now;
+                        TimeSpan age_now = currdate - bd;
+                        int age = (int)(age_now.TotalDays / 365.25);
+                        string gen = gender.SelectedItem.ToString();
+                        db.addInstructor(fnameTxtbox.Text, miTxtbox.Text, lnameTxtbox.Text, bd, age, gen, phone.Text, emailtextBox.Text, adminID);
+                        MessageBox.Show("Professor Added!", "Successfull");
+                        Visible = false;
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Input fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

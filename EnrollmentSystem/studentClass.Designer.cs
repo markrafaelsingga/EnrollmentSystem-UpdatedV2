@@ -31,11 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.studClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbmsDataSet16 = new EnrollmentSystem.dbmsDataSet16();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dbmsDataSet16 = new EnrollmentSystem.dbmsDataSet16();
-            this.studClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studClassTableAdapter = new EnrollmentSystem.dbmsDataSet16TableAdapters.studClassTableAdapter();
+            this.dbmsDataSet25 = new EnrollmentSystem.dbmsDataSet25();
+            this.studClassBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.studClassTableAdapter1 = new EnrollmentSystem.dbmsDataSet25TableAdapters.studClassTableAdapter();
             this.classsectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.classfromTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.classtoTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,9 +49,11 @@
             this.yearlevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studClassBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet16)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studClassBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,7 +83,7 @@
             this.instructornameDataGridViewTextBoxColumn,
             this.roomnameDataGridViewTextBoxColumn,
             this.yearlevelDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.studClassBindingSource;
+            this.dataGridView1.DataSource = this.studClassBindingSource1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -86,6 +91,16 @@
             this.dataGridView1.Size = new System.Drawing.Size(735, 361);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // studClassBindingSource
+            // 
+            this.studClassBindingSource.DataMember = "studClass";
+            this.studClassBindingSource.DataSource = this.dbmsDataSet16;
+            // 
+            // dbmsDataSet16
+            // 
+            this.dbmsDataSet16.DataSetName = "dbmsDataSet16";
+            this.dbmsDataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // flowLayoutPanel1
             // 
@@ -108,19 +123,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "MY CLASSES";
             // 
-            // dbmsDataSet16
-            // 
-            this.dbmsDataSet16.DataSetName = "dbmsDataSet16";
-            this.dbmsDataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studClassBindingSource
-            // 
-            this.studClassBindingSource.DataMember = "studClass";
-            this.studClassBindingSource.DataSource = this.dbmsDataSet16;
-            // 
             // studClassTableAdapter
             // 
             this.studClassTableAdapter.ClearBeforeFill = true;
+            // 
+            // dbmsDataSet25
+            // 
+            this.dbmsDataSet25.DataSetName = "dbmsDataSet25";
+            this.dbmsDataSet25.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studClassBindingSource1
+            // 
+            this.studClassBindingSource1.DataMember = "studClass";
+            this.studClassBindingSource1.DataSource = this.dbmsDataSet25;
+            // 
+            // studClassTableAdapter1
+            // 
+            this.studClassTableAdapter1.ClearBeforeFill = true;
             // 
             // classsectionDataGridViewTextBoxColumn
             // 
@@ -191,10 +210,12 @@
             this.Load += new System.EventHandler(this.studentClass_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studClassBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet16)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studClassBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studClassBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -205,6 +226,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource studClassBindingSource;
+        private dbmsDataSet16 dbmsDataSet16;
+        private dbmsDataSet16TableAdapters.studClassTableAdapter studClassTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn classsectionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn classfromTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn classtoTimeDataGridViewTextBoxColumn;
@@ -213,8 +237,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn instructornameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn roomnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn yearlevelDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource studClassBindingSource;
-        private dbmsDataSet16 dbmsDataSet16;
-        private dbmsDataSet16TableAdapters.studClassTableAdapter studClassTableAdapter;
+        private System.Windows.Forms.BindingSource studClassBindingSource1;
+        private dbmsDataSet25 dbmsDataSet25;
+        private dbmsDataSet25TableAdapters.studClassTableAdapter studClassTableAdapter1;
     }
 }

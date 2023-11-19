@@ -112,11 +112,20 @@ namespace EnrollmentSystem
             subjectcomboBox.DataSource = db.showCrs().ToList();
             subjectcomboBox.DisplayMember = "crs_name";
             subjectcomboBox.ValueMember = "crs_code";
+
+            progList();
         }
 
         private void toTime_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void progList()
+        {
+            prog.DataSource = db.progList().ToList();
+            prog.DisplayMember = "prog_name";
+            prog.ValueMember = "prog_id";
         }
     }
 }

@@ -61,20 +61,48 @@ namespace EnrollmentSystem
             display();
         }
 
+        private bool AllRequiredFieldsFilled()
+        {
+            Control[] requiredControls = { subjectcomboBox,room,prof,section,day };
+
+            foreach (Control control in requiredControls)
+            {
+                if (string.IsNullOrWhiteSpace(control.Text))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            int crs = (int)subjectcomboBox.SelectedValue;
-            int roomId = (int)room.SelectedValue;
-            int insId = (int)prof.SelectedValue;
-            DateTime selectedTime = fromTime.Value;
-            TimeSpan ftime = selectedTime.TimeOfDay;
+            try
+            {
+                if (AllRequiredFieldsFilled())
+                {
+                    int crs = (int)subjectcomboBox.SelectedValue;
+                    int roomId = (int)room.SelectedValue;
+                    int insId = (int)prof.SelectedValue;
+                    DateTime selectedTime = fromTime.Value;
+                    TimeSpan ftime = selectedTime.TimeOfDay;
 
-            DateTime selectedTo = toTime.Value;
-            TimeSpan ttime = selectedTo.TimeOfDay;
-            db.updateClass(id,section.Text,ftime,ttime,day.Text,crs,insId,roomId);
+                    DateTime selectedTo = toTime.Value;
+                    TimeSpan ttime = selectedTo.TimeOfDay;
+                    db.updateClass(id, section.Text, ftime, ttime, day.Text, crs, insId, roomId);
 
-            MessageBox.Show("Updated!", "Successfull");
-            display();
+                    MessageBox.Show("Updated!", "Successfull");
+                    display();
+                }
+                else
+                {
+                    MessageBox.Show("Input fields", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show($"An error occured: {ex.Message}");
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

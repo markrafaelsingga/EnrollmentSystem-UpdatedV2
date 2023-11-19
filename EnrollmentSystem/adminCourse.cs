@@ -24,8 +24,8 @@ namespace EnrollmentSystem
 
         private void adminCourse_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dbmsDataSet15.showCrs' table. You can move, or remove it, as needed.
-            this.showCrsTableAdapter3.Fill(this.dbmsDataSet15.showCrs);      
+        
+
             this.ControlBox = false;
             display();
         }

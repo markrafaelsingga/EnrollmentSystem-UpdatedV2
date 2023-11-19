@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(updateStudent));
             this.saveBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.gpa = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.yr = new System.Windows.Forms.ComboBox();
             this.gender = new System.Windows.Forms.ComboBox();
             this.course = new System.Windows.Forms.ComboBox();
             this.birthdatePicker = new System.Windows.Forms.DateTimePicker();
@@ -55,16 +58,16 @@
             this.search = new System.Windows.Forms.PictureBox();
             this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.yr = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.showStudentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dbmsDataSet10 = new EnrollmentSystem.dbmsDataSet10();
             this.dbmsDataSet9 = new EnrollmentSystem.dbmsDataSet9();
             this.showStudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.showStudentTableAdapter = new EnrollmentSystem.dbmsDataSet9TableAdapters.showStudentTableAdapter();
-            this.gpa = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dbmsDataSet10 = new EnrollmentSystem.dbmsDataSet10();
-            this.showStudentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.showStudentTableAdapter1 = new EnrollmentSystem.dbmsDataSet10TableAdapters.showStudentTableAdapter();
+            this.dbmsDataSet20 = new EnrollmentSystem.dbmsDataSet20();
+            this.showStudentBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.showStudentTableAdapter2 = new EnrollmentSystem.dbmsDataSet20TableAdapters.showStudentTableAdapter();
             this.studidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studfnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,17 +78,20 @@
             this.studphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studemailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studgenderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studyearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yearlevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prognameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studgpaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.batchyearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // saveBtn
@@ -132,6 +138,39 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(865, 312);
             this.panel1.TabIndex = 9;
+            // 
+            // gpa
+            // 
+            this.gpa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpa.Location = new System.Drawing.Point(501, 224);
+            this.gpa.Name = "gpa";
+            this.gpa.Size = new System.Drawing.Size(215, 26);
+            this.gpa.TabIndex = 46;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label6.Location = new System.Drawing.Point(444, 230);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 20);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "GPA: ";
+            // 
+            // yr
+            // 
+            this.yr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yr.FormattingEnabled = true;
+            this.yr.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.yr.Location = new System.Drawing.Point(502, 177);
+            this.yr.Name = "yr";
+            this.yr.Size = new System.Drawing.Size(117, 28);
+            this.yr.TabIndex = 44;
             // 
             // gender
             // 
@@ -365,20 +404,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Search the ID number:";
             // 
-            // yr
-            // 
-            this.yr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yr.FormattingEnabled = true;
-            this.yr.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.yr.Location = new System.Drawing.Point(502, 177);
-            this.yr.Name = "yr";
-            this.yr.Size = new System.Drawing.Size(117, 28);
-            this.yr.TabIndex = 44;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -397,16 +422,27 @@
             this.studphoneDataGridViewTextBoxColumn,
             this.studemailDataGridViewTextBoxColumn,
             this.studgenderDataGridViewTextBoxColumn,
-            this.studyearDataGridViewTextBoxColumn,
+            this.yearlevelDataGridViewTextBoxColumn,
             this.prognameDataGridViewTextBoxColumn,
-            this.studgpaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.showStudentBindingSource1;
+            this.studgpaDataGridViewTextBoxColumn,
+            this.batchyearDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.showStudentBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(28, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(865, 418);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // showStudentBindingSource1
+            // 
+            this.showStudentBindingSource1.DataMember = "showStudent";
+            this.showStudentBindingSource1.DataSource = this.dbmsDataSet10;
+            // 
+            // dbmsDataSet10
+            // 
+            this.dbmsDataSet10.DataSetName = "dbmsDataSet10";
+            this.dbmsDataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dbmsDataSet9
             // 
@@ -422,38 +458,23 @@
             // 
             this.showStudentTableAdapter.ClearBeforeFill = true;
             // 
-            // gpa
-            // 
-            this.gpa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpa.Location = new System.Drawing.Point(501, 224);
-            this.gpa.Name = "gpa";
-            this.gpa.Size = new System.Drawing.Size(215, 26);
-            this.gpa.TabIndex = 46;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label6.Location = new System.Drawing.Point(444, 230);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
-            this.label6.TabIndex = 45;
-            this.label6.Text = "GPA: ";
-            // 
-            // dbmsDataSet10
-            // 
-            this.dbmsDataSet10.DataSetName = "dbmsDataSet10";
-            this.dbmsDataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // showStudentBindingSource1
-            // 
-            this.showStudentBindingSource1.DataMember = "showStudent";
-            this.showStudentBindingSource1.DataSource = this.dbmsDataSet10;
-            // 
             // showStudentTableAdapter1
             // 
             this.showStudentTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dbmsDataSet20
+            // 
+            this.dbmsDataSet20.DataSetName = "dbmsDataSet20";
+            this.dbmsDataSet20.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // showStudentBindingSource2
+            // 
+            this.showStudentBindingSource2.DataMember = "showStudent";
+            this.showStudentBindingSource2.DataSource = this.dbmsDataSet20;
+            // 
+            // showStudentTableAdapter2
+            // 
+            this.showStudentTableAdapter2.ClearBeforeFill = true;
             // 
             // studidDataGridViewTextBoxColumn
             // 
@@ -525,12 +546,12 @@
             this.studgenderDataGridViewTextBoxColumn.Name = "studgenderDataGridViewTextBoxColumn";
             this.studgenderDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // studyearDataGridViewTextBoxColumn
+            // yearlevelDataGridViewTextBoxColumn
             // 
-            this.studyearDataGridViewTextBoxColumn.DataPropertyName = "stud_year";
-            this.studyearDataGridViewTextBoxColumn.HeaderText = "stud_year";
-            this.studyearDataGridViewTextBoxColumn.Name = "studyearDataGridViewTextBoxColumn";
-            this.studyearDataGridViewTextBoxColumn.ReadOnly = true;
+            this.yearlevelDataGridViewTextBoxColumn.DataPropertyName = "year_level";
+            this.yearlevelDataGridViewTextBoxColumn.HeaderText = "year_level";
+            this.yearlevelDataGridViewTextBoxColumn.Name = "yearlevelDataGridViewTextBoxColumn";
+            this.yearlevelDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // prognameDataGridViewTextBoxColumn
             // 
@@ -545,6 +566,13 @@
             this.studgpaDataGridViewTextBoxColumn.HeaderText = "stud_gpa";
             this.studgpaDataGridViewTextBoxColumn.Name = "studgpaDataGridViewTextBoxColumn";
             this.studgpaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // batchyearDataGridViewTextBoxColumn
+            // 
+            this.batchyearDataGridViewTextBoxColumn.DataPropertyName = "batch_year";
+            this.batchyearDataGridViewTextBoxColumn.HeaderText = "batch_year";
+            this.batchyearDataGridViewTextBoxColumn.Name = "batchyearDataGridViewTextBoxColumn";
+            this.batchyearDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // updateStudent
             // 
@@ -566,10 +594,12 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -608,6 +638,9 @@
         private dbmsDataSet9TableAdapters.showStudentTableAdapter showStudentTableAdapter;
         private System.Windows.Forms.TextBox gpa;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.BindingSource showStudentBindingSource1;
+        private dbmsDataSet10 dbmsDataSet10;
+        private dbmsDataSet10TableAdapters.showStudentTableAdapter showStudentTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn studidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studfnameDataGridViewTextBoxColumn;
@@ -618,11 +651,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn studphoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studemailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studgenderDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studyearDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn yearlevelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prognameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studgpaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource showStudentBindingSource1;
-        private dbmsDataSet10 dbmsDataSet10;
-        private dbmsDataSet10TableAdapters.showStudentTableAdapter showStudentTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn batchyearDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource showStudentBindingSource2;
+        private dbmsDataSet20 dbmsDataSet20;
+        private dbmsDataSet20TableAdapters.showStudentTableAdapter showStudentTableAdapter2;
     }
 }

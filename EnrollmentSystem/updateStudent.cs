@@ -52,7 +52,7 @@ namespace EnrollmentSystem
             string gen = gender.SelectedItem.ToString();
             int year = Convert.ToInt32(yr.SelectedItem);
             int prog_id = (int)course.SelectedValue;
-            int grade = Convert.ToInt32(gpa.Text);
+            decimal grade = Convert.ToDecimal(gpa.Text);
             db.updateStudent(id, fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text,bd,age,addressTxtbox.Text,phone.Text,emailtextBox.Text,gen,year,prog_id,grade,adminId);
             MessageBox.Show("Updated!", "Successfull");
             display();
