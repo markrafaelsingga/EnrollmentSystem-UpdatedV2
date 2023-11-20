@@ -34,7 +34,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.userFname = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnHome = new System.Windows.Forms.Panel();
             this.homeBtn = new System.Windows.Forms.Button();
@@ -70,19 +69,19 @@
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
-            this.sidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sidebar.Margin = new System.Windows.Forms.Padding(4);
             this.sidebar.Name = "sidebar";
             this.sidebar.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.sidebar.Size = new System.Drawing.Size(293, 709);
+            this.sidebar.Size = new System.Drawing.Size(293, 599);
             this.sidebar.TabIndex = 1;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(4, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(292, 130);
+            this.panel1.Size = new System.Drawing.Size(292, 160);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -91,10 +90,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(84, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(72, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(148, 138);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -102,10 +101,9 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.userFname);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(4, 148);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(4, 178);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(292, 54);
             this.panel2.TabIndex = 1;
@@ -124,18 +122,6 @@
             this.userFname.TabIndex = 0;
             this.userFname.Text = "STUDENT";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(195, 26);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "!";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -151,8 +137,8 @@
             // pnHome
             // 
             this.pnHome.Controls.Add(this.homeBtn);
-            this.pnHome.Location = new System.Drawing.Point(4, 210);
-            this.pnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnHome.Location = new System.Drawing.Point(4, 240);
+            this.pnHome.Margin = new System.Windows.Forms.Padding(4);
             this.pnHome.Name = "pnHome";
             this.pnHome.Size = new System.Drawing.Size(292, 49);
             this.pnHome.TabIndex = 1;
@@ -170,7 +156,7 @@
             this.homeBtn.Image = ((System.Drawing.Image)(resources.GetObject("homeBtn.Image")));
             this.homeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.homeBtn.Location = new System.Drawing.Point(0, 0);
-            this.homeBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.homeBtn.Margin = new System.Windows.Forms.Padding(4);
             this.homeBtn.Name = "homeBtn";
             this.homeBtn.Padding = new System.Windows.Forms.Padding(13, 6, 13, 6);
             this.homeBtn.Size = new System.Drawing.Size(292, 49);
@@ -183,8 +169,8 @@
             // pnCourse
             // 
             this.pnCourse.Controls.Add(this.courseBtn);
-            this.pnCourse.Location = new System.Drawing.Point(4, 267);
-            this.pnCourse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnCourse.Location = new System.Drawing.Point(4, 297);
+            this.pnCourse.Margin = new System.Windows.Forms.Padding(4);
             this.pnCourse.Name = "pnCourse";
             this.pnCourse.Padding = new System.Windows.Forms.Padding(0, 12, 13, 12);
             this.pnCourse.Size = new System.Drawing.Size(292, 49);
@@ -203,7 +189,7 @@
             this.courseBtn.Image = ((System.Drawing.Image)(resources.GetObject("courseBtn.Image")));
             this.courseBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.courseBtn.Location = new System.Drawing.Point(0, 0);
-            this.courseBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.courseBtn.Margin = new System.Windows.Forms.Padding(4);
             this.courseBtn.Name = "courseBtn";
             this.courseBtn.Padding = new System.Windows.Forms.Padding(13, 6, 13, 6);
             this.courseBtn.Size = new System.Drawing.Size(292, 49);
@@ -216,8 +202,8 @@
             // pnClass
             // 
             this.pnClass.Controls.Add(this.classBtn);
-            this.pnClass.Location = new System.Drawing.Point(4, 324);
-            this.pnClass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnClass.Location = new System.Drawing.Point(4, 354);
+            this.pnClass.Margin = new System.Windows.Forms.Padding(4);
             this.pnClass.Name = "pnClass";
             this.pnClass.Padding = new System.Windows.Forms.Padding(0, 12, 13, 12);
             this.pnClass.Size = new System.Drawing.Size(292, 49);
@@ -236,7 +222,7 @@
             this.classBtn.Image = ((System.Drawing.Image)(resources.GetObject("classBtn.Image")));
             this.classBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.classBtn.Location = new System.Drawing.Point(0, 0);
-            this.classBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.classBtn.Margin = new System.Windows.Forms.Padding(4);
             this.classBtn.Name = "classBtn";
             this.classBtn.Padding = new System.Windows.Forms.Padding(13, 6, 13, 6);
             this.classBtn.Size = new System.Drawing.Size(292, 49);
@@ -250,8 +236,8 @@
             // 
             this.pnProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pnProfile.Controls.Add(this.profileBtn);
-            this.pnProfile.Location = new System.Drawing.Point(4, 381);
-            this.pnProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnProfile.Location = new System.Drawing.Point(4, 411);
+            this.pnProfile.Margin = new System.Windows.Forms.Padding(4);
             this.pnProfile.Name = "pnProfile";
             this.pnProfile.Padding = new System.Windows.Forms.Padding(0, 12, 13, 12);
             this.pnProfile.Size = new System.Drawing.Size(292, 49);
@@ -270,7 +256,7 @@
             this.profileBtn.Image = ((System.Drawing.Image)(resources.GetObject("profileBtn.Image")));
             this.profileBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.profileBtn.Location = new System.Drawing.Point(0, 0);
-            this.profileBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.profileBtn.Margin = new System.Windows.Forms.Padding(4);
             this.profileBtn.Name = "profileBtn";
             this.profileBtn.Padding = new System.Windows.Forms.Padding(13, 6, 13, 6);
             this.profileBtn.Size = new System.Drawing.Size(291, 49);
@@ -284,8 +270,8 @@
             // 
             this.pnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pnLogout.Controls.Add(this.logoutBtn);
-            this.pnLogout.Location = new System.Drawing.Point(4, 438);
-            this.pnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnLogout.Location = new System.Drawing.Point(4, 468);
+            this.pnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.pnLogout.Name = "pnLogout";
             this.pnLogout.Padding = new System.Windows.Forms.Padding(0, 12, 13, 12);
             this.pnLogout.Size = new System.Drawing.Size(292, 49);
@@ -304,7 +290,7 @@
             this.logoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logoutBtn.Image")));
             this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logoutBtn.Location = new System.Drawing.Point(0, 0);
-            this.logoutBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(4);
             this.logoutBtn.Name = "logoutBtn";
             this.logoutBtn.Padding = new System.Windows.Forms.Padding(16, 6, 13, 6);
             this.logoutBtn.Size = new System.Drawing.Size(292, 49);
@@ -318,12 +304,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1371, 709);
+            this.ClientSize = new System.Drawing.Size(1115, 599);
             this.Controls.Add(this.sidebar);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "student_page";
             this.Text = "ENROLLMENT SYSTEM / STUDENT";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.student_page_Load);
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -356,7 +343,6 @@
         private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label userFname;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }
 }

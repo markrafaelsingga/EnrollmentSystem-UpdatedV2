@@ -97,13 +97,12 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(3, 8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(219, 106);
+            this.panel1.Size = new System.Drawing.Size(219, 132);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(52, 4);
@@ -116,7 +115,7 @@
             // pnHome
             // 
             this.pnHome.Controls.Add(this.homeBtn);
-            this.pnHome.Location = new System.Drawing.Point(3, 120);
+            this.pnHome.Location = new System.Drawing.Point(3, 146);
             this.pnHome.Name = "pnHome";
             this.pnHome.Size = new System.Drawing.Size(219, 40);
             this.pnHome.TabIndex = 1;
@@ -146,7 +145,7 @@
             // pnEnroll
             // 
             this.pnEnroll.Controls.Add(this.enrollmentBtn);
-            this.pnEnroll.Location = new System.Drawing.Point(3, 166);
+            this.pnEnroll.Location = new System.Drawing.Point(3, 192);
             this.pnEnroll.Name = "pnEnroll";
             this.pnEnroll.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
             this.pnEnroll.Size = new System.Drawing.Size(219, 40);
@@ -181,7 +180,7 @@
             this.infoContainer.Controls.Add(this.panel6);
             this.infoContainer.Controls.Add(this.panel8);
             this.infoContainer.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.infoContainer.Location = new System.Drawing.Point(3, 212);
+            this.infoContainer.Location = new System.Drawing.Point(3, 238);
             this.infoContainer.Name = "infoContainer";
             this.infoContainer.Size = new System.Drawing.Size(219, 40);
             this.infoContainer.TabIndex = 2;
@@ -281,7 +280,7 @@
             // pnCourse
             // 
             this.pnCourse.Controls.Add(this.courseBtn);
-            this.pnCourse.Location = new System.Drawing.Point(3, 258);
+            this.pnCourse.Location = new System.Drawing.Point(3, 284);
             this.pnCourse.Name = "pnCourse";
             this.pnCourse.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
             this.pnCourse.Size = new System.Drawing.Size(219, 40);
@@ -312,7 +311,7 @@
             // pnClass
             // 
             this.pnClass.Controls.Add(this.classBtn);
-            this.pnClass.Location = new System.Drawing.Point(3, 304);
+            this.pnClass.Location = new System.Drawing.Point(3, 330);
             this.pnClass.Name = "pnClass";
             this.pnClass.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
             this.pnClass.Size = new System.Drawing.Size(219, 40);
@@ -345,7 +344,7 @@
             this.pnProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pnProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
             this.pnProfile.Controls.Add(this.profileBtn);
-            this.pnProfile.Location = new System.Drawing.Point(3, 350);
+            this.pnProfile.Location = new System.Drawing.Point(3, 376);
             this.pnProfile.Name = "pnProfile";
             this.pnProfile.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
             this.pnProfile.Size = new System.Drawing.Size(219, 40);
@@ -378,7 +377,7 @@
             this.pnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
             this.pnLogout.Controls.Add(this.logoutBtn);
-            this.pnLogout.Location = new System.Drawing.Point(3, 396);
+            this.pnLogout.Location = new System.Drawing.Point(3, 422);
             this.pnLogout.Name = "pnLogout";
             this.pnLogout.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
             this.pnLogout.Size = new System.Drawing.Size(219, 40);
@@ -447,6 +446,7 @@
             this.IsMdiContainer = true;
             this.Name = "admin_page";
             this.Text = "ENROLLMENT SYSTEM / ADMIN";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.admin_page_Load);
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

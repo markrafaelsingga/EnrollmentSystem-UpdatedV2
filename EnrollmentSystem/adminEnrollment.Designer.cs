@@ -34,6 +34,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminEnrollment));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.studidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studfnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studlnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studmiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studbdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studaddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studemailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studgenderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studyearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studstatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prognameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Approve = new System.Windows.Forms.DataGridViewButtonColumn();
             this.viewEnrolleeBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.dbmsDataSet5 = new EnrollmentSystem.dbmsDataSet5();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -61,20 +75,6 @@
             this.viewEnrolleeBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.viewEnrolleeTableAdapter4 = new EnrollmentSystem.dbmsDataSet4TableAdapters.viewEnrolleeTableAdapter();
             this.viewEnrolleeTableAdapter5 = new EnrollmentSystem.dbmsDataSet5TableAdapters.viewEnrolleeTableAdapter();
-            this.studidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studfnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studlnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studmiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studbdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studaddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studemailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studgenderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studyearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studstatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prognameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Approve = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource5)).BeginInit();
@@ -105,7 +105,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(53, 156);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1043, 436);
             this.panel1.TabIndex = 2;
@@ -151,7 +151,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -159,206 +159,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // viewEnrolleeBindingSource5
-            // 
-            this.viewEnrolleeBindingSource5.DataMember = "viewEnrollee";
-            this.viewEnrolleeBindingSource5.DataSource = this.dbmsDataSet5;
-            // 
-            // dbmsDataSet5
-            // 
-            this.dbmsDataSet5.DataSetName = "dbmsDataSet5";
-            this.dbmsDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel2.Controls.Add(this.delete);
-            this.flowLayoutPanel2.Controls.Add(this.add);
-            this.flowLayoutPanel2.Controls.Add(this.edit);
-            this.flowLayoutPanel2.Controls.Add(this.panel2);
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 80);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 12, 53, 0);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1153, 69);
-            this.flowLayoutPanel2.TabIndex = 6;
-            // 
-            // delete
-            // 
-            this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
-            this.delete.Location = new System.Drawing.Point(1053, 16);
-            this.delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(43, 43);
-            this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.delete.TabIndex = 5;
-            this.delete.TabStop = false;
-            this.delete.MouseLeave += new System.EventHandler(this.delete_MouseLeave);
-            this.delete.MouseHover += new System.EventHandler(this.delete_MouseHover);
-            // 
-            // add
-            // 
-            this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
-            this.add.Location = new System.Drawing.Point(1002, 16);
-            this.add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(43, 43);
-            this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.add.TabIndex = 5;
-            this.add.TabStop = false;
-            this.add.MouseLeave += new System.EventHandler(this.add_MouseLeave);
-            this.add.MouseHover += new System.EventHandler(this.add_MouseHover);
-            // 
-            // edit
-            // 
-            this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-            this.edit.Location = new System.Drawing.Point(947, 16);
-            this.edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(47, 43);
-            this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.edit.TabIndex = 5;
-            this.edit.TabStop = false;
-            this.edit.MouseLeave += new System.EventHandler(this.edit_MouseLeave);
-            this.edit.MouseHover += new System.EventHandler(this.edit_MouseHover);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.search);
-            this.panel2.Controls.Add(this.searchTxtbox);
-            this.panel2.Location = new System.Drawing.Point(394, 16);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(545, 43);
-            this.panel2.TabIndex = 6;
-            // 
-            // search
-            // 
-            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
-            this.search.Location = new System.Drawing.Point(515, 9);
-            this.search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(27, 25);
-            this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.search.TabIndex = 5;
-            this.search.TabStop = false;
-            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
-            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
-            // 
-            // searchTxtbox
-            // 
-            this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxtbox.Location = new System.Drawing.Point(0, 5);
-            this.searchTxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.searchTxtbox.Name = "searchTxtbox";
-            this.searchTxtbox.Size = new System.Drawing.Size(545, 30);
-            this.searchTxtbox.TabIndex = 3;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(53, 25, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 73);
-            this.flowLayoutPanel1.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(57, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ENROLLMENT";
-            // 
-            // dbmsDataSet
-            // 
-            this.dbmsDataSet.DataSetName = "dbmsDataSet";
-            this.dbmsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // viewEnrolleeBindingSource
-            // 
-            this.viewEnrolleeBindingSource.DataMember = "viewEnrollee";
-            this.viewEnrolleeBindingSource.DataSource = this.dbmsDataSet;
-            // 
-            // viewEnrolleeTableAdapter
-            // 
-            this.viewEnrolleeTableAdapter.ClearBeforeFill = true;
-            // 
-            // dbmsDataSet1
-            // 
-            this.dbmsDataSet1.DataSetName = "dbmsDataSet1";
-            this.dbmsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // viewEnrolleeBindingSource1
-            // 
-            this.viewEnrolleeBindingSource1.DataMember = "viewEnrollee";
-            this.viewEnrolleeBindingSource1.DataSource = this.dbmsDataSet1;
-            // 
-            // viewEnrolleeTableAdapter1
-            // 
-            this.viewEnrolleeTableAdapter1.ClearBeforeFill = true;
-            // 
-            // dbmsDataSet2
-            // 
-            this.dbmsDataSet2.DataSetName = "dbmsDataSet2";
-            this.dbmsDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // viewEnrolleeBindingSource2
-            // 
-            this.viewEnrolleeBindingSource2.DataMember = "viewEnrollee";
-            this.viewEnrolleeBindingSource2.DataSource = this.dbmsDataSet2;
-            // 
-            // viewEnrolleeTableAdapter2
-            // 
-            this.viewEnrolleeTableAdapter2.ClearBeforeFill = true;
-            // 
-            // dbmsDataSet3
-            // 
-            this.dbmsDataSet3.DataSetName = "dbmsDataSet3";
-            this.dbmsDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // viewEnrolleeBindingSource3
-            // 
-            this.viewEnrolleeBindingSource3.DataMember = "viewEnrollee";
-            this.viewEnrolleeBindingSource3.DataSource = this.dbmsDataSet3;
-            // 
-            // viewEnrolleeTableAdapter3
-            // 
-            this.viewEnrolleeTableAdapter3.ClearBeforeFill = true;
-            // 
-            // dbmsDataSet4
-            // 
-            this.dbmsDataSet4.DataSetName = "dbmsDataSet4";
-            this.dbmsDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // viewEnrolleeBindingSource4
-            // 
-            this.viewEnrolleeBindingSource4.DataMember = "viewEnrollee";
-            this.viewEnrolleeBindingSource4.DataSource = this.dbmsDataSet4;
-            // 
-            // viewEnrolleeTableAdapter4
-            // 
-            this.viewEnrolleeTableAdapter4.ClearBeforeFill = true;
-            // 
-            // viewEnrolleeTableAdapter5
-            // 
-            this.viewEnrolleeTableAdapter5.ClearBeforeFill = true;
             // 
             // studidDataGridViewTextBoxColumn
             // 
@@ -500,6 +300,206 @@
             this.Approve.UseColumnTextForButtonValue = true;
             this.Approve.Width = 125;
             // 
+            // viewEnrolleeBindingSource5
+            // 
+            this.viewEnrolleeBindingSource5.DataMember = "viewEnrollee";
+            this.viewEnrolleeBindingSource5.DataSource = this.dbmsDataSet5;
+            // 
+            // dbmsDataSet5
+            // 
+            this.dbmsDataSet5.DataSetName = "dbmsDataSet5";
+            this.dbmsDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel2.Controls.Add(this.delete);
+            this.flowLayoutPanel2.Controls.Add(this.add);
+            this.flowLayoutPanel2.Controls.Add(this.edit);
+            this.flowLayoutPanel2.Controls.Add(this.panel2);
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 80);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 12, 53, 0);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1153, 69);
+            this.flowLayoutPanel2.TabIndex = 6;
+            // 
+            // delete
+            // 
+            this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
+            this.delete.Location = new System.Drawing.Point(1053, 16);
+            this.delete.Margin = new System.Windows.Forms.Padding(4);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(43, 43);
+            this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.delete.TabIndex = 5;
+            this.delete.TabStop = false;
+            this.delete.MouseLeave += new System.EventHandler(this.delete_MouseLeave);
+            this.delete.MouseHover += new System.EventHandler(this.delete_MouseHover);
+            // 
+            // add
+            // 
+            this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
+            this.add.Location = new System.Drawing.Point(1002, 16);
+            this.add.Margin = new System.Windows.Forms.Padding(4);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(43, 43);
+            this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.add.TabIndex = 5;
+            this.add.TabStop = false;
+            this.add.MouseLeave += new System.EventHandler(this.add_MouseLeave);
+            this.add.MouseHover += new System.EventHandler(this.add_MouseHover);
+            // 
+            // edit
+            // 
+            this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
+            this.edit.Location = new System.Drawing.Point(947, 16);
+            this.edit.Margin = new System.Windows.Forms.Padding(4);
+            this.edit.Name = "edit";
+            this.edit.Size = new System.Drawing.Size(47, 43);
+            this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.edit.TabIndex = 5;
+            this.edit.TabStop = false;
+            this.edit.MouseLeave += new System.EventHandler(this.edit_MouseLeave);
+            this.edit.MouseHover += new System.EventHandler(this.edit_MouseHover);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.search);
+            this.panel2.Controls.Add(this.searchTxtbox);
+            this.panel2.Location = new System.Drawing.Point(394, 16);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(545, 43);
+            this.panel2.TabIndex = 6;
+            // 
+            // search
+            // 
+            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
+            this.search.Location = new System.Drawing.Point(515, 9);
+            this.search.Margin = new System.Windows.Forms.Padding(4);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(27, 25);
+            this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.search.TabIndex = 5;
+            this.search.TabStop = false;
+            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
+            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
+            // 
+            // searchTxtbox
+            // 
+            this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTxtbox.Location = new System.Drawing.Point(0, 5);
+            this.searchTxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.searchTxtbox.Name = "searchTxtbox";
+            this.searchTxtbox.Size = new System.Drawing.Size(545, 30);
+            this.searchTxtbox.TabIndex = 3;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.label1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(53, 25, 0, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 73);
+            this.flowLayoutPanel1.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(57, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(261, 39);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ENROLLMENT";
+            // 
+            // dbmsDataSet
+            // 
+            this.dbmsDataSet.DataSetName = "dbmsDataSet";
+            this.dbmsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // viewEnrolleeBindingSource
+            // 
+            this.viewEnrolleeBindingSource.DataMember = "viewEnrollee";
+            this.viewEnrolleeBindingSource.DataSource = this.dbmsDataSet;
+            // 
+            // viewEnrolleeTableAdapter
+            // 
+            this.viewEnrolleeTableAdapter.ClearBeforeFill = true;
+            // 
+            // dbmsDataSet1
+            // 
+            this.dbmsDataSet1.DataSetName = "dbmsDataSet1";
+            this.dbmsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // viewEnrolleeBindingSource1
+            // 
+            this.viewEnrolleeBindingSource1.DataMember = "viewEnrollee";
+            this.viewEnrolleeBindingSource1.DataSource = this.dbmsDataSet1;
+            // 
+            // viewEnrolleeTableAdapter1
+            // 
+            this.viewEnrolleeTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dbmsDataSet2
+            // 
+            this.dbmsDataSet2.DataSetName = "dbmsDataSet2";
+            this.dbmsDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // viewEnrolleeBindingSource2
+            // 
+            this.viewEnrolleeBindingSource2.DataMember = "viewEnrollee";
+            this.viewEnrolleeBindingSource2.DataSource = this.dbmsDataSet2;
+            // 
+            // viewEnrolleeTableAdapter2
+            // 
+            this.viewEnrolleeTableAdapter2.ClearBeforeFill = true;
+            // 
+            // dbmsDataSet3
+            // 
+            this.dbmsDataSet3.DataSetName = "dbmsDataSet3";
+            this.dbmsDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // viewEnrolleeBindingSource3
+            // 
+            this.viewEnrolleeBindingSource3.DataMember = "viewEnrollee";
+            this.viewEnrolleeBindingSource3.DataSource = this.dbmsDataSet3;
+            // 
+            // viewEnrolleeTableAdapter3
+            // 
+            this.viewEnrolleeTableAdapter3.ClearBeforeFill = true;
+            // 
+            // dbmsDataSet4
+            // 
+            this.dbmsDataSet4.DataSetName = "dbmsDataSet4";
+            this.dbmsDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // viewEnrolleeBindingSource4
+            // 
+            this.viewEnrolleeBindingSource4.DataMember = "viewEnrollee";
+            this.viewEnrolleeBindingSource4.DataSource = this.dbmsDataSet4;
+            // 
+            // viewEnrolleeTableAdapter4
+            // 
+            this.viewEnrolleeTableAdapter4.ClearBeforeFill = true;
+            // 
+            // viewEnrolleeTableAdapter5
+            // 
+            this.viewEnrolleeTableAdapter5.ClearBeforeFill = true;
+            // 
             // adminEnrollment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -510,7 +510,7 @@
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "adminEnrollment";
             this.Text = "adminEnrollment";
             this.Load += new System.EventHandler(this.adminEnrollment_Load);
