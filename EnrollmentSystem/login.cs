@@ -103,7 +103,7 @@ namespace EnrollmentSystem
 
         private void loginBtn_MouseHover(object sender, EventArgs e)
         {
-            loginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
+            loginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
         }
 
         private void loginBtn_MouseLeave(object sender, EventArgs e)

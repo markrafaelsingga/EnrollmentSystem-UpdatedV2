@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminClass));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.subject = new System.Windows.Forms.PictureBox();
             this.delete = new System.Windows.Forms.PictureBox();
@@ -56,8 +59,7 @@
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel2.Controls.Add(this.subject);
             this.flowLayoutPanel2.Controls.Add(this.delete);
@@ -65,19 +67,21 @@
             this.flowLayoutPanel2.Controls.Add(this.edit);
             this.flowLayoutPanel2.Controls.Add(this.panel2);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 65);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 80);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 10, 40, 0);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(865, 58);
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 12, 53, 0);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1153, 71);
             this.flowLayoutPanel2.TabIndex = 10;
             // 
             // subject
             // 
             this.subject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.subject.Image = ((System.Drawing.Image)(resources.GetObject("subject.Image")));
-            this.subject.Location = new System.Drawing.Point(790, 13);
+            this.subject.Location = new System.Drawing.Point(1053, 16);
+            this.subject.Margin = new System.Windows.Forms.Padding(4);
             this.subject.Name = "subject";
-            this.subject.Size = new System.Drawing.Size(32, 35);
+            this.subject.Size = new System.Drawing.Size(43, 43);
             this.subject.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.subject.TabIndex = 5;
             this.subject.TabStop = false;
@@ -89,9 +93,10 @@
             // 
             this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
-            this.delete.Location = new System.Drawing.Point(752, 13);
+            this.delete.Location = new System.Drawing.Point(1002, 16);
+            this.delete.Margin = new System.Windows.Forms.Padding(4);
             this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(32, 35);
+            this.delete.Size = new System.Drawing.Size(43, 43);
             this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.delete.TabIndex = 5;
             this.delete.TabStop = false;
@@ -102,9 +107,10 @@
             // 
             this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
-            this.add.Location = new System.Drawing.Point(714, 13);
+            this.add.Location = new System.Drawing.Point(951, 16);
+            this.add.Margin = new System.Windows.Forms.Padding(4);
             this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(32, 35);
+            this.add.Size = new System.Drawing.Size(43, 43);
             this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.add.TabIndex = 5;
             this.add.TabStop = false;
@@ -116,9 +122,10 @@
             // 
             this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-            this.edit.Location = new System.Drawing.Point(673, 13);
+            this.edit.Location = new System.Drawing.Point(896, 16);
+            this.edit.Margin = new System.Windows.Forms.Padding(4);
             this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(35, 35);
+            this.edit.Size = new System.Drawing.Size(47, 43);
             this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.edit.TabIndex = 5;
             this.edit.TabStop = false;
@@ -130,19 +137,21 @@
             // 
             this.panel2.Controls.Add(this.search);
             this.panel2.Controls.Add(this.searchTxtbox);
-            this.panel2.Location = new System.Drawing.Point(258, 13);
+            this.panel2.Location = new System.Drawing.Point(343, 16);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(409, 35);
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(545, 43);
             this.panel2.TabIndex = 6;
             // 
             // search
             // 
             this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
-            this.search.Location = new System.Drawing.Point(386, 7);
+            this.search.Location = new System.Drawing.Point(515, 9);
+            this.search.Margin = new System.Windows.Forms.Padding(4);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(20, 20);
+            this.search.Size = new System.Drawing.Size(27, 25);
             this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.search.TabIndex = 5;
             this.search.TabStop = false;
@@ -153,9 +162,10 @@
             // 
             this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxtbox.Location = new System.Drawing.Point(0, 4);
+            this.searchTxtbox.Location = new System.Drawing.Point(0, 5);
+            this.searchTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.searchTxtbox.Name = "searchTxtbox";
-            this.searchTxtbox.Size = new System.Drawing.Size(409, 26);
+            this.searchTxtbox.Size = new System.Drawing.Size(545, 30);
             this.searchTxtbox.TabIndex = 3;
             // 
             // panel1
@@ -164,22 +174,50 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(49, 129);
+            this.panel1.Location = new System.Drawing.Point(65, 159);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(773, 387);
+            this.panel1.Size = new System.Drawing.Size(1031, 476);
             this.panel1.TabIndex = 9;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeight = 29;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(773, 387);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1031, 476);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -189,26 +227,29 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(40, 20, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(865, 59);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(53, 25, 0, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 73);
             this.flowLayoutPanel1.TabIndex = 11;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(43, 20);
+            this.label1.Location = new System.Drawing.Point(57, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 31);
+            this.label1.Size = new System.Drawing.Size(183, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "CLASSES";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(673, 518);
+            this.button1.Location = new System.Drawing.Point(897, 638);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 12;
             this.button1.Text = "Refresh";
             this.button1.UseVisualStyleBackColor = true;
@@ -216,14 +257,15 @@
             // 
             // adminClass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 541);
+            this.ClientSize = new System.Drawing.Size(1153, 666);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "adminClass";
             this.Text = "adminClass";
             this.Load += new System.EventHandler(this.adminClass_Load);

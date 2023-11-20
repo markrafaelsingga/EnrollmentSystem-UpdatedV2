@@ -35,7 +35,7 @@ namespace EnrollmentSystem
 
         private void origColor (Button origBtn)
         {
-            origBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
+            origBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
         }
 
         bool infoExpand = false;
@@ -520,6 +520,5 @@ namespace EnrollmentSystem
             back_login.Show();
             Visible = false;
         }
-        
     }
 }
