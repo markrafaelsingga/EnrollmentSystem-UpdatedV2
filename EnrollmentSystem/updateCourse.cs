@@ -69,6 +69,20 @@ namespace EnrollmentSystem
             }
         }
 
+        private void semList()
+        {
+            sem.DataSource = db.semList();
+            sem.DisplayMember = "sem_level";
+            sem.ValueMember = "sem_id";
+        }
+
+        private void crsList()
+        {
+            comboBox1.DataSource = db.yearList();
+            comboBox1.DisplayMember = "year_level";
+            comboBox1.ValueMember = "year_id";
+        }
+
         private void saveBtn_Click(object sender, EventArgs e)
         {
             var result = db.searchCrs(searchTxtbox.Text);
@@ -82,12 +96,14 @@ namespace EnrollmentSystem
                    /* string crs_name = item.crs_name;
                     string crs_desc = item.crs_desc;*/
                     int crs_year = Convert.ToInt32(item.year_id);
+                    int sem_id = (int)sem.SelectedValue;
+                    int year_id = (int)comboBox1.SelectedValue;
                    /* crsName.Text = crs_name;
                     crsdescTxtbox.Text = crs_desc;
                     comboBox1.Text = crs_year.ToString();*/
                     if (crs_id > 0)
                     {
-                        db.updateCrs(crs_id,crsName.Text, crsdescTxtbox.Text, crs_year);
+                        db.updateCrs(crs_id,crsName.Text, crsdescTxtbox.Text, year_id,sem_id);
                         MessageBox.Show("Updated Successfully!","Success");
                         Visible = false;
                     }
@@ -101,6 +117,10 @@ namespace EnrollmentSystem
 
         }
 
-
+        private void updateCourse_Load(object sender, EventArgs e)
+        {
+            semList();
+            crsList();
+        }
     }
 }

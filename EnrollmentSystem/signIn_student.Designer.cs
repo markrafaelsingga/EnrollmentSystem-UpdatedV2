@@ -243,6 +243,7 @@
             this.birthdatePicker.Name = "birthdatePicker";
             this.birthdatePicker.Size = new System.Drawing.Size(177, 26);
             this.birthdatePicker.TabIndex = 16;
+            this.birthdatePicker.ValueChanged += new System.EventHandler(this.birthdatePicker_ValueChanged);
             // 
             // emailtextBox
             // 
@@ -251,6 +252,7 @@
             this.emailtextBox.Name = "emailtextBox";
             this.emailtextBox.Size = new System.Drawing.Size(215, 26);
             this.emailtextBox.TabIndex = 11;
+            this.emailtextBox.TextChanged += new System.EventHandler(this.emailtextBox_TextChanged);
             // 
             // label12
             // 
@@ -300,6 +302,7 @@
             this.phone.Name = "phone";
             this.phone.Size = new System.Drawing.Size(215, 26);
             this.phone.TabIndex = 9;
+            this.phone.TextChanged += new System.EventHandler(this.phone_TextChanged);
             // 
             // label4
             // 

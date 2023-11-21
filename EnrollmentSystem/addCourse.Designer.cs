@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.prog = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.crsdescTxtbox = new System.Windows.Forms.TextBox();
@@ -36,8 +38,8 @@
             this.crscodeTxtbox = new System.Windows.Forms.TextBox();
             this.courseLbl = new System.Windows.Forms.Label();
             this.saveBtn = new System.Windows.Forms.Button();
-            this.prog = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.sem = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +49,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.sem);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.prog);
             this.panel1.Controls.Add(this.comboBox1);
@@ -59,6 +63,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(503, 238);
             this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label2.Location = new System.Drawing.Point(188, 172);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Program: ";
+            // 
+            // prog
+            // 
+            this.prog.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.prog.FormattingEnabled = true;
+            this.prog.Location = new System.Drawing.Point(192, 196);
+            this.prog.Name = "prog";
+            this.prog.Size = new System.Drawing.Size(121, 21);
+            this.prog.TabIndex = 25;
             // 
             // comboBox1
             // 
@@ -155,28 +182,28 @@
             this.saveBtn.MouseLeave += new System.EventHandler(this.saveBtn_MouseLeave);
             this.saveBtn.MouseHover += new System.EventHandler(this.saveBtn_MouseHover);
             // 
-            // prog
+            // label3
             // 
-            this.prog.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.prog.FormattingEnabled = true;
-            this.prog.Location = new System.Drawing.Point(238, 196);
-            this.prog.Name = "prog";
-            this.prog.Size = new System.Drawing.Size(121, 21);
-            this.prog.TabIndex = 25;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(234, 172);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 20);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Program: ";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label3.Location = new System.Drawing.Point(351, 172);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 20);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Semester: ";
+            // 
+            // sem
+            // 
+            this.sem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sem.FormattingEnabled = true;
+            this.sem.Location = new System.Drawing.Point(355, 196);
+            this.sem.Name = "sem";
+            this.sem.Size = new System.Drawing.Size(121, 21);
+            this.sem.TabIndex = 27;
             // 
             // addCourse
             // 
@@ -209,5 +236,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox prog;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox sem;
     }
 }
