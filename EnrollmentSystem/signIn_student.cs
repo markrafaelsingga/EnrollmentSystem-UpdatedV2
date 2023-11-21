@@ -51,6 +51,46 @@ namespace EnrollmentSystem
             emlLbl.Hide();
         }
 
+        private void phone_TextChanged(object sender, EventArgs e)
+        {
+            string phpattern = @"^(\+63|09)\d{9}$";
+            string pNo = phone.Text;
+            bool checkPhone = Regex.IsMatch(pNo, phpattern ,RegexOptions.IgnoreCase);
+
+            if (checkPhone)
+            {
+                phLbl.Hide();
+            }
+            else
+            {
+                phLbl.Show();
+            }
+        }
+
+        private void emailtextBox_TextChanged(object sender, EventArgs e)
+        {
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            string eadd = emailtextBox.Text;
+            bool checkEmail = Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase);
+
+            if (checkEmail)
+            {
+                emlLbl.Hide();
+            }
+            else
+            {
+                emlLbl.Show();
+            }
+        }
+
+        private void birthdatePicker_ValueChanged(object sender, EventArgs e)
+        {
+            if(birthdatePicker.Value > DateTime.Now)
+            {
+                MessageBox.Show("Future date is invalid!","Warning",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
         private void backBtn_Click(object sender, EventArgs e)
         {
 
@@ -60,12 +100,12 @@ namespace EnrollmentSystem
             Visible = false;
         }
 
-       private void check()
+        private void check()
         {
             var studCheck = db.checkStud(fnameTxtbox.Text, lnameTxtbox.Text).ToList();
-            if(studCheck != null&& studCheck.Any())
+            if (studCheck != null && studCheck.Any())
             {
-                foreach(var item in studCheck)
+                foreach (var item in studCheck)
                 {
                     studFname = item.stud_fname;
                     studLname = item.stud_lname;
@@ -74,7 +114,6 @@ namespace EnrollmentSystem
         }
         private void signinBtn_Click(object sender, EventArgs e)
         {
-            //@"(09|+639)\d{9}$"
             check();
             DateTime bd = birthdatePicker.Value;
             DateTime currDate = DateTime.Now;
@@ -89,15 +128,12 @@ namespace EnrollmentSystem
                     string eadd = emailtextBox.Text;
                     db.createAcc(uname.Text, repword.Text);
                     var result = db.accId(uname.Text);
-                    string phpattern = @"(09|+639)\d{9}$";
+                    string phpattern = @"^(\+63|09)\d{9}$"; 
                     string pNo = phone.Text;
-                    bool checkPhone = Regex.IsMatch(phpattern, pNo, RegexOptions.IgnoreCase);
-                    bool checkEmail = Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase);
-                    if (Regex.IsMatch(phpattern, pNo, RegexOptions.IgnoreCase) && Regex.IsMatch(eadd,pattern, RegexOptions.IgnoreCase))
+                    if (Regex.IsMatch(pNo, phpattern, RegexOptions.IgnoreCase) && Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase))
                     {
                         if (result != null)
                         {
-
                             var item = result.First();
 
                             id = item.u_id;
@@ -121,17 +157,8 @@ namespace EnrollmentSystem
                     }
                     else
                     {
-                        if(!checkEmail)
-                        {
-                            emlLbl.Show();
-                        }
-                        if(!checkPhone)
-                        {
-                            phLbl.Show();
-                        }
+                        MessageBox.Show("Unsuccessfull!","Warning",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     }
-                        
-            
                 }
                 else
                 {
@@ -140,11 +167,10 @@ namespace EnrollmentSystem
             }
             else
             {
-                MessageBox.Show("Student already exist!","Warning!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Student already exist!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-      
-        
     }
 }
+
+    

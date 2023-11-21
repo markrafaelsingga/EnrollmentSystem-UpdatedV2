@@ -35,7 +35,8 @@ namespace EnrollmentSystem
         {
             int year = Convert.ToInt32(comboBox1.SelectedItem);
             int prog_id = (int)prog.SelectedValue;
-            db.addCrs(crscodeTxtbox.Text, crsdescTxtbox.Text, year,prog_id);
+            int sem_id = (int)sem.SelectedValue;
+            db.addCrs(crscodeTxtbox.Text, crsdescTxtbox.Text, year,prog_id,sem_id);
             MessageBox.Show("Added", "Successfull");
             adminCourse ac = new adminCourse(verId);
             
@@ -49,8 +50,16 @@ namespace EnrollmentSystem
             prog.ValueMember = "prog_id";
         }
 
+        private void semList()
+        {
+            sem.DataSource = db.semList();
+            sem.DisplayMember = "sem_level";
+            sem.ValueMember = "sem_id";
+        }
+
         private void addCourse_Load(object sender, EventArgs e)
         {
+            semList();
             progList();
         }
     }

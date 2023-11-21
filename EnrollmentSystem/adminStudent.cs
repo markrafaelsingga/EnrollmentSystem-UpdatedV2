@@ -90,9 +90,6 @@ namespace EnrollmentSystem
         {
                 
         }
-
-       
-
         private void display()
         {
             var adId = db.adminID(verId).ToList();
