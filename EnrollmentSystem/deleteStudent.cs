@@ -89,18 +89,18 @@ namespace EnrollmentSystem
 
         private void search_Click(object sender, EventArgs e)
         {
-            var result = db.searchStud(Convert.ToInt32(searchTxtbox.Text)).ToList();
-            if (result != null && result.Any())
-            {
-                foreach (var item in result)
-                {
-                    id = Convert.ToInt32(item.stud_no);
-                }
-            }
-            else
-            {
-                MessageBox.Show("No Student Found!");
-            }
+            //var result = db.searchStud(Convert.ToInt32(searchTxtbox.Text)).ToList();
+            //if (result != null && result.Any())
+            //{
+            //    foreach (var item in result)
+            //    {
+            //        id = Convert.ToInt32(item.stud_no);
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No Student Found!");
+            //}
         }
     }
 }

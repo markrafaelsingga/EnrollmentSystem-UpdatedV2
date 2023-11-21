@@ -46,14 +46,14 @@ namespace EnrollmentSystem
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            DateTime bd = birthdatePicker.Value;
-            DateTime currdate = DateTime.Now;
-            TimeSpan age_now = currdate - bd;
-            int age = (int)(age_now.TotalDays / 365.25);
-            db.updateInstructor(id,fnameTxtbox.Text, miTxtbox.Text,lnameTxtbox.Text,bd,age,phone.Text,emailtextBox.Text,adminId);
-            MessageBox.Show("Updated!", "Successfull");
-            display();
-            Visible = false;
+            //DateTime bd = birthdatePicker.Value;
+            //DateTime currdate = DateTime.Now;
+            //TimeSpan age_now = currdate - bd;
+            //int age = (int)(age_now.TotalDays / 365.25);
+            //db.updateInstructor(id,fnameTxtbox.Text, miTxtbox.Text,lnameTxtbox.Text,bd,age,phone.Text,emailtextBox.Text,adminId);
+            //MessageBox.Show("Updated!", "Successfull");
+            //display();
+            //Visible = false;
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
