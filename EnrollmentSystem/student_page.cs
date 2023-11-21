@@ -13,6 +13,7 @@ namespace EnrollmentSystem
     public partial class student_page : Form
     {
         studentHome home;
+        studentEnrollment enrollment;
         studentCourse course;
         studentClass class1;
         studentProfile profile;
@@ -58,6 +59,10 @@ namespace EnrollmentSystem
 
         private void homeBtn_Click(object sender, EventArgs e)
         {
+            if (enrollment != null)
+            {
+                enrollment.Close();
+            }
             if (course != null)
             {
                 course.Close();
@@ -96,8 +101,59 @@ namespace EnrollmentSystem
             home = null;
         }
 
+        private void enrollmentBtn_Click(object sender, EventArgs e)
+        {
+            if (home != null)
+            {
+                home.Close();
+            }
+
+            if (course != null)
+            {
+                course.Close();
+            }
+
+            if (class1 != null)
+            {
+                class1.Close();
+            }
+
+            if (profile != null)
+            {
+                profile.Close();
+            }
+
+            if (enrollment == null)
+            {
+                enrollment = new studentEnrollment();
+                enrollment.FormClosed += Enrollment_FormClosed;
+                enrollment.MdiParent = this;
+                enrollment.Show();
+
+                changeColor(enrollmentBtn);
+                enrollment.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                enrollment.Activate();
+
+            }
+        }
+
+        private void Enrollment_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            origColor(enrollmentBtn);
+            enrollment = null;
+        }
+
+
         private void profileBtn_Click(object sender, EventArgs e)
         {
+            if (enrollment != null)
+            {
+                enrollment.Close();
+            }
+
             if (course != null)
             {
                 course.Close();
@@ -138,6 +194,11 @@ namespace EnrollmentSystem
 
         private void courseBtn_Click(object sender, EventArgs e)
         {
+            if (enrollment != null)
+            {
+                enrollment.Close();
+            }
+
             if (home != null)
             {
                 home.Close();
@@ -178,6 +239,11 @@ namespace EnrollmentSystem
 
         private void classBtn_Click(object sender, EventArgs e)
         {
+            if (enrollment != null)
+            {
+                enrollment.Close();
+            }
+
             if (home != null)
             {
                 home.Close();
@@ -228,7 +294,6 @@ namespace EnrollmentSystem
         {
             homeBtn_Click(sender, e);
             changeColor(homeBtn);
-            
         }
     }
 }
