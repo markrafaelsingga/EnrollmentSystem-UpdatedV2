@@ -77,34 +77,6 @@ namespace EnrollmentSystem
                 bool checkPhone = Regex.IsMatch(pNo, phpattern, RegexOptions.IgnoreCase);
                 bool checkEmail = Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase);
 
-                if (Regex.IsMatch(pNo, phpattern, RegexOptions.IgnoreCase) && Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase))
-                {
-                    if (result != null)
-                    {
-                        var item = result.First();
-
-                        id = item.u_id;
-                        decimal grade = Convert.ToDecimal(gpa.Text);
-                        int prog_id = (int)program.SelectedValue;
-                        int batch_id = (int)batch.SelectedValue;
-                        string gen = gender.SelectedItem.ToString();
-                        int yrs = (int)yr.SelectedValue;
-
-                        db.enrollStudent(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, bd, age, addressTxtbox.Text, phone.Text, emailTxtbox.Text, gen, yrs, grade, prog_id, id, 1, batch_id);
-                        MessageBox.Show("Successfully enrolled!", "Done");
-
-                        login back = new login();
-                        back.Show();
-                        Visible = false;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error retrieving user information", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Unsuccessfull!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
