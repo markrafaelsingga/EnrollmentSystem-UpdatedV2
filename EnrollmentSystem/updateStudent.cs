@@ -15,17 +15,33 @@ namespace EnrollmentSystem
         DataClasses1DataContext db = new DataClasses1DataContext();
         private int verId;
         int adminId;
-        int id;
+
+        public int ID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string MI { get; set; }
+        public DateTime? Birthdate { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public string Gender { get; set; }
+        public string YearLevel { get; set; }
+        public string ProgName { get; set; }
+        public decimal? GPA { get; set; }
+
         public updateStudent(int verId)
         {
             InitializeComponent();
+            birthdatePicker.MaxDate = DateTime.Now;
             this.verId = verId;
             display();
+
+            idTxtbox.Text = ID.ToString();
         }
 
         private void saveBtn_MouseHover(object sender, EventArgs e)
         {
-            saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
+            saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
         }
 
         private void saveBtn_MouseLeave(object sender, EventArgs e)
@@ -33,45 +49,92 @@ namespace EnrollmentSystem
             saveBtn.BackColor = System.Drawing.Color.White;
         }
 
-        private void search_MouseHover(object sender, EventArgs e)
+        public bool HasChanges(string newFirstName, string newLastName, string newMI, DateTime? newBirthdate, string newAddress, string newPhone, string newEmail, string newGender, string newYearLevel, string newProgName, decimal? newGpa)
         {
-            search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
+            return !string.Equals(FirstName, newFirstName, StringComparison.OrdinalIgnoreCase) ||
+                   !string.Equals(LastName, newLastName, StringComparison.OrdinalIgnoreCase) ||
+                   !string.Equals(MI, newMI, StringComparison.OrdinalIgnoreCase) ||
+                   !Nullable.Equals(Birthdate?.Date, newBirthdate?.Date) || // Compare only date parts
+                   !string.Equals(Address, newAddress, StringComparison.OrdinalIgnoreCase) ||
+                   !string.Equals(Phone, newPhone, StringComparison.OrdinalIgnoreCase) ||
+                   !string.Equals(Email, newEmail, StringComparison.OrdinalIgnoreCase) ||
+                   !string.Equals(Gender, newGender, StringComparison.OrdinalIgnoreCase) ||
+                   !string.Equals(YearLevel, newYearLevel, StringComparison.OrdinalIgnoreCase) ||
+                   !string.Equals(ProgName, newProgName, StringComparison.OrdinalIgnoreCase) ||
+                   !Nullable.Equals(GPA, newGpa);
         }
 
-        private void search_MouseLeave(object sender, EventArgs e)
+        private bool AllRequiredFieldsFilled()
         {
-            search.BackColor = System.Drawing.Color.White;
+            Control[] requiredControls = { idTxtbox, fnameTxtbox, lnameTxtbox, miTxtbox, birthdatePicker, addressTxtbox, phone, emailtextBox, gender, yr, course, gpa };
+
+            foreach (Control control in requiredControls)
+            {
+                if (string.IsNullOrWhiteSpace(control.Text))
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
+
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            DateTime bd = birthdatePicker.Value;
-            DateTime currdate = DateTime.Now;
-            TimeSpan age_now = currdate - bd;
-            int age = (int)(age_now.TotalDays / 365.25);
-            string gen = gender.SelectedItem.ToString();
-            int year = Convert.ToInt32(yr.SelectedItem);
-            int prog_id = (int)course.SelectedValue;
-            decimal grade = Convert.ToDecimal(gpa.Text);
-            db.updateStudent(id, fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text,bd,age,addressTxtbox.Text,phone.Text,emailtextBox.Text,gen,year,prog_id,grade,adminId);
-            MessageBox.Show("Updated!", "Successfull");
-            display();
-        }
+            try
+            {
+                if (AllRequiredFieldsFilled())
+                {
+                    string selectedCourse = string.Empty;
+                    DateTime bd = birthdatePicker.Value;
+                    int age = CalculateAge(bd);
+                    string gen = gender.SelectedItem.ToString();
+                    int year = Convert.ToInt32(yr.SelectedItem);
+                    int prog_id = (int)course.SelectedValue;
+                    int index = course.FindString(ProgName);
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            fnameTxtbox.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            lnameTxtbox.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            miTxtbox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            birthdatePicker.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            addressTxtbox.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            phone.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-            emailtextBox.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-            gender.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-            yr.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
-            course.Text = dataGridView1.CurrentRow.Cells[11].Value.ToString();
-            gpa.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
+                    if (index != -1)
+                    {
+                        // The string was found in the ComboBox items
+                        selectedCourse = course.Items[index].ToString();
+                    }
+
+                    // Use decimal.TryParse for GPA
+                    if (!decimal.TryParse(gpa.Text, out var parsedGpa))
+                    {
+                        // Handle parsing failure or set a default value
+                        parsedGpa = 0.0m;
+                    }
+
+                    // Check if any of the fields have changed, including the program name
+                    if (HasChanges(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, bd, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, year.ToString(), selectedCourse, parsedGpa))
+                    {
+                        // Perform the update with the Student object
+                        db.updateStudent(ID, fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, bd, age, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, year, prog_id, parsedGpa, adminId);
+                        MessageBox.Show("Updated successfully!", "UPDATED");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nothing changed!", "Warning", MessageBoxButtons.OK);
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    // Provide more specific feedback about missing required fields
+                    MessageBox.Show("Please fill in all required fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show($"Error parsing date or GPA: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void display()
@@ -84,10 +147,60 @@ namespace EnrollmentSystem
                     adminId = item.admin_id;
                 }
             }
-            dataGridView1.DataSource = db.showStudent(adminId);
+        }
+
+        private int CalculateAge(DateTime birthdate)
+        {
+            DateTime now = DateTime.Now;
+            DateTime bday = DateTime.Parse(birthdatePicker.Text);
+            TimeSpan cal_age = now - bday;
+            int age = (int)(cal_age.TotalDays / 365);
+
+            return age;
         }
 
         private void updateStudent_Load(object sender, EventArgs e)
+        {
+            PopulateProgramList();
+
+            idTxtbox.Text = ID.ToString();
+            fnameTxtbox.Text = FirstName;
+            lnameTxtbox.Text = LastName;
+            miTxtbox.Text = MI;
+
+            // Check if Birthdate is not null before assigning to the DateTimePicker
+            if (Birthdate.HasValue)
+            {
+                birthdatePicker.Value = Birthdate.Value;
+            }
+
+            // Find the index of the item with the specified ProgName
+            int index = course.FindString(ProgName);
+
+            // Set the selected item based on the found index
+            if (index != -1)
+            {
+                course.SelectedIndex = index;
+            }
+
+            addressTxtbox.Text = Address;
+            phone.Text = Phone;
+            emailtextBox.Text = Email;
+            gender.SelectedItem = Gender;
+            yr.SelectedItem = YearLevel;
+
+            // Assuming GPA is a decimal, validate it before setting the Text property
+            if (GPA.HasValue)
+            {
+                gpa.Text = GPA.ToString();
+            }
+            else
+            {
+                gpa.Text = string.Empty; // or set a default value if appropriate
+            }
+        }
+
+        private void PopulateProgramList()
         {
             course.DataSource = db.progList().ToList();
             course.DisplayMember = "prog_name";
