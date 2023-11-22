@@ -622,11 +622,11 @@
             // 
             // studentEnrollment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
+            this.ClientSize = new System.Drawing.Size(376, 311);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "studentEnrollment";
             this.Text = "studentEnrollment";
             this.Load += new System.EventHandler(this.studentEnrollment_Load);
