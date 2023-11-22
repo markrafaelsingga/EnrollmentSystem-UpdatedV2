@@ -60,7 +60,9 @@
             this.lnameTxtbox = new System.Windows.Forms.TextBox();
             this.emailLbl = new System.Windows.Forms.Label();
             this.saveBtn = new System.Windows.Forms.Button();
-
+            this.emailTxtbox = new System.Windows.Forms.TextBox();
+            this.sem = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -121,6 +123,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
             this.panel1.Controls.Add(this.sem);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.emailTxtbox);
             this.panel1.Controls.Add(this.phLbl);
             this.panel1.Controls.Add(this.emlLbl);
             this.panel1.Controls.Add(this.batch);
@@ -132,7 +135,6 @@
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.gender);
             this.panel1.Controls.Add(this.birthdatePicker);
-            this.panel1.Controls.Add(this.emailtextBox);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.addressTxtbox);
@@ -278,7 +280,6 @@
             this.birthdatePicker.TabIndex = 16;
             this.birthdatePicker.ValueChanged += new System.EventHandler(this.birthdatePicker_ValueChanged);
             // 
-
             // label12
             // 
             this.label12.AutoSize = true;
@@ -439,7 +440,38 @@
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
-
+            // emailTxtbox
+            // 
+            this.emailTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTxtbox.Location = new System.Drawing.Point(154, 283);
+            this.emailTxtbox.Name = "emailTxtbox";
+            this.emailTxtbox.Size = new System.Drawing.Size(215, 26);
+            this.emailTxtbox.TabIndex = 31;
+            // 
+            // sem
+            // 
+            this.sem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sem.FormattingEnabled = true;
+            this.sem.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.sem.Location = new System.Drawing.Point(594, 198);
+            this.sem.Name = "sem";
+            this.sem.Size = new System.Drawing.Size(121, 21);
+            this.sem.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(515, 199);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 20);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Semester: ";
             // 
             // addStudent
             // 
@@ -497,6 +529,8 @@
         private System.Windows.Forms.TextBox lnameTxtbox;
         private System.Windows.Forms.Label emailLbl;
         private System.Windows.Forms.Button saveBtn;
-
+        private System.Windows.Forms.ComboBox sem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox emailTxtbox;
     }
 }

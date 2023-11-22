@@ -30,12 +30,12 @@ namespace EnrollmentSystem
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void Insertadmin(admin instance);
-    partial void Updateadmin(admin instance);
-    partial void Deleteadmin(admin instance);
     partial void Insertbatch(batch instance);
     partial void Updatebatch(batch instance);
     partial void Deletebatch(batch instance);
+    partial void Insertadmin(admin instance);
+    partial void Updateadmin(admin instance);
+    partial void Deleteadmin(admin instance);
     partial void Insertclass(@class instance);
     partial void Updateclass(@class instance);
     partial void Deleteclass(@class instance);
@@ -57,12 +57,12 @@ namespace EnrollmentSystem
     partial void Insertstudent(student instance);
     partial void Updatestudent(student instance);
     partial void Deletestudent(student instance);
-    partial void Insertyear(year instance);
-    partial void Updateyear(year instance);
-    partial void Deleteyear(year instance);
     partial void Insertuser_account(user_account instance);
     partial void Updateuser_account(user_account instance);
     partial void Deleteuser_account(user_account instance);
+    partial void Insertyear(year instance);
+    partial void Updateyear(year instance);
+    partial void Deleteyear(year instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -95,19 +95,19 @@ namespace EnrollmentSystem
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<admin> admins
-		{
-			get
-			{
-				return this.GetTable<admin>();
-			}
-		}
-		
 		public System.Data.Linq.Table<batch> batches
 		{
 			get
 			{
 				return this.GetTable<batch>();
+			}
+		}
+		
+		public System.Data.Linq.Table<admin> admins
+		{
+			get
+			{
+				return this.GetTable<admin>();
 			}
 		}
 		
@@ -167,19 +167,19 @@ namespace EnrollmentSystem
 			}
 		}
 		
-		public System.Data.Linq.Table<year> years
-		{
-			get
-			{
-				return this.GetTable<year>();
-			}
-		}
-		
 		public System.Data.Linq.Table<user_account> user_accounts
 		{
 			get
 			{
 				return this.GetTable<user_account>();
+			}
+		}
+		
+		public System.Data.Linq.Table<year> years
+		{
+			get
+			{
+				return this.GetTable<year>();
 			}
 		}
 		
@@ -211,16 +211,18 @@ namespace EnrollmentSystem
 			return ((int)(result.ReturnValue));
 		}
 		
-
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), section, from, toTime, day, crs_id, prof_id, room_id);
-			return ((int)(result.ReturnValue));
-		}
-		
-
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.adminID")]
+		public ISingleResult<adminIDResult> adminID([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> u_id)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), u_id);
 			return ((ISingleResult<adminIDResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.assignClass")]
+		public int assignClass([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string section, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Time")] System.Nullable<System.TimeSpan> from, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Time")] System.Nullable<System.TimeSpan> toTime, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string day, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> crs_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> prof_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> room_id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), section, from, toTime, day, crs_id, prof_id, room_id);
+			return ((int)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.batchList")]
@@ -281,7 +283,6 @@ namespace EnrollmentSystem
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.delCrs")]
 		public int delCrs([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string name)
-
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name);
 			return ((int)(result.ReturnValue));
@@ -292,6 +293,43 @@ namespace EnrollmentSystem
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), stud_fname, stud_lname, stud_mi, stud_bday, stud_age, stud_address, stud_phone, stud_email, stud_gender, stud_year, stud_gpa, prog_id, u_id, admin_id, batch_id);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.enrollStudentbyAdmin")]
+		public int enrollStudentbyAdmin(
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_fname, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_lname, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(1)")] string stud_mi, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> stud_bday, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> stud_age, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_address, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(11)")] string stud_phone, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_email, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(6)")] string stud_gender, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> stud_year, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(5,1)")] System.Nullable<decimal> stud_gpa, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> prog_id, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> u_id, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> admin_id, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> batch_id, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sem_id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), stud_fname, stud_lname, stud_mi, stud_bday, stud_age, stud_address, stud_phone, stud_email, stud_gender, stud_year, stud_gpa, prog_id, u_id, admin_id, batch_id, sem_id);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.getAdmin")]
+		public ISingleResult<getAdminResult> getAdmin([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
+			return ((ISingleResult<getAdminResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.getStud")]
+		public ISingleResult<getStudResult> getStud([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
+			return ((ISingleResult<getStudResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insActive")]
@@ -329,18 +367,18 @@ namespace EnrollmentSystem
 			return ((ISingleResult<insNameResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.logId")]
-		public ISingleResult<logIdResult> logId([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(MAX)")] string uname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(MAX)")] string upass)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), uname, upass);
-			return ((ISingleResult<logIdResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.progList")]
 		public ISingleResult<progListResult> progList()
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<progListResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.logId")]
+		public ISingleResult<logIdResult> logId([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(MAX)")] string uname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(MAX)")] string upass)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), uname, upass);
+			return ((ISingleResult<logIdResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.roomList")]
@@ -399,60 +437,25 @@ namespace EnrollmentSystem
 			return ((ISingleResult<showCrsResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.yearList")]
-		public ISingleResult<yearListResult> yearList()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<yearListResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.viewEnrollee")]
-		public ISingleResult<viewEnrolleeResult> viewEnrollee([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> admin_id)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.showInstructor")]
+		public ISingleResult<showInstructorResult> showInstructor([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> admin_id)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), admin_id);
-			return ((ISingleResult<viewEnrolleeResult>)(result.ReturnValue));
+			return ((ISingleResult<showInstructorResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateStudent")]
-		public int updateStudent([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string fname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string lname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(1)")] string mi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> dob, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> age, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string address, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string phone, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string email, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(6)")] string gender, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> year, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> prog_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(5,1)")] System.Nullable<decimal> gpa, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> admin_id)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id, fname, lname, mi, dob, age, address, phone, email, gender, year, prog_id, gpa, admin_id);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateClass")]
-		public int updateClass([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string section, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Time")] System.Nullable<System.TimeSpan> from, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Time")] System.Nullable<System.TimeSpan> to, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string day, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> crs_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ins_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> room_id)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id, section, from, to, day, crs_id, ins_id, room_id);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.tryView")]
-		public ISingleResult<tryViewResult> tryView()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<tryViewResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.studName")]
-		public ISingleResult<studNameResult> studName([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.showStudent")]
+		public ISingleResult<showStudentResult> showStudent([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
-			return ((ISingleResult<studNameResult>)(result.ReturnValue));
+			return ((ISingleResult<showStudentResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.studId")]
-		public ISingleResult<studIdResult> studId([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string user, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string pass)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), user, pass);
-			return ((ISingleResult<studIdResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.studDel")]
-		public int studDel([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.studClass")]
+		public ISingleResult<studClassResult> studClass([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
-			return ((int)(result.ReturnValue));
+			return ((ISingleResult<studClassResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.studCourse")]
@@ -462,16 +465,74 @@ namespace EnrollmentSystem
 			return ((ISingleResult<studCourseResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.studClass")]
-		public ISingleResult<studClassResult> studClass([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.studDel")]
+		public int studDel([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
-			return ((ISingleResult<studClassResult>)(result.ReturnValue));
+			return ((int)(result.ReturnValue));
 		}
-
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.studId")]
+		public ISingleResult<studIdResult> studId([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string user, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string pass)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), user, pass);
+			return ((ISingleResult<studIdResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.studName")]
+		public ISingleResult<studNameResult> studName([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
+			return ((ISingleResult<studNameResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.tryView")]
+		public ISingleResult<tryViewResult> tryView()
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<semListResult>)(result.ReturnValue));
+			return ((ISingleResult<tryViewResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateClass")]
+		public int updateClass([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string section, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Time")] System.Nullable<System.TimeSpan> from, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Time")] System.Nullable<System.TimeSpan> to, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string day, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> crs_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ins_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> room_id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id, section, from, to, day, crs_id, ins_id, room_id);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateCrs")]
+		public int updateCrs([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> crs_code, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string crs_name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string crs_desc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> crs_year, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sem)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), crs_code, crs_name, crs_desc, crs_year, sem);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateStudent")]
+		public int updateStudent([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string fname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string lname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(1)")] string mi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> dob, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> age, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string address, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string phone, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string email, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(6)")] string gender, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> year, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> prog_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(5,1)")] System.Nullable<decimal> gpa, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> admin_id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id, fname, lname, mi, dob, age, address, phone, email, gender, year, prog_id, gpa, admin_id);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.viewEnrollee")]
+		public ISingleResult<viewEnrolleeResult> viewEnrollee([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> admin_id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), admin_id);
+			return ((ISingleResult<viewEnrolleeResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.yearList")]
+		public ISingleResult<yearListResult> yearList()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<yearListResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.searchInstructor")]
+		public ISingleResult<searchInstructorResult> searchInstructor([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(MAX)")] string key)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), key);
+			return ((ISingleResult<searchInstructorResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateInstructor")]
@@ -480,8 +541,119 @@ namespace EnrollmentSystem
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id, fname, mi, lname, dob, age, gender, phone, email, admin_id);
 			return ((int)(result.ReturnValue));
 		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.batch")]
+	public partial class batch : INotifyPropertyChanging, INotifyPropertyChanged
+	{
 		
-
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _batch_id;
+		
+		private string _batch_year;
+		
+		private EntitySet<student> _students;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onbatch_idChanging(int value);
+    partial void Onbatch_idChanged();
+    partial void Onbatch_yearChanging(string value);
+    partial void Onbatch_yearChanged();
+    #endregion
+		
+		public batch()
+		{
+			this._students = new EntitySet<student>(new Action<student>(this.attach_students), new Action<student>(this.detach_students));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_batch_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int batch_id
+		{
+			get
+			{
+				return this._batch_id;
+			}
+			set
+			{
+				if ((this._batch_id != value))
+				{
+					this.Onbatch_idChanging(value);
+					this.SendPropertyChanging();
+					this._batch_id = value;
+					this.SendPropertyChanged("batch_id");
+					this.Onbatch_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_batch_year", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string batch_year
+		{
+			get
+			{
+				return this._batch_year;
+			}
+			set
+			{
+				if ((this._batch_year != value))
+				{
+					this.Onbatch_yearChanging(value);
+					this.SendPropertyChanging();
+					this._batch_year = value;
+					this.SendPropertyChanged("batch_year");
+					this.Onbatch_yearChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="batch_student", Storage="_students", ThisKey="batch_id", OtherKey="batch_id")]
+		public EntitySet<student> students
+		{
+			get
+			{
+				return this._students;
+			}
+			set
+			{
+				this._students.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_students(student entity)
+		{
+			this.SendPropertyChanging();
+			entity.batch = this;
+		}
+		
+		private void detach_students(student entity)
+		{
+			this.SendPropertyChanging();
+			entity.batch = null;
 		}
 	}
 	
@@ -809,120 +981,6 @@ namespace EnrollmentSystem
 		{
 			this.SendPropertyChanging();
 			entity.admin = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.batch")]
-	public partial class batch : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _batch_id;
-		
-		private string _batch_year;
-		
-		private EntitySet<student> _students;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onbatch_idChanging(int value);
-    partial void Onbatch_idChanged();
-    partial void Onbatch_yearChanging(string value);
-    partial void Onbatch_yearChanged();
-    #endregion
-		
-		public batch()
-		{
-			this._students = new EntitySet<student>(new Action<student>(this.attach_students), new Action<student>(this.detach_students));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_batch_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int batch_id
-		{
-			get
-			{
-				return this._batch_id;
-			}
-			set
-			{
-				if ((this._batch_id != value))
-				{
-					this.Onbatch_idChanging(value);
-					this.SendPropertyChanging();
-					this._batch_id = value;
-					this.SendPropertyChanged("batch_id");
-					this.Onbatch_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_batch_year", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
-		public string batch_year
-		{
-			get
-			{
-				return this._batch_year;
-			}
-			set
-			{
-				if ((this._batch_year != value))
-				{
-					this.Onbatch_yearChanging(value);
-					this.SendPropertyChanging();
-					this._batch_year = value;
-					this.SendPropertyChanged("batch_year");
-					this.Onbatch_yearChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="batch_student", Storage="_students", ThisKey="batch_id", OtherKey="batch_id")]
-		public EntitySet<student> students
-		{
-			get
-			{
-				return this._students;
-			}
-			set
-			{
-				this._students.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_students(student entity)
-		{
-			this.SendPropertyChanging();
-			entity.batch = this;
-		}
-		
-		private void detach_students(student entity)
-		{
-			this.SendPropertyChanging();
-			entity.batch = null;
 		}
 	}
 	
@@ -2459,9 +2517,9 @@ namespace EnrollmentSystem
 		
 		private EntityRef<semester> _semester;
 		
-		private EntityRef<year> _year;
-		
 		private EntityRef<user_account> _user_account;
+		
+		private EntityRef<year> _year;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2515,8 +2573,8 @@ namespace EnrollmentSystem
 			this._batch = default(EntityRef<batch>);
 			this._program = default(EntityRef<program>);
 			this._semester = default(EntityRef<semester>);
-			this._year = default(EntityRef<year>);
 			this._user_account = default(EntityRef<user_account>);
+			this._year = default(EntityRef<year>);
 			OnCreated();
 		}
 		
@@ -3080,40 +3138,6 @@ namespace EnrollmentSystem
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="year_student", Storage="_year", ThisKey="year_id", OtherKey="year_id", IsForeignKey=true)]
-		public year year
-		{
-			get
-			{
-				return this._year.Entity;
-			}
-			set
-			{
-				year previousValue = this._year.Entity;
-				if (((previousValue != value) 
-							|| (this._year.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._year.Entity = null;
-						previousValue.students.Remove(this);
-					}
-					this._year.Entity = value;
-					if ((value != null))
-					{
-						value.students.Add(this);
-						this._year_id = value.year_id;
-					}
-					else
-					{
-						this._year_id = default(int);
-					}
-					this.SendPropertyChanged("year");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_account_student", Storage="_user_account", ThisKey="u_id", OtherKey="u_id", IsForeignKey=true)]
 		public user_account user_account
 		{
@@ -3148,121 +3172,37 @@ namespace EnrollmentSystem
 			}
 		}
 		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.years")]
-	public partial class year : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _year_id;
-		
-		private int _year_level;
-		
-		private EntitySet<course> _courses;
-		
-		private EntitySet<student> _students;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onyear_idChanging(int value);
-    partial void Onyear_idChanged();
-    partial void Onyear_levelChanging(int value);
-    partial void Onyear_levelChanged();
-    #endregion
-		
-		public year()
-		{
-			this._courses = new EntitySet<course>(new Action<course>(this.attach_courses), new Action<course>(this.detach_courses));
-			this._students = new EntitySet<student>(new Action<student>(this.attach_students), new Action<student>(this.detach_students));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int year_id
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="year_student", Storage="_year", ThisKey="year_id", OtherKey="year_id", IsForeignKey=true)]
+		public year year
 		{
 			get
 			{
-				return this._year_id;
+				return this._year.Entity;
 			}
 			set
 			{
-				if ((this._year_id != value))
+				year previousValue = this._year.Entity;
+				if (((previousValue != value) 
+							|| (this._year.HasLoadedOrAssignedValue == false)))
 				{
-					this.Onyear_idChanging(value);
 					this.SendPropertyChanging();
-					this._year_id = value;
-					this.SendPropertyChanged("year_id");
-					this.Onyear_idChanged();
+					if ((previousValue != null))
+					{
+						this._year.Entity = null;
+						previousValue.students.Remove(this);
+					}
+					this._year.Entity = value;
+					if ((value != null))
+					{
+						value.students.Add(this);
+						this._year_id = value.year_id;
+					}
+					else
+					{
+						this._year_id = default(int);
+					}
+					this.SendPropertyChanged("year");
 				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_level", DbType="Int NOT NULL")]
-		public int year_level
-		{
-			get
-			{
-				return this._year_level;
-			}
-			set
-			{
-				if ((this._year_level != value))
-				{
-					this.Onyear_levelChanging(value);
-					this.SendPropertyChanging();
-					this._year_level = value;
-					this.SendPropertyChanged("year_level");
-					this.Onyear_levelChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="year_course", Storage="_courses", ThisKey="year_id", OtherKey="year_id")]
-		public EntitySet<course> courses
-		{
-			get
-			{
-				return this._courses;
-			}
-			set
-			{
-				this._courses.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="year_student", Storage="_students", ThisKey="year_id", OtherKey="year_id")]
-		public EntitySet<student> students
-		{
-			get
-			{
-				return this._students;
-			}
-			set
-			{
-				this._students.Assign(value);
 			}
 		}
 		
@@ -3284,30 +3224,6 @@ namespace EnrollmentSystem
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_courses(course entity)
-		{
-			this.SendPropertyChanging();
-			entity.year = this;
-		}
-		
-		private void detach_courses(course entity)
-		{
-			this.SendPropertyChanging();
-			entity.year = null;
-		}
-		
-		private void attach_students(student entity)
-		{
-			this.SendPropertyChanging();
-			entity.year = this;
-		}
-		
-		private void detach_students(student entity)
-		{
-			this.SendPropertyChanging();
-			entity.year = null;
 		}
 	}
 	
@@ -3477,6 +3393,148 @@ namespace EnrollmentSystem
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.years")]
+	public partial class year : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _year_id;
+		
+		private int _year_level;
+		
+		private EntitySet<course> _courses;
+		
+		private EntitySet<student> _students;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onyear_idChanging(int value);
+    partial void Onyear_idChanged();
+    partial void Onyear_levelChanging(int value);
+    partial void Onyear_levelChanged();
+    #endregion
+		
+		public year()
+		{
+			this._courses = new EntitySet<course>(new Action<course>(this.attach_courses), new Action<course>(this.detach_courses));
+			this._students = new EntitySet<student>(new Action<student>(this.attach_students), new Action<student>(this.detach_students));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int year_id
+		{
+			get
+			{
+				return this._year_id;
+			}
+			set
+			{
+				if ((this._year_id != value))
+				{
+					this.Onyear_idChanging(value);
+					this.SendPropertyChanging();
+					this._year_id = value;
+					this.SendPropertyChanged("year_id");
+					this.Onyear_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_level", DbType="Int NOT NULL")]
+		public int year_level
+		{
+			get
+			{
+				return this._year_level;
+			}
+			set
+			{
+				if ((this._year_level != value))
+				{
+					this.Onyear_levelChanging(value);
+					this.SendPropertyChanging();
+					this._year_level = value;
+					this.SendPropertyChanged("year_level");
+					this.Onyear_levelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="year_course", Storage="_courses", ThisKey="year_id", OtherKey="year_id")]
+		public EntitySet<course> courses
+		{
+			get
+			{
+				return this._courses;
+			}
+			set
+			{
+				this._courses.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="year_student", Storage="_students", ThisKey="year_id", OtherKey="year_id")]
+		public EntitySet<student> students
+		{
+			get
+			{
+				return this._students;
+			}
+			set
+			{
+				this._students.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_courses(course entity)
+		{
+			this.SendPropertyChanging();
+			entity.year = this;
+		}
+		
+		private void detach_courses(course entity)
+		{
+			this.SendPropertyChanging();
+			entity.year = null;
+		}
+		
+		private void attach_students(student entity)
+		{
+			this.SendPropertyChanging();
+			entity.year = this;
+		}
+		
+		private void detach_students(student entity)
+		{
+			this.SendPropertyChanging();
+			entity.year = null;
+		}
+	}
+	
 	public partial class accIdResult
 	{
 		
@@ -3498,6 +3556,32 @@ namespace EnrollmentSystem
 				if ((this._u_id != value))
 				{
 					this._u_id = value;
+				}
+			}
+		}
+	}
+	
+	public partial class adminIDResult
+	{
+		
+		private int _admin_id;
+		
+		public adminIDResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_admin_id", DbType="Int NOT NULL")]
+		public int admin_id
+		{
+			get
+			{
+				return this._admin_id;
+			}
+			set
+			{
+				if ((this._admin_id != value))
+				{
+					this._admin_id = value;
 				}
 			}
 		}
@@ -3542,32 +3626,6 @@ namespace EnrollmentSystem
 				if ((this._batch_year != value))
 				{
 					this._batch_year = value;
-				}
-			}
-		}
-	}
-	
-	public partial class adminIDResult
-	{
-		
-		private int _admin_id;
-		
-		public adminIDResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_admin_id", DbType="Int NOT NULL")]
-		public int admin_id
-		{
-			get
-			{
-				return this._admin_id;
-			}
-			set
-			{
-				if ((this._admin_id != value))
-				{
-					this._admin_id = value;
 				}
 			}
 		}
@@ -3819,7 +3877,6 @@ namespace EnrollmentSystem
 				}
 			}
 		}
-
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
 		public string crs_name
@@ -3902,12 +3959,532 @@ namespace EnrollmentSystem
 		}
 	}
 	
-
+	public partial class getAdminResult
+	{
+		
+		private int _admin_id;
+		
+		private string _admin_fname;
+		
+		private string _admin_mi;
+		
+		private string _admin_lname;
+		
+		private string _admin_address;
+		
+		private string _admin_email;
+		
+		private string _admin_phone;
+		
+		private int _u_id;
+		
+		public getAdminResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_admin_id", DbType="Int NOT NULL")]
+		public int admin_id
+		{
+			get
+			{
+				return this._admin_id;
+			}
+			set
+			{
+				if ((this._admin_id != value))
+				{
+					this._admin_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_admin_fname", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string admin_fname
+		{
+			get
+			{
+				return this._admin_fname;
+			}
+			set
+			{
+				if ((this._admin_fname != value))
+				{
+					this._admin_fname = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_admin_mi", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		public string admin_mi
+		{
+			get
+			{
+				return this._admin_mi;
+			}
+			set
+			{
+				if ((this._admin_mi != value))
+				{
+					this._admin_mi = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_admin_lname", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string admin_lname
+		{
+			get
+			{
+				return this._admin_lname;
+			}
+			set
+			{
+				if ((this._admin_lname != value))
+				{
+					this._admin_lname = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_admin_address", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string admin_address
+		{
+			get
+			{
+				return this._admin_address;
+			}
+			set
+			{
+				if ((this._admin_address != value))
+				{
+					this._admin_address = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_admin_email", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string admin_email
+		{
+			get
+			{
+				return this._admin_email;
+			}
+			set
+			{
+				if ((this._admin_email != value))
+				{
+					this._admin_email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_admin_phone", DbType="VarChar(11) NOT NULL", CanBeNull=false)]
+		public string admin_phone
+		{
+			get
+			{
+				return this._admin_phone;
+			}
+			set
+			{
+				if ((this._admin_phone != value))
+				{
+					this._admin_phone = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_u_id", DbType="Int NOT NULL")]
+		public int u_id
+		{
+			get
+			{
+				return this._u_id;
+			}
+			set
+			{
+				if ((this._u_id != value))
+				{
+					this._u_id = value;
+				}
+			}
+		}
+	}
+	
+	public partial class getStudResult
+	{
+		
+		private int _stud_id;
+		
+		private string _stud_no;
+		
+		private string _stud_fname;
+		
+		private string _stud_lname;
+		
+		private string _stud_mi;
+		
+		private System.DateTime _stud_bday;
+		
+		private int _stud_age;
+		
+		private string _stud_address;
+		
+		private string _stud_phone;
+		
+		private string _stud_email;
+		
+		private string _stud_gender;
+		
+		private string _stud_status;
+		
+		private bool _stud_isActive;
+		
+		private int _prog_id;
+		
+		private int _u_id;
+		
+		private int _admin_id;
+		
+		private decimal _stud_gpa;
+		
+		private int _batch_id;
+		
+		private int _year_id;
+		
+		private int _sem_id;
+		
+		public getStudResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_id", DbType="Int NOT NULL")]
+		public int stud_id
+		{
+			get
+			{
+				return this._stud_id;
+			}
+			set
+			{
+				if ((this._stud_id != value))
+				{
+					this._stud_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_no", DbType="VarChar(5)")]
+		public string stud_no
+		{
+			get
+			{
+				return this._stud_no;
+			}
+			set
+			{
+				if ((this._stud_no != value))
+				{
+					this._stud_no = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_fname", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string stud_fname
+		{
+			get
+			{
+				return this._stud_fname;
+			}
+			set
+			{
+				if ((this._stud_fname != value))
+				{
+					this._stud_fname = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_lname", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string stud_lname
+		{
+			get
+			{
+				return this._stud_lname;
+			}
+			set
+			{
+				if ((this._stud_lname != value))
+				{
+					this._stud_lname = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_mi", DbType="VarChar(1)")]
+		public string stud_mi
+		{
+			get
+			{
+				return this._stud_mi;
+			}
+			set
+			{
+				if ((this._stud_mi != value))
+				{
+					this._stud_mi = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_bday", DbType="Date NOT NULL")]
+		public System.DateTime stud_bday
+		{
+			get
+			{
+				return this._stud_bday;
+			}
+			set
+			{
+				if ((this._stud_bday != value))
+				{
+					this._stud_bday = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_age", DbType="Int NOT NULL")]
+		public int stud_age
+		{
+			get
+			{
+				return this._stud_age;
+			}
+			set
+			{
+				if ((this._stud_age != value))
+				{
+					this._stud_age = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_address", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string stud_address
+		{
+			get
+			{
+				return this._stud_address;
+			}
+			set
+			{
+				if ((this._stud_address != value))
+				{
+					this._stud_address = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_phone", DbType="VarChar(11) NOT NULL", CanBeNull=false)]
+		public string stud_phone
+		{
+			get
+			{
+				return this._stud_phone;
+			}
+			set
+			{
+				if ((this._stud_phone != value))
+				{
+					this._stud_phone = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_email", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string stud_email
+		{
+			get
+			{
+				return this._stud_email;
+			}
+			set
+			{
+				if ((this._stud_email != value))
+				{
+					this._stud_email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_gender", DbType="VarChar(6) NOT NULL", CanBeNull=false)]
+		public string stud_gender
+		{
+			get
+			{
+				return this._stud_gender;
+			}
+			set
+			{
+				if ((this._stud_gender != value))
+				{
+					this._stud_gender = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_status", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string stud_status
+		{
+			get
+			{
+				return this._stud_status;
+			}
+			set
+			{
+				if ((this._stud_status != value))
+				{
+					this._stud_status = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_isActive", DbType="Bit NOT NULL")]
+		public bool stud_isActive
+		{
+			get
+			{
+				return this._stud_isActive;
+			}
+			set
+			{
+				if ((this._stud_isActive != value))
+				{
+					this._stud_isActive = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_id", DbType="Int NOT NULL")]
+		public int prog_id
+		{
+			get
+			{
+				return this._prog_id;
+			}
+			set
+			{
+				if ((this._prog_id != value))
+				{
+					this._prog_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_u_id", DbType="Int NOT NULL")]
+		public int u_id
+		{
+			get
+			{
+				return this._u_id;
+			}
+			set
+			{
+				if ((this._u_id != value))
+				{
+					this._u_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_admin_id", DbType="Int NOT NULL")]
+		public int admin_id
+		{
+			get
+			{
+				return this._admin_id;
+			}
+			set
+			{
+				if ((this._admin_id != value))
+				{
+					this._admin_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_gpa", DbType="Decimal(5,1) NOT NULL")]
+		public decimal stud_gpa
+		{
+			get
+			{
+				return this._stud_gpa;
+			}
+			set
+			{
+				if ((this._stud_gpa != value))
+				{
+					this._stud_gpa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_batch_id", DbType="Int NOT NULL")]
+		public int batch_id
+		{
+			get
+			{
+				return this._batch_id;
+			}
+			set
+			{
+				if ((this._batch_id != value))
+				{
+					this._batch_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_id", DbType="Int NOT NULL")]
+		public int year_id
+		{
+			get
+			{
+				return this._year_id;
+			}
+			set
+			{
+				if ((this._year_id != value))
+				{
+					this._year_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sem_id", DbType="Int NOT NULL")]
+		public int sem_id
+		{
+			get
+			{
+				return this._sem_id;
+			}
+			set
+			{
+				if ((this._sem_id != value))
+				{
+					this._sem_id = value;
+				}
+			}
+		}
+	}
+	
+	public partial class insActiveResult
 	{
 		
 		private int _ins_id;
 		
-
+		public insActiveResult()
 		{
 		}
 		
@@ -3939,7 +4516,18 @@ namespace EnrollmentSystem
 		{
 		}
 		
-
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_id", DbType="Int NOT NULL")]
+		public int ins_id
+		{
+			get
+			{
+				return this._ins_id;
+			}
+			set
+			{
+				if ((this._ins_id != value))
+				{
+					this._ins_id = value;
 				}
 			}
 		}
@@ -3961,7 +4549,51 @@ namespace EnrollmentSystem
 		}
 	}
 	
-
+	public partial class insListResult
+	{
+		
+		private int _ins_id;
+		
+		private string _ins_fname;
+		
+		private string _ins_mi;
+		
+		private string _ins_lname;
+		
+		public insListResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_id", DbType="Int NOT NULL")]
+		public int ins_id
+		{
+			get
+			{
+				return this._ins_id;
+			}
+			set
+			{
+				if ((this._ins_id != value))
+				{
+					this._ins_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_fname", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string ins_fname
+		{
+			get
+			{
+				return this._ins_fname;
+			}
+			set
+			{
+				if ((this._ins_fname != value))
+				{
+					this._ins_fname = value;
+				}
+			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_mi", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
@@ -4041,32 +4673,6 @@ namespace EnrollmentSystem
 		}
 	}
 	
-	public partial class logIdResult
-	{
-		
-		private int _admin_id;
-		
-		public logIdResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_admin_id", DbType="Int NOT NULL")]
-		public int admin_id
-		{
-			get
-			{
-				return this._admin_id;
-			}
-			set
-			{
-				if ((this._admin_id != value))
-				{
-					this._admin_id = value;
-				}
-			}
-		}
-	}
-	
 	public partial class progListResult
 	{
 		
@@ -4106,6 +4712,32 @@ namespace EnrollmentSystem
 				if ((this._prog_name != value))
 				{
 					this._prog_name = value;
+				}
+			}
+		}
+	}
+	
+	public partial class logIdResult
+	{
+		
+		private int _admin_id;
+		
+		public logIdResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_admin_id", DbType="Int NOT NULL")]
+		public int admin_id
+		{
+			get
+			{
+				return this._admin_id;
+			}
+			set
+			{
+				if ((this._admin_id != value))
+				{
+					this._admin_id = value;
 				}
 			}
 		}
@@ -4807,12 +5439,346 @@ namespace EnrollmentSystem
 			{
 				if ((this._crs_code != value))
 				{
-
+					this._crs_code = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_mi", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string crs_name
+		{
+			get
+			{
+				return this._crs_name;
+			}
+			set
+			{
+				if ((this._crs_name != value))
+				{
+					this._crs_name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_desc", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string crs_desc
+		{
+			get
+			{
+				return this._crs_desc;
+			}
+			set
+			{
+				if ((this._crs_desc != value))
+				{
+					this._crs_desc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_level", DbType="Int NOT NULL")]
+		public int year_level
+		{
+			get
+			{
+				return this._year_level;
+			}
+			set
+			{
+				if ((this._year_level != value))
+				{
+					this._year_level = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string prog_name
+		{
+			get
+			{
+				return this._prog_name;
+			}
+			set
+			{
+				if ((this._prog_name != value))
+				{
+					this._prog_name = value;
+				}
+			}
+		}
+	}
+	
+	public partial class showInstructorResult
+	{
+		
+		private int _ins_id;
+		
+		private string _ins_no;
+		
+		private string _ins_fname;
+		
+		private string _ins_mi;
+		
+		private string _ins_lname;
+		
+		private System.DateTime _ins_dob;
+		
+		private int _ins_age;
+		
+		private string _ins_phone;
+		
+		private string _ins_email;
+		
+		public showInstructorResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_id", DbType="Int NOT NULL")]
+		public int ins_id
+		{
+			get
+			{
+				return this._ins_id;
+			}
+			set
+			{
+				if ((this._ins_id != value))
+				{
+					this._ins_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_no", DbType="VarChar(5)")]
+		public string ins_no
+		{
+			get
+			{
+				return this._ins_no;
+			}
+			set
+			{
+				if ((this._ins_no != value))
+				{
+					this._ins_no = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_fname", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string ins_fname
+		{
+			get
+			{
+				return this._ins_fname;
+			}
+			set
+			{
+				if ((this._ins_fname != value))
+				{
+					this._ins_fname = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_mi", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string ins_mi
+		{
+			get
+			{
+				return this._ins_mi;
+			}
+			set
+			{
+				if ((this._ins_mi != value))
+				{
+					this._ins_mi = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_lname", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string ins_lname
+		{
+			get
+			{
+				return this._ins_lname;
+			}
+			set
+			{
+				if ((this._ins_lname != value))
+				{
+					this._ins_lname = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_dob", DbType="Date NOT NULL")]
+		public System.DateTime ins_dob
+		{
+			get
+			{
+				return this._ins_dob;
+			}
+			set
+			{
+				if ((this._ins_dob != value))
+				{
+					this._ins_dob = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_age", DbType="Int NOT NULL")]
+		public int ins_age
+		{
+			get
+			{
+				return this._ins_age;
+			}
+			set
+			{
+				if ((this._ins_age != value))
+				{
+					this._ins_age = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_phone", DbType="VarChar(11) NOT NULL", CanBeNull=false)]
+		public string ins_phone
+		{
+			get
+			{
+				return this._ins_phone;
+			}
+			set
+			{
+				if ((this._ins_phone != value))
+				{
+					this._ins_phone = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_email", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string ins_email
+		{
+			get
+			{
+				return this._ins_email;
+			}
+			set
+			{
+				if ((this._ins_email != value))
+				{
+					this._ins_email = value;
+				}
+			}
+		}
+	}
+	
+	public partial class showStudentResult
+	{
+		
+		private int _stud_id;
+		
+		private string _stud_no;
+		
+		private string _stud_fname;
+		
+		private string _stud_lname;
+		
+		private string _stud_mi;
+		
+		private System.DateTime _stud_bday;
+		
+		private string _stud_address;
+		
+		private string _stud_phone;
+		
+		private string _stud_email;
+		
+		private string _stud_gender;
+		
+		private int _year_level;
+		
+		private string _prog_name;
+		
+		private decimal _stud_gpa;
+		
+		private string _batch_year;
+		
+		public showStudentResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_id", DbType="Int NOT NULL")]
+		public int stud_id
+		{
+			get
+			{
+				return this._stud_id;
+			}
+			set
+			{
+				if ((this._stud_id != value))
+				{
+					this._stud_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_no", DbType="VarChar(5)")]
+		public string stud_no
+		{
+			get
+			{
+				return this._stud_no;
+			}
+			set
+			{
+				if ((this._stud_no != value))
+				{
+					this._stud_no = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_fname", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string stud_fname
+		{
+			get
+			{
+				return this._stud_fname;
+			}
+			set
+			{
+				if ((this._stud_fname != value))
+				{
+					this._stud_fname = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_lname", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string stud_lname
+		{
+			get
+			{
+				return this._stud_lname;
+			}
+			set
+			{
+				if ((this._stud_lname != value))
+				{
+					this._stud_lname = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_mi", DbType="VarChar(1)")]
 		public string stud_mi
 		{
 			get
@@ -4843,7 +5809,6 @@ namespace EnrollmentSystem
 				}
 			}
 		}
-
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_address", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
 		public string stud_address
@@ -4909,18 +5874,18 @@ namespace EnrollmentSystem
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_gpa", DbType="Decimal(5,1) NOT NULL")]
-		public decimal stud_gpa
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_level", DbType="Int NOT NULL")]
+		public int year_level
 		{
 			get
 			{
-				return this._stud_gpa;
+				return this._year_level;
 			}
 			set
 			{
-				if ((this._stud_gpa != value))
+				if ((this._year_level != value))
 				{
-					this._stud_gpa = value;
+					this._year_level = value;
 				}
 			}
 		}
@@ -4941,6 +5906,22 @@ namespace EnrollmentSystem
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_gpa", DbType="Decimal(5,1) NOT NULL")]
+		public decimal stud_gpa
+		{
+			get
+			{
+				return this._stud_gpa;
+			}
+			set
+			{
+				if ((this._stud_gpa != value))
+				{
+					this._stud_gpa = value;
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_batch_year", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
 		public string batch_year
 		{
@@ -4956,25 +5937,29 @@ namespace EnrollmentSystem
 				}
 			}
 		}
+	}
+	
+	public partial class studClassResult
+	{
 		
-
-		{
-		}
+		private string _class_section;
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_code", DbType="Int NOT NULL")]
-		public int class_code
+		private System.TimeSpan _class_fromTime;
+		
+		private System.TimeSpan _class_toTime;
+		
+		private string _class_day;
+		
+		private string _crs_name;
+		
+		private string _instructor_name;
+		
+		private string _room_name;
+		
+		private int _year_level;
+		
+		public studClassResult()
 		{
-			get
-			{
-
-			}
-			set
-			{
-				if ((this._class_code != value))
-				{
-					this._class_code = value;
-				}
-			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_section", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
@@ -4993,7 +5978,8 @@ namespace EnrollmentSystem
 			}
 		}
 		
-
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_fromTime", DbType="Time NOT NULL")]
+		public System.TimeSpan class_fromTime
 		{
 			get
 			{
@@ -5087,12 +6073,26 @@ namespace EnrollmentSystem
 				}
 			}
 		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_level", DbType="Int NOT NULL")]
+		public int year_level
+		{
+			get
+			{
+				return this._year_level;
+			}
+			set
+			{
+				if ((this._year_level != value))
+				{
+					this._year_level = value;
+				}
+			}
+		}
 	}
 	
-	public partial class showCrsResult
+	public partial class studCourseResult
 	{
-		
-		private int _crs_code;
 		
 		private string _crs_name;
 		
@@ -5100,24 +6100,8 @@ namespace EnrollmentSystem
 		
 		private int _year_level;
 		
-		public showCrsResult()
+		public studCourseResult()
 		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_code", DbType="Int NOT NULL")]
-		public int crs_code
-		{
-			get
-			{
-				return this._crs_code;
-			}
-			set
-			{
-				if ((this._crs_code != value))
-				{
-					this._crs_code = value;
-				}
-			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
@@ -5169,80 +6153,12 @@ namespace EnrollmentSystem
 		}
 	}
 	
-	public partial class yearListResult
-	{
-		
-		private int _year_id;
-		
-		private int _year_level;
-		
-		public yearListResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_id", DbType="Int NOT NULL")]
-		public int year_id
-		{
-			get
-			{
-				return this._year_id;
-			}
-			set
-			{
-				if ((this._year_id != value))
-				{
-					this._year_id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_level", DbType="Int NOT NULL")]
-		public int year_level
-		{
-			get
-			{
-				return this._year_level;
-			}
-			set
-			{
-				if ((this._year_level != value))
-				{
-					this._year_level = value;
-				}
-			}
-		}
-	}
-	
-	public partial class viewEnrolleeResult
+	public partial class studIdResult
 	{
 		
 		private int _stud_id;
 		
-		private string _stud_fname;
-		
-		private string _stud_lname;
-		
-		private string _stud_mi;
-		
-		private System.DateTime _stud_bday;
-		
-		private int _stud_age;
-		
-		private string _stud_address;
-		
-		private string _stud_phone;
-		
-		private string _stud_email;
-		
-		private string _stud_gender;
-		
-		private string _stud_status;
-		
-		private string _prog_name;
-		
-		private int _year_level;
-		
-		public viewEnrolleeResult()
+		public studIdResult()
 		{
 		}
 		
@@ -5261,195 +6177,29 @@ namespace EnrollmentSystem
 				}
 			}
 		}
+	}
+	
+	public partial class studNameResult
+	{
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_fname", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string stud_fname
+		private string _Fullname;
+		
+		public studNameResult()
 		{
-			get
-			{
-				return this._stud_fname;
-			}
-			set
-			{
-				if ((this._stud_fname != value))
-				{
-					this._stud_fname = value;
-				}
-			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_lname", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string stud_lname
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fullname", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string Fullname
 		{
 			get
 			{
-				return this._stud_lname;
+				return this._Fullname;
 			}
 			set
 			{
-				if ((this._stud_lname != value))
+				if ((this._Fullname != value))
 				{
-					this._stud_lname = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_mi", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
-		public string stud_mi
-		{
-			get
-			{
-				return this._stud_mi;
-			}
-			set
-			{
-				if ((this._stud_mi != value))
-				{
-					this._stud_mi = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_bday", DbType="Date NOT NULL")]
-		public System.DateTime stud_bday
-		{
-			get
-			{
-				return this._stud_bday;
-			}
-			set
-			{
-				if ((this._stud_bday != value))
-				{
-					this._stud_bday = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_age", DbType="Int NOT NULL")]
-		public int stud_age
-		{
-			get
-			{
-				return this._stud_age;
-			}
-			set
-			{
-				if ((this._stud_age != value))
-				{
-					this._stud_age = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_address", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string stud_address
-		{
-			get
-			{
-				return this._stud_address;
-			}
-			set
-			{
-				if ((this._stud_address != value))
-				{
-					this._stud_address = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_phone", DbType="VarChar(11) NOT NULL", CanBeNull=false)]
-		public string stud_phone
-		{
-			get
-			{
-				return this._stud_phone;
-			}
-			set
-			{
-				if ((this._stud_phone != value))
-				{
-					this._stud_phone = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_email", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string stud_email
-		{
-			get
-			{
-				return this._stud_email;
-			}
-			set
-			{
-				if ((this._stud_email != value))
-				{
-					this._stud_email = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_gender", DbType="VarChar(6) NOT NULL", CanBeNull=false)]
-		public string stud_gender
-		{
-			get
-			{
-				return this._stud_gender;
-			}
-			set
-			{
-				if ((this._stud_gender != value))
-				{
-					this._stud_gender = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_status", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
-		public string stud_status
-		{
-			get
-			{
-				return this._stud_status;
-			}
-			set
-			{
-				if ((this._stud_status != value))
-				{
-					this._stud_status = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string prog_name
-		{
-			get
-			{
-				return this._prog_name;
-			}
-			set
-			{
-				if ((this._prog_name != value))
-				{
-					this._prog_name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_level", DbType="Int NOT NULL")]
-		public int year_level
-		{
-			get
-			{
-				return this._year_level;
-			}
-			set
-			{
-				if ((this._year_level != value))
-				{
-					this._year_level = value;
+					this._Fullname = value;
 				}
 			}
 		}
@@ -5823,280 +6573,36 @@ namespace EnrollmentSystem
 		}
 	}
 	
-	public partial class studNameResult
-	{
-		
-		private string _Fullname;
-		
-		public studNameResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fullname", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string Fullname
-		{
-			get
-			{
-				return this._Fullname;
-			}
-			set
-			{
-				if ((this._Fullname != value))
-				{
-					this._Fullname = value;
-				}
-			}
-		}
-	}
-	
-	public partial class studIdResult
+	public partial class viewEnrolleeResult
 	{
 		
 		private int _stud_id;
-		
-		public studIdResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_id", DbType="Int NOT NULL")]
-		public int stud_id
-		{
-			get
-			{
-				return this._stud_id;
-			}
-			set
-			{
-				if ((this._stud_id != value))
-				{
-					this._stud_id = value;
-				}
-			}
-		}
-	}
-	
-	public partial class studCourseResult
-	{
-
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string crs_name
-		{
-			get
-			{
-				return this._crs_name;
-			}
-			set
-			{
-				if ((this._crs_name != value))
-				{
-					this._crs_name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_desc", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string crs_desc
-		{
-			get
-			{
-				return this._crs_desc;
-			}
-			set
-			{
-				if ((this._crs_desc != value))
-				{
-					this._crs_desc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_level", DbType="Int NOT NULL")]
-		public int year_level
-		{
-			get
-			{
-				return this._year_level;
-			}
-			set
-			{
-				if ((this._year_level != value))
-				{
-					this._year_level = value;
-				}
-			}
-		}
-	}
-	
-	public partial class studClassResult
-	{
-		
-		private string _class_section;
-		
-		private System.TimeSpan _class_fromTime;
-		
-		private System.TimeSpan _class_toTime;
-		
-		private string _class_day;
-		
-		private string _crs_name;
-		
-		private string _instructor_name;
-		
-		private string _room_name;
-		
-		private int _year_level;
-		
-		public studClassResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_section", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string class_section
-		{
-			get
-			{
-				return this._class_section;
-			}
-			set
-			{
-				if ((this._class_section != value))
-				{
-					this._class_section = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_fromTime", DbType="Time NOT NULL")]
-		public System.TimeSpan class_fromTime
-		{
-			get
-			{
-				return this._class_fromTime;
-			}
-			set
-			{
-				if ((this._class_fromTime != value))
-				{
-					this._class_fromTime = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_toTime", DbType="Time NOT NULL")]
-		public System.TimeSpan class_toTime
-		{
-			get
-			{
-				return this._class_toTime;
-			}
-			set
-			{
-				if ((this._class_toTime != value))
-				{
-					this._class_toTime = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_day", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string class_day
-		{
-			get
-			{
-				return this._class_day;
-			}
-			set
-			{
-				if ((this._class_day != value))
-				{
-					this._class_day = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string crs_name
-		{
-			get
-			{
-				return this._crs_name;
-			}
-			set
-			{
-				if ((this._crs_name != value))
-				{
-					this._crs_name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_instructor_name", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string instructor_name
-		{
-			get
-			{
-				return this._instructor_name;
-			}
-			set
-			{
-				if ((this._instructor_name != value))
-				{
-					this._instructor_name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_room_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string room_name
-		{
-			get
-			{
-				return this._room_name;
-			}
-			set
-			{
-				if ((this._room_name != value))
-				{
-					this._room_name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_level", DbType="Int NOT NULL")]
-		public int year_level
-		{
-			get
-			{
-				return this._year_level;
-			}
-			set
-			{
-				if ((this._year_level != value))
-				{
-					this._year_level = value;
-				}
-			}
-		}
-	}
-	
-
-	{
-		
-		private int _stud_id;
-		
-		private string _stud_no;
 		
 		private string _stud_fname;
-
 		
 		private string _stud_lname;
 		
 		private string _stud_mi;
 		
-
+		private System.DateTime _stud_bday;
+		
+		private int _stud_age;
+		
+		private string _stud_address;
+		
+		private string _stud_phone;
+		
+		private string _stud_email;
+		
+		private string _stud_gender;
+		
+		private string _stud_status;
+		
+		private string _prog_name;
+		
+		private int _year_level;
+		
+		public viewEnrolleeResult()
 		{
 		}
 		
@@ -6112,22 +6618,6 @@ namespace EnrollmentSystem
 				if ((this._stud_id != value))
 				{
 					this._stud_id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_no", DbType="VarChar(5)")]
-		public string stud_no
-		{
-			get
-			{
-				return this._stud_no;
-			}
-			set
-			{
-				if ((this._stud_no != value))
-				{
-					this._stud_no = value;
 				}
 			}
 		}
@@ -6164,7 +6654,7 @@ namespace EnrollmentSystem
 			}
 		}
 		
-
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_mi", DbType="VarChar(1)")]
 		public string stud_mi
 		{
 			get
@@ -6179,7 +6669,66 @@ namespace EnrollmentSystem
 				}
 			}
 		}
-
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_bday", DbType="Date NOT NULL")]
+		public System.DateTime stud_bday
+		{
+			get
+			{
+				return this._stud_bday;
+			}
+			set
+			{
+				if ((this._stud_bday != value))
+				{
+					this._stud_bday = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_age", DbType="Int NOT NULL")]
+		public int stud_age
+		{
+			get
+			{
+				return this._stud_age;
+			}
+			set
+			{
+				if ((this._stud_age != value))
+				{
+					this._stud_age = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_address", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string stud_address
+		{
+			get
+			{
+				return this._stud_address;
+			}
+			set
+			{
+				if ((this._stud_address != value))
+				{
+					this._stud_address = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_phone", DbType="VarChar(11) NOT NULL", CanBeNull=false)]
+		public string stud_phone
+		{
+			get
+			{
+				return this._stud_phone;
+			}
+			set
+			{
+				if ((this._stud_phone != value))
+				{
 					this._stud_phone = value;
 				}
 			}
@@ -6217,43 +6766,176 @@ namespace EnrollmentSystem
 			}
 		}
 		
-
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_gpa", DbType="Decimal(5,1) NOT NULL")]
-		public decimal stud_gpa
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_status", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string stud_status
 		{
 			get
 			{
-				return this._stud_gpa;
+				return this._stud_status;
 			}
 			set
 			{
-				if ((this._stud_gpa != value))
+				if ((this._stud_status != value))
 				{
-					this._stud_gpa = value;
+					this._stud_status = value;
 				}
 			}
 		}
 		
-
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string prog_name
 		{
 			get
 			{
-				return this._stud_gpa;
+				return this._prog_name;
 			}
 			set
 			{
-				if ((this._stud_gpa != value))
+				if ((this._prog_name != value))
 				{
-					this._stud_gpa = value;
+					this._prog_name = value;
 				}
 			}
 		}
 		
-
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_level", DbType="Int NOT NULL")]
+		public int year_level
+		{
+			get
+			{
+				return this._year_level;
+			}
+			set
+			{
+				if ((this._year_level != value))
+				{
+					this._year_level = value;
+				}
+			}
+		}
+	}
+	
+	public partial class yearListResult
+	{
+		
+		private int _year_id;
+		
+		private int _year_level;
+		
+		public yearListResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_id", DbType="Int NOT NULL")]
+		public int year_id
+		{
+			get
+			{
+				return this._year_id;
+			}
+			set
+			{
+				if ((this._year_id != value))
+				{
+					this._year_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_level", DbType="Int NOT NULL")]
+		public int year_level
+		{
+			get
+			{
+				return this._year_level;
+			}
+			set
+			{
+				if ((this._year_level != value))
+				{
+					this._year_level = value;
+				}
+			}
+		}
+	}
+	
+	public partial class searchInstructorResult
+	{
+		
+		private int _ins_id;
+		
+		private string _ins_no;
+		
+		private string _ins_fname;
+		
+		private string _ins_mi;
+		
+		private string _ins_lname;
+		
+		private System.DateTime _ins_dob;
+		
+		private int _ins_age;
+		
+		private string _ins_gender;
+		
+		private string _ins_phone;
+		
+		private string _ins_email;
+		
+		public searchInstructorResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_id", DbType="Int NOT NULL")]
+		public int ins_id
+		{
+			get
+			{
+				return this._ins_id;
+			}
+			set
+			{
+				if ((this._ins_id != value))
+				{
+					this._ins_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_no", DbType="VarChar(5)")]
+		public string ins_no
+		{
+			get
+			{
+				return this._ins_no;
+			}
+			set
+			{
+				if ((this._ins_no != value))
+				{
+					this._ins_no = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_fname", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string ins_fname
+		{
+			get
+			{
+				return this._ins_fname;
+			}
+			set
+			{
+				if ((this._ins_fname != value))
+				{
+					this._ins_fname = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_mi", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string ins_mi
 		{
 			get
 			{
@@ -6268,16 +6950,98 @@ namespace EnrollmentSystem
 			}
 		}
 		
-
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_lname", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string ins_lname
+		{
+			get
+			{
+				return this._ins_lname;
+			}
+			set
+			{
+				if ((this._ins_lname != value))
+				{
+					this._ins_lname = value;
 				}
 			}
 		}
-	}
-	
-	public partial class semListResult
-	{
 		
-
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_dob", DbType="Date NOT NULL")]
+		public System.DateTime ins_dob
+		{
+			get
+			{
+				return this._ins_dob;
+			}
+			set
+			{
+				if ((this._ins_dob != value))
+				{
+					this._ins_dob = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_age", DbType="Int NOT NULL")]
+		public int ins_age
+		{
+			get
+			{
+				return this._ins_age;
+			}
+			set
+			{
+				if ((this._ins_age != value))
+				{
+					this._ins_age = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_gender", DbType="VarChar(6) NOT NULL", CanBeNull=false)]
+		public string ins_gender
+		{
+			get
+			{
+				return this._ins_gender;
+			}
+			set
+			{
+				if ((this._ins_gender != value))
+				{
+					this._ins_gender = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_phone", DbType="VarChar(11) NOT NULL", CanBeNull=false)]
+		public string ins_phone
+		{
+			get
+			{
+				return this._ins_phone;
+			}
+			set
+			{
+				if ((this._ins_phone != value))
+				{
+					this._ins_phone = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_email", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string ins_email
+		{
+			get
+			{
+				return this._ins_email;
+			}
+			set
+			{
+				if ((this._ins_email != value))
+				{
+					this._ins_email = value;
 				}
 			}
 		}
