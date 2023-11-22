@@ -39,8 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.fnameTxtbox = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.passtextBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.emailtextBox = new System.Windows.Forms.TextBox();
@@ -51,12 +49,11 @@
             this.edit = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.emailTxtbox = new System.Windows.Forms.TextBox();
+            this.phone = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -169,33 +166,10 @@
             // 
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.Controls.Add(this.passtextBox);
-            this.panel8.Controls.Add(this.label6);
             this.panel8.Location = new System.Drawing.Point(1, 182);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(618, 28);
             this.panel8.TabIndex = 3;
-            // 
-            // passtextBox
-            // 
-            this.passtextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.passtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passtextBox.Location = new System.Drawing.Point(126, 0);
-            this.passtextBox.Name = "passtextBox";
-            this.passtextBox.Size = new System.Drawing.Size(480, 26);
-            this.passtextBox.TabIndex = 13;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label6.Location = new System.Drawing.Point(5, 5);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 20);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Password:";
             // 
             // panel7
             // 
@@ -288,7 +262,7 @@
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.emailTxtbox);
+            this.panel6.Controls.Add(this.phone);
             this.panel6.Location = new System.Drawing.Point(1, 114);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(618, 28);
@@ -305,15 +279,15 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Phone number:";
             // 
-            // emailTxtbox
+            // phone
             // 
-            this.emailTxtbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.phone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.emailTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTxtbox.Location = new System.Drawing.Point(126, 0);
-            this.emailTxtbox.Name = "emailTxtbox";
-            this.emailTxtbox.Size = new System.Drawing.Size(480, 26);
-            this.emailTxtbox.TabIndex = 9;
+            this.phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phone.Location = new System.Drawing.Point(126, 0);
+            this.phone.Name = "phone";
+            this.phone.Size = new System.Drawing.Size(480, 26);
+            this.phone.TabIndex = 9;
             // 
             // adminProfile
             // 
@@ -334,8 +308,6 @@
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -359,8 +331,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox fnameTxtbox;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox passtextBox;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox emailtextBox;
@@ -371,6 +341,6 @@
         private System.Windows.Forms.PictureBox edit;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox emailTxtbox;
+        private System.Windows.Forms.TextBox phone;
     }
 }

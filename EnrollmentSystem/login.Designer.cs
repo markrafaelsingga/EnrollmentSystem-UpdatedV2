@@ -186,6 +186,7 @@
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
             this.Name = "login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ENROLLMENT / LOGIN";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

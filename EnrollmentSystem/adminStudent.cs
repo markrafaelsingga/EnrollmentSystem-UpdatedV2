@@ -14,8 +14,6 @@ namespace EnrollmentSystem
     {
         DataClasses1DataContext db = new DataClasses1DataContext();
         private int verId;
-        int id;
-        string studNumber;
         int adminId;
 
         public adminStudent(int verId)
@@ -32,7 +30,7 @@ namespace EnrollmentSystem
 
         private void delete_MouseHover(object sender, EventArgs e)
         {
-            delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
+            delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
         }
 
         private void delete_MouseLeave(object sender, EventArgs e)
@@ -47,12 +45,12 @@ namespace EnrollmentSystem
 
         private void add_MouseHover(object sender, EventArgs e)
         {
-            add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
+            add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
         }
 
         private void edit_MouseHover(object sender, EventArgs e)
         {
-            edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
+            edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
         }
 
         private void edit_MouseLeave(object sender, EventArgs e)
@@ -62,7 +60,7 @@ namespace EnrollmentSystem
 
         private void search_MouseHover(object sender, EventArgs e)
         {
-            search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
+            search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
         }
 
         private void search_MouseLeave(object sender, EventArgs e)
@@ -73,94 +71,25 @@ namespace EnrollmentSystem
         private void add_Click(object sender, EventArgs e)
         {
             addStudent addNewstudent = new addStudent();
-            addNewstudent.FormClosed += AddNewstudent_FormClosed;
             addNewstudent.ShowDialog();
-        }
-
-        private void AddNewstudent_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            display();
         }
 
         private void edit_Click(object sender, EventArgs e)
         {
             updateStudent editstudent = new updateStudent(verId);
-
-            // Set properties before showing the form
-            editstudent.ID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            editstudent.FirstName = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            editstudent.LastName = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            editstudent.MI = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-
-            // Parse Birthdate (assuming it's stored as a DateTime in the DataGridView)
-            if (DateTime.TryParse(dataGridView1.CurrentRow.Cells[5].Value?.ToString(), out var birthdate))
-            {
-                editstudent.Birthdate = birthdate;
-            }
-            else
-            {
-                // Handle parsing failure or set a default value
-                editstudent.Birthdate = DateTime.MinValue;
-            }
-
-            editstudent.Address = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            editstudent.Phone = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-            editstudent.Email = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-            editstudent.Gender = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-            editstudent.YearLevel = dataGridView1.CurrentRow.Cells[10].Value.ToString();
-            editstudent.ProgName = dataGridView1.CurrentRow.Cells[11].Value.ToString();
-
-            // Parse GPA (assuming it's stored as a decimal in the DataGridView)
-            if (decimal.TryParse(dataGridView1.CurrentRow.Cells[12].Value.ToString(), out var gpa))
-            {
-                editstudent.GPA = gpa;
-            }
-            else
-            {
-                // Handle parsing failure or set a default value (consistent with DateTime parsing)
-                editstudent.GPA = 0.0m;
-            }
-
-            // Now show the form
-            editstudent.FormClosed += Editstudent_FormClosed;
             editstudent.ShowDialog();
-        }
-
-
-        private void Editstudent_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            display();
         }
 
         private void delete_Click(object sender, EventArgs e)
         {
-            id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            studNumber = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            try
-            {
-                if (int.TryParse(id.ToString(), out int student_id))
-                {
-                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete \" Student no. " +studNumber+  " \"?", "Confirmation", MessageBoxButtons.YesNo);
-
-                    if (dialogResult == DialogResult.Yes)
-                    {
-                        db.studDel(student_id);
-                        MessageBox.Show("Successfully deleted!!", "DELETED");
-                        display();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Invalid 'id' value. Please enter a valid integer.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
+            deleteStudent deletestudent = new deleteStudent(verId);
+            deletestudent.ShowDialog();
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+                
+        }
         private void display()
         {
             var adId = db.adminID(verId).ToList();
@@ -174,23 +103,14 @@ namespace EnrollmentSystem
             dataGridView1.DataSource = db.showStudent(adminId);
         }
 
-        private void search_Click(object sender, EventArgs e)
-        {
-            var result = db.searchStudent(searchTxtbox.Text).FirstOrDefault();
-
-            if (result != null)
-            {
-                dataGridView1.DataSource = db.searchStudent(searchTxtbox.Text);
-            }
-            else
-            {
-                MessageBox.Show("No Student Found!");
-            }
-        }
-
-        private void searchTxtbox_TextChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             display();
+        }
+
+        private void search_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -13,6 +13,7 @@ namespace EnrollmentSystem
     public partial class adminCourse : Form
     {
         private int verId;
+        string name;
         DataClasses1DataContext db = new DataClasses1DataContext();
         public adminCourse(int verId)
         {
@@ -120,7 +121,7 @@ namespace EnrollmentSystem
 
         private void Courseedit_FormClosed(object sender, FormClosedEventArgs e)
         {
-            display();
+
         }
 
         private void display()
@@ -131,6 +132,13 @@ namespace EnrollmentSystem
         private void delete_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            db.delCrs(name);
+            MessageBox.Show("Successfully Deleted!");
+            display();
         }
     }
 }

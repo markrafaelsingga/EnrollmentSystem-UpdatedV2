@@ -57,10 +57,9 @@ namespace EnrollmentSystem
         {
             saveBtn.BackColor = System.Drawing.Color.White;
         }
-
+       
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            //@"(09|+639)\d{9}$"
             check();
             DateTime bd = birthdatePicker.Value;
             DateTime currDate = DateTime.Now;
@@ -77,7 +76,7 @@ namespace EnrollmentSystem
                 string pNo = phone.Text;
                 bool checkPhone = Regex.IsMatch(pNo, phpattern, RegexOptions.IgnoreCase);
                 bool checkEmail = Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase);
-                if (checkPhone && checkEmail)
+
                 {
                     if (result != null)
                     {
@@ -89,10 +88,12 @@ namespace EnrollmentSystem
                         int batch_id = (int)batch.SelectedValue;
                         string gen = gender.SelectedItem.ToString();
                         int yrs = (int)yr.SelectedValue;
+                        int sem_id = (int)sem.SelectedValue;
 
-                        db.enrollStudentbyAdmin(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, bd, age, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, yrs, grade, prog_id, id, 1, batch_id);
+                        db.enrollStudentbyAdmin(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, bd, age, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, yrs, grade, prog_id, id, 1, batch_id,sem_id);
+
                         MessageBox.Show("Successfully enrolled!", "Done");
-                        this.Close();
+
                     }
                     else
                     {
@@ -101,15 +102,7 @@ namespace EnrollmentSystem
                 }
                 else
                 {
-                    // Show error labels based on individual issues
-                    if (!checkEmail)
-                    {
-                        emlLbl.Show();
-                    }
-                    if (!checkPhone)
-                    {
-                        phLbl.Show();
-                    }
+
                 }
             }
             else
@@ -118,10 +111,98 @@ namespace EnrollmentSystem
             }
         }
 
+        private void phone_TextChanged(object sender, EventArgs e)
+        {
+            string phpattern = @"^(\+63|09)\d{9}$";
+            string pNo = phone.Text;
+            bool checkPhone = Regex.IsMatch(pNo, phpattern, RegexOptions.IgnoreCase);
+
+            if (checkPhone)
+            {
+                phLbl.Hide();
+            }
+            else
+            {
+                phLbl.Show();
+            }
+        }
+
+        private void emailtextBox_TextChanged(object sender, EventArgs e)
+        {
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            string eadd = emailtextBox.Text;
+            bool checkEmail = Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase);
+
+            if (checkEmail)
+            {
+                emlLbl.Hide();
+            }
+            else
+            {
+                emlLbl.Show();
+            }
+        }
+
+        private void lnameTxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fnameTxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void miTxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void birthdatePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emailLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void addStudent_Load(object sender, EventArgs e)
         {
             phLbl.Hide();
             emlLbl.Hide();
+            semList();
         }
 
         private void check()
@@ -135,6 +216,13 @@ namespace EnrollmentSystem
                     studLname = item.stud_lname;
                 }
             }
+        }
+
+        private void semList()
+        {
+            sem.DataSource = db.semList();
+            sem.DisplayMember = "sem_level";
+            sem.ValueMember = "sem_id";
         }
     }
 }
