@@ -131,6 +131,7 @@ namespace EnrollmentSystem
 
         private void delete_Click(object sender, EventArgs e)
         {
+
             db.delCrs(name);
             MessageBox.Show("Successfully Deleted!");
             display();

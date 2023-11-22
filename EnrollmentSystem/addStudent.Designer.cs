@@ -60,9 +60,7 @@
             this.lnameTxtbox = new System.Windows.Forms.TextBox();
             this.emailLbl = new System.Windows.Forms.Label();
             this.saveBtn = new System.Windows.Forms.Button();
-            this.emailtextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.sem = new System.Windows.Forms.ComboBox();
+
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -126,6 +124,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
+
             this.panel1.Controls.Add(this.phLbl);
             this.panel1.Controls.Add(this.emlLbl);
             this.panel1.Controls.Add(this.sem);
@@ -472,27 +471,7 @@
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
-            // emailtextBox
-            // 
-            this.emailtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailtextBox.Location = new System.Drawing.Point(205, 345);
-            this.emailtextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.emailtextBox.Name = "emailtextBox";
-            this.emailtextBox.Size = new System.Drawing.Size(285, 30);
-            this.emailtextBox.TabIndex = 9;
-            this.emailtextBox.TextChanged += new System.EventHandler(this.phone_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(682, 239);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 25);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Semester:";
+
             // 
             // sem
             // 
@@ -503,11 +482,7 @@
             "2",
             "3",
             "4"});
-            this.sem.Location = new System.Drawing.Point(810, 238);
-            this.sem.Margin = new System.Windows.Forms.Padding(4);
-            this.sem.Name = "sem";
-            this.sem.Size = new System.Drawing.Size(160, 24);
-            this.sem.TabIndex = 28;
+
             // 
             // addStudent
             // 
@@ -566,8 +541,6 @@
         private System.Windows.Forms.TextBox lnameTxtbox;
         private System.Windows.Forms.Label emailLbl;
         private System.Windows.Forms.Button saveBtn;
-        private System.Windows.Forms.TextBox emailtextBox;
-        private System.Windows.Forms.ComboBox sem;
-        private System.Windows.Forms.Label label1;
+
     }
 }
