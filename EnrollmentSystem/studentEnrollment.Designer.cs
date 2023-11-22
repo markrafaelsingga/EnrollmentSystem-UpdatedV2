@@ -64,7 +64,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.yr = new System.Windows.Forms.ComboBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.program = new System.Windows.Forms.ComboBox();
@@ -76,8 +75,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.gpa = new System.Windows.Forms.TextBox();
-            this.saveBtn = new System.Windows.Forms.Button();
             this.panel22 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.saveBtn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -89,10 +89,10 @@
             this.panel20.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -477,14 +477,6 @@
             this.yr.Size = new System.Drawing.Size(246, 24);
             this.yr.TabIndex = 23;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.saveBtn);
-            this.panel3.Location = new System.Drawing.Point(13, 650);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(248, 40);
-            this.panel3.TabIndex = 41;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -601,6 +593,21 @@
             this.gpa.Size = new System.Drawing.Size(246, 30);
             this.gpa.TabIndex = 26;
             // 
+            // panel22
+            // 
+            this.panel22.Location = new System.Drawing.Point(13, 392);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(246, 252);
+            this.panel22.TabIndex = 43;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.saveBtn);
+            this.panel3.Location = new System.Drawing.Point(13, 650);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(248, 40);
+            this.panel3.TabIndex = 41;
+            // 
             // saveBtn
             // 
             this.saveBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -612,13 +619,6 @@
             this.saveBtn.TabIndex = 25;
             this.saveBtn.Text = "SAVE";
             this.saveBtn.UseVisualStyleBackColor = true;
-            // 
-            // panel22
-            // 
-            this.panel22.Location = new System.Drawing.Point(13, 392);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(246, 252);
-            this.panel22.TabIndex = 43;
             // 
             // studentEnrollment
             // 
@@ -653,11 +653,11 @@
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
