@@ -56,7 +56,7 @@
             this.panel1.Controls.Add(this.passwordLbl);
             this.panel1.Controls.Add(this.emailLbl);
             this.panel1.Location = new System.Drawing.Point(87, 196);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(479, 295);
             this.panel1.TabIndex = 1;
@@ -93,7 +93,7 @@
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.Location = new System.Drawing.Point(151, 197);
-            this.loginBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(4);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(172, 39);
             this.loginBtn.TabIndex = 4;
@@ -115,6 +115,7 @@
             this.forgotpassLink.TabIndex = 3;
             this.forgotpassLink.TabStop = true;
             this.forgotpassLink.Text = "Forgot password?";
+            this.forgotpassLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.forgotpassLink_LinkClicked);
             this.forgotpassLink.MouseLeave += new System.EventHandler(this.forgotpassLink_MouseLeave);
             this.forgotpassLink.MouseHover += new System.EventHandler(this.forgotpassLink_MouseHover);
             // 
@@ -122,7 +123,7 @@
             // 
             this.pword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pword.Location = new System.Drawing.Point(151, 111);
-            this.pword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pword.Margin = new System.Windows.Forms.Padding(4);
             this.pword.Name = "pword";
             this.pword.Size = new System.Drawing.Size(285, 30);
             this.pword.TabIndex = 2;
@@ -132,7 +133,7 @@
             // 
             this.uname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uname.Location = new System.Drawing.Point(151, 42);
-            this.uname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uname.Margin = new System.Windows.Forms.Padding(4);
             this.uname.Name = "uname";
             this.uname.Size = new System.Drawing.Size(285, 30);
             this.uname.TabIndex = 1;
@@ -179,7 +180,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(237, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(172, 150);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -196,7 +197,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

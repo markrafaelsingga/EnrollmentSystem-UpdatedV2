@@ -130,5 +130,12 @@ namespace EnrollmentSystem
         {
             forgotpassLink.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
         }
+
+        private void forgotpassLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            forgotPassword forgot = new forgotPassword();
+            forgot.Show();
+            Visible = false;
+        }
     }
 }
