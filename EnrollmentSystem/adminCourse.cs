@@ -107,32 +107,10 @@ namespace EnrollmentSystem
             dataGridView1.DataSource = db.showCrs();
         }
 
-        private void delete_Click(object sender, EventArgs e)
+        
+        private void delete_Click_1(object sender, EventArgs e)
         {
-            int code = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            string crsNumber = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            try
-            {
-                if (int.TryParse(code.ToString(), out int crscode))
-                {
-                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete \" " + crsNumber + " \"?", "Confirmation", MessageBoxButtons.YesNo);
 
-                    if (dialogResult == DialogResult.Yes)
-                    {
-                        db.delCrs(name);
-                        MessageBox.Show("Successfully Deleted!");
-                        display();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Invalid 'id' value. Please enter a valid integer.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
     }
 }

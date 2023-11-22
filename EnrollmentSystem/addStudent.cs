@@ -77,7 +77,7 @@ namespace EnrollmentSystem
                 bool checkPhone = Regex.IsMatch(pNo, phpattern, RegexOptions.IgnoreCase);
                 bool checkEmail = Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase);
 
-                }
+                
             }
             else
             {
@@ -117,60 +117,7 @@ namespace EnrollmentSystem
             }
         }
 
-        private void lnameTxtbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fnameTxtbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void miTxtbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void birthdatePicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void emailLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void addStudent_Load(object sender, EventArgs e)
         {

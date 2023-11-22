@@ -27,6 +27,7 @@ namespace EnrollmentSystem
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Gender { get; set; }
+        
         public updateProfessor(int verId)
         {
             InitializeComponent();
@@ -89,7 +90,7 @@ namespace EnrollmentSystem
                     if (HasChanges(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, bd, phone.Text, emailtextBox.Text, gen))
                     {
                         // Perform the update with the Student object
-                        db.updateInstructor(ID, fnameTxtbox.Text, miTxtbox.Text, lnameTxtbox.Text, bd, age, gen, phone.Text, emailtextBox.Text, adminId);
+                        db.updateInstructor(ID, fnameTxtbox.Text, miTxtbox.Text, lnameTxtbox.Text, bd, age, gen, phone.Text, emailtextBox.Text, verId);
                         MessageBox.Show("Updated successfully!", "UPDATED");
                         this.Close();
                     }
@@ -141,6 +142,12 @@ namespace EnrollmentSystem
             phone.Text = Phone;
             emailtextBox.Text = Email;
             gender.SelectedItem = Gender;
+        }
+
+       
+        private void updateProfessor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }
