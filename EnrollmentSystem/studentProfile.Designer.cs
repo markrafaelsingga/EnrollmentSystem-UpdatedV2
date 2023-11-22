@@ -32,25 +32,23 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.passtextBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.edit = new System.Windows.Forms.PictureBox();
             this.emailtextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.addressTxtbox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.emailTxtbox = new System.Windows.Forms.TextBox();
+            this.phone = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.birthdateTxtbox = new System.Windows.Forms.TextBox();
             this.miTxtbox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.fnameTxtbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.idTxtbox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.lnameTxtbox = new System.Windows.Forms.TextBox();
             this.emailLbl = new System.Windows.Forms.Label();
-            this.birthdateTxtbox = new System.Windows.Forms.TextBox();
-            this.edit = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.idTxtbox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.edit)).BeginInit();
@@ -66,6 +64,7 @@
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(40, 40, 0, 0);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(824, 75);
             this.flowLayoutPanel1.TabIndex = 14;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // label1
             // 
@@ -84,13 +83,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
             this.panel1.Controls.Add(this.edit);
-            this.panel1.Controls.Add(this.passtextBox);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.emailtextBox);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.addressTxtbox);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.emailTxtbox);
+            this.panel1.Controls.Add(this.phone);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.birthdateTxtbox);
             this.panel1.Controls.Add(this.miTxtbox);
@@ -107,31 +104,19 @@
             this.panel1.Size = new System.Drawing.Size(727, 392);
             this.panel1.TabIndex = 15;
             // 
-            // passtextBox
+            // edit
             // 
-            this.passtextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.passtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passtextBox.Location = new System.Drawing.Point(173, 275);
-            this.passtextBox.Name = "passtextBox";
-            this.passtextBox.Size = new System.Drawing.Size(527, 27);
-            this.passtextBox.TabIndex = 13;
-            this.passtextBox.UseSystemPasswordChar = true;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(24, 281);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 22);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Password:";
+            this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.edit.BackColor = System.Drawing.Color.White;
+            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
+            this.edit.Location = new System.Drawing.Point(665, 308);
+            this.edit.Name = "edit";
+            this.edit.Size = new System.Drawing.Size(35, 35);
+            this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.edit.TabIndex = 16;
+            this.edit.TabStop = false;
+            this.edit.MouseLeave += new System.EventHandler(this.edit_MouseLeave);
+            this.edit.MouseHover += new System.EventHandler(this.edit_MouseHover);
             // 
             // emailtextBox
             // 
@@ -183,16 +168,16 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Address:";
             // 
-            // emailTxtbox
+            // phone
             // 
-            this.emailTxtbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.phone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.emailTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTxtbox.Location = new System.Drawing.Point(173, 208);
-            this.emailTxtbox.Name = "emailTxtbox";
-            this.emailTxtbox.Size = new System.Drawing.Size(527, 27);
-            this.emailTxtbox.TabIndex = 9;
+            this.phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phone.Location = new System.Drawing.Point(173, 208);
+            this.phone.Name = "phone";
+            this.phone.Size = new System.Drawing.Size(527, 27);
+            this.phone.TabIndex = 9;
             // 
             // label4
             // 
@@ -207,6 +192,17 @@
             this.label4.Size = new System.Drawing.Size(145, 22);
             this.label4.TabIndex = 8;
             this.label4.Text = "Phone number:";
+            // 
+            // birthdateTxtbox
+            // 
+            this.birthdateTxtbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.birthdateTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.birthdateTxtbox.Location = new System.Drawing.Point(173, 143);
+            this.birthdateTxtbox.Name = "birthdateTxtbox";
+            this.birthdateTxtbox.Size = new System.Drawing.Size(527, 27);
+            this.birthdateTxtbox.TabIndex = 7;
             // 
             // miTxtbox
             // 
@@ -272,6 +268,31 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Firstname:";
             // 
+            // idTxtbox
+            // 
+            this.idTxtbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.idTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idTxtbox.Location = new System.Drawing.Point(173, 12);
+            this.idTxtbox.Name = "idTxtbox";
+            this.idTxtbox.Size = new System.Drawing.Size(527, 27);
+            this.idTxtbox.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(24, 18);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(135, 22);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "STUDENT ID:";
+            // 
             // lnameTxtbox
             // 
             this.lnameTxtbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -296,56 +317,6 @@
             this.emailLbl.Size = new System.Drawing.Size(102, 22);
             this.emailLbl.TabIndex = 2;
             this.emailLbl.Text = "Lastname:";
-            // 
-            // birthdateTxtbox
-            // 
-            this.birthdateTxtbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.birthdateTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.birthdateTxtbox.Location = new System.Drawing.Point(173, 143);
-            this.birthdateTxtbox.Name = "birthdateTxtbox";
-            this.birthdateTxtbox.Size = new System.Drawing.Size(527, 27);
-            this.birthdateTxtbox.TabIndex = 7;
-            // 
-            // edit
-            // 
-            this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.edit.BackColor = System.Drawing.Color.White;
-            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-            this.edit.Location = new System.Drawing.Point(665, 308);
-            this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(35, 35);
-            this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.edit.TabIndex = 16;
-            this.edit.TabStop = false;
-            this.edit.MouseLeave += new System.EventHandler(this.edit_MouseLeave);
-            this.edit.MouseHover += new System.EventHandler(this.edit_MouseHover);
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(24, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(135, 22);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "STUDENT ID:";
-            // 
-            // idTxtbox
-            // 
-            this.idTxtbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.idTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTxtbox.Location = new System.Drawing.Point(173, 12);
-            this.idTxtbox.Name = "idTxtbox";
-            this.idTxtbox.Size = new System.Drawing.Size(527, 27);
-            this.idTxtbox.TabIndex = 3;
             // 
             // studentProfile
             // 
@@ -372,13 +343,11 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox passtextBox;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox emailtextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox addressTxtbox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox emailTxtbox;
+        private System.Windows.Forms.TextBox phone;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox miTxtbox;
         private System.Windows.Forms.Label label8;
