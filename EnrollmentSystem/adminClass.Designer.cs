@@ -43,12 +43,6 @@
             this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dbmsDataSet26 = new EnrollmentSystem.dbmsDataSet26();
-            this.showClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.showClassTableAdapter = new EnrollmentSystem.dbmsDataSet26TableAdapters.showClassTableAdapter();
             this.classcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.classsectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.classfromTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +51,12 @@
             this.crsnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.instructornameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.showClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbmsDataSet26 = new EnrollmentSystem.dbmsDataSet26();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.showClassTableAdapter = new EnrollmentSystem.dbmsDataSet26TableAdapters.showClassTableAdapter();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.subject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delete)).BeginInit();
@@ -66,9 +66,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showClassBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet26)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -237,51 +237,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(40, 20, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(865, 59);
-            this.flowLayoutPanel1.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(43, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CLASSES";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(673, 518);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Refresh";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dbmsDataSet26
-            // 
-            this.dbmsDataSet26.DataSetName = "dbmsDataSet26";
-            this.dbmsDataSet26.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // showClassBindingSource
-            // 
-            this.showClassBindingSource.DataMember = "showClass";
-            this.showClassBindingSource.DataSource = this.dbmsDataSet26;
-            // 
-            // showClassTableAdapter
-            // 
-            this.showClassTableAdapter.ClearBeforeFill = true;
-            // 
             // classcodeDataGridViewTextBoxColumn
             // 
             this.classcodeDataGridViewTextBoxColumn.DataPropertyName = "class_code";
@@ -338,6 +293,51 @@
             this.roomnameDataGridViewTextBoxColumn.Name = "roomnameDataGridViewTextBoxColumn";
             this.roomnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // showClassBindingSource
+            // 
+            this.showClassBindingSource.DataMember = "showClass";
+            this.showClassBindingSource.DataSource = this.dbmsDataSet26;
+            // 
+            // dbmsDataSet26
+            // 
+            this.dbmsDataSet26.DataSetName = "dbmsDataSet26";
+            this.dbmsDataSet26.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.label1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(40, 20, 0, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(865, 59);
+            this.flowLayoutPanel1.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(43, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 31);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CLASSES";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(673, 518);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // showClassTableAdapter
+            // 
+            this.showClassTableAdapter.ClearBeforeFill = true;
+            // 
             // adminClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,10 +361,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showClassBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet26)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showClassBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -180,13 +180,6 @@
     <Parameter Name="admin_id" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.updateCrs" Method="updateCrs">
-    <Parameter Name="crs_code" Type="System.Int32" DbType="Int" />
-    <Parameter Name="crs_name" Type="System.String" DbType="Text" />
-    <Parameter Name="crs_desc" Type="System.String" DbType="Text" />
-    <Parameter Name="crs_year" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.updateClass" Method="updateClass">
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
     <Parameter Name="section" Type="System.String" DbType="Text" />
@@ -238,14 +231,6 @@
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.studCourse" Method="studCourse">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <ElementType Name="studCourseResult">
-      <Column Name="crs_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="crs_desc" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="year_level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.showStudent" Method="showStudent">
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
     <ElementType Name="showStudentResult">
@@ -277,15 +262,6 @@
       <Column Name="ins_age" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ins_phone" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
       <Column Name="ins_email" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.showCrs" Method="showCrs">
-    <ElementType Name="showCrsResult">
-      <Column Name="crs_code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="crs_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="crs_desc" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="year_level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="prog_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </ElementType>
   </Function>
   <Function Name="dbo.showClass" Method="showClass">
@@ -491,13 +467,6 @@
     <Parameter Name="admin_id" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.addCrs" Method="addCrs">
-    <Parameter Name="crsname" Type="System.String" DbType="Text" />
-    <Parameter Name="crs_desc" Type="System.String" DbType="Text" />
-    <Parameter Name="crs_year" Type="System.Int32" DbType="Int" />
-    <Parameter Name="crs_prog" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.accId" Method="accId">
     <Parameter Name="key" Type="System.String" DbType="VarChar(MAX)" />
     <ElementType Name="accIdResult">
@@ -508,6 +477,55 @@
     <Parameter Name="key" Type="System.String" DbType="VarChar(MAX)" />
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.showCrs" Method="showCrs">
+    <ElementType Name="showCrsResult">
+      <Column Name="crs_code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="crs_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="crs_desc" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="year_level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prog_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.addCrs" Method="addCrs">
+    <Parameter Name="crsname" Type="System.String" DbType="Text" />
+    <Parameter Name="crs_desc" Type="System.String" DbType="Text" />
+    <Parameter Name="crs_year" Type="System.Int32" DbType="Int" />
+    <Parameter Name="crs_prog" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sem" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.semList" Method="semList">
+    <ElementType Name="semListResult">
+      <Column Name="sem_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sem_level" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.updateCrs" Method="updateCrs">
+    <Parameter Name="crs_code" Type="System.Int32" DbType="Int" />
+    <Parameter Name="crs_name" Type="System.String" DbType="Text" />
+    <Parameter Name="crs_desc" Type="System.String" DbType="Text" />
+    <Parameter Name="crs_year" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sem" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.crsList" Method="crsList">
+    <ElementType Name="crsListResult">
+      <Column Name="crs_code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="crs_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="crs_desc" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="year_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prog_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sem_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.studCourse" Method="studCourse">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="studCourseResult">
+      <Column Name="crs_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="crs_desc" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="year_level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
   <Function Name="dbo.studClass" Method="studClass">
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
