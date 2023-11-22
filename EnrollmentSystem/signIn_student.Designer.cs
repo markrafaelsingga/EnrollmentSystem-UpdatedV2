@@ -243,6 +243,7 @@
             this.birthdatePicker.Name = "birthdatePicker";
             this.birthdatePicker.Size = new System.Drawing.Size(177, 26);
             this.birthdatePicker.TabIndex = 16;
+            this.birthdatePicker.ValueChanged += new System.EventHandler(this.birthdatePicker_ValueChanged);
             // 
             // emailtextBox
             // 

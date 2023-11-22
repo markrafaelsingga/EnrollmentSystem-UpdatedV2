@@ -83,6 +83,14 @@ namespace EnrollmentSystem
             }
         }
 
+        private void birthdatePicker_ValueChanged(object sender, EventArgs e)
+        {
+            if(birthdatePicker.Value > DateTime.Now)
+            {
+                MessageBox.Show("Future date is invalid!","Warning",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
         private void backBtn_Click(object sender, EventArgs e)
         {
 
