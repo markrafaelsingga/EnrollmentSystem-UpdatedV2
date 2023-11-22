@@ -382,7 +382,7 @@ namespace EnrollmentSystem
 
             if (profile == null)
             {
-                profile = new adminProfile();
+                profile = new adminProfile(verId);
                 profile.FormClosed += Profile_FormClosed;
                 profile.MdiParent = this;
                 profile.Show();

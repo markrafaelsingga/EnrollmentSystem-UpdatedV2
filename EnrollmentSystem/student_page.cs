@@ -171,7 +171,7 @@ namespace EnrollmentSystem
 
             if (profile == null)
             {
-                profile = new studentProfile();
+                profile = new studentProfile(studId);
                 profile.FormClosed += Profile_FormClosed;
                 profile.MdiParent = this;
                 profile.Show();
