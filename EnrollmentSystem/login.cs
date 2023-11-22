@@ -76,7 +76,6 @@ namespace EnrollmentSystem
                         foreach (var items in sId)
                         {
                             studId = items.stud_id;
-                         
                             if (studId > 0)
                             {
                                 student_page dashboard = new student_page(studId);

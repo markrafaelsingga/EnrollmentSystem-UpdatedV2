@@ -13,6 +13,7 @@ namespace EnrollmentSystem
     public partial class adminCourse : Form
     {
         private int verId;
+        string name;
         DataClasses1DataContext db = new DataClasses1DataContext();
         public adminCourse(int verId)
         {
@@ -100,7 +101,7 @@ namespace EnrollmentSystem
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            name = dataGridView1.CurrentRow.Cells[1].Value.ToString();
         }
 
         private void display()
@@ -111,6 +112,13 @@ namespace EnrollmentSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+            display();
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            db.delCrs(name);
+            MessageBox.Show("Successfully Deleted!");
             display();
         }
     }
