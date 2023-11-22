@@ -25,7 +25,7 @@ namespace EnrollmentSystem
 
         private void saveBtn_MouseHover(object sender, EventArgs e)
         {
-            saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
+            saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
         }
 
         private void saveBtn_MouseLeave(object sender, EventArgs e)
@@ -66,8 +66,6 @@ namespace EnrollmentSystem
             return true;
 
         }
-
-
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
@@ -114,11 +112,6 @@ namespace EnrollmentSystem
             subjectcomboBox.ValueMember = "crs_code";
 
             progList();
-        }
-
-        private void toTime_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void progList()

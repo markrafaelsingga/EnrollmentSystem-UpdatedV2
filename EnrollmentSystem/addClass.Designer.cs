@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.prog = new System.Windows.Forms.ComboBox();
             this.prof = new System.Windows.Forms.ComboBox();
             this.day = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.section = new System.Windows.Forms.TextBox();
             this.saveBtn = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,10 +75,26 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.section);
-            this.panel1.Location = new System.Drawing.Point(24, 24);
+            this.panel1.Location = new System.Drawing.Point(32, 30);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(616, 252);
+            this.panel1.Size = new System.Drawing.Size(821, 310);
             this.panel1.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label9.Location = new System.Drawing.Point(521, 162);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(97, 25);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Program: ";
             // 
             // prog
             // 
@@ -88,18 +104,20 @@
             this.prog.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.prog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prog.FormattingEnabled = true;
-            this.prog.Location = new System.Drawing.Point(395, 153);
+            this.prog.Location = new System.Drawing.Point(527, 188);
+            this.prog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.prog.Name = "prog";
-            this.prog.Size = new System.Drawing.Size(200, 28);
+            this.prog.Size = new System.Drawing.Size(265, 33);
             this.prog.TabIndex = 23;
             // 
             // prof
             // 
             this.prof.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.prof.FormattingEnabled = true;
-            this.prof.Location = new System.Drawing.Point(111, 200);
+            this.prof.Location = new System.Drawing.Point(148, 246);
+            this.prof.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.prof.Name = "prof";
-            this.prof.Size = new System.Drawing.Size(484, 21);
+            this.prof.Size = new System.Drawing.Size(644, 24);
             this.prof.TabIndex = 22;
             // 
             // day
@@ -108,9 +126,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.day.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.day.Location = new System.Drawing.Point(87, 155);
+            this.day.Location = new System.Drawing.Point(116, 191);
+            this.day.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.day.Name = "day";
-            this.day.Size = new System.Drawing.Size(215, 26);
+            this.day.Size = new System.Drawing.Size(285, 30);
             this.day.TabIndex = 21;
             // 
             // room
@@ -121,9 +140,10 @@
             this.room.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.room.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.room.FormattingEnabled = true;
-            this.room.Location = new System.Drawing.Point(266, 35);
+            this.room.Location = new System.Drawing.Point(355, 43);
+            this.room.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.room.Name = "room";
-            this.room.Size = new System.Drawing.Size(244, 28);
+            this.room.Size = new System.Drawing.Size(324, 33);
             this.room.TabIndex = 20;
             // 
             // label8
@@ -134,9 +154,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label8.Location = new System.Drawing.Point(18, 158);
+            this.label8.Location = new System.Drawing.Point(24, 194);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 20);
+            this.label8.Size = new System.Drawing.Size(58, 25);
             this.label8.TabIndex = 18;
             this.label8.Text = "Day: ";
             // 
@@ -148,9 +169,10 @@
             this.subjectcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.subjectcomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subjectcomboBox.FormattingEnabled = true;
-            this.subjectcomboBox.Location = new System.Drawing.Point(395, 97);
+            this.subjectcomboBox.Location = new System.Drawing.Point(527, 119);
+            this.subjectcomboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.subjectcomboBox.Name = "subjectcomboBox";
-            this.subjectcomboBox.Size = new System.Drawing.Size(200, 28);
+            this.subjectcomboBox.Size = new System.Drawing.Size(265, 33);
             this.subjectcomboBox.TabIndex = 19;
             // 
             // label7
@@ -161,9 +183,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label7.Location = new System.Drawing.Point(18, 200);
+            this.label7.Location = new System.Drawing.Point(24, 246);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 20);
+            this.label7.Size = new System.Drawing.Size(98, 25);
             this.label7.TabIndex = 18;
             this.label7.Text = "Instructor:";
             // 
@@ -175,9 +198,10 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label10.Location = new System.Drawing.Point(391, 75);
+            this.label10.Location = new System.Drawing.Point(521, 92);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 20);
+            this.label10.Size = new System.Drawing.Size(84, 25);
             this.label10.TabIndex = 18;
             this.label10.Text = "Subject:";
             // 
@@ -188,11 +212,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.toTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.toTime.Location = new System.Drawing.Point(239, 97);
+            this.toTime.Location = new System.Drawing.Point(319, 119);
+            this.toTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.toTime.Name = "toTime";
-            this.toTime.Size = new System.Drawing.Size(132, 26);
+            this.toTime.Size = new System.Drawing.Size(175, 30);
             this.toTime.TabIndex = 17;
-            this.toTime.ValueChanged += new System.EventHandler(this.toTime_ValueChanged);
             // 
             // fromTime
             // 
@@ -201,9 +225,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fromTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fromTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.fromTime.Location = new System.Drawing.Point(71, 96);
+            this.fromTime.Location = new System.Drawing.Point(95, 118);
+            this.fromTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fromTime.Name = "fromTime";
-            this.fromTime.Size = new System.Drawing.Size(132, 26);
+            this.fromTime.Size = new System.Drawing.Size(175, 30);
             this.fromTime.TabIndex = 17;
             // 
             // label6
@@ -214,9 +239,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label6.Location = new System.Drawing.Point(275, 126);
+            this.label6.Location = new System.Drawing.Point(367, 155);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 20);
+            this.label6.Size = new System.Drawing.Size(36, 25);
             this.label6.TabIndex = 6;
             this.label6.Text = "To";
             // 
@@ -228,9 +254,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(209, 91);
+            this.label5.Location = new System.Drawing.Point(279, 112);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 31);
+            this.label5.Size = new System.Drawing.Size(29, 39);
             this.label5.TabIndex = 6;
             this.label5.Text = "-";
             // 
@@ -242,9 +269,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(107, 125);
+            this.label4.Location = new System.Drawing.Point(143, 154);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 20);
+            this.label4.Size = new System.Drawing.Size(57, 25);
             this.label4.TabIndex = 6;
             this.label4.Text = "From";
             // 
@@ -256,9 +284,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(18, 102);
+            this.label1.Location = new System.Drawing.Point(24, 126);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 20);
+            this.label1.Size = new System.Drawing.Size(62, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Time:";
             // 
@@ -270,9 +299,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(262, 12);
+            this.label3.Location = new System.Drawing.Point(349, 15);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 20);
+            this.label3.Size = new System.Drawing.Size(69, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "Room:";
             // 
@@ -284,9 +314,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(18, 12);
+            this.label2.Location = new System.Drawing.Point(24, 15);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 20);
+            this.label2.Size = new System.Drawing.Size(84, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Section:";
             // 
@@ -296,9 +327,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.section.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section.Location = new System.Drawing.Point(20, 35);
+            this.section.Location = new System.Drawing.Point(27, 43);
+            this.section.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.section.Name = "section";
-            this.section.Size = new System.Drawing.Size(215, 26);
+            this.section.Size = new System.Drawing.Size(285, 30);
             this.section.TabIndex = 3;
             // 
             // saveBtn
@@ -307,9 +339,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBtn.Location = new System.Drawing.Point(511, 282);
+            this.saveBtn.Location = new System.Drawing.Point(681, 347);
+            this.saveBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(129, 32);
+            this.saveBtn.Size = new System.Drawing.Size(172, 39);
             this.saveBtn.TabIndex = 18;
             this.saveBtn.Text = "SAVE";
             this.saveBtn.UseVisualStyleBackColor = true;
@@ -317,28 +350,15 @@
             this.saveBtn.MouseLeave += new System.EventHandler(this.saveBtn_MouseLeave);
             this.saveBtn.MouseHover += new System.EventHandler(this.saveBtn_MouseHover);
             // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label9.Location = new System.Drawing.Point(391, 132);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 20);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Program: ";
-            // 
             // addClass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
-            this.ClientSize = new System.Drawing.Size(666, 326);
+            this.ClientSize = new System.Drawing.Size(888, 401);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "addClass";

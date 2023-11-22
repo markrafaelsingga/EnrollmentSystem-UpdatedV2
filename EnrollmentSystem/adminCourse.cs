@@ -69,28 +69,6 @@ namespace EnrollmentSystem
             search.BackColor = System.Drawing.Color.White;
         }
 
-        private void college_MouseHover(object sender, EventArgs e)
-        {
-            college.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
-        }
-
-        private void college_MouseLeave(object sender, EventArgs e)
-        {
-            college.BackColor = System.Drawing.Color.White;
-        }
-
-        private void college_Click(object sender, EventArgs e)
-        {
-            adminCollege collegeadmin = new adminCollege();
-            collegeadmin.FormClosed += Collegeadmin_FormClosed;
-            collegeadmin.ShowDialog();
-        }
-
-        private void Collegeadmin_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            display();
-        }
-
         private void add_Click(object sender, EventArgs e)
         {
             addCourse courseadd = new addCourse(verId);
@@ -111,8 +89,8 @@ namespace EnrollmentSystem
             courseedit.Coursename = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             courseedit.Description = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             courseedit.Year = int.Parse(dataGridView1.CurrentRow.Cells[3].Value.ToString());
-            //courseedit.Program = int.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString());
-            courseedit.Semester = int.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString());
+            courseedit.Program = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            //courseedit.Semester = int.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString());
 
 
             courseedit.FormClosed += Courseedit_FormClosed;
@@ -121,7 +99,7 @@ namespace EnrollmentSystem
 
         private void Courseedit_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            display();
         }
 
         private void display()
@@ -131,9 +109,30 @@ namespace EnrollmentSystem
 
         private void delete_Click(object sender, EventArgs e)
         {
-            db.delCrs(name);
-            MessageBox.Show("Successfully Deleted!");
-            display();
+            int code = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            string crsNumber = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            try
+            {
+                if (int.TryParse(code.ToString(), out int crscode))
+                {
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete \" " + crsNumber + " \"?", "Confirmation", MessageBoxButtons.YesNo);
+
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        db.delCrs(name);
+                        MessageBox.Show("Successfully Deleted!");
+                        display();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid 'id' value. Please enter a valid integer.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

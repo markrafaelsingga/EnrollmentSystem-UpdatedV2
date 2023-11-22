@@ -45,7 +45,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.gender = new System.Windows.Forms.ComboBox();
             this.birthdatePicker = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.addressTxtbox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -63,6 +62,7 @@
             this.emailtextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.sem = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -164,7 +164,7 @@
             // 
             this.phLbl.AutoSize = true;
             this.phLbl.ForeColor = System.Drawing.Color.Red;
-            this.phLbl.Location = new System.Drawing.Point(205, 271);
+            this.phLbl.Location = new System.Drawing.Point(203, 280);
             this.phLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.phLbl.Name = "phLbl";
             this.phLbl.Size = new System.Drawing.Size(140, 16);
@@ -175,7 +175,7 @@
             // 
             this.emlLbl.AutoSize = true;
             this.emlLbl.ForeColor = System.Drawing.Color.Red;
-            this.emlLbl.Location = new System.Drawing.Point(201, 329);
+            this.emlLbl.Location = new System.Drawing.Point(199, 338);
             this.emlLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.emlLbl.Name = "emlLbl";
             this.emlLbl.Size = new System.Drawing.Size(87, 16);
@@ -185,6 +185,7 @@
             // batch
             // 
             this.batch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.batch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.batch.FormattingEnabled = true;
             this.batch.Items.AddRange(new object[] {
             "1",
@@ -194,7 +195,7 @@
             this.batch.Location = new System.Drawing.Point(810, 181);
             this.batch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.batch.Name = "batch";
-            this.batch.Size = new System.Drawing.Size(160, 24);
+            this.batch.Size = new System.Drawing.Size(160, 33);
             this.batch.TabIndex = 28;
             // 
             // label15
@@ -233,6 +234,7 @@
             // program
             // 
             this.program.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.program.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.program.FormattingEnabled = true;
             this.program.Items.AddRange(new object[] {
             "1",
@@ -242,12 +244,13 @@
             this.program.Location = new System.Drawing.Point(205, 181);
             this.program.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.program.Name = "program";
-            this.program.Size = new System.Drawing.Size(160, 24);
+            this.program.Size = new System.Drawing.Size(160, 33);
             this.program.TabIndex = 24;
             // 
             // yr
             // 
             this.yr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.yr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yr.FormattingEnabled = true;
             this.yr.Items.AddRange(new object[] {
             "1",
@@ -257,7 +260,7 @@
             this.yr.Location = new System.Drawing.Point(477, 181);
             this.yr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.yr.Name = "yr";
-            this.yr.Size = new System.Drawing.Size(160, 24);
+            this.yr.Size = new System.Drawing.Size(160, 33);
             this.yr.TabIndex = 23;
             // 
             // label13
@@ -276,6 +279,7 @@
             // gender
             // 
             this.gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gender.FormattingEnabled = true;
             this.gender.Items.AddRange(new object[] {
             "Male",
@@ -283,7 +287,7 @@
             this.gender.Location = new System.Drawing.Point(205, 240);
             this.gender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(160, 24);
+            this.gender.Size = new System.Drawing.Size(160, 33);
             this.gender.TabIndex = 21;
             // 
             // birthdatePicker
@@ -297,25 +301,12 @@
             this.birthdatePicker.TabIndex = 16;
             this.birthdatePicker.ValueChanged += new System.EventHandler(this.birthdatePicker_ValueChanged);
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label12.Location = new System.Drawing.Point(27, 182);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(159, 25);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Course program:";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(24, 348);
+            this.label5.Location = new System.Drawing.Point(22, 357);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 25);
@@ -347,7 +338,7 @@
             // phone
             // 
             this.phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phone.Location = new System.Drawing.Point(205, 288);
+            this.phone.Location = new System.Drawing.Point(203, 297);
             this.phone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.phone.Name = "phone";
             this.phone.Size = new System.Drawing.Size(285, 30);
@@ -359,7 +350,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(24, 295);
+            this.label4.Location = new System.Drawing.Point(22, 304);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(146, 25);
@@ -471,11 +462,14 @@
             this.saveBtn.Text = "SAVE";
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            this.saveBtn.MouseEnter += new System.EventHandler(this.saveBtn_Click);
+            this.saveBtn.MouseLeave += new System.EventHandler(this.saveBtn_MouseLeave);
+            this.saveBtn.MouseHover += new System.EventHandler(this.saveBtn_MouseHover);
             // 
             // emailtextBox
             // 
             this.emailtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailtextBox.Location = new System.Drawing.Point(205, 345);
+            this.emailtextBox.Location = new System.Drawing.Point(203, 354);
             this.emailtextBox.Margin = new System.Windows.Forms.Padding(4);
             this.emailtextBox.Name = "emailtextBox";
             this.emailtextBox.Size = new System.Drawing.Size(285, 30);
@@ -497,6 +491,7 @@
             // sem
             // 
             this.sem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sem.FormattingEnabled = true;
             this.sem.Items.AddRange(new object[] {
             "1",
@@ -506,8 +501,21 @@
             this.sem.Location = new System.Drawing.Point(810, 238);
             this.sem.Margin = new System.Windows.Forms.Padding(4);
             this.sem.Name = "sem";
-            this.sem.Size = new System.Drawing.Size(160, 24);
+            this.sem.Size = new System.Drawing.Size(160, 33);
             this.sem.TabIndex = 28;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label12.Location = new System.Drawing.Point(27, 182);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(159, 25);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Course program:";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // addStudent
             // 
@@ -551,7 +559,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox gender;
         private System.Windows.Forms.DateTimePicker birthdatePicker;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox addressTxtbox;
         private System.Windows.Forms.Label label9;
@@ -569,5 +576,6 @@
         private System.Windows.Forms.TextBox emailtextBox;
         private System.Windows.Forms.ComboBox sem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label12;
     }
 }
