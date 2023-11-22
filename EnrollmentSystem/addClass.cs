@@ -47,7 +47,7 @@ namespace EnrollmentSystem
             return true;
         }
 
-      /*  private bool Check()
+        private bool Check()
         {
             DateTime selectedTime = fromTime.Value;
             TimeSpan ftime = selectedTime.TimeOfDay;
@@ -55,20 +55,20 @@ namespace EnrollmentSystem
             DateTime selectedTo = toTime.Value;
             TimeSpan ttime = selectedTo.TimeOfDay;
             var result = db.checkClass(section.Text, ftime, ttime, day.Text, Convert.ToInt32(subjectcomboBox.SelectedValue), Convert.ToInt32(room.SelectedValue)).ToList();
-            if(result != null && result.Any())
+            if (result != null && result.Any())
             {
-                foreach(var item in result)
+                foreach (var item in result)
                 {
                     classId = item.class_code;
-                  
+
                 }
             }
             return true;
 
-        }*/
-            
+        }
 
-     
+
+
         private void saveBtn_Click(object sender, EventArgs e)
         {
             try

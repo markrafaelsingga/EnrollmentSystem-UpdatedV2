@@ -21,7 +21,11 @@ namespace EnrollmentSystem
         public addStudent()
         {
             InitializeComponent();
-            birthdatePicker.MaxDate = DateTime.Now;
+            DateTime maxDate = DateTime.Now.AddYears(-17);
+
+            // Set the MaxDate property of the DateTimePicker
+            birthdatePicker.MaxDate = maxDate;
+
             program.DataSource = db.progList().ToList();
             program.DisplayMember = "prog_name";
             program.ValueMember = "prog_id";
@@ -68,11 +72,11 @@ namespace EnrollmentSystem
                 string eadd = emailtextBox.Text;
                 db.createAcc(uname.Text, pword.Text);
                 var result = db.accId(uname.Text);
-                string phpattern = @"(09|+639)\d{9}$";
+                string phpattern = @"(09|\+639)\d{9}$";
                 string pNo = phone.Text;
-                bool checkPhone = Regex.IsMatch(phpattern, pNo, RegexOptions.IgnoreCase);
+                bool checkPhone = Regex.IsMatch(pNo, phpattern, RegexOptions.IgnoreCase);
                 bool checkEmail = Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase);
-                if (Regex.IsMatch(pNo, phpattern, RegexOptions.IgnoreCase) && Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase))
+
                 {
                     if (result != null)
                     {
@@ -90,9 +94,6 @@ namespace EnrollmentSystem
 
                         MessageBox.Show("Successfully enrolled!", "Done");
 
-                        login back = new login();
-                        back.Show();
-                        Visible = false;
                     }
                     else
                     {
@@ -101,7 +102,7 @@ namespace EnrollmentSystem
                 }
                 else
                 {
-                    MessageBox.Show("Unsuccessfull!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
             }
             else

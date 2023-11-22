@@ -12,17 +12,35 @@ namespace EnrollmentSystem
 {
     public partial class addProfessor : Form
     {
+        DataClasses1DataContext db = new DataClasses1DataContext();
+        string insFname, insLname, studFname, studLname;
         private int verId;
+        int adminId;
+        int id;
+
         public addProfessor(int verId)
         {
             InitializeComponent();
             this.verId = verId;
+            DateTime maxDate = DateTime.Now.AddYears(-17);
+
+            // Set the MaxDate property of the DateTimePicker
+            birthdatePicker.MaxDate = maxDate;
+
+
+            var adId = db.adminID(id);
+            if (adId != null && adId.Any())
+            {
+                foreach (var item in adId)
+                {
+                    adminId = item.admin_id;
+                }
+            }
         }
-        DataClasses1DataContext db = new DataClasses1DataContext();
 
         private void saveBtn_MouseHover(object sender, EventArgs e)
         {
-            saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
+            saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
         }
 
         private void saveBtn_MouseLeave(object sender, EventArgs e)
@@ -61,7 +79,7 @@ namespace EnrollmentSystem
                         string gen = gender.SelectedItem.ToString();
                         db.addInstructor(fnameTxtbox.Text, miTxtbox.Text, lnameTxtbox.Text, bd, age, gen, phone.Text, emailtextBox.Text, adminID);
                         MessageBox.Show("Professor Added!", "Successfull");
-                        Visible = false;
+                        this.Close();
                     }
                 }
             }

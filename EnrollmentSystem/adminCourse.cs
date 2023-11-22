@@ -25,15 +25,13 @@ namespace EnrollmentSystem
 
         private void adminCourse_Load(object sender, EventArgs e)
         {
-        
-
             this.ControlBox = false;
             display();
         }
 
         private void delete_MouseHover(object sender, EventArgs e)
         {
-            delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
+            delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
         }
 
         private void delete_MouseLeave(object sender, EventArgs e)
@@ -48,12 +46,12 @@ namespace EnrollmentSystem
 
         private void add_MouseHover(object sender, EventArgs e)
         {
-            add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
+            add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
         }
 
         private void edit_MouseHover(object sender, EventArgs e)
         {
-            edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
+            edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
         }
 
         private void edit_MouseLeave(object sender, EventArgs e)
@@ -63,7 +61,7 @@ namespace EnrollmentSystem
 
         private void search_MouseHover(object sender, EventArgs e)
         {
-            search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
+            search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
         }
 
         private void search_MouseLeave(object sender, EventArgs e)
@@ -73,7 +71,7 @@ namespace EnrollmentSystem
 
         private void college_MouseHover(object sender, EventArgs e)
         {
-            college.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
+            college.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
         }
 
         private void college_MouseLeave(object sender, EventArgs e)
@@ -84,24 +82,46 @@ namespace EnrollmentSystem
         private void college_Click(object sender, EventArgs e)
         {
             adminCollege collegeadmin = new adminCollege();
+            collegeadmin.FormClosed += Collegeadmin_FormClosed;
             collegeadmin.ShowDialog();
+        }
+
+        private void Collegeadmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            display();
         }
 
         private void add_Click(object sender, EventArgs e)
         {
             addCourse courseadd = new addCourse(verId);
+            courseadd.FormClosed += Courseadd_FormClosed;
             courseadd.ShowDialog();
+        }
+
+        private void Courseadd_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            display();
         }
 
         private void edit_Click(object sender, EventArgs e)
         {
             updateCourse courseedit = new updateCourse(verId);
+
+            courseedit.ID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()); 
+            courseedit.Coursename = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            courseedit.Description = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            courseedit.Year = int.Parse(dataGridView1.CurrentRow.Cells[3].Value.ToString());
+            //courseedit.Program = int.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString());
+            courseedit.Semester = int.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString());
+
+
+            courseedit.FormClosed += Courseedit_FormClosed;
             courseedit.ShowDialog();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Courseedit_FormClosed(object sender, FormClosedEventArgs e)
         {
-            name = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+
         }
 
         private void display()
@@ -109,10 +129,9 @@ namespace EnrollmentSystem
             dataGridView1.DataSource = db.showCrs();
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
+        private void delete_Click(object sender, EventArgs e)
         {
-            display();
+
         }
 
         private void delete_Click(object sender, EventArgs e)

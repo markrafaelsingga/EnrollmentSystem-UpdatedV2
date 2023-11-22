@@ -32,11 +32,11 @@ namespace EnrollmentSystem
         public updateStudent(int verId)
         {
             InitializeComponent();
-            birthdatePicker.MaxDate = DateTime.Now;
-            this.verId = verId;
-            display();
+            DateTime maxDate = DateTime.Now.AddYears(-17);
 
-            idTxtbox.Text = ID.ToString();
+            // Set the MaxDate property of the DateTimePicker
+            birthdatePicker.MaxDate = maxDate;
+            this.verId = verId;
         }
 
         private void saveBtn_MouseHover(object sender, EventArgs e)
@@ -134,18 +134,6 @@ namespace EnrollmentSystem
             catch (Exception ex)
             {
                 MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void display()
-        {
-            var adId = db.adminID(verId).ToList();
-            if (adId != null && adId.Any())
-            {
-                foreach(var item in adId)
-                {
-                    adminId = item.admin_id;
-                }
             }
         }
 

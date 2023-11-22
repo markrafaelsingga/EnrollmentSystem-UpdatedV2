@@ -13,6 +13,12 @@ namespace EnrollmentSystem
     public partial class updateCourse : Form
     {
         private int verId;
+        public int ID {  get; set; }
+        public string Coursename { get; set; }
+        public string Description { get; set; }
+        public int Year { get; set; }
+        public int Semester {  get; set; }
+
        
         public updateCourse(int verId)
         {
@@ -20,9 +26,6 @@ namespace EnrollmentSystem
             this.verId = verId;
             
         }
-
-        
-
         DataClasses1DataContext db = new DataClasses1DataContext();
 
         private void saveBtn_MouseHover(object sender, EventArgs e)
@@ -33,40 +36,6 @@ namespace EnrollmentSystem
         private void saveBtn_MouseLeave(object sender, EventArgs e)
         {
             saveBtn.BackColor = System.Drawing.Color.White;
-        }
-
-        private void search_MouseHover(object sender, EventArgs e)
-        {
-            search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
-        }
-
-        private void search_MouseLeave(object sender, EventArgs e)
-        {
-            search.BackColor = System.Drawing.Color.White;
-        }
-
-        private void search_Click(object sender, EventArgs e)
-        {
-            var result = db.searchCrs(searchTxtbox.Text);
-            var resultList = result.ToList();
-            if (resultList != null && resultList.Any())
-            {
-                
-                foreach(var item in resultList)
-                {
-                    string crs_name = item.crs_name;
-                    string crs_desc = item.crs_desc;
-                    int crs_year = Convert.ToInt32(item.year_id);
-                    crsName.Text = crs_name;
-                    crsdescTxtbox.Text = crs_desc;
-                    comboBox1.Text = crs_year.ToString();
-                    /*MessageBox.Show($"Name: {crs_name} Desc: {crs_desc} Year: {crs_year}");*/
-                }
-            }
-            else
-            {
-                MessageBox.Show("No courses found!");
-            }
         }
 
         private void semList()
@@ -85,7 +54,7 @@ namespace EnrollmentSystem
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            var result = db.searchCrs(searchTxtbox.Text);
+            var result = db.searchCrs(idTxtbox.Text);
             var resultList = result.ToList();
             if (resultList != null && resultList.Any())
             {
@@ -93,21 +62,21 @@ namespace EnrollmentSystem
                 foreach (var item in resultList)
                 {
                     int crs_id = item.crs_code;
-                   /* string crs_name = item.crs_name;
-                    string crs_desc = item.crs_desc;*/
+                    string crs_name = item.crs_name;
+                    string crs_desc = item.crs_desc;
                     int crs_year = Convert.ToInt32(item.year_id);
                     int sem_id = (int)sem.SelectedValue;
                     int year_id = (int)comboBox1.SelectedValue;
-                   /* crsName.Text = crs_name;
+                    crsName.Text = crs_name;
                     crsdescTxtbox.Text = crs_desc;
-                    comboBox1.Text = crs_year.ToString();*/
+                    comboBox1.Text = crs_year.ToString();
                     if (crs_id > 0)
                     {
-                        db.updateCrs(crs_id,crsName.Text, crsdescTxtbox.Text, year_id,sem_id);
-                        MessageBox.Show("Updated Successfully!","Success");
+                        db.updateCrs(crs_id, crsName.Text, crsdescTxtbox.Text, year_id, sem_id);
+                        MessageBox.Show("Updated Successfully!", "Success");
                         Visible = false;
                     }
-                    /*MessageBox.Show($"Name: {crs_name} Desc: {crs_desc} Year: {crs_year}");*/
+                    MessageBox.Show($"Name: {crs_name} Desc: {crs_desc} Year: {crs_year}");
                 }
             }
             else
@@ -121,6 +90,12 @@ namespace EnrollmentSystem
         {
             semList();
             crsList();
+
+            idTxtbox.Text = ID.ToString();
+            crsName.Text = Coursename;
+            crsdescTxtbox.Text = Description;
+            comboBox1.Text = Year.ToString();
+            sem.Text = Semester.ToString();
         }
     }
 }
