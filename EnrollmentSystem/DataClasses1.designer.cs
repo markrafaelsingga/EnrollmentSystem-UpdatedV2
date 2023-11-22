@@ -497,6 +497,29 @@ namespace EnrollmentSystem
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<yearListResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.enrollStudentbyAdmin")]
+		public int enrollStudentbyAdmin(
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_fname, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_lname, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(1)")] string stud_mi, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> stud_bday, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> stud_age, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_address, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(11)")] string stud_phone, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_email, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(6)")] string stud_gender, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> stud_year, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(5,1)")] System.Nullable<decimal> stud_gpa, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> prog_id, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> u_id, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> admin_id, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> batch_id, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sem_id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), stud_fname, stud_lname, stud_mi, stud_bday, stud_age, stud_address, stud_phone, stud_email, stud_gender, stud_year, stud_gpa, prog_id, u_id, admin_id, batch_id, sem_id);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.admins")]

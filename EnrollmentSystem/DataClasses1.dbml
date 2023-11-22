@@ -554,4 +554,23 @@
       <Column Name="year_level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.enrollStudentbyAdmin" Method="enrollStudentbyAdmin">
+    <Parameter Name="stud_fname" Type="System.String" DbType="Text" />
+    <Parameter Name="stud_lname" Type="System.String" DbType="Text" />
+    <Parameter Name="stud_mi" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="stud_bday" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="stud_age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="stud_address" Type="System.String" DbType="Text" />
+    <Parameter Name="stud_phone" Type="System.String" DbType="VarChar(11)" />
+    <Parameter Name="stud_email" Type="System.String" DbType="Text" />
+    <Parameter Name="stud_gender" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="stud_year" Type="System.Int32" DbType="Int" />
+    <Parameter Name="stud_gpa" Type="System.Decimal" DbType="Decimal(5,1)" />
+    <Parameter Name="prog_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="u_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="admin_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="batch_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sem_id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>
