@@ -26,16 +26,6 @@ namespace EnrollmentSystem
             this.ControlBox = false;
         }
 
-        private void edit_MouseHover(object sender, EventArgs e)
-        {
-            edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
-        }
-
-        private void edit_MouseLeave(object sender, EventArgs e)
-        {
-            edit.BackColor = System.Drawing.Color.White;
-        }
-
         private void getStud()
         {
             var sName = db.getStud(studId).ToList();

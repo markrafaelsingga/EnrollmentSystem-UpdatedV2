@@ -96,12 +96,6 @@
     <Compile Include="adminClass.Designer.cs">
       <DependentUpon>adminClass.cs</DependentUpon>
     </Compile>
-    <Compile Include="adminCollege.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="adminCollege.Designer.cs">
-      <DependentUpon>adminCollege.cs</DependentUpon>
-    </Compile>
     <Compile Include="adminCourse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,12 +131,6 @@
     </Compile>
     <Compile Include="adminStudent.Designer.cs">
       <DependentUpon>adminStudent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="adminSubject.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="adminSubject.Designer.cs">
-      <DependentUpon>adminSubject.cs</DependentUpon>
     </Compile>
     <Compile Include="admin_page.cs">
       <SubType>Form</SubType>
@@ -441,10 +429,6 @@
     <EmbeddedResource Include="adminClass.resx">
       <DependentUpon>adminClass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="adminCollege.resx">
-      <DependentUpon>adminCollege.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="adminCourse.resx">
       <DependentUpon>adminCourse.cs</DependentUpon>
     </EmbeddedResource>
@@ -462,9 +446,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminStudent.resx">
       <DependentUpon>adminStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="adminSubject.resx">
-      <DependentUpon>adminSubject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin_page.resx">
       <DependentUpon>admin_page.cs</DependentUpon>

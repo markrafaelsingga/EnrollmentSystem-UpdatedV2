@@ -16,6 +16,7 @@ namespace EnrollmentSystem
         public int ID {  get; set; }
         public string Coursename { get; set; }
         public string Description { get; set; }
+        public string Program {  get; set; }
         public int Year { get; set; }
         public int Semester {  get; set; }
 
@@ -30,7 +31,7 @@ namespace EnrollmentSystem
 
         private void saveBtn_MouseHover(object sender, EventArgs e)
         {
-            saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
+            saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
         }
 
         private void saveBtn_MouseLeave(object sender, EventArgs e)

@@ -69,28 +69,6 @@ namespace EnrollmentSystem
             search.BackColor = System.Drawing.Color.White;
         }
 
-        private void college_MouseHover(object sender, EventArgs e)
-        {
-            college.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
-        }
-
-        private void college_MouseLeave(object sender, EventArgs e)
-        {
-            college.BackColor = System.Drawing.Color.White;
-        }
-
-        private void college_Click(object sender, EventArgs e)
-        {
-            adminCollege collegeadmin = new adminCollege();
-            collegeadmin.FormClosed += Collegeadmin_FormClosed;
-            collegeadmin.ShowDialog();
-        }
-
-        private void Collegeadmin_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            display();
-        }
-
         private void add_Click(object sender, EventArgs e)
         {
             addCourse courseadd = new addCourse(verId);
@@ -111,8 +89,8 @@ namespace EnrollmentSystem
             courseedit.Coursename = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             courseedit.Description = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             courseedit.Year = int.Parse(dataGridView1.CurrentRow.Cells[3].Value.ToString());
-            //courseedit.Program = int.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString());
-            courseedit.Semester = int.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString());
+            courseedit.Program = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            //courseedit.Semester = int.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString());
 
 
             courseedit.FormClosed += Courseedit_FormClosed;
@@ -121,7 +99,7 @@ namespace EnrollmentSystem
 
         private void Courseedit_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            display();
         }
 
         private void display()
@@ -132,20 +110,7 @@ namespace EnrollmentSystem
         
         private void delete_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                db.delCrs(name);
-                MessageBox.Show("Successfully Deleted!");
-                display();
-            }catch(Exception ex)
-            {
-                MessageBox.Show("That course exist in a class right now");
-            }
-        }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            name = dataGridView1.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }
