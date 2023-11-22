@@ -44,6 +44,13 @@ namespace EnrollmentSystem
 
         DataClasses1DataContext db = new DataClasses1DataContext();
         int id;
+
+        private void signIn_student_Load(object sender, EventArgs e)
+        {
+            phLbl.Hide();
+            emlLbl.Hide();
+        }
+
         private void backBtn_Click(object sender, EventArgs e)
         {
 
@@ -67,42 +74,64 @@ namespace EnrollmentSystem
         }
         private void signinBtn_Click(object sender, EventArgs e)
         {
+            //@"(09|+639)\d{9}$"
             check();
             DateTime bd = birthdatePicker.Value;
             DateTime currDate = DateTime.Now;
             TimeSpan age_now = currDate - bd;
             int age = (int)(age_now.TotalDays / 365.25);
+
             if (studFname != fnameTxtbox.Text && studLname != lnameTxtbox.Text)
             {
                 if (pword.Text == repword.Text)
                 {
+                    string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+                    string eadd = emailtextBox.Text;
                     db.createAcc(uname.Text, repword.Text);
                     var result = db.accId(uname.Text);
-
-                    if (result != null)
+                    string phpattern = @"(09|+639)\d{9}$";
+                    string pNo = phone.Text;
+                    bool checkPhone = Regex.IsMatch(phpattern, pNo, RegexOptions.IgnoreCase);
+                    bool checkEmail = Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase);
+                    if (Regex.IsMatch(phpattern, pNo, RegexOptions.IgnoreCase) && Regex.IsMatch(eadd,pattern, RegexOptions.IgnoreCase))
                     {
-                        // Assuming accId returns only one item, take the first one
-                        var item = result.First();
+                        if (result != null)
+                        {
 
-                        id = item.u_id;
-                        decimal grade = Convert.ToDecimal(gpa.Text);
-                        int prog_id = (int)program.SelectedValue;
-                        int batch_id = (int)batch.SelectedValue;
-                        string gen = gender.SelectedItem.ToString();
-                        int yrs = (int)yr.SelectedValue;
+                            var item = result.First();
 
-                        db.enrollStudent(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, bd, age, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, yrs, grade, prog_id, id, 1, batch_id);
-                        MessageBox.Show("Successfully enrolled!", "Done");
+                            id = item.u_id;
+                            decimal grade = Convert.ToDecimal(gpa.Text);
+                            int prog_id = (int)program.SelectedValue;
+                            int batch_id = (int)batch.SelectedValue;
+                            string gen = gender.SelectedItem.ToString();
+                            int yrs = (int)yr.SelectedValue;
 
-                        // Redirect to the login page
-                        login back = new login();
-                        back.Show();
-                        Visible = false;
+                            db.enrollStudent(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, bd, age, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, yrs, grade, prog_id, id, 1, batch_id);
+                            MessageBox.Show("Successfully enrolled!", "Done");
+
+                            login back = new login();
+                            back.Show();
+                            Visible = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error retrieving user information", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Error retrieving user information", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if(!checkEmail)
+                        {
+                            emlLbl.Show();
+                        }
+                        if(!checkPhone)
+                        {
+                            phLbl.Show();
+                        }
                     }
+                        
+            
                 }
                 else
                 {

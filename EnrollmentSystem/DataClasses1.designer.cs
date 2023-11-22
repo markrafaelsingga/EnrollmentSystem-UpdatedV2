@@ -36,12 +36,12 @@ namespace EnrollmentSystem
     partial void Insertbatch(batch instance);
     partial void Updatebatch(batch instance);
     partial void Deletebatch(batch instance);
-    partial void Insertcourse(course instance);
-    partial void Updatecourse(course instance);
-    partial void Deletecourse(course instance);
     partial void Insertclass(@class instance);
     partial void Updateclass(@class instance);
     partial void Deleteclass(@class instance);
+    partial void Insertcourse(course instance);
+    partial void Updatecourse(course instance);
+    partial void Deletecourse(course instance);
     partial void Insertinstructor(instructor instance);
     partial void Updateinstructor(instructor instance);
     partial void Deleteinstructor(instructor instance);
@@ -63,7 +63,7 @@ namespace EnrollmentSystem
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::EnrollmentSystem.Properties.Settings.Default.dbmsConnectionString1, mappingSource)
+				base(global::EnrollmentSystem.Properties.Settings.Default.dbmsConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -108,19 +108,19 @@ namespace EnrollmentSystem
 			}
 		}
 		
-		public System.Data.Linq.Table<course> courses
-		{
-			get
-			{
-				return this.GetTable<course>();
-			}
-		}
-		
 		public System.Data.Linq.Table<@class> classes
 		{
 			get
 			{
 				return this.GetTable<@class>();
+			}
+		}
+		
+		public System.Data.Linq.Table<course> courses
+		{
+			get
+			{
+				return this.GetTable<course>();
 			}
 		}
 		
@@ -284,18 +284,18 @@ namespace EnrollmentSystem
 			return ((ISingleResult<showClassResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.searchStud")]
-		public ISingleResult<searchStudResult> searchStud([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
-			return ((ISingleResult<searchStudResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.searchStudDel")]
 		public ISingleResult<searchStudDelResult> searchStudDel([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
 			return ((ISingleResult<searchStudDelResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.searchStud")]
+		public ISingleResult<searchStudResult> searchStud([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
+			return ((ISingleResult<searchStudResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.searchIns")]
@@ -354,18 +354,18 @@ namespace EnrollmentSystem
 			return ((ISingleResult<insFullnameResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insDel")]
-		public int insDel([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insActive")]
 		public ISingleResult<insActiveResult> insActive()
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<insActiveResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insDel")]
+		public int insDel([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
+			return ((int)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.enrollStudent")]
@@ -915,274 +915,6 @@ namespace EnrollmentSystem
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.course")]
-	public partial class course : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _crs_code;
-		
-		private string _crs_name;
-		
-		private string _crs_desc;
-		
-		private int _year_id;
-		
-		private System.Nullable<int> _prog_id;
-		
-		private EntitySet<@class> _classes;
-		
-		private EntityRef<program> _program;
-		
-		private EntityRef<year> _year;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Oncrs_codeChanging(int value);
-    partial void Oncrs_codeChanged();
-    partial void Oncrs_nameChanging(string value);
-    partial void Oncrs_nameChanged();
-    partial void Oncrs_descChanging(string value);
-    partial void Oncrs_descChanged();
-    partial void Onyear_idChanging(int value);
-    partial void Onyear_idChanged();
-    partial void Onprog_idChanging(System.Nullable<int> value);
-    partial void Onprog_idChanged();
-    #endregion
-		
-		public course()
-		{
-			this._classes = new EntitySet<@class>(new Action<@class>(this.attach_classes), new Action<@class>(this.detach_classes));
-			this._program = default(EntityRef<program>);
-			this._year = default(EntityRef<year>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_code", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int crs_code
-		{
-			get
-			{
-				return this._crs_code;
-			}
-			set
-			{
-				if ((this._crs_code != value))
-				{
-					this.Oncrs_codeChanging(value);
-					this.SendPropertyChanging();
-					this._crs_code = value;
-					this.SendPropertyChanged("crs_code");
-					this.Oncrs_codeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string crs_name
-		{
-			get
-			{
-				return this._crs_name;
-			}
-			set
-			{
-				if ((this._crs_name != value))
-				{
-					this.Oncrs_nameChanging(value);
-					this.SendPropertyChanging();
-					this._crs_name = value;
-					this.SendPropertyChanged("crs_name");
-					this.Oncrs_nameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_desc", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string crs_desc
-		{
-			get
-			{
-				return this._crs_desc;
-			}
-			set
-			{
-				if ((this._crs_desc != value))
-				{
-					this.Oncrs_descChanging(value);
-					this.SendPropertyChanging();
-					this._crs_desc = value;
-					this.SendPropertyChanged("crs_desc");
-					this.Oncrs_descChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_id", DbType="Int NOT NULL")]
-		public int year_id
-		{
-			get
-			{
-				return this._year_id;
-			}
-			set
-			{
-				if ((this._year_id != value))
-				{
-					if (this._year.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onyear_idChanging(value);
-					this.SendPropertyChanging();
-					this._year_id = value;
-					this.SendPropertyChanged("year_id");
-					this.Onyear_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_id", DbType="Int")]
-		public System.Nullable<int> prog_id
-		{
-			get
-			{
-				return this._prog_id;
-			}
-			set
-			{
-				if ((this._prog_id != value))
-				{
-					if (this._program.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onprog_idChanging(value);
-					this.SendPropertyChanging();
-					this._prog_id = value;
-					this.SendPropertyChanged("prog_id");
-					this.Onprog_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="course_class", Storage="_classes", ThisKey="crs_code", OtherKey="crs_id")]
-		public EntitySet<@class> classes
-		{
-			get
-			{
-				return this._classes;
-			}
-			set
-			{
-				this._classes.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="program_course", Storage="_program", ThisKey="prog_id", OtherKey="prog_id", IsForeignKey=true)]
-		public program program
-		{
-			get
-			{
-				return this._program.Entity;
-			}
-			set
-			{
-				program previousValue = this._program.Entity;
-				if (((previousValue != value) 
-							|| (this._program.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._program.Entity = null;
-						previousValue.courses.Remove(this);
-					}
-					this._program.Entity = value;
-					if ((value != null))
-					{
-						value.courses.Add(this);
-						this._prog_id = value.prog_id;
-					}
-					else
-					{
-						this._prog_id = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("program");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="year_course", Storage="_year", ThisKey="year_id", OtherKey="year_id", IsForeignKey=true)]
-		public year year
-		{
-			get
-			{
-				return this._year.Entity;
-			}
-			set
-			{
-				year previousValue = this._year.Entity;
-				if (((previousValue != value) 
-							|| (this._year.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._year.Entity = null;
-						previousValue.courses.Remove(this);
-					}
-					this._year.Entity = value;
-					if ((value != null))
-					{
-						value.courses.Add(this);
-						this._year_id = value.year_id;
-					}
-					else
-					{
-						this._year_id = default(int);
-					}
-					this.SendPropertyChanged("year");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_classes(@class entity)
-		{
-			this.SendPropertyChanging();
-			entity.course = this;
-		}
-		
-		private void detach_classes(@class entity)
-		{
-			this.SendPropertyChanging();
-			entity.course = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.class")]
 	public partial class @class : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1533,6 +1265,274 @@ namespace EnrollmentSystem
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.course")]
+	public partial class course : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _crs_code;
+		
+		private string _crs_name;
+		
+		private string _crs_desc;
+		
+		private int _year_id;
+		
+		private int _prog_id;
+		
+		private EntitySet<@class> _classes;
+		
+		private EntityRef<program> _program;
+		
+		private EntityRef<year> _year;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Oncrs_codeChanging(int value);
+    partial void Oncrs_codeChanged();
+    partial void Oncrs_nameChanging(string value);
+    partial void Oncrs_nameChanged();
+    partial void Oncrs_descChanging(string value);
+    partial void Oncrs_descChanged();
+    partial void Onyear_idChanging(int value);
+    partial void Onyear_idChanged();
+    partial void Onprog_idChanging(int value);
+    partial void Onprog_idChanged();
+    #endregion
+		
+		public course()
+		{
+			this._classes = new EntitySet<@class>(new Action<@class>(this.attach_classes), new Action<@class>(this.detach_classes));
+			this._program = default(EntityRef<program>);
+			this._year = default(EntityRef<year>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_code", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int crs_code
+		{
+			get
+			{
+				return this._crs_code;
+			}
+			set
+			{
+				if ((this._crs_code != value))
+				{
+					this.Oncrs_codeChanging(value);
+					this.SendPropertyChanging();
+					this._crs_code = value;
+					this.SendPropertyChanged("crs_code");
+					this.Oncrs_codeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string crs_name
+		{
+			get
+			{
+				return this._crs_name;
+			}
+			set
+			{
+				if ((this._crs_name != value))
+				{
+					this.Oncrs_nameChanging(value);
+					this.SendPropertyChanging();
+					this._crs_name = value;
+					this.SendPropertyChanged("crs_name");
+					this.Oncrs_nameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_desc", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string crs_desc
+		{
+			get
+			{
+				return this._crs_desc;
+			}
+			set
+			{
+				if ((this._crs_desc != value))
+				{
+					this.Oncrs_descChanging(value);
+					this.SendPropertyChanging();
+					this._crs_desc = value;
+					this.SendPropertyChanged("crs_desc");
+					this.Oncrs_descChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_id", DbType="Int NOT NULL")]
+		public int year_id
+		{
+			get
+			{
+				return this._year_id;
+			}
+			set
+			{
+				if ((this._year_id != value))
+				{
+					if (this._year.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onyear_idChanging(value);
+					this.SendPropertyChanging();
+					this._year_id = value;
+					this.SendPropertyChanged("year_id");
+					this.Onyear_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_id", DbType="Int NOT NULL")]
+		public int prog_id
+		{
+			get
+			{
+				return this._prog_id;
+			}
+			set
+			{
+				if ((this._prog_id != value))
+				{
+					if (this._program.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onprog_idChanging(value);
+					this.SendPropertyChanging();
+					this._prog_id = value;
+					this.SendPropertyChanged("prog_id");
+					this.Onprog_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="course_class", Storage="_classes", ThisKey="crs_code", OtherKey="crs_id")]
+		public EntitySet<@class> classes
+		{
+			get
+			{
+				return this._classes;
+			}
+			set
+			{
+				this._classes.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="program_course", Storage="_program", ThisKey="prog_id", OtherKey="prog_id", IsForeignKey=true)]
+		public program program
+		{
+			get
+			{
+				return this._program.Entity;
+			}
+			set
+			{
+				program previousValue = this._program.Entity;
+				if (((previousValue != value) 
+							|| (this._program.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._program.Entity = null;
+						previousValue.courses.Remove(this);
+					}
+					this._program.Entity = value;
+					if ((value != null))
+					{
+						value.courses.Add(this);
+						this._prog_id = value.prog_id;
+					}
+					else
+					{
+						this._prog_id = default(int);
+					}
+					this.SendPropertyChanged("program");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="year_course", Storage="_year", ThisKey="year_id", OtherKey="year_id", IsForeignKey=true)]
+		public year year
+		{
+			get
+			{
+				return this._year.Entity;
+			}
+			set
+			{
+				year previousValue = this._year.Entity;
+				if (((previousValue != value) 
+							|| (this._year.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._year.Entity = null;
+						previousValue.courses.Remove(this);
+					}
+					this._year.Entity = value;
+					if ((value != null))
+					{
+						value.courses.Add(this);
+						this._year_id = value.year_id;
+					}
+					else
+					{
+						this._year_id = default(int);
+					}
+					this.SendPropertyChanged("year");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_classes(@class entity)
+		{
+			this.SendPropertyChanging();
+			entity.course = this;
+		}
+		
+		private void detach_classes(@class entity)
+		{
+			this.SendPropertyChanging();
+			entity.course = null;
 		}
 	}
 	
@@ -4537,6 +4537,8 @@ namespace EnrollmentSystem
 		
 		private int _year_level;
 		
+		private string _prog_name;
+		
 		public showCrsResult()
 		{
 		}
@@ -4601,6 +4603,22 @@ namespace EnrollmentSystem
 				if ((this._year_level != value))
 				{
 					this._year_level = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string prog_name
+		{
+			get
+			{
+				return this._prog_name;
+			}
+			set
+			{
+				if ((this._prog_name != value))
+				{
+					this._prog_name = value;
 				}
 			}
 		}
@@ -4753,32 +4771,6 @@ namespace EnrollmentSystem
 				if ((this._room_name != value))
 				{
 					this._room_name = value;
-				}
-			}
-		}
-	}
-	
-	public partial class searchStudResult
-	{
-		
-		private string _stud_no;
-		
-		public searchStudResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_no", DbType="VarChar(5)")]
-		public string stud_no
-		{
-			get
-			{
-				return this._stud_no;
-			}
-			set
-			{
-				if ((this._stud_no != value))
-				{
-					this._stud_no = value;
 				}
 			}
 		}
@@ -5044,6 +5036,32 @@ namespace EnrollmentSystem
 		}
 	}
 	
+	public partial class searchStudResult
+	{
+		
+		private string _stud_no;
+		
+		public searchStudResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_no", DbType="VarChar(5)")]
+		public string stud_no
+		{
+			get
+			{
+				return this._stud_no;
+			}
+			set
+			{
+				if ((this._stud_no != value))
+				{
+					this._stud_no = value;
+				}
+			}
+		}
+	}
+	
 	public partial class searchInsResult
 	{
 		
@@ -5081,7 +5099,7 @@ namespace EnrollmentSystem
 		
 		private int _year_id;
 		
-		private System.Nullable<int> _prog_id;
+		private int _prog_id;
 		
 		public searchCrsResult()
 		{
@@ -5151,8 +5169,8 @@ namespace EnrollmentSystem
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_id", DbType="Int")]
-		public System.Nullable<int> prog_id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_id", DbType="Int NOT NULL")]
+		public int prog_id
 		{
 			get
 			{

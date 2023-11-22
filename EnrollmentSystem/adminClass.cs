@@ -14,6 +14,7 @@ namespace EnrollmentSystem
     {
         DataClasses1DataContext db = new DataClasses1DataContext();
         private int verId;
+        int crs_id;
         public adminClass(int verId)
         {
             InitializeComponent();
@@ -22,6 +23,8 @@ namespace EnrollmentSystem
 
         private void adminClass_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dbmsDataSet26.showClass' table. You can move, or remove it, as needed.
+            this.showClassTableAdapter.Fill(this.dbmsDataSet26.showClass);
             this.ControlBox = false;
             display();
         }
@@ -96,7 +99,7 @@ namespace EnrollmentSystem
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            crs_id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
         }
         private void display()
         {
@@ -106,6 +109,12 @@ namespace EnrollmentSystem
         private void button1_Click(object sender, EventArgs e)
         {
             display();
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            db.delClass(crs_id);
+            MessageBox.Show("Successfully deleted!");
         }
     }
 }

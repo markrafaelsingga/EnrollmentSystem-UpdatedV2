@@ -43,6 +43,11 @@
             this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.crscodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.crsnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.crsdescDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yearlevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prognameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.showCrsBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.dbmsDataSet21 = new EnrollmentSystem.dbmsDataSet21();
             this.showCrsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
@@ -61,11 +66,6 @@
             this.showCrsTableAdapter2 = new EnrollmentSystem.dbmsDataSet14TableAdapters.showCrsTableAdapter();
             this.showCrsTableAdapter3 = new EnrollmentSystem.dbmsDataSet15TableAdapters.showCrsTableAdapter();
             this.showCrsTableAdapter4 = new EnrollmentSystem.dbmsDataSet21TableAdapters.showCrsTableAdapter();
-            this.crscodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.crsnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.crsdescDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yearlevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prognameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.college)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delete)).BeginInit();
@@ -98,21 +98,19 @@
             this.flowLayoutPanel2.Controls.Add(this.edit);
             this.flowLayoutPanel2.Controls.Add(this.panel2);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 80);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 65);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 12, 53, 0);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1153, 68);
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 10, 40, 0);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(865, 55);
             this.flowLayoutPanel2.TabIndex = 8;
             // 
             // college
             // 
             this.college.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.college.Image = ((System.Drawing.Image)(resources.GetObject("college.Image")));
-            this.college.Location = new System.Drawing.Point(1053, 16);
-            this.college.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.college.Location = new System.Drawing.Point(790, 13);
             this.college.Name = "college";
-            this.college.Size = new System.Drawing.Size(43, 43);
+            this.college.Size = new System.Drawing.Size(32, 35);
             this.college.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.college.TabIndex = 5;
             this.college.TabStop = false;
@@ -124,10 +122,9 @@
             // 
             this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
-            this.delete.Location = new System.Drawing.Point(1002, 16);
-            this.delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.delete.Location = new System.Drawing.Point(752, 13);
             this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(43, 43);
+            this.delete.Size = new System.Drawing.Size(32, 35);
             this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.delete.TabIndex = 5;
             this.delete.TabStop = false;
@@ -138,10 +135,9 @@
             // 
             this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
-            this.add.Location = new System.Drawing.Point(951, 16);
-            this.add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.add.Location = new System.Drawing.Point(714, 13);
             this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(43, 43);
+            this.add.Size = new System.Drawing.Size(32, 35);
             this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.add.TabIndex = 5;
             this.add.TabStop = false;
@@ -153,10 +149,9 @@
             // 
             this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-            this.edit.Location = new System.Drawing.Point(896, 16);
-            this.edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edit.Location = new System.Drawing.Point(673, 13);
             this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(47, 43);
+            this.edit.Size = new System.Drawing.Size(35, 35);
             this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.edit.TabIndex = 5;
             this.edit.TabStop = false;
@@ -168,21 +163,19 @@
             // 
             this.panel2.Controls.Add(this.search);
             this.panel2.Controls.Add(this.searchTxtbox);
-            this.panel2.Location = new System.Drawing.Point(343, 16);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(258, 13);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(545, 43);
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(409, 35);
             this.panel2.TabIndex = 6;
             // 
             // search
             // 
             this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
-            this.search.Location = new System.Drawing.Point(515, 9);
-            this.search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.search.Location = new System.Drawing.Point(386, 7);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(27, 25);
+            this.search.Size = new System.Drawing.Size(20, 20);
             this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.search.TabIndex = 5;
             this.search.TabStop = false;
@@ -193,10 +186,9 @@
             // 
             this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxtbox.Location = new System.Drawing.Point(0, 5);
-            this.searchTxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchTxtbox.Location = new System.Drawing.Point(0, 4);
             this.searchTxtbox.Name = "searchTxtbox";
-            this.searchTxtbox.Size = new System.Drawing.Size(545, 30);
+            this.searchTxtbox.Size = new System.Drawing.Size(409, 26);
             this.searchTxtbox.TabIndex = 3;
             // 
             // panel1
@@ -205,10 +197,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(65, 155);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(49, 126);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1029, 428);
+            this.panel1.Size = new System.Drawing.Size(772, 348);
             this.panel1.TabIndex = 7;
             // 
             // dataGridView1
@@ -244,7 +235,6 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -256,113 +246,9 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1029, 428);
+            this.dataGridView1.Size = new System.Drawing.Size(772, 348);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // showCrsBindingSource4
-            // 
-            this.showCrsBindingSource4.DataMember = "showCrs";
-            this.showCrsBindingSource4.DataSource = this.dbmsDataSet21;
-            // 
-            // dbmsDataSet21
-            // 
-            this.dbmsDataSet21.DataSetName = "dbmsDataSet21";
-            this.dbmsDataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // showCrsBindingSource3
-            // 
-            this.showCrsBindingSource3.DataMember = "showCrs";
-            this.showCrsBindingSource3.DataSource = this.dbmsDataSet15;
-            // 
-            // dbmsDataSet15
-            // 
-            this.dbmsDataSet15.DataSetName = "dbmsDataSet15";
-            this.dbmsDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // showCrsBindingSource
-            // 
-            this.showCrsBindingSource.DataMember = "showCrs";
-            this.showCrsBindingSource.DataSource = this.dbmsDataSet6;
-            // 
-            // dbmsDataSet6
-            // 
-            this.dbmsDataSet6.DataSetName = "dbmsDataSet6";
-            this.dbmsDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(53, 25, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 73);
-            this.flowLayoutPanel1.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(57, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(455, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "COURSES INFORMATION";
-            // 
-            // showCrsTableAdapter
-            // 
-            this.showCrsTableAdapter.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(919, 591);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Refresh";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dbmsDataSet13
-            // 
-            this.dbmsDataSet13.DataSetName = "dbmsDataSet13";
-            this.dbmsDataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // showCrsBindingSource1
-            // 
-            this.showCrsBindingSource1.DataMember = "showCrs";
-            this.showCrsBindingSource1.DataSource = this.dbmsDataSet13;
-            // 
-            // showCrsTableAdapter1
-            // 
-            this.showCrsTableAdapter1.ClearBeforeFill = true;
-            // 
-            // dbmsDataSet14
-            // 
-            this.dbmsDataSet14.DataSetName = "dbmsDataSet14";
-            this.dbmsDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // showCrsBindingSource2
-            // 
-            this.showCrsBindingSource2.DataMember = "showCrs";
-            this.showCrsBindingSource2.DataSource = this.dbmsDataSet14;
-            // 
-            // showCrsTableAdapter2
-            // 
-            this.showCrsTableAdapter2.ClearBeforeFill = true;
-            // 
-            // showCrsTableAdapter3
-            // 
-            this.showCrsTableAdapter3.ClearBeforeFill = true;
-            // 
-            // showCrsTableAdapter4
-            // 
-            this.showCrsTableAdapter4.ClearBeforeFill = true;
             // 
             // crscodeDataGridViewTextBoxColumn
             // 
@@ -409,18 +295,118 @@
             this.prognameDataGridViewTextBoxColumn.ReadOnly = true;
             this.prognameDataGridViewTextBoxColumn.ToolTipText = "Program Name";
             // 
+            // showCrsBindingSource4
+            // 
+            this.showCrsBindingSource4.DataMember = "showCrs";
+            this.showCrsBindingSource4.DataSource = this.dbmsDataSet21;
+            // 
+            // dbmsDataSet21
+            // 
+            this.dbmsDataSet21.DataSetName = "dbmsDataSet21";
+            this.dbmsDataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // showCrsBindingSource3
+            // 
+            this.showCrsBindingSource3.DataMember = "showCrs";
+            this.showCrsBindingSource3.DataSource = this.dbmsDataSet15;
+            // 
+            // dbmsDataSet15
+            // 
+            this.dbmsDataSet15.DataSetName = "dbmsDataSet15";
+            this.dbmsDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // showCrsBindingSource
+            // 
+            this.showCrsBindingSource.DataMember = "showCrs";
+            this.showCrsBindingSource.DataSource = this.dbmsDataSet6;
+            // 
+            // dbmsDataSet6
+            // 
+            this.dbmsDataSet6.DataSetName = "dbmsDataSet6";
+            this.dbmsDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.label1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(40, 20, 0, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(865, 59);
+            this.flowLayoutPanel1.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(43, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(367, 31);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "COURSES INFORMATION";
+            // 
+            // showCrsTableAdapter
+            // 
+            this.showCrsTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(689, 480);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dbmsDataSet13
+            // 
+            this.dbmsDataSet13.DataSetName = "dbmsDataSet13";
+            this.dbmsDataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // showCrsBindingSource1
+            // 
+            this.showCrsBindingSource1.DataMember = "showCrs";
+            this.showCrsBindingSource1.DataSource = this.dbmsDataSet13;
+            // 
+            // showCrsTableAdapter1
+            // 
+            this.showCrsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dbmsDataSet14
+            // 
+            this.dbmsDataSet14.DataSetName = "dbmsDataSet14";
+            this.dbmsDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // showCrsBindingSource2
+            // 
+            this.showCrsBindingSource2.DataMember = "showCrs";
+            this.showCrsBindingSource2.DataSource = this.dbmsDataSet14;
+            // 
+            // showCrsTableAdapter2
+            // 
+            this.showCrsTableAdapter2.ClearBeforeFill = true;
+            // 
+            // showCrsTableAdapter3
+            // 
+            this.showCrsTableAdapter3.ClearBeforeFill = true;
+            // 
+            // showCrsTableAdapter4
+            // 
+            this.showCrsTableAdapter4.ClearBeforeFill = true;
+            // 
             // adminCourse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1153, 666);
+            this.ClientSize = new System.Drawing.Size(865, 541);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "adminCourse";
             this.Text = "adminCourse";
             this.Load += new System.EventHandler(this.adminCourse_Load);
