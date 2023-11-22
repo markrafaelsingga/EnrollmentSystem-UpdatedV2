@@ -77,7 +77,6 @@ namespace EnrollmentSystem
                 bool checkPhone = Regex.IsMatch(pNo, phpattern, RegexOptions.IgnoreCase);
                 bool checkEmail = Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase);
 
-                }
             }
             else
             {
