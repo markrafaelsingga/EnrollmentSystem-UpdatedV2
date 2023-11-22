@@ -21,7 +21,11 @@ namespace EnrollmentSystem
         public addStudent()
         {
             InitializeComponent();
-            birthdatePicker.MaxDate = DateTime.Now;
+            DateTime maxDate = DateTime.Now.AddYears(-17);
+
+            // Set the MaxDate property of the DateTimePicker
+            birthdatePicker.MaxDate = maxDate;
+
             program.DataSource = db.progList().ToList();
             program.DisplayMember = "prog_name";
             program.ValueMember = "prog_id";
@@ -69,15 +73,14 @@ namespace EnrollmentSystem
                 string eadd = emailtextBox.Text;
                 db.createAcc(uname.Text, pword.Text);
                 var result = db.accId(uname.Text);
-                string phpattern = @"(09|+639)\d{9}$";
+                string phpattern = @"(09|\+639)\d{9}$";
                 string pNo = phone.Text;
-                bool checkPhone = Regex.IsMatch(phpattern, pNo, RegexOptions.IgnoreCase);
+                bool checkPhone = Regex.IsMatch(pNo, phpattern, RegexOptions.IgnoreCase);
                 bool checkEmail = Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase);
-                if (Regex.IsMatch(phpattern, pNo, RegexOptions.IgnoreCase) && Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase))
+                if (checkPhone && checkEmail)
                 {
                     if (result != null)
                     {
-
                         var item = result.First();
 
                         id = item.u_id;
@@ -89,6 +92,7 @@ namespace EnrollmentSystem
 
                         db.enrollStudentbyAdmin(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, bd, age, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, yrs, grade, prog_id, id, 1, batch_id);
                         MessageBox.Show("Successfully enrolled!", "Done");
+                        this.Close();
                     }
                     else
                     {
@@ -97,6 +101,7 @@ namespace EnrollmentSystem
                 }
                 else
                 {
+                    // Show error labels based on individual issues
                     if (!checkEmail)
                     {
                         emlLbl.Show();
