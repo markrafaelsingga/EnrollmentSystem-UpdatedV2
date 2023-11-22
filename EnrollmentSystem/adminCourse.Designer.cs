@@ -96,8 +96,8 @@
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 80);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 12, 53, 0);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1153, 68);
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 10, 40, 0);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(865, 55);
             this.flowLayoutPanel2.TabIndex = 8;
             // 
             // delete
@@ -107,11 +107,11 @@
             this.delete.Location = new System.Drawing.Point(1053, 16);
             this.delete.Margin = new System.Windows.Forms.Padding(4);
             this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(43, 43);
+            this.delete.Size = new System.Drawing.Size(32, 35);
             this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.delete.TabIndex = 5;
             this.delete.TabStop = false;
-            this.delete.Click += new System.EventHandler(this.delete_Click);
+            this.delete.Click += new System.EventHandler(this.delete_Click_1);
             this.delete.MouseLeave += new System.EventHandler(this.delete_MouseLeave);
             this.delete.MouseHover += new System.EventHandler(this.delete_MouseHover);
             // 
@@ -122,7 +122,7 @@
             this.add.Location = new System.Drawing.Point(1002, 16);
             this.add.Margin = new System.Windows.Forms.Padding(4);
             this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(43, 43);
+            this.add.Size = new System.Drawing.Size(32, 35);
             this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.add.TabIndex = 5;
             this.add.TabStop = false;
@@ -137,7 +137,7 @@
             this.edit.Location = new System.Drawing.Point(947, 16);
             this.edit.Margin = new System.Windows.Forms.Padding(4);
             this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(47, 43);
+            this.edit.Size = new System.Drawing.Size(35, 35);
             this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.edit.TabIndex = 5;
             this.edit.TabStop = false;
@@ -152,8 +152,8 @@
             this.panel2.Location = new System.Drawing.Point(394, 16);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(545, 43);
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(409, 35);
             this.panel2.TabIndex = 6;
             // 
             // search
@@ -163,7 +163,7 @@
             this.search.Location = new System.Drawing.Point(515, 9);
             this.search.Margin = new System.Windows.Forms.Padding(4);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(27, 25);
+            this.search.Size = new System.Drawing.Size(20, 20);
             this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.search.TabIndex = 5;
             this.search.TabStop = false;
@@ -177,7 +177,7 @@
             this.searchTxtbox.Location = new System.Drawing.Point(0, 5);
             this.searchTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.searchTxtbox.Name = "searchTxtbox";
-            this.searchTxtbox.Size = new System.Drawing.Size(545, 30);
+            this.searchTxtbox.Size = new System.Drawing.Size(409, 26);
             this.searchTxtbox.TabIndex = 3;
             // 
             // panel1
@@ -189,7 +189,7 @@
             this.panel1.Location = new System.Drawing.Point(65, 155);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1029, 428);
+            this.panel1.Size = new System.Drawing.Size(772, 348);
             this.panel1.TabIndex = 7;
             // 
             // dataGridView1
@@ -229,7 +229,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1029, 428);
+            this.dataGridView1.Size = new System.Drawing.Size(772, 348);
             this.dataGridView1.TabIndex = 0;
             // 
             // crscodeDataGridViewTextBoxColumn
@@ -315,18 +315,17 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(53, 25, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 73);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(40, 20, 0, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(865, 59);
             this.flowLayoutPanel1.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(57, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(43, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(455, 39);
+            this.label1.Size = new System.Drawing.Size(367, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "COURSES INFORMATION";
             // 
@@ -372,10 +371,10 @@
             // 
             // adminCourse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1153, 666);
+            this.ClientSize = new System.Drawing.Size(865, 541);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.panel1);

@@ -126,6 +126,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
+
             this.panel1.Controls.Add(this.phLbl);
             this.panel1.Controls.Add(this.emlLbl);
             this.panel1.Controls.Add(this.sem);
@@ -466,7 +467,7 @@
             this.saveBtn.MouseLeave += new System.EventHandler(this.saveBtn_MouseLeave);
             this.saveBtn.MouseHover += new System.EventHandler(this.saveBtn_MouseHover);
             // 
-            // emailtextBox
+
             // 
             this.emailtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailtextBox.Location = new System.Drawing.Point(203, 354);
