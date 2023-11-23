@@ -444,20 +444,6 @@
       <Column Name="prog_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </ElementType>
   </Function>
-  <Function Name="dbo.showInstructor" Method="showInstructor">
-    <Parameter Name="admin_id" Type="System.Int32" DbType="Int" />
-    <ElementType Name="showInstructorResult">
-      <Column Name="ins_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ins_no" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
-      <Column Name="ins_fname" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="ins_mi" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="ins_lname" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="ins_dob" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="ins_age" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ins_phone" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
-      <Column Name="ins_email" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.showStudent" Method="showStudent">
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
     <ElementType Name="showStudentResult">
@@ -599,6 +585,19 @@
       <Column Name="year_level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.updateInstructor" Method="updateInstructor">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fname" Type="System.String" DbType="Text" />
+    <Parameter Name="mi" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="lname" Type="System.String" DbType="Text" />
+    <Parameter Name="dob" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="gender" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="phone" Type="System.String" DbType="VarChar(11)" />
+    <Parameter Name="email" Type="System.String" DbType="Text" />
+    <Parameter Name="admin_id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.searchInstructor" Method="searchInstructor">
     <Parameter Name="key" Type="System.String" DbType="VarChar(MAX)" />
     <ElementType Name="searchInstructorResult">
@@ -614,17 +613,19 @@
       <Column Name="ins_email" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </ElementType>
   </Function>
-  <Function Name="dbo.updateInstructor" Method="updateInstructor">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <Parameter Name="fname" Type="System.String" DbType="Text" />
-    <Parameter Name="mi" Type="System.String" DbType="VarChar(1)" />
-    <Parameter Name="lname" Type="System.String" DbType="Text" />
-    <Parameter Name="dob" Type="System.DateTime" DbType="Date" />
-    <Parameter Name="age" Type="System.Int32" DbType="Int" />
-    <Parameter Name="gender" Type="System.String" DbType="VarChar(6)" />
-    <Parameter Name="phone" Type="System.String" DbType="VarChar(11)" />
-    <Parameter Name="email" Type="System.String" DbType="Text" />
+  <Function Name="dbo.showInstructor" Method="showInstructor">
     <Parameter Name="admin_id" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
+    <ElementType Name="showInstructorResult">
+      <Column Name="ins_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ins_no" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="ins_fname" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ins_mi" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ins_lname" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ins_dob" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ins_gender" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="ins_age" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ins_phone" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="ins_email" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </ElementType>
   </Function>
 </Database>
