@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace EnrollmentSystem
 {
@@ -23,15 +24,17 @@ namespace EnrollmentSystem
 
         private void adminClass_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dbmsDataSet27.showClass' table. You can move, or remove it, as needed.
+            this.showClassTableAdapter1.Fill(this.dbmsDataSet27.showClass);
             // TODO: This line of code loads data into the 'dbmsDataSet26.showClass' table. You can move, or remove it, as needed.
-            this.showClassTableAdapter.Fill(this.dbmsDataSet26.showClass);
+            //this.showClassTableAdapter.Fill(this.dbmsDataSet26.showClass);
             this.ControlBox = false;
             display();
         }
 
         private void delete_MouseHover(object sender, EventArgs e)
         {
-            delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
+            delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
         }
 
         private void delete_MouseLeave(object sender, EventArgs e)
@@ -46,12 +49,12 @@ namespace EnrollmentSystem
 
         private void add_MouseHover(object sender, EventArgs e)
         {
-            add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
+            add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
         }
 
         private void edit_MouseHover(object sender, EventArgs e)
         {
-            edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
+            edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
         }
 
         private void edit_MouseLeave(object sender, EventArgs e)
@@ -61,7 +64,7 @@ namespace EnrollmentSystem
 
         private void search_MouseHover(object sender, EventArgs e)
         {
-            search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
+            search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
         }
 
         private void search_MouseLeave(object sender, EventArgs e)
@@ -69,32 +72,42 @@ namespace EnrollmentSystem
             search.BackColor = System.Drawing.Color.White;
         }
 
-        private void subject_MouseHover(object sender, EventArgs e)
-        {
-            subject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
-        }
-
-        private void subject_MouseLeave(object sender, EventArgs e)
-        {
-            subject.BackColor = System.Drawing.Color.White;
-        }
-
-        private void subject_Click(object sender, EventArgs e)
-        {
-            adminSubject subjectadmin = new adminSubject();
-            subjectadmin.ShowDialog();
-        }
-
         private void add_Click(object sender, EventArgs e)
         {
             addClass classadd = new addClass(verId);
+            classadd.FormClosed += Classadd_FormClosed;
             classadd.ShowDialog();
+        }
+
+        private void Classadd_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            display();
         }
 
         private void edit_Click(object sender, EventArgs e)
         {
             updateClass classupdate = new updateClass(verId);
+
+            classupdate.Code = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            classupdate.Section = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+
+            // Parse string values to DateTime objects
+            classupdate.from = DateTime.Parse(dataGridView1.CurrentRow.Cells[2].Value.ToString());
+            classupdate.to = DateTime.Parse(dataGridView1.CurrentRow.Cells[3].Value.ToString());
+
+            classupdate.Day = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            classupdate.Course = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            classupdate.Instructor = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            classupdate.Room = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+
+
+            classupdate.FormClosed += Classupdate_FormClosed;
             classupdate.ShowDialog();
+        }
+
+        private void Classupdate_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            display();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -106,15 +119,31 @@ namespace EnrollmentSystem
             dataGridView1.DataSource = db.showClass();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            display();
-        }
-
         private void delete_Click(object sender, EventArgs e)
         {
-            db.delClass(crs_id);
-            MessageBox.Show("Successfully deleted!");
+            int code = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            try
+            {
+                if (int.TryParse(code.ToString(), out int clscode))
+                {
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete \" Class code: " + clscode + " \"?", "Confirmation", MessageBoxButtons.YesNo);
+
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        db.delClass(code);
+                        MessageBox.Show("Successfully deleted!");
+                        display();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid 'id' value. Please enter a valid integer.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

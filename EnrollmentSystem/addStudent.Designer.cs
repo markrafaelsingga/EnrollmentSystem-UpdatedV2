@@ -45,7 +45,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.gender = new System.Windows.Forms.ComboBox();
             this.birthdatePicker = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.addressTxtbox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,9 +59,10 @@
             this.lnameTxtbox = new System.Windows.Forms.TextBox();
             this.emailLbl = new System.Windows.Forms.Label();
             this.saveBtn = new System.Windows.Forms.Button();
+            this.emailTxtbox = new System.Windows.Forms.TextBox();
             this.sem = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.emailTxtbox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -121,9 +121,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
-            this.panel1.Controls.Add(this.emailTxtbox);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.sem);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.emailTxtbox);
             this.panel1.Controls.Add(this.phLbl);
             this.panel1.Controls.Add(this.emlLbl);
             this.panel1.Controls.Add(this.batch);
@@ -135,7 +136,6 @@
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.gender);
             this.panel1.Controls.Add(this.birthdatePicker);
-            this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.addressTxtbox);
             this.panel1.Controls.Add(this.label9);
@@ -158,7 +158,7 @@
             // 
             this.phLbl.AutoSize = true;
             this.phLbl.ForeColor = System.Drawing.Color.Red;
-            this.phLbl.Location = new System.Drawing.Point(154, 220);
+            this.phLbl.Location = new System.Drawing.Point(151, 227);
             this.phLbl.Name = "phLbl";
             this.phLbl.Size = new System.Drawing.Size(113, 13);
             this.phLbl.TabIndex = 30;
@@ -168,7 +168,7 @@
             // 
             this.emlLbl.AutoSize = true;
             this.emlLbl.ForeColor = System.Drawing.Color.Red;
-            this.emlLbl.Location = new System.Drawing.Point(151, 267);
+            this.emlLbl.Location = new System.Drawing.Point(151, 272);
             this.emlLbl.Name = "emlLbl";
             this.emlLbl.Size = new System.Drawing.Size(69, 13);
             this.emlLbl.TabIndex = 29;
@@ -177,6 +177,7 @@
             // batch
             // 
             this.batch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.batch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.batch.FormattingEnabled = true;
             this.batch.Items.AddRange(new object[] {
             "1",
@@ -185,7 +186,7 @@
             "4"});
             this.batch.Location = new System.Drawing.Point(608, 147);
             this.batch.Name = "batch";
-            this.batch.Size = new System.Drawing.Size(121, 21);
+            this.batch.Size = new System.Drawing.Size(121, 28);
             this.batch.TabIndex = 28;
             // 
             // label15
@@ -221,6 +222,7 @@
             // program
             // 
             this.program.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.program.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.program.FormattingEnabled = true;
             this.program.Items.AddRange(new object[] {
             "1",
@@ -229,12 +231,13 @@
             "4"});
             this.program.Location = new System.Drawing.Point(154, 147);
             this.program.Name = "program";
-            this.program.Size = new System.Drawing.Size(121, 21);
+            this.program.Size = new System.Drawing.Size(121, 28);
             this.program.TabIndex = 24;
             // 
             // yr
             // 
             this.yr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.yr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yr.FormattingEnabled = true;
             this.yr.Items.AddRange(new object[] {
             "1",
@@ -243,7 +246,7 @@
             "4"});
             this.yr.Location = new System.Drawing.Point(358, 147);
             this.yr.Name = "yr";
-            this.yr.Size = new System.Drawing.Size(121, 21);
+            this.yr.Size = new System.Drawing.Size(121, 28);
             this.yr.TabIndex = 23;
             // 
             // label13
@@ -251,7 +254,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label13.Location = new System.Drawing.Point(20, 196);
+            this.label13.Location = new System.Drawing.Point(20, 193);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(67, 20);
             this.label13.TabIndex = 22;
@@ -260,13 +263,14 @@
             // gender
             // 
             this.gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gender.FormattingEnabled = true;
             this.gender.Items.AddRange(new object[] {
             "Male",
             "Female"});
             this.gender.Location = new System.Drawing.Point(154, 195);
             this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(121, 21);
+            this.gender.Size = new System.Drawing.Size(121, 28);
             this.gender.TabIndex = 21;
             // 
             // birthdatePicker
@@ -278,23 +282,12 @@
             this.birthdatePicker.Size = new System.Drawing.Size(177, 26);
             this.birthdatePicker.TabIndex = 16;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label12.Location = new System.Drawing.Point(20, 148);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(127, 20);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Course program:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(18, 283);
+            this.label5.Location = new System.Drawing.Point(20, 287);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 20);
             this.label5.TabIndex = 10;
@@ -322,7 +315,7 @@
             // phone
             // 
             this.phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phone.Location = new System.Drawing.Point(154, 234);
+            this.phone.Location = new System.Drawing.Point(154, 243);
             this.phone.Name = "phone";
             this.phone.Size = new System.Drawing.Size(215, 26);
             this.phone.TabIndex = 9;
@@ -332,7 +325,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(18, 240);
+            this.label4.Location = new System.Drawing.Point(20, 240);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 20);
             this.label4.TabIndex = 8;
@@ -427,39 +420,54 @@
             this.saveBtn.Text = "SAVE";
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            this.saveBtn.MouseEnter += new System.EventHandler(this.saveBtn_Click);
+            this.saveBtn.MouseLeave += new System.EventHandler(this.saveBtn_MouseLeave);
+            this.saveBtn.MouseHover += new System.EventHandler(this.saveBtn_MouseHover);
+            // 
+            // emailTxtbox
+            // 
+            this.emailTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTxtbox.Location = new System.Drawing.Point(154, 287);
+            this.emailTxtbox.Name = "emailTxtbox";
+            this.emailTxtbox.Size = new System.Drawing.Size(215, 26);
+            this.emailTxtbox.TabIndex = 31;
             // 
             // sem
             // 
             this.sem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sem.FormattingEnabled = true;
             this.sem.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-            this.sem.Location = new System.Drawing.Point(608, 198);
+            this.sem.Location = new System.Drawing.Point(608, 196);
             this.sem.Name = "sem";
-            this.sem.Size = new System.Drawing.Size(121, 21);
-            this.sem.TabIndex = 32;
+            this.sem.Size = new System.Drawing.Size(121, 28);
+            this.sem.TabIndex = 33;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(512, 199);
+            this.label1.Location = new System.Drawing.Point(512, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 20);
-            this.label1.TabIndex = 31;
+            this.label1.TabIndex = 32;
             this.label1.Text = "Semester";
             // 
-            // emailTxtbox
+            // label7
             // 
-            this.emailTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTxtbox.Location = new System.Drawing.Point(154, 283);
-            this.emailTxtbox.Name = "emailTxtbox";
-            this.emailTxtbox.Size = new System.Drawing.Size(215, 26);
-            this.emailTxtbox.TabIndex = 33;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label7.Location = new System.Drawing.Point(16, 155);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 20);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Program: ";
             // 
             // addStudent
             // 
@@ -501,7 +509,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox gender;
         private System.Windows.Forms.DateTimePicker birthdatePicker;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox addressTxtbox;
         private System.Windows.Forms.Label label9;
@@ -516,8 +523,9 @@
         private System.Windows.Forms.TextBox lnameTxtbox;
         private System.Windows.Forms.Label emailLbl;
         private System.Windows.Forms.Button saveBtn;
-        private System.Windows.Forms.TextBox emailTxtbox;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox sem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox emailTxtbox;
     }
 }

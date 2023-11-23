@@ -51,9 +51,6 @@
             this.viewEnrolleeBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.dbmsDataSet5 = new EnrollmentSystem.dbmsDataSet5();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.delete = new System.Windows.Forms.PictureBox();
-            this.add = new System.Windows.Forms.PictureBox();
-            this.edit = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.search = new System.Windows.Forms.PictureBox();
             this.searchTxtbox = new System.Windows.Forms.TextBox();
@@ -80,9 +77,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet5)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.delete)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.add)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edit)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -104,10 +98,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(53, 156);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(40, 127);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1043, 436);
+            this.panel1.Size = new System.Drawing.Size(782, 354);
             this.panel1.TabIndex = 2;
             // 
             // dataGridView1
@@ -115,7 +108,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -151,12 +144,11 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1043, 436);
+            this.dataGridView1.Size = new System.Drawing.Size(782, 354);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -315,77 +307,29 @@
             // 
             this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel2.Controls.Add(this.delete);
-            this.flowLayoutPanel2.Controls.Add(this.add);
-            this.flowLayoutPanel2.Controls.Add(this.edit);
             this.flowLayoutPanel2.Controls.Add(this.panel2);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 80);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 65);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 12, 53, 0);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1153, 69);
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 10, 40, 0);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(865, 56);
             this.flowLayoutPanel2.TabIndex = 6;
-            // 
-            // delete
-            // 
-            this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
-            this.delete.Location = new System.Drawing.Point(1053, 16);
-            this.delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(43, 43);
-            this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.delete.TabIndex = 5;
-            this.delete.TabStop = false;
-            this.delete.MouseLeave += new System.EventHandler(this.delete_MouseLeave);
-            this.delete.MouseHover += new System.EventHandler(this.delete_MouseHover);
-            // 
-            // add
-            // 
-            this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
-            this.add.Location = new System.Drawing.Point(1002, 16);
-            this.add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(43, 43);
-            this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.add.TabIndex = 5;
-            this.add.TabStop = false;
-            this.add.MouseLeave += new System.EventHandler(this.add_MouseLeave);
-            this.add.MouseHover += new System.EventHandler(this.add_MouseHover);
-            // 
-            // edit
-            // 
-            this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-            this.edit.Location = new System.Drawing.Point(947, 16);
-            this.edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(47, 43);
-            this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.edit.TabIndex = 5;
-            this.edit.TabStop = false;
-            this.edit.MouseLeave += new System.EventHandler(this.edit_MouseLeave);
-            this.edit.MouseHover += new System.EventHandler(this.edit_MouseHover);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.search);
             this.panel2.Controls.Add(this.searchTxtbox);
-            this.panel2.Location = new System.Drawing.Point(394, 16);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(622, 13);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(545, 43);
-            this.panel2.TabIndex = 6;
+            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.TabIndex = 0;
             // 
             // search
             // 
             this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
-            this.search.Location = new System.Drawing.Point(515, 9);
-            this.search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.search.Location = new System.Drawing.Point(655, 9);
+            this.search.Margin = new System.Windows.Forms.Padding(4);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(27, 25);
             this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -398,10 +342,9 @@
             // 
             this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxtbox.Location = new System.Drawing.Point(0, 5);
-            this.searchTxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchTxtbox.Location = new System.Drawing.Point(0, 0);
             this.searchTxtbox.Name = "searchTxtbox";
-            this.searchTxtbox.Size = new System.Drawing.Size(545, 30);
+            this.searchTxtbox.Size = new System.Drawing.Size(200, 26);
             this.searchTxtbox.TabIndex = 3;
             // 
             // flowLayoutPanel1
@@ -410,20 +353,18 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(53, 25, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 73);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(40, 20, 0, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(865, 59);
             this.flowLayoutPanel1.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(57, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(43, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 39);
+            this.label1.Size = new System.Drawing.Size(210, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "ENROLLMENT";
             // 
@@ -503,15 +444,14 @@
             // 
             // adminEnrollment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1153, 666);
+            this.ClientSize = new System.Drawing.Size(865, 541);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "adminEnrollment";
             this.Text = "adminEnrollment";
             this.Load += new System.EventHandler(this.adminEnrollment_Load);
@@ -520,9 +460,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet5)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.delete)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.add)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edit)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
@@ -546,9 +483,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.PictureBox add;
-        private System.Windows.Forms.PictureBox edit;
-        private System.Windows.Forms.PictureBox delete;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox search;

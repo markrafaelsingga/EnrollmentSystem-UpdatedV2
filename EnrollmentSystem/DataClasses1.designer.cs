@@ -197,17 +197,17 @@ namespace EnrollmentSystem
 			return ((ISingleResult<accIdResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.addCrs")]
-		public int addCrs([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string crsname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string crs_desc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> crs_year, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> crs_prog, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sem)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), crsname, crs_desc, crs_year, crs_prog, sem);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.addInstructor")]
 		public int addInstructor([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string ins_fname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(1)")] string ins_mi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string ins_lname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> ins_dob, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ins_age, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(6)")] string ins_gender, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(11)")] string ins_phone, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string ins_email, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> admin_id)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ins_fname, ins_mi, ins_lname, ins_dob, ins_age, ins_gender, ins_phone, ins_email, admin_id);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.addCrs")]
+		public int addCrs([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string crsname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string crs_desc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> crs_year, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> crs_prog, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sem)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), crsname, crs_desc, crs_year, crs_prog, sem);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -253,18 +253,18 @@ namespace EnrollmentSystem
 			return ((ISingleResult<checkCourseResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.createAcc")]
-		public int createAcc([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string uname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string upass)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), uname, upass);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.checkStud")]
 		public ISingleResult<checkStudResult> checkStud([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string fname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string lname)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fname, lname);
 			return ((ISingleResult<checkStudResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.createAcc")]
+		public int createAcc([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string uname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string upass)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), uname, upass);
+			return ((int)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.crsList")]
@@ -332,11 +332,11 @@ namespace EnrollmentSystem
 			return ((ISingleResult<getStudResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insActive")]
-		public ISingleResult<insActiveResult> insActive()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insFullname")]
+		public ISingleResult<insFullnameResult> insFullname()
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<insActiveResult>)(result.ReturnValue));
+			return ((ISingleResult<insFullnameResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insDel")]
@@ -346,11 +346,11 @@ namespace EnrollmentSystem
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insFullname")]
-		public ISingleResult<insFullnameResult> insFullname()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insActive")]
+		public ISingleResult<insActiveResult> insActive()
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<insFullnameResult>)(result.ReturnValue));
+			return ((ISingleResult<insActiveResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insList")]
@@ -374,6 +374,27 @@ namespace EnrollmentSystem
 			return ((ISingleResult<logIdResult>)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.newAdddInstructor")]
+		public int newAdddInstructor([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string ins_fname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(1)")] string ins_mi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string ins_lname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> ins_dob, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(6)")] string ins_gender, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(11)")] string ins_phone, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string ins_email, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> admin_id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ins_fname, ins_mi, ins_lname, ins_dob, ins_gender, ins_phone, ins_email, admin_id);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.newEnrollStudent")]
+		public int newEnrollStudent([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_fname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_lname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(1)")] string stud_mi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> stud_bday, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_address, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(11)")] string stud_phone, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_email, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(6)")] string stud_gender, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> stud_year, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(5,1)")] System.Nullable<decimal> stud_gpa, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> prog_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> u_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> admin_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> batch_id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), stud_fname, stud_lname, stud_mi, stud_bday, stud_address, stud_phone, stud_email, stud_gender, stud_year, stud_gpa, prog_id, u_id, admin_id, batch_id);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.pinakaNewEnrollStudent")]
+		public int pinakaNewEnrollStudent([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_fname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_lname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(1)")] string stud_mi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> stud_bday, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_address, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(11)")] string stud_phone, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_email, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(6)")] string stud_gender, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> stud_year, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(5,1)")] System.Nullable<decimal> stud_gpa, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> prog_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> u_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> admin_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> batch_id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), stud_fname, stud_lname, stud_mi, stud_bday, stud_address, stud_phone, stud_email, stud_gender, stud_year, stud_gpa, prog_id, u_id, admin_id, batch_id);
+			return ((int)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.progList")]
 		public ISingleResult<progListResult> progList()
 		{
@@ -386,13 +407,6 @@ namespace EnrollmentSystem
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<roomListResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.searchCrs")]
-		public ISingleResult<searchCrsResult> searchCrs([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(MAX)")] string key)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), key);
-			return ((ISingleResult<searchCrsResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.searchIns")]
@@ -458,18 +472,18 @@ namespace EnrollmentSystem
 			return ((ISingleResult<showInstructorResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.showStudent")]
-		public ISingleResult<showStudentResult> showStudent([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
-			return ((ISingleResult<showStudentResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.studClass")]
 		public ISingleResult<studClassResult> studClass([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
 			return ((ISingleResult<studClassResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.showStudent")]
+		public ISingleResult<showStudentResult> showStudent([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
+			return ((ISingleResult<showStudentResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.studCourse")]
@@ -549,25 +563,11 @@ namespace EnrollmentSystem
 			return ((ISingleResult<yearListResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.newEnrollStudent")]
-		public int newEnrollStudent([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_fname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_lname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(1)")] string stud_mi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> stud_bday, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_address, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(11)")] string stud_phone, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_email, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(6)")] string stud_gender, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> stud_year, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(5,1)")] System.Nullable<decimal> stud_gpa, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> prog_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> u_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> admin_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> batch_id)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.searchCrs")]
+		public ISingleResult<searchCrsResult> searchCrs([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> crs)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), stud_fname, stud_lname, stud_mi, stud_bday, stud_address, stud_phone, stud_email, stud_gender, stud_year, stud_gpa, prog_id, u_id, admin_id, batch_id);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.pinakaNewEnrollStudent")]
-		public int pinakaNewEnrollStudent([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_fname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_lname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(1)")] string stud_mi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> stud_bday, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_address, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(11)")] string stud_phone, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_email, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(6)")] string stud_gender, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> stud_year, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(5,1)")] System.Nullable<decimal> stud_gpa, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> prog_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> u_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> admin_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> batch_id)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), stud_fname, stud_lname, stud_mi, stud_bday, stud_address, stud_phone, stud_email, stud_gender, stud_year, stud_gpa, prog_id, u_id, admin_id, batch_id);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.newAdddInstructor")]
-		public int newAdddInstructor([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string ins_fname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(1)")] string ins_mi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string ins_lname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> ins_dob, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(6)")] string ins_gender, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(11)")] string ins_phone, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string ins_email, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> admin_id)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ins_fname, ins_mi, ins_lname, ins_dob, ins_gender, ins_phone, ins_email, admin_id);
-			return ((int)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), crs);
+			return ((ISingleResult<searchCrsResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -4507,32 +4507,6 @@ namespace EnrollmentSystem
 		}
 	}
 	
-	public partial class insActiveResult
-	{
-		
-		private int _ins_id;
-		
-		public insActiveResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_id", DbType="Int NOT NULL")]
-		public int ins_id
-		{
-			get
-			{
-				return this._ins_id;
-			}
-			set
-			{
-				if ((this._ins_id != value))
-				{
-					this._ins_id = value;
-				}
-			}
-		}
-	}
-	
 	public partial class insFullnameResult
 	{
 		
@@ -4572,6 +4546,32 @@ namespace EnrollmentSystem
 				if ((this._Fullname != value))
 				{
 					this._Fullname = value;
+				}
+			}
+		}
+	}
+	
+	public partial class insActiveResult
+	{
+		
+		private int _ins_id;
+		
+		public insActiveResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_id", DbType="Int NOT NULL")]
+		public int ins_id
+		{
+			get
+			{
+				return this._ins_id;
+			}
+			set
+			{
+				if ((this._ins_id != value))
+				{
+					this._ins_id = value;
 				}
 			}
 		}
@@ -4810,122 +4810,6 @@ namespace EnrollmentSystem
 				if ((this._room_name != value))
 				{
 					this._room_name = value;
-				}
-			}
-		}
-	}
-	
-	public partial class searchCrsResult
-	{
-		
-		private int _crs_code;
-		
-		private string _crs_name;
-		
-		private string _crs_desc;
-		
-		private int _year_id;
-		
-		private int _prog_id;
-		
-		private int _sem_id;
-		
-		public searchCrsResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_code", DbType="Int NOT NULL")]
-		public int crs_code
-		{
-			get
-			{
-				return this._crs_code;
-			}
-			set
-			{
-				if ((this._crs_code != value))
-				{
-					this._crs_code = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string crs_name
-		{
-			get
-			{
-				return this._crs_name;
-			}
-			set
-			{
-				if ((this._crs_name != value))
-				{
-					this._crs_name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_desc", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string crs_desc
-		{
-			get
-			{
-				return this._crs_desc;
-			}
-			set
-			{
-				if ((this._crs_desc != value))
-				{
-					this._crs_desc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_id", DbType="Int NOT NULL")]
-		public int year_id
-		{
-			get
-			{
-				return this._year_id;
-			}
-			set
-			{
-				if ((this._year_id != value))
-				{
-					this._year_id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_id", DbType="Int NOT NULL")]
-		public int prog_id
-		{
-			get
-			{
-				return this._prog_id;
-			}
-			set
-			{
-				if ((this._prog_id != value))
-				{
-					this._prog_id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sem_id", DbType="Int NOT NULL")]
-		public int sem_id
-		{
-			get
-			{
-				return this._sem_id;
-			}
-			set
-			{
-				if ((this._sem_id != value))
-				{
-					this._sem_id = value;
 				}
 			}
 		}
@@ -6173,6 +6057,158 @@ namespace EnrollmentSystem
 		}
 	}
 	
+	public partial class studClassResult
+	{
+		
+		private string _class_section;
+		
+		private System.TimeSpan _class_fromTime;
+		
+		private System.TimeSpan _class_toTime;
+		
+		private string _class_day;
+		
+		private string _crs_name;
+		
+		private string _instructor_name;
+		
+		private string _room_name;
+		
+		private int _year_level;
+		
+		public studClassResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_section", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string class_section
+		{
+			get
+			{
+				return this._class_section;
+			}
+			set
+			{
+				if ((this._class_section != value))
+				{
+					this._class_section = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_fromTime", DbType="Time NOT NULL")]
+		public System.TimeSpan class_fromTime
+		{
+			get
+			{
+				return this._class_fromTime;
+			}
+			set
+			{
+				if ((this._class_fromTime != value))
+				{
+					this._class_fromTime = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_toTime", DbType="Time NOT NULL")]
+		public System.TimeSpan class_toTime
+		{
+			get
+			{
+				return this._class_toTime;
+			}
+			set
+			{
+				if ((this._class_toTime != value))
+				{
+					this._class_toTime = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_day", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string class_day
+		{
+			get
+			{
+				return this._class_day;
+			}
+			set
+			{
+				if ((this._class_day != value))
+				{
+					this._class_day = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string crs_name
+		{
+			get
+			{
+				return this._crs_name;
+			}
+			set
+			{
+				if ((this._crs_name != value))
+				{
+					this._crs_name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_instructor_name", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string instructor_name
+		{
+			get
+			{
+				return this._instructor_name;
+			}
+			set
+			{
+				if ((this._instructor_name != value))
+				{
+					this._instructor_name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_room_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string room_name
+		{
+			get
+			{
+				return this._room_name;
+			}
+			set
+			{
+				if ((this._room_name != value))
+				{
+					this._room_name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_level", DbType="Int NOT NULL")]
+		public int year_level
+		{
+			get
+			{
+				return this._year_level;
+			}
+			set
+			{
+				if ((this._year_level != value))
+				{
+					this._year_level = value;
+				}
+			}
+		}
+	}
+	
 	public partial class showStudentResult
 	{
 		
@@ -6428,158 +6464,6 @@ namespace EnrollmentSystem
 				if ((this._batch_year != value))
 				{
 					this._batch_year = value;
-				}
-			}
-		}
-	}
-	
-	public partial class studClassResult
-	{
-		
-		private string _class_section;
-		
-		private System.TimeSpan _class_fromTime;
-		
-		private System.TimeSpan _class_toTime;
-		
-		private string _class_day;
-		
-		private string _crs_name;
-		
-		private string _instructor_name;
-		
-		private string _room_name;
-		
-		private int _year_level;
-		
-		public studClassResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_section", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string class_section
-		{
-			get
-			{
-				return this._class_section;
-			}
-			set
-			{
-				if ((this._class_section != value))
-				{
-					this._class_section = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_fromTime", DbType="Time NOT NULL")]
-		public System.TimeSpan class_fromTime
-		{
-			get
-			{
-				return this._class_fromTime;
-			}
-			set
-			{
-				if ((this._class_fromTime != value))
-				{
-					this._class_fromTime = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_toTime", DbType="Time NOT NULL")]
-		public System.TimeSpan class_toTime
-		{
-			get
-			{
-				return this._class_toTime;
-			}
-			set
-			{
-				if ((this._class_toTime != value))
-				{
-					this._class_toTime = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_day", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string class_day
-		{
-			get
-			{
-				return this._class_day;
-			}
-			set
-			{
-				if ((this._class_day != value))
-				{
-					this._class_day = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string crs_name
-		{
-			get
-			{
-				return this._crs_name;
-			}
-			set
-			{
-				if ((this._crs_name != value))
-				{
-					this._crs_name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_instructor_name", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string instructor_name
-		{
-			get
-			{
-				return this._instructor_name;
-			}
-			set
-			{
-				if ((this._instructor_name != value))
-				{
-					this._instructor_name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_room_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string room_name
-		{
-			get
-			{
-				return this._room_name;
-			}
-			set
-			{
-				if ((this._room_name != value))
-				{
-					this._room_name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_level", DbType="Int NOT NULL")]
-		public int year_level
-		{
-			get
-			{
-				return this._year_level;
-			}
-			set
-			{
-				if ((this._year_level != value))
-				{
-					this._year_level = value;
 				}
 			}
 		}
@@ -7348,6 +7232,122 @@ namespace EnrollmentSystem
 				if ((this._year_level != value))
 				{
 					this._year_level = value;
+				}
+			}
+		}
+	}
+	
+	public partial class searchCrsResult
+	{
+		
+		private int _crs_code;
+		
+		private string _crs_name;
+		
+		private string _crs_desc;
+		
+		private int _year_id;
+		
+		private int _prog_id;
+		
+		private int _sem_id;
+		
+		public searchCrsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_code", DbType="Int NOT NULL")]
+		public int crs_code
+		{
+			get
+			{
+				return this._crs_code;
+			}
+			set
+			{
+				if ((this._crs_code != value))
+				{
+					this._crs_code = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string crs_name
+		{
+			get
+			{
+				return this._crs_name;
+			}
+			set
+			{
+				if ((this._crs_name != value))
+				{
+					this._crs_name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_desc", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string crs_desc
+		{
+			get
+			{
+				return this._crs_desc;
+			}
+			set
+			{
+				if ((this._crs_desc != value))
+				{
+					this._crs_desc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_id", DbType="Int NOT NULL")]
+		public int year_id
+		{
+			get
+			{
+				return this._year_id;
+			}
+			set
+			{
+				if ((this._year_id != value))
+				{
+					this._year_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_id", DbType="Int NOT NULL")]
+		public int prog_id
+		{
+			get
+			{
+				return this._prog_id;
+			}
+			set
+			{
+				if ((this._prog_id != value))
+				{
+					this._prog_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sem_id", DbType="Int NOT NULL")]
+		public int sem_id
+		{
+			get
+			{
+				return this._sem_id;
+			}
+			set
+			{
+				if ((this._sem_id != value))
+				{
+					this._sem_id = value;
 				}
 			}
 		}

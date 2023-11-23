@@ -73,9 +73,10 @@
             // 
             this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
-            this.delete.Location = new System.Drawing.Point(790, 13);
+            this.delete.Location = new System.Drawing.Point(778, 14);
+            this.delete.Margin = new System.Windows.Forms.Padding(4);
             this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(32, 35);
+            this.delete.Size = new System.Drawing.Size(43, 43);
             this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.delete.TabIndex = 5;
             this.delete.TabStop = false;
@@ -87,9 +88,10 @@
             // 
             this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
-            this.add.Location = new System.Drawing.Point(752, 13);
+            this.add.Location = new System.Drawing.Point(727, 14);
+            this.add.Margin = new System.Windows.Forms.Padding(4);
             this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(32, 35);
+            this.add.Size = new System.Drawing.Size(43, 43);
             this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.add.TabIndex = 5;
             this.add.TabStop = false;
@@ -101,9 +103,10 @@
             // 
             this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-            this.edit.Location = new System.Drawing.Point(711, 13);
+            this.edit.Location = new System.Drawing.Point(672, 14);
+            this.edit.Margin = new System.Windows.Forms.Padding(4);
             this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(35, 35);
+            this.edit.Size = new System.Drawing.Size(47, 43);
             this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.edit.TabIndex = 5;
             this.edit.TabStop = false;
@@ -115,7 +118,7 @@
             // 
             this.panel2.Controls.Add(this.search);
             this.panel2.Controls.Add(this.searchTxtbox);
-            this.panel2.Location = new System.Drawing.Point(296, 13);
+            this.panel2.Location = new System.Drawing.Point(256, 13);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.panel2.Size = new System.Drawing.Size(409, 35);
@@ -125,9 +128,10 @@
             // 
             this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
-            this.search.Location = new System.Drawing.Point(386, 7);
+            this.search.Location = new System.Drawing.Point(515, 9);
+            this.search.Margin = new System.Windows.Forms.Padding(4);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(20, 20);
+            this.search.Size = new System.Drawing.Size(27, 25);
             this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.search.TabIndex = 5;
             this.search.TabStop = false;
@@ -161,7 +165,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(131)))), ((int)(((byte)(179)))));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -96,12 +96,6 @@
     <Compile Include="adminClass.Designer.cs">
       <DependentUpon>adminClass.cs</DependentUpon>
     </Compile>
-    <Compile Include="adminCollege.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="adminCollege.Designer.cs">
-      <DependentUpon>adminCollege.cs</DependentUpon>
-    </Compile>
     <Compile Include="adminCourse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,12 +131,6 @@
     </Compile>
     <Compile Include="adminStudent.Designer.cs">
       <DependentUpon>adminStudent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="adminSubject.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="adminSubject.Designer.cs">
-      <DependentUpon>adminSubject.cs</DependentUpon>
     </Compile>
     <Compile Include="admin_page.cs">
       <SubType>Form</SubType>
@@ -259,6 +247,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbmsDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet27.xsd</DependentUpon>
     </Compile>
     <Compile Include="dbmsDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -446,10 +439,6 @@
     <EmbeddedResource Include="adminClass.resx">
       <DependentUpon>adminClass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="adminCollege.resx">
-      <DependentUpon>adminCollege.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="adminCourse.resx">
       <DependentUpon>adminCourse.cs</DependentUpon>
     </EmbeddedResource>
@@ -467,9 +456,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminStudent.resx">
       <DependentUpon>adminStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="adminSubject.resx">
-      <DependentUpon>adminSubject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin_page.resx">
       <DependentUpon>admin_page.cs</DependentUpon>
@@ -766,6 +752,17 @@
     </None>
     <None Include="dbmsDataSet26.xss">
       <DependentUpon>dbmsDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet27.xsc">
+      <DependentUpon>dbmsDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet27.xss">
+      <DependentUpon>dbmsDataSet27.xsd</DependentUpon>
     </None>
     <None Include="dbmsDataSet3.xsc">
       <DependentUpon>dbmsDataSet3.xsd</DependentUpon>
