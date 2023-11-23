@@ -559,14 +559,6 @@
       <Column Name="batch_year" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.studCourse" Method="studCourse">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <ElementType Name="studCourseResult">
-      <Column Name="crs_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="crs_desc" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="year_level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.studDel" Method="studDel">
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
@@ -690,6 +682,14 @@
       <Column Name="year_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="prog_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="sem_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.studCourse" Method="studCourse">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="studCourseResult">
+      <Column Name="crs_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="crs_desc" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="year_level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
 </Database>
