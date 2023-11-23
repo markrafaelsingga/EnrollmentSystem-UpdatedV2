@@ -243,6 +243,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbmsDataSet26.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dbmsDataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet27.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dbmsDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -741,6 +746,17 @@
     </None>
     <None Include="dbmsDataSet26.xss">
       <DependentUpon>dbmsDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet27.xsc">
+      <DependentUpon>dbmsDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet27.xss">
+      <DependentUpon>dbmsDataSet27.xsd</DependentUpon>
     </None>
     <None Include="dbmsDataSet3.xsc">
       <DependentUpon>dbmsDataSet3.xsd</DependentUpon>

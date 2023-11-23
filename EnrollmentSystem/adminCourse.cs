@@ -110,7 +110,21 @@ namespace EnrollmentSystem
         
         private void delete_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+                db.delCrs(name);
+                MessageBox.Show("Deleted successfully");
+                display();
+            }
+            catch
+            {
+                MessageBox.Show("Can't delete that course yet.");
+            }
+        }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            name = dataGridView1.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }

@@ -52,6 +52,7 @@
             this.dbmsDataSet5 = new EnrollmentSystem.dbmsDataSet5();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.search = new System.Windows.Forms.PictureBox();
             this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -71,13 +72,13 @@
             this.viewEnrolleeBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.viewEnrolleeTableAdapter4 = new EnrollmentSystem.dbmsDataSet4TableAdapters.viewEnrolleeTableAdapter();
             this.viewEnrolleeTableAdapter5 = new EnrollmentSystem.dbmsDataSet5TableAdapters.viewEnrolleeTableAdapter();
-            this.search = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet5)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource)).BeginInit();
@@ -89,7 +90,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -315,19 +315,36 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(865, 56);
             this.flowLayoutPanel2.TabIndex = 6;
             // 
-
             // panel2
             // 
             this.panel2.Controls.Add(this.search);
             this.panel2.Controls.Add(this.searchTxtbox);
-
+            this.panel2.Location = new System.Drawing.Point(622, 13);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.TabIndex = 0;
+            // 
+            // search
+            // 
+            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
+            this.search.Location = new System.Drawing.Point(655, 9);
+            this.search.Margin = new System.Windows.Forms.Padding(4);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(27, 25);
+            this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.search.TabIndex = 5;
+            this.search.TabStop = false;
+            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
+            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
+            // 
             // searchTxtbox
             // 
             this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxtbox.Location = new System.Drawing.Point(0, 4);
+            this.searchTxtbox.Location = new System.Drawing.Point(0, 0);
             this.searchTxtbox.Name = "searchTxtbox";
-
+            this.searchTxtbox.Size = new System.Drawing.Size(200, 26);
             this.searchTxtbox.TabIndex = 3;
             // 
             // flowLayoutPanel1
@@ -425,20 +442,6 @@
             // 
             this.viewEnrolleeTableAdapter5.ClearBeforeFill = true;
             // 
-            // search
-            // 
-            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
-            this.search.Location = new System.Drawing.Point(655, 9);
-            this.search.Margin = new System.Windows.Forms.Padding(4);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(27, 25);
-            this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.search.TabIndex = 5;
-            this.search.TabStop = false;
-            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
-            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
-            // 
             // adminEnrollment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -459,6 +462,7 @@
             this.flowLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet)).EndInit();
@@ -471,7 +475,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
             this.ResumeLayout(false);
 
         }
