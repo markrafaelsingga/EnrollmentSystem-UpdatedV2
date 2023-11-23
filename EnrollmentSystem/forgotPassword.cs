@@ -20,7 +20,15 @@ namespace EnrollmentSystem
         private void nextBtn_Click(object sender, EventArgs e)
         {
             changePassword change = new changePassword();
+            change.FormClosed += Change_FormClosed;
             change.Show();
+            Visible = false;
+        }
+
+        private void Change_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            login log = new login();
+            log.Show();
             Visible = false;
         }
 

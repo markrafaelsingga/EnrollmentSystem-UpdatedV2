@@ -48,7 +48,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(353, 143);
+            this.panel1.Size = new System.Drawing.Size(419, 143);
             this.panel1.TabIndex = 18;
             // 
             // label1
@@ -56,7 +56,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(57, 105);
+            this.label1.Location = new System.Drawing.Point(92, 107);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(235, 25);
@@ -66,7 +66,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(140, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(175, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -76,7 +76,7 @@
             // pword
             // 
             this.pword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pword.Location = new System.Drawing.Point(32, 187);
+            this.pword.Location = new System.Drawing.Point(68, 223);
             this.pword.Margin = new System.Windows.Forms.Padding(4);
             this.pword.Name = "pword";
             this.pword.Size = new System.Drawing.Size(285, 30);
@@ -88,7 +88,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label6.Location = new System.Drawing.Point(27, 159);
+            this.label6.Location = new System.Drawing.Point(63, 195);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 25);
@@ -100,7 +100,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label7.Location = new System.Drawing.Point(27, 245);
+            this.label7.Location = new System.Drawing.Point(63, 281);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(164, 25);
@@ -110,7 +110,7 @@
             // repword
             // 
             this.repword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.repword.Location = new System.Drawing.Point(32, 273);
+            this.repword.Location = new System.Drawing.Point(68, 309);
             this.repword.Margin = new System.Windows.Forms.Padding(4);
             this.repword.Name = "repword";
             this.repword.Size = new System.Drawing.Size(285, 30);
@@ -120,7 +120,7 @@
             // nextBtn
             // 
             this.nextBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextBtn.Location = new System.Drawing.Point(125, 330);
+            this.nextBtn.Location = new System.Drawing.Point(161, 366);
             this.nextBtn.Margin = new System.Windows.Forms.Padding(4);
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.Size = new System.Drawing.Size(114, 30);
@@ -136,7 +136,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(18)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(353, 394);
+            this.ClientSize = new System.Drawing.Size(419, 447);
             this.Controls.Add(this.nextBtn);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.repword);

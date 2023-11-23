@@ -26,8 +26,16 @@ namespace EnrollmentSystem
         DataClasses1DataContext db = new DataClasses1DataContext();
         private void signinLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            signIn_student chooseUser = new signIn_student();
-            chooseUser.Show();
+            signIn_student signIn = new signIn_student();
+            signIn.FormClosed += SignIn_FormClosed;
+            signIn.Show();
+            Visible = false;
+        }
+
+        private void SignIn_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            login log = new login();
+            log.Show();
             Visible = false;
         }
 
@@ -65,6 +73,7 @@ namespace EnrollmentSystem
                             if (id > 0)
                             {
                                 admin_page dashboard = new admin_page(id);
+                                dashboard.FormClosed += Dashboard_FormClosed;
                                 dashboard.Show();
                                 Visible = false;
 
@@ -97,8 +106,13 @@ namespace EnrollmentSystem
             {
                 MessageBox.Show($"An error occured: {ex.Message}");
             }
-         
+        }
 
+        private void Dashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            login log = new login();
+            log.Show();
+            Visible = false;
         }
 
         private void loginBtn_MouseHover(object sender, EventArgs e)
@@ -134,7 +148,15 @@ namespace EnrollmentSystem
         private void forgotpassLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             forgotPassword forgot = new forgotPassword();
+            forgot.FormClosed += Forgot_FormClosed;
             forgot.Show();
+            Visible = false;
+        }
+
+        private void Forgot_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            login log = new login();
+            log.Show();
             Visible = false;
         }
     }
