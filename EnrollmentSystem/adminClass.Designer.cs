@@ -61,104 +61,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.edit)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.add)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delete)).BeginInit();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showClassBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showClassBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet26)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // showClassBindingSource
-            // 
-            this.showClassBindingSource.DataMember = "showClass";
-            this.showClassBindingSource.DataSource = this.dbmsDataSet26;
-            // 
-            // dbmsDataSet26
-            // 
-            this.dbmsDataSet26.DataSetName = "dbmsDataSet26";
-            this.dbmsDataSet26.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // showClassTableAdapter
-            // 
-            this.showClassTableAdapter.ClearBeforeFill = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.search);
-            this.panel2.Controls.Add(this.searchTxtbox);
-            this.panel2.Location = new System.Drawing.Point(296, 13);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(409, 35);
-            this.panel2.TabIndex = 6;
-            // 
-            // searchTxtbox
-            // 
-            this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxtbox.Location = new System.Drawing.Point(0, 4);
-            this.searchTxtbox.Name = "searchTxtbox";
-            this.searchTxtbox.Size = new System.Drawing.Size(409, 26);
-            this.searchTxtbox.TabIndex = 3;
-            // 
-            // search
-            // 
-            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
-            this.search.Location = new System.Drawing.Point(386, 7);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(20, 20);
-            this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.search.TabIndex = 5;
-            this.search.TabStop = false;
-            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
-            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
-            // 
-            // edit
-            // 
-            this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-            this.edit.Location = new System.Drawing.Point(711, 13);
-            this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(35, 35);
-            this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.edit.TabIndex = 5;
-            this.edit.TabStop = false;
-            this.edit.Click += new System.EventHandler(this.edit_Click);
-            this.edit.MouseLeave += new System.EventHandler(this.edit_MouseLeave);
-            this.edit.MouseHover += new System.EventHandler(this.edit_MouseHover);
-            // 
-            // add
-            // 
-            this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
-            this.add.Location = new System.Drawing.Point(752, 13);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(32, 35);
-            this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.add.TabIndex = 5;
-            this.add.TabStop = false;
-            this.add.Click += new System.EventHandler(this.add_Click);
-            this.add.MouseLeave += new System.EventHandler(this.add_MouseLeave);
-            this.add.MouseHover += new System.EventHandler(this.add_MouseHover);
-            // 
-            // delete
-            // 
-            this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
-            this.delete.Location = new System.Drawing.Point(790, 13);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(32, 35);
-            this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.delete.TabIndex = 5;
-            this.delete.TabStop = false;
-            this.delete.Click += new System.EventHandler(this.delete_Click);
-            this.delete.MouseLeave += new System.EventHandler(this.delete_MouseLeave);
-            this.delete.MouseHover += new System.EventHandler(this.delete_MouseHover);
             // 
             // flowLayoutPanel2
             // 
@@ -169,34 +77,92 @@
             this.flowLayoutPanel2.Controls.Add(this.edit);
             this.flowLayoutPanel2.Controls.Add(this.panel2);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 65);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 80);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 10, 40, 0);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(865, 58);
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 12, 53, 0);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1153, 71);
             this.flowLayoutPanel2.TabIndex = 10;
             // 
-            // flowLayoutPanel1
+            // delete
             // 
-            this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(53, 25, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(865, 59);
-            this.flowLayoutPanel1.TabIndex = 11;
+            this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
+            this.delete.Location = new System.Drawing.Point(1053, 16);
+            this.delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(43, 43);
+            this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.delete.TabIndex = 5;
+            this.delete.TabStop = false;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
+            this.delete.MouseLeave += new System.EventHandler(this.delete_MouseLeave);
+            this.delete.MouseHover += new System.EventHandler(this.delete_MouseHover);
             // 
-            // label1
+            // add
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(57, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CLASSES";
+            this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
+            this.add.Location = new System.Drawing.Point(1003, 16);
+            this.add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(43, 43);
+            this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.add.TabIndex = 5;
+            this.add.TabStop = false;
+            this.add.Click += new System.EventHandler(this.add_Click);
+            this.add.MouseLeave += new System.EventHandler(this.add_MouseLeave);
+            this.add.MouseHover += new System.EventHandler(this.add_MouseHover);
+            // 
+            // edit
+            // 
+            this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
+            this.edit.Location = new System.Drawing.Point(948, 16);
+            this.edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edit.Name = "edit";
+            this.edit.Size = new System.Drawing.Size(47, 43);
+            this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.edit.TabIndex = 5;
+            this.edit.TabStop = false;
+            this.edit.Click += new System.EventHandler(this.edit_Click);
+            this.edit.MouseLeave += new System.EventHandler(this.edit_MouseLeave);
+            this.edit.MouseHover += new System.EventHandler(this.edit_MouseHover);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.search);
+            this.panel2.Controls.Add(this.searchTxtbox);
+            this.panel2.Location = new System.Drawing.Point(395, 16);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(545, 43);
+            this.panel2.TabIndex = 6;
+            // 
+            // search
+            // 
+            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
+            this.search.Location = new System.Drawing.Point(515, 9);
+            this.search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(27, 25);
+            this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.search.TabIndex = 5;
+            this.search.TabStop = false;
+            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
+            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
+            // 
+            // searchTxtbox
+            // 
+            this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTxtbox.Location = new System.Drawing.Point(0, 5);
+            this.searchTxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchTxtbox.Name = "searchTxtbox";
+            this.searchTxtbox.Size = new System.Drawing.Size(545, 30);
+            this.searchTxtbox.TabIndex = 3;
             // 
             // panel1
             // 
@@ -204,9 +170,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(49, 129);
+            this.panel1.Location = new System.Drawing.Point(65, 159);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(773, 387);
+            this.panel1.Size = new System.Drawing.Size(1031, 476);
             this.panel1.TabIndex = 12;
             // 
             // dataGridView1
@@ -245,6 +212,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -256,7 +224,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(773, 387);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1031, 476);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -264,6 +233,7 @@
             // 
             this.classcodeDataGridViewTextBoxColumn.DataPropertyName = "class_code";
             this.classcodeDataGridViewTextBoxColumn.HeaderText = "class_code";
+            this.classcodeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.classcodeDataGridViewTextBoxColumn.Name = "classcodeDataGridViewTextBoxColumn";
             this.classcodeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -271,6 +241,7 @@
             // 
             this.classsectionDataGridViewTextBoxColumn.DataPropertyName = "class_section";
             this.classsectionDataGridViewTextBoxColumn.HeaderText = "class_section";
+            this.classsectionDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.classsectionDataGridViewTextBoxColumn.Name = "classsectionDataGridViewTextBoxColumn";
             this.classsectionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -278,6 +249,7 @@
             // 
             this.classfromTimeDataGridViewTextBoxColumn.DataPropertyName = "class_fromTime";
             this.classfromTimeDataGridViewTextBoxColumn.HeaderText = "class_fromTime";
+            this.classfromTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.classfromTimeDataGridViewTextBoxColumn.Name = "classfromTimeDataGridViewTextBoxColumn";
             this.classfromTimeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -285,6 +257,7 @@
             // 
             this.classtoTimeDataGridViewTextBoxColumn.DataPropertyName = "class_toTime";
             this.classtoTimeDataGridViewTextBoxColumn.HeaderText = "class_toTime";
+            this.classtoTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.classtoTimeDataGridViewTextBoxColumn.Name = "classtoTimeDataGridViewTextBoxColumn";
             this.classtoTimeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -292,6 +265,7 @@
             // 
             this.classdayDataGridViewTextBoxColumn.DataPropertyName = "class_day";
             this.classdayDataGridViewTextBoxColumn.HeaderText = "class_day";
+            this.classdayDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.classdayDataGridViewTextBoxColumn.Name = "classdayDataGridViewTextBoxColumn";
             this.classdayDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -299,6 +273,7 @@
             // 
             this.crsnameDataGridViewTextBoxColumn.DataPropertyName = "crs_name";
             this.crsnameDataGridViewTextBoxColumn.HeaderText = "crs_name";
+            this.crsnameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.crsnameDataGridViewTextBoxColumn.Name = "crsnameDataGridViewTextBoxColumn";
             this.crsnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -306,6 +281,7 @@
             // 
             this.instructornameDataGridViewTextBoxColumn.DataPropertyName = "instructor_name";
             this.instructornameDataGridViewTextBoxColumn.HeaderText = "instructor_name";
+            this.instructornameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.instructornameDataGridViewTextBoxColumn.Name = "instructornameDataGridViewTextBoxColumn";
             this.instructornameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -313,6 +289,7 @@
             // 
             this.roomnameDataGridViewTextBoxColumn.DataPropertyName = "room_name";
             this.roomnameDataGridViewTextBoxColumn.HeaderText = "room_name";
+            this.roomnameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.roomnameDataGridViewTextBoxColumn.Name = "roomnameDataGridViewTextBoxColumn";
             this.roomnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -332,18 +309,18 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(53, 25, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 73);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(71, 31, 0, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 90);
             this.flowLayoutPanel1.TabIndex = 11;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(57, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(76, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(183, 39);
             this.label1.TabIndex = 0;
@@ -355,31 +332,30 @@
             // 
             // adminClass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 541);
+            this.ClientSize = new System.Drawing.Size(1153, 666);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "adminClass";
             this.Text = "adminClass";
             this.Load += new System.EventHandler(this.adminClass_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.showClassBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet26)).EndInit();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.delete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edit)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.add)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delete)).EndInit();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showClassBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showClassBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet26)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
