@@ -106,10 +106,6 @@ namespace EnrollmentSystem
         private void signinBtn_Click(object sender, EventArgs e)
         {
             check();
-            DateTime bd = birthdatePicker.Value;
-            DateTime currDate = DateTime.Now;
-            TimeSpan age_now = currDate - bd;
-            int age = (int)(age_now.TotalDays / 365.25);
 
             if (studFname != fnameTxtbox.Text && studLname != lnameTxtbox.Text)
             {
@@ -134,7 +130,8 @@ namespace EnrollmentSystem
                             string gen = gender.SelectedItem.ToString();
                             int yrs = (int)yr.SelectedValue;
 
-                            db.enrollStudent(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, bd, age, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, yrs, grade, prog_id, id, 1, batch_id);
+                           
+                            db.pinakaNewEnrollStudent(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, birthdatePicker.Value, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, yrs, grade, prog_id, id, 1, batch_id);
                             MessageBox.Show("Successfully enrolled!", "Done");
 
                             login back = new login();

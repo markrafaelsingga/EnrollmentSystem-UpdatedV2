@@ -17,6 +17,7 @@ namespace EnrollmentSystem
         int id;
         string insNumber;
         int adminId;
+        
         public adminProfessor(int verId)
         {
             InitializeComponent();
@@ -89,8 +90,9 @@ namespace EnrollmentSystem
             // Set properties before showing the form
             editprofessor.ID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
             editprofessor.FirstName = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            editprofessor.LastName = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             editprofessor.MI = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            editprofessor.LastName = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            
 
             // Parse Birthdate (assuming it's stored as a DateTime in the DataGridView)
             if (DateTime.TryParse(dataGridView1.CurrentRow.Cells[5].Value?.ToString(), out var birthdate))
@@ -105,7 +107,7 @@ namespace EnrollmentSystem
 
             editprofessor.Phone = dataGridView1.CurrentRow.Cells[8].Value.ToString();
             editprofessor.Email = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-            editprofessor.Gender = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            editprofessor.Gender = dataGridView1.CurrentRow.Cells[6].Value.ToString();
 
             // Now show the form
             editprofessor.FormClosed += Editprofessor_FormClosed;
@@ -177,6 +179,11 @@ namespace EnrollmentSystem
             {
                 MessageBox.Show("No Instructor Found!");
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
