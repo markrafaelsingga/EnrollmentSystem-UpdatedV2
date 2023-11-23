@@ -29,16 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminStudent));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminStudent));
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.delete = new System.Windows.Forms.PictureBox();
-            this.add = new System.Windows.Forms.PictureBox();
-            this.edit = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.search = new System.Windows.Forms.PictureBox();
             this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -60,17 +56,16 @@
             this.dbmsDataSet17 = new EnrollmentSystem.dbmsDataSet17();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.dbmsDataSet12 = new EnrollmentSystem.dbmsDataSet12();
             this.showStudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.showStudentTableAdapter = new EnrollmentSystem.dbmsDataSet12TableAdapters.showStudentTableAdapter();
             this.showStudentTableAdapter1 = new EnrollmentSystem.dbmsDataSet17TableAdapters.showStudentTableAdapter();
+            this.delete = new System.Windows.Forms.PictureBox();
+            this.add = new System.Windows.Forms.PictureBox();
+            this.edit = new System.Windows.Forms.PictureBox();
+            this.search = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.delete)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.add)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edit)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource1)).BeginInit();
@@ -78,6 +73,10 @@
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -89,86 +88,34 @@
             this.flowLayoutPanel2.Controls.Add(this.edit);
             this.flowLayoutPanel2.Controls.Add(this.panel2);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 65);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 80);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 10, 40, 0);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(865, 64);
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 12, 53, 0);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1153, 79);
             this.flowLayoutPanel2.TabIndex = 8;
-            // 
-            // delete
-            // 
-            this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
-            this.delete.Location = new System.Drawing.Point(790, 13);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(32, 35);
-            this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.delete.TabIndex = 5;
-            this.delete.TabStop = false;
-            this.delete.Click += new System.EventHandler(this.delete_Click);
-            this.delete.MouseLeave += new System.EventHandler(this.delete_MouseLeave);
-            this.delete.MouseHover += new System.EventHandler(this.delete_MouseHover);
-            // 
-            // add
-            // 
-            this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
-            this.add.Location = new System.Drawing.Point(752, 13);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(32, 35);
-            this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.add.TabIndex = 5;
-            this.add.TabStop = false;
-            this.add.Click += new System.EventHandler(this.add_Click);
-            this.add.MouseLeave += new System.EventHandler(this.add_MouseLeave);
-            this.add.MouseHover += new System.EventHandler(this.add_MouseHover);
-            // 
-            // edit
-            // 
-            this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-            this.edit.Location = new System.Drawing.Point(711, 13);
-            this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(35, 35);
-            this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.edit.TabIndex = 5;
-            this.edit.TabStop = false;
-            this.edit.Click += new System.EventHandler(this.edit_Click);
-            this.edit.MouseLeave += new System.EventHandler(this.edit_MouseLeave);
-            this.edit.MouseHover += new System.EventHandler(this.edit_MouseHover);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.search);
             this.panel2.Controls.Add(this.searchTxtbox);
-            this.panel2.Location = new System.Drawing.Point(296, 13);
+            this.panel2.Location = new System.Drawing.Point(394, 16);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(409, 35);
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(545, 43);
             this.panel2.TabIndex = 6;
-            // 
-            // search
-            // 
-            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
-            this.search.Location = new System.Drawing.Point(386, 7);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(20, 20);
-            this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.search.TabIndex = 5;
-            this.search.TabStop = false;
-            this.search.Click += new System.EventHandler(this.search_Click);
-            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
-            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
             // 
             // searchTxtbox
             // 
             this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxtbox.Location = new System.Drawing.Point(0, 4);
+            this.searchTxtbox.Location = new System.Drawing.Point(0, 5);
+            this.searchTxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.searchTxtbox.Name = "searchTxtbox";
-            this.searchTxtbox.Size = new System.Drawing.Size(409, 26);
+            this.searchTxtbox.Size = new System.Drawing.Size(545, 30);
             this.searchTxtbox.TabIndex = 3;
+            this.searchTxtbox.TextChanged += new System.EventHandler(this.searchTxtbox_TextChanged);
             // 
             // panel1
             // 
@@ -176,9 +123,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(49, 135);
+            this.panel1.Location = new System.Drawing.Point(65, 166);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(772, 348);
+            this.panel1.Size = new System.Drawing.Size(1029, 428);
             this.panel1.TabIndex = 7;
             // 
             // dataGridView1
@@ -223,6 +171,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -234,9 +183,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(772, 348);
+            this.dataGridView1.Size = new System.Drawing.Size(1029, 428);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // studidDataGridViewTextBoxColumn
             // 
@@ -246,7 +194,7 @@
             this.studidDataGridViewTextBoxColumn.Name = "studidDataGridViewTextBoxColumn";
             this.studidDataGridViewTextBoxColumn.ReadOnly = true;
             this.studidDataGridViewTextBoxColumn.ToolTipText = "Student ID";
-            this.studidDataGridViewTextBoxColumn.Width = 99;
+            this.studidDataGridViewTextBoxColumn.Width = 117;
             // 
             // studnoDataGridViewTextBoxColumn
             // 
@@ -256,7 +204,7 @@
             this.studnoDataGridViewTextBoxColumn.Name = "studnoDataGridViewTextBoxColumn";
             this.studnoDataGridViewTextBoxColumn.ReadOnly = true;
             this.studnoDataGridViewTextBoxColumn.ToolTipText = "Student no.";
-            this.studnoDataGridViewTextBoxColumn.Width = 106;
+            this.studnoDataGridViewTextBoxColumn.Width = 122;
             // 
             // studfnameDataGridViewTextBoxColumn
             // 
@@ -266,7 +214,7 @@
             this.studfnameDataGridViewTextBoxColumn.Name = "studfnameDataGridViewTextBoxColumn";
             this.studfnameDataGridViewTextBoxColumn.ReadOnly = true;
             this.studfnameDataGridViewTextBoxColumn.ToolTipText = "Firstname";
-            this.studfnameDataGridViewTextBoxColumn.Width = 95;
+            this.studfnameDataGridViewTextBoxColumn.Width = 113;
             // 
             // studlnameDataGridViewTextBoxColumn
             // 
@@ -276,7 +224,7 @@
             this.studlnameDataGridViewTextBoxColumn.Name = "studlnameDataGridViewTextBoxColumn";
             this.studlnameDataGridViewTextBoxColumn.ReadOnly = true;
             this.studlnameDataGridViewTextBoxColumn.ToolTipText = "Lastname";
-            this.studlnameDataGridViewTextBoxColumn.Width = 95;
+            this.studlnameDataGridViewTextBoxColumn.Width = 112;
             // 
             // studmiDataGridViewTextBoxColumn
             // 
@@ -286,7 +234,7 @@
             this.studmiDataGridViewTextBoxColumn.Name = "studmiDataGridViewTextBoxColumn";
             this.studmiDataGridViewTextBoxColumn.ReadOnly = true;
             this.studmiDataGridViewTextBoxColumn.ToolTipText = "MI";
-            this.studmiDataGridViewTextBoxColumn.Width = 47;
+            this.studmiDataGridViewTextBoxColumn.Width = 56;
             // 
             // studbdayDataGridViewTextBoxColumn
             // 
@@ -296,7 +244,7 @@
             this.studbdayDataGridViewTextBoxColumn.Name = "studbdayDataGridViewTextBoxColumn";
             this.studbdayDataGridViewTextBoxColumn.ReadOnly = true;
             this.studbdayDataGridViewTextBoxColumn.ToolTipText = "Birthdate";
-            this.studbdayDataGridViewTextBoxColumn.Width = 90;
+            this.studbdayDataGridViewTextBoxColumn.Width = 106;
             // 
             // studaddressDataGridViewTextBoxColumn
             // 
@@ -306,7 +254,6 @@
             this.studaddressDataGridViewTextBoxColumn.Name = "studaddressDataGridViewTextBoxColumn";
             this.studaddressDataGridViewTextBoxColumn.ReadOnly = true;
             this.studaddressDataGridViewTextBoxColumn.ToolTipText = "Address";
-            this.studaddressDataGridViewTextBoxColumn.Width = 85;
             // 
             // studphoneDataGridViewTextBoxColumn
             // 
@@ -316,7 +263,7 @@
             this.studphoneDataGridViewTextBoxColumn.Name = "studphoneDataGridViewTextBoxColumn";
             this.studphoneDataGridViewTextBoxColumn.ReadOnly = true;
             this.studphoneDataGridViewTextBoxColumn.ToolTipText = "Phone no.";
-            this.studphoneDataGridViewTextBoxColumn.Width = 98;
+            this.studphoneDataGridViewTextBoxColumn.Width = 112;
             // 
             // studemailDataGridViewTextBoxColumn
             // 
@@ -326,7 +273,7 @@
             this.studemailDataGridViewTextBoxColumn.Name = "studemailDataGridViewTextBoxColumn";
             this.studemailDataGridViewTextBoxColumn.ReadOnly = true;
             this.studemailDataGridViewTextBoxColumn.ToolTipText = "Email address";
-            this.studemailDataGridViewTextBoxColumn.Width = 122;
+            this.studemailDataGridViewTextBoxColumn.Width = 145;
             // 
             // studgenderDataGridViewTextBoxColumn
             // 
@@ -336,7 +283,7 @@
             this.studgenderDataGridViewTextBoxColumn.Name = "studgenderDataGridViewTextBoxColumn";
             this.studgenderDataGridViewTextBoxColumn.ReadOnly = true;
             this.studgenderDataGridViewTextBoxColumn.ToolTipText = "Gender";
-            this.studgenderDataGridViewTextBoxColumn.Width = 81;
+            this.studgenderDataGridViewTextBoxColumn.Width = 93;
             // 
             // yearlevelDataGridViewTextBoxColumn
             // 
@@ -346,7 +293,7 @@
             this.yearlevelDataGridViewTextBoxColumn.Name = "yearlevelDataGridViewTextBoxColumn";
             this.yearlevelDataGridViewTextBoxColumn.ReadOnly = true;
             this.yearlevelDataGridViewTextBoxColumn.ToolTipText = "Year level";
-            this.yearlevelDataGridViewTextBoxColumn.Width = 96;
+            this.yearlevelDataGridViewTextBoxColumn.Width = 111;
             // 
             // prognameDataGridViewTextBoxColumn
             // 
@@ -356,7 +303,7 @@
             this.prognameDataGridViewTextBoxColumn.Name = "prognameDataGridViewTextBoxColumn";
             this.prognameDataGridViewTextBoxColumn.ReadOnly = true;
             this.prognameDataGridViewTextBoxColumn.ToolTipText = "Program name";
-            this.prognameDataGridViewTextBoxColumn.Width = 126;
+            this.prognameDataGridViewTextBoxColumn.Width = 148;
             // 
             // studgpaDataGridViewTextBoxColumn
             // 
@@ -366,7 +313,7 @@
             this.studgpaDataGridViewTextBoxColumn.Name = "studgpaDataGridViewTextBoxColumn";
             this.studgpaDataGridViewTextBoxColumn.ReadOnly = true;
             this.studgpaDataGridViewTextBoxColumn.ToolTipText = "GPA";
-            this.studgpaDataGridViewTextBoxColumn.Width = 62;
+            this.studgpaDataGridViewTextBoxColumn.Width = 73;
             // 
             // batchyearDataGridViewTextBoxColumn
             // 
@@ -376,7 +323,7 @@
             this.batchyearDataGridViewTextBoxColumn.Name = "batchyearDataGridViewTextBoxColumn";
             this.batchyearDataGridViewTextBoxColumn.ReadOnly = true;
             this.batchyearDataGridViewTextBoxColumn.ToolTipText = "Batch year";
-            this.batchyearDataGridViewTextBoxColumn.Width = 101;
+            this.batchyearDataGridViewTextBoxColumn.Width = 119;
             // 
             // showStudentBindingSource1
             // 
@@ -394,30 +341,22 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(40, 20, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(865, 59);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(53, 25, 0, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 73);
             this.flowLayoutPanel1.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(43, 20);
+            this.label1.Location = new System.Drawing.Point(57, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(381, 31);
+            this.label1.Size = new System.Drawing.Size(472, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "STUDENTS INFORMATION";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(697, 489);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Refresh";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dbmsDataSet12
             // 
@@ -437,27 +376,83 @@
             // 
             this.showStudentTableAdapter1.ClearBeforeFill = true;
             // 
+            // delete
+            // 
+            this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
+            this.delete.Location = new System.Drawing.Point(1053, 16);
+            this.delete.Margin = new System.Windows.Forms.Padding(4);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(43, 43);
+            this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.delete.TabIndex = 5;
+            this.delete.TabStop = false;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
+            this.delete.MouseLeave += new System.EventHandler(this.delete_MouseLeave);
+            this.delete.MouseHover += new System.EventHandler(this.delete_MouseHover);
+            // 
+            // add
+            // 
+            this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
+            this.add.Location = new System.Drawing.Point(1002, 16);
+            this.add.Margin = new System.Windows.Forms.Padding(4);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(43, 43);
+            this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.add.TabIndex = 5;
+            this.add.TabStop = false;
+            this.add.Click += new System.EventHandler(this.add_Click);
+            this.add.MouseLeave += new System.EventHandler(this.add_MouseLeave);
+            this.add.MouseHover += new System.EventHandler(this.add_MouseHover);
+            // 
+            // edit
+            // 
+            this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
+            this.edit.Location = new System.Drawing.Point(947, 16);
+            this.edit.Margin = new System.Windows.Forms.Padding(4);
+            this.edit.Name = "edit";
+            this.edit.Size = new System.Drawing.Size(47, 43);
+            this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.edit.TabIndex = 5;
+            this.edit.TabStop = false;
+            this.edit.Click += new System.EventHandler(this.edit_Click);
+            this.edit.MouseLeave += new System.EventHandler(this.edit_MouseLeave);
+            this.edit.MouseHover += new System.EventHandler(this.edit_MouseHover);
+            // 
+            // search
+            // 
+            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
+            this.search.Location = new System.Drawing.Point(515, 9);
+            this.search.Margin = new System.Windows.Forms.Padding(4);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(27, 25);
+            this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.search.TabIndex = 5;
+            this.search.TabStop = false;
+            this.search.Click += new System.EventHandler(this.search_Click);
+            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
+            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
+            // 
             // adminStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(865, 541);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1153, 666);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "adminStudent";
             this.Text = "adminStudent";
             this.Load += new System.EventHandler(this.adminStudent_Load);
             this.flowLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.delete)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.add)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edit)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource1)).EndInit();
@@ -466,6 +461,10 @@
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -483,7 +482,6 @@
         private System.Windows.Forms.TextBox searchTxtbox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource showStudentBindingSource;
         private dbmsDataSet12 dbmsDataSet12;
         private dbmsDataSet12TableAdapters.showStudentTableAdapter showStudentTableAdapter;
