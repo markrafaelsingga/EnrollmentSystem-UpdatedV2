@@ -57,6 +57,7 @@
             this.saveBtn.TabIndex = 26;
             this.saveBtn.Text = "DETECT";
             this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // label1
             // 
