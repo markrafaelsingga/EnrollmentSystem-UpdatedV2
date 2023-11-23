@@ -138,6 +138,12 @@
     <Compile Include="admin_page.Designer.cs">
       <DependentUpon>admin_page.cs</DependentUpon>
     </Compile>
+    <Compile Include="changePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changePassword.Designer.cs">
+      <DependentUpon>changePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -159,6 +165,11 @@
       <DependentUpon>dbmsDataSet10.xsd</DependentUpon>
     </Compile>
     <Compile Include="dbmsDataSet101.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet103.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbmsDataSet10.xsd</DependentUpon>
@@ -305,6 +316,12 @@
     </Compile>
     <Compile Include="createAcc.Designer.cs">
       <DependentUpon>createAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forgotPassword.Designer.cs">
+      <DependentUpon>forgotPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -460,6 +477,9 @@
     <EmbeddedResource Include="admin_page.resx">
       <DependentUpon>admin_page.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="changePassword.resx">
+      <DependentUpon>changePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="deleteProfessor.resx">
       <DependentUpon>deleteProfessor.cs</DependentUpon>
     </EmbeddedResource>
@@ -468,6 +488,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="createAcc.resx">
       <DependentUpon>createAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forgotPassword.resx">
+      <DependentUpon>forgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -562,6 +585,7 @@
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>dbmsDataSet101.Designer.cs</LastGenOutput>
+      <LastGenOutput>dbmsDataSet103.Designer.cs</LastGenOutput>
     </None>
     <None Include="dbmsDataSet10.xss">
       <DependentUpon>dbmsDataSet10.xsd</DependentUpon>

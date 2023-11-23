@@ -91,13 +91,6 @@ namespace EnrollmentSystem
             }
         }
 
-        private void backBtn_Click(object sender, EventArgs e)
-        {
-            login back_login = new login();
-            back_login.Show();
-            Visible = false;
-        }
-
         private void check()
         {
             var studCheck = db.checkStud(fnameTxtbox.Text, lnameTxtbox.Text).ToList();

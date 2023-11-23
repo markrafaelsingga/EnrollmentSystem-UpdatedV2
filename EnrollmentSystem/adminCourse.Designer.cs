@@ -111,7 +111,6 @@
             this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.delete.TabIndex = 5;
             this.delete.TabStop = false;
-            this.delete.Click += new System.EventHandler(this.delete_Click_1);
             this.delete.MouseLeave += new System.EventHandler(this.delete_MouseLeave);
             this.delete.MouseHover += new System.EventHandler(this.delete_MouseHover);
             // 
