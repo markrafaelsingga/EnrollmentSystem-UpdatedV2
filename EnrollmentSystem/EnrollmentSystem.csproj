@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>EnrollmentSystem</RootNamespace>
     <AssemblyName>EnrollmentSystem</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -166,6 +166,11 @@
       <DependentUpon>dbmsDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="dbmsDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet101.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbmsDataSet10.xsd</DependentUpon>
@@ -570,6 +575,7 @@
     <None Include="dbmsDataSet10.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>dbmsDataSet101.Designer.cs</LastGenOutput>
     </None>
     <None Include="dbmsDataSet10.xss">
       <DependentUpon>dbmsDataSet10.xsd</DependentUpon>
