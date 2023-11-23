@@ -13,7 +13,7 @@ namespace EnrollmentSystem
     public partial class addProfessor : Form
     {
         DataClasses1DataContext db = new DataClasses1DataContext();
-        string insFname, insLname, studFname, studLname;
+        
         private int verId;
         int adminId;
         int id;
@@ -71,13 +71,9 @@ namespace EnrollmentSystem
                 {
                     foreach (var item in result)
                     {
-                        int adminID = item.admin_id;
-                        DateTime bd = birthdatePicker.Value;
-                        DateTime currdate = DateTime.Now;
-                        TimeSpan age_now = currdate - bd;
-                        int age = (int)(age_now.TotalDays / 365.25);
+                        int adminID = item.admin_id;                      
                         string gen = gender.SelectedItem.ToString();
-                        db.addInstructor(fnameTxtbox.Text, miTxtbox.Text, lnameTxtbox.Text, bd, age, gen, phone.Text, emailtextBox.Text, adminID);
+                        db.newAdddInstructor(fnameTxtbox.Text, miTxtbox.Text, lnameTxtbox.Text, birthdatePicker.Value, gen, phone.Text, emailtextBox.Text, adminID);
                         MessageBox.Show("Professor Added!", "Successfull");
                         this.Close();
                     }

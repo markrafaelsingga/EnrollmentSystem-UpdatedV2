@@ -129,12 +129,23 @@ namespace EnrollmentSystem
             dataGridView1.DataSource = db.showCrs();
         }
 
-        private void delete_Click(object sender, EventArgs e)
+        
+        private void delete_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+                db.delCrs(name);
+                MessageBox.Show("Successfully Deleted!");
+                display();
+            }catch(Exception ex)
+            {
+                MessageBox.Show("That course exist in a class right now");
+            }
+        }
 
-            db.delCrs(name);
-            MessageBox.Show("Successfully Deleted!");
-            display();
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            name = dataGridView1.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }

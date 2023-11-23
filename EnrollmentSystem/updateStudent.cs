@@ -157,10 +157,10 @@ namespace EnrollmentSystem
             miTxtbox.Text = MI;
 
             // Check if Birthdate is not null before assigning to the DateTimePicker
-            if (Birthdate.HasValue)
+           /* if (Birthdate.HasValue)
             {
                 birthdatePicker.Value = Birthdate.Value;
-            }
+            }*/
 
             // Find the index of the item with the specified ProgName
             int index = course.FindString(ProgName);
