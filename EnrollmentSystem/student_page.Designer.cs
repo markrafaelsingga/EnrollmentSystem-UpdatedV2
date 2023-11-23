@@ -37,6 +37,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnHome = new System.Windows.Forms.Panel();
             this.homeBtn = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.enrollmentBtn = new System.Windows.Forms.Button();
             this.pnCourse = new System.Windows.Forms.Panel();
             this.courseBtn = new System.Windows.Forms.Button();
             this.pnClass = new System.Windows.Forms.Panel();
@@ -45,18 +47,16 @@
             this.profileBtn = new System.Windows.Forms.Button();
             this.pnLogout = new System.Windows.Forms.Panel();
             this.logoutBtn = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.enrollmentBtn = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.pnHome.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.pnCourse.SuspendLayout();
             this.pnClass.SuspendLayout();
             this.pnProfile.SuspendLayout();
             this.pnLogout.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -76,7 +76,7 @@
             this.sidebar.Margin = new System.Windows.Forms.Padding(4);
             this.sidebar.Name = "sidebar";
             this.sidebar.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.sidebar.Size = new System.Drawing.Size(293, 599);
+            this.sidebar.Size = new System.Drawing.Size(293, 656);
             this.sidebar.TabIndex = 1;
             // 
             // panel1
@@ -169,6 +169,39 @@
             this.homeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.homeBtn.UseVisualStyleBackColor = false;
             this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.enrollmentBtn);
+            this.panel3.Location = new System.Drawing.Point(4, 297);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(0, 12, 13, 12);
+            this.panel3.Size = new System.Drawing.Size(292, 49);
+            this.panel3.TabIndex = 1;
+            // 
+            // enrollmentBtn
+            // 
+            this.enrollmentBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.enrollmentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
+            this.enrollmentBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
+            this.enrollmentBtn.FlatAppearance.BorderSize = 0;
+            this.enrollmentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.enrollmentBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enrollmentBtn.Image = ((System.Drawing.Image)(resources.GetObject("enrollmentBtn.Image")));
+            this.enrollmentBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.enrollmentBtn.Location = new System.Drawing.Point(0, 0);
+            this.enrollmentBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.enrollmentBtn.Name = "enrollmentBtn";
+            this.enrollmentBtn.Padding = new System.Windows.Forms.Padding(13, 6, 13, 6);
+            this.enrollmentBtn.Size = new System.Drawing.Size(292, 49);
+            this.enrollmentBtn.TabIndex = 3;
+            this.enrollmentBtn.Text = "      ENROLLMENT";
+            this.enrollmentBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.enrollmentBtn.UseVisualStyleBackColor = false;
+            this.enrollmentBtn.Click += new System.EventHandler(this.enrollmentBtn_Click);
             // 
             // pnCourse
             // 
@@ -304,48 +337,18 @@
             this.logoutBtn.UseVisualStyleBackColor = false;
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.enrollmentBtn);
-            this.panel3.Location = new System.Drawing.Point(4, 297);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(0, 12, 13, 12);
-            this.panel3.Size = new System.Drawing.Size(292, 49);
-            this.panel3.TabIndex = 1;
-            // 
-            // enrollmentBtn
-            // 
-            this.enrollmentBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.enrollmentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
-            this.enrollmentBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
-            this.enrollmentBtn.FlatAppearance.BorderSize = 0;
-            this.enrollmentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.enrollmentBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enrollmentBtn.Image = ((System.Drawing.Image)(resources.GetObject("enrollmentBtn.Image")));
-            this.enrollmentBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.enrollmentBtn.Location = new System.Drawing.Point(0, 0);
-            this.enrollmentBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.enrollmentBtn.Name = "enrollmentBtn";
-            this.enrollmentBtn.Padding = new System.Windows.Forms.Padding(13, 6, 13, 6);
-            this.enrollmentBtn.Size = new System.Drawing.Size(292, 49);
-            this.enrollmentBtn.TabIndex = 3;
-            this.enrollmentBtn.Text = "      ENROLLMENT";
-            this.enrollmentBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.enrollmentBtn.UseVisualStyleBackColor = false;
-            this.enrollmentBtn.Click += new System.EventHandler(this.enrollmentBtn_Click);
-            // 
             // student_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1115, 599);
+            this.ClientSize = new System.Drawing.Size(1178, 656);
             this.Controls.Add(this.sidebar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "student_page";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ENROLLMENT SYSTEM / STUDENT";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.student_page_Load);
@@ -355,11 +358,11 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pnHome.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.pnCourse.ResumeLayout(false);
             this.pnClass.ResumeLayout(false);
             this.pnProfile.ResumeLayout(false);
             this.pnLogout.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

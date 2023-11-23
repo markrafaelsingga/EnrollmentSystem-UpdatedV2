@@ -219,16 +219,6 @@
       <Column Name="ins_lname" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </ElementType>
   </Function>
-  <Function Name="dbo.crsList" Method="crsList">
-    <ElementType Name="crsListResult">
-      <Column Name="crs_code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="crs_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="crs_desc" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="year_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="prog_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="sem_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.checkStud" Method="checkStud">
     <Parameter Name="fname" Type="System.String" DbType="Text" />
     <Parameter Name="lname" Type="System.String" DbType="Text" />
@@ -243,6 +233,16 @@
     <Parameter Name="uname" Type="System.String" DbType="Text" />
     <Parameter Name="upass" Type="System.String" DbType="Text" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.crsList" Method="crsList">
+    <ElementType Name="crsListResult">
+      <Column Name="crs_code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="crs_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="crs_desc" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="year_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prog_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sem_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
   <Function Name="dbo.delClass" Method="delClass">
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
@@ -363,6 +363,51 @@
       <Column Name="admin_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.newAdddInstructor" Method="newAdddInstructor">
+    <Parameter Name="ins_fname" Type="System.String" DbType="Text" />
+    <Parameter Name="ins_mi" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="ins_lname" Type="System.String" DbType="Text" />
+    <Parameter Name="ins_dob" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ins_gender" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="ins_phone" Type="System.String" DbType="VarChar(11)" />
+    <Parameter Name="ins_email" Type="System.String" DbType="Text" />
+    <Parameter Name="admin_id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.newEnrollStudent" Method="newEnrollStudent">
+    <Parameter Name="stud_fname" Type="System.String" DbType="Text" />
+    <Parameter Name="stud_lname" Type="System.String" DbType="Text" />
+    <Parameter Name="stud_mi" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="stud_bday" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="stud_address" Type="System.String" DbType="Text" />
+    <Parameter Name="stud_phone" Type="System.String" DbType="VarChar(11)" />
+    <Parameter Name="stud_email" Type="System.String" DbType="Text" />
+    <Parameter Name="stud_gender" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="stud_year" Type="System.Int32" DbType="Int" />
+    <Parameter Name="stud_gpa" Type="System.Decimal" DbType="Decimal(5,1)" />
+    <Parameter Name="prog_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="u_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="admin_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="batch_id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.pinakaNewEnrollStudent" Method="pinakaNewEnrollStudent">
+    <Parameter Name="stud_fname" Type="System.String" DbType="Text" />
+    <Parameter Name="stud_lname" Type="System.String" DbType="Text" />
+    <Parameter Name="stud_mi" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="stud_bday" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="stud_address" Type="System.String" DbType="Text" />
+    <Parameter Name="stud_phone" Type="System.String" DbType="VarChar(11)" />
+    <Parameter Name="stud_email" Type="System.String" DbType="Text" />
+    <Parameter Name="stud_gender" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="stud_year" Type="System.Int32" DbType="Int" />
+    <Parameter Name="stud_gpa" Type="System.Decimal" DbType="Decimal(5,1)" />
+    <Parameter Name="prog_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="u_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="admin_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="batch_id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.progList" Method="progList">
     <ElementType Name="progListResult">
       <Column Name="prog_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -376,7 +421,7 @@
     </ElementType>
   </Function>
   <Function Name="dbo.searchCrs" Method="searchCrs">
-    <Parameter Name="key" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="crs" Type="System.Int32" DbType="Int" />
     <ElementType Name="searchCrsResult">
       <Column Name="crs_code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="crs_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
@@ -432,6 +477,12 @@
       <Column Name="batch_year" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.semList" Method="semList">
+    <ElementType Name="semListResult">
+      <Column Name="sem_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sem_level" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.searchStudent" Method="searchStudent">
     <Parameter Name="key" Type="System.String" DbType="VarChar(MAX)" />
     <ElementType Name="searchStudentResult">
@@ -449,12 +500,6 @@
       <Column Name="prog_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="batch_year" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="year_level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.semList" Method="semList">
-    <ElementType Name="semListResult">
-      <Column Name="sem_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="sem_level" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </ElementType>
   </Function>
   <Function Name="dbo.showClass" Method="showClass">
@@ -487,6 +532,7 @@
       <Column Name="ins_mi" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="ins_lname" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="ins_dob" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ins_gender" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
       <Column Name="ins_age" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ins_phone" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
       <Column Name="ins_email" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />

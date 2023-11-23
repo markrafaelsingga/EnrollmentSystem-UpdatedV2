@@ -347,10 +347,13 @@
             this.ClientSize = new System.Drawing.Size(737, 495);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.saveBtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "updateClass";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UPDATE CLASS";
             this.Load += new System.EventHandler(this.updateClass_Load);
             ((System.ComponentModel.ISupportInitialize)(this.showClassBindingSource)).EndInit();

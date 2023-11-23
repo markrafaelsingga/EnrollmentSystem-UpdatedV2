@@ -88,6 +88,7 @@ namespace EnrollmentSystem
                             if (studId > 0)
                             {
                                 student_page dashboard = new student_page(studId);
+                                dashboard.FormClosed += Dashboard_FormClosed;
                                 dashboard.Show();
                                 Visible = false;
                             }

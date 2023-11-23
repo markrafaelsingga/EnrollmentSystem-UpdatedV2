@@ -52,7 +52,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.Location = new System.Drawing.Point(536, 332);
-            this.saveBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveBtn.Margin = new System.Windows.Forms.Padding(4);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(172, 39);
             this.saveBtn.TabIndex = 15;
@@ -99,7 +99,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.crsdescTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.crsdescTxtbox.Location = new System.Drawing.Point(24, 169);
-            this.crsdescTxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.crsdescTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.crsdescTxtbox.Multiline = true;
             this.crsdescTxtbox.Name = "crsdescTxtbox";
             this.crsdescTxtbox.Size = new System.Drawing.Size(624, 34);
@@ -112,7 +112,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.idTxtbox);
             this.panel2.Location = new System.Drawing.Point(166, 28);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(259, 31);
             this.panel2.TabIndex = 23;
@@ -122,7 +122,7 @@
             this.idTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.idTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idTxtbox.Location = new System.Drawing.Point(0, 0);
-            this.idTxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.idTxtbox.Multiline = true;
             this.idTxtbox.Name = "idTxtbox";
             this.idTxtbox.Size = new System.Drawing.Size(259, 31);
@@ -145,7 +145,7 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.courseLbl);
             this.panel1.Location = new System.Drawing.Point(37, 25);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(671, 293);
             this.panel1.TabIndex = 14;
@@ -160,7 +160,7 @@
             "3",
             "4"});
             this.sem.Location = new System.Drawing.Point(247, 242);
-            this.sem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sem.Margin = new System.Windows.Forms.Padding(4);
             this.sem.Name = "sem";
             this.sem.Size = new System.Drawing.Size(160, 24);
             this.sem.TabIndex = 29;
@@ -187,7 +187,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.crsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.crsName.Location = new System.Drawing.Point(24, 91);
-            this.crsName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.crsName.Margin = new System.Windows.Forms.Padding(4);
             this.crsName.Multiline = true;
             this.crsName.Name = "crsName";
             this.crsName.Size = new System.Drawing.Size(227, 34);
@@ -213,7 +213,7 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(24, 242);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(160, 24);
             this.comboBox1.TabIndex = 25;
@@ -241,10 +241,13 @@
             this.ClientSize = new System.Drawing.Size(745, 398);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "updateCourse";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UPDATE COURSE";
             this.Load += new System.EventHandler(this.updateCourse_Load);
             this.panel2.ResumeLayout(false);

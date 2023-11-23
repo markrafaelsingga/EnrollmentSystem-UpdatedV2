@@ -164,16 +164,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbmsDataSet10.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dbmsDataSet101.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbmsDataSet10.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dbmsDataSet103.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbmsDataSet10.xsd</DependentUpon>
-    </Compile>
     <Compile Include="dbmsDataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -317,11 +307,23 @@
     <Compile Include="createAcc.Designer.cs">
       <DependentUpon>createAcc.cs</DependentUpon>
     </Compile>
+    <Compile Include="faceRecognition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="faceRecognition.Designer.cs">
+      <DependentUpon>faceRecognition.cs</DependentUpon>
+    </Compile>
     <Compile Include="forgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forgotPassword.Designer.cs">
       <DependentUpon>forgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -489,8 +491,14 @@
     <EmbeddedResource Include="createAcc.resx">
       <DependentUpon>createAcc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="faceRecognition.resx">
+      <DependentUpon>faceRecognition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forgotPassword.resx">
       <DependentUpon>forgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
