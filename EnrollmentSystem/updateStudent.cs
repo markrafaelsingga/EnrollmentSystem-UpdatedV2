@@ -111,7 +111,7 @@ namespace EnrollmentSystem
                     if (HasChanges(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, bd, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, year.ToString(), selectedCourse, parsedGpa))
                     {
                         // Perform the update with the Student object
-                        db.updateStudent(ID, fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, bd, age, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, year, prog_id, parsedGpa, adminId);
+                        db.updateStudent(ID, fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, bd, age, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, year, prog_id, parsedGpa, verId);
                         MessageBox.Show("Updated successfully!", "UPDATED");
                         this.Close();
                     }
