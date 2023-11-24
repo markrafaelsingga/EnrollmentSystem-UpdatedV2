@@ -13,6 +13,7 @@ namespace EnrollmentSystem
     public partial class adminStudent : Form
     {
         DataClasses1DataContext db = new DataClasses1DataContext();
+
         private int verId;
         int id;
         string studNumber;

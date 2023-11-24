@@ -44,7 +44,7 @@
             this.flowLayoutPanel2.Controls.Add(this.semLbl);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(53, 49, 40, 37);
             this.flowLayoutPanel2.Size = new System.Drawing.Size(1153, 91);
@@ -69,15 +69,14 @@
             this.syLbl.Location = new System.Drawing.Point(219, 49);
             this.syLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.syLbl.Name = "syLbl";
-            this.syLbl.Size = new System.Drawing.Size(158, 29);
+            this.syLbl.Size = new System.Drawing.Size(0, 29);
             this.syLbl.TabIndex = 2;
-            this.syLbl.Text = "2023 - 2024";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(385, 49);
+            this.label3.Location = new System.Drawing.Point(227, 49);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 29);
@@ -88,12 +87,11 @@
             // 
             this.semLbl.AutoSize = true;
             this.semLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.semLbl.Location = new System.Drawing.Point(522, 49);
+            this.semLbl.Location = new System.Drawing.Point(364, 49);
             this.semLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.semLbl.Name = "semLbl";
-            this.semLbl.Size = new System.Drawing.Size(50, 29);
+            this.semLbl.Size = new System.Drawing.Size(0, 29);
             this.semLbl.TabIndex = 2;
-            this.semLbl.Text = "1st";
             // 
             // studentHome
             // 
@@ -102,7 +100,7 @@
             this.ClientSize = new System.Drawing.Size(1153, 666);
             this.Controls.Add(this.flowLayoutPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "studentHome";
             this.Text = "studentHome";
             this.Load += new System.EventHandler(this.studentHome_Load);
