@@ -125,7 +125,7 @@ namespace EnrollmentSystem
 
             if (enrollment == null)
             {
-                enrollment = new studentEnrollment();
+                enrollment = new studentEnrollment(studId);
                 enrollment.FormClosed += Enrollment_FormClosed;
                 enrollment.MdiParent = this;
                 enrollment.Show();

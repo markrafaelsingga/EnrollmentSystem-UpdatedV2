@@ -72,7 +72,7 @@ namespace EnrollmentSystem
                             int id = item.admin_id;
                             if (id > 0)
                             {
-                                faceRecognition face = new faceRecognition();
+                                faceRecognition face = new faceRecognition(id);
                                 face.FormClosed += FaceRecognition_FormClosed;
                                 face.Show();
                                 Visible = false;

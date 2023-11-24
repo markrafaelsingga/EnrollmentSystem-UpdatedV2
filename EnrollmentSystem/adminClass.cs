@@ -24,10 +24,7 @@ namespace EnrollmentSystem
 
         private void adminClass_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dbmsDataSet27.showClass' table. You can move, or remove it, as needed.
-            this.showClassTableAdapter1.Fill(this.dbmsDataSet27.showClass);
-            // TODO: This line of code loads data into the 'dbmsDataSet26.showClass' table. You can move, or remove it, as needed.
-            //this.showClassTableAdapter.Fill(this.dbmsDataSet26.showClass);
+           
             this.ControlBox = false;
             display();
         }

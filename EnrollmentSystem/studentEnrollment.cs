@@ -13,9 +13,12 @@ namespace EnrollmentSystem
 {
     public partial class studentEnrollment : Form
     {
-        public studentEnrollment()
+        DataClasses1DataContext db = new DataClasses1DataContext();
+        private int studId;
+        public studentEnrollment(int studId)
         {
             InitializeComponent();
+            this.studId = studId;
         }
 
         private void studentEnrollment_Load(object sender, EventArgs e)
@@ -31,6 +34,16 @@ namespace EnrollmentSystem
         private void saveBtn_MouseLeave(object sender, EventArgs e)
         {
             saveBtn.BackColor = System.Drawing.Color.White;
+        }
+
+        private void fillFields()
+        {
+            var result = db.enrollExisting(studId);
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

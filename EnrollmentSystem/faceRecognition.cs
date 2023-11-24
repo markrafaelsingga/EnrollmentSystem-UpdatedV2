@@ -12,15 +12,16 @@ namespace EnrollmentSystem
 {
     public partial class faceRecognition : Form
     {
-        int id;
-        public faceRecognition()
+        private int adminId;
+        public faceRecognition(int adminId)
         {
             InitializeComponent();
+            this.adminId = adminId;
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            admin_page dashboard = new admin_page(id);
+            admin_page dashboard = new admin_page(adminId);
             dashboard.FormClosed += Dashboard_FormClosed;
             dashboard.Show();
             Visible = false;
