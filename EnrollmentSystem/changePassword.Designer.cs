@@ -143,9 +143,12 @@
             this.Controls.Add(this.pword);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "changePassword";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Change Password";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

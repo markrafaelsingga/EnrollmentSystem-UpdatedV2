@@ -76,7 +76,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.section);
             this.panel1.Location = new System.Drawing.Point(32, 30);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(821, 310);
             this.panel1.TabIndex = 5;
@@ -105,7 +105,7 @@
             this.prog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prog.FormattingEnabled = true;
             this.prog.Location = new System.Drawing.Point(527, 188);
-            this.prog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prog.Margin = new System.Windows.Forms.Padding(4);
             this.prog.Name = "prog";
             this.prog.Size = new System.Drawing.Size(265, 33);
             this.prog.TabIndex = 23;
@@ -115,7 +115,7 @@
             this.prof.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.prof.FormattingEnabled = true;
             this.prof.Location = new System.Drawing.Point(148, 246);
-            this.prof.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prof.Margin = new System.Windows.Forms.Padding(4);
             this.prof.Name = "prof";
             this.prof.Size = new System.Drawing.Size(644, 24);
             this.prof.TabIndex = 22;
@@ -127,7 +127,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.day.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.day.Location = new System.Drawing.Point(116, 191);
-            this.day.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.day.Margin = new System.Windows.Forms.Padding(4);
             this.day.Name = "day";
             this.day.Size = new System.Drawing.Size(285, 30);
             this.day.TabIndex = 21;
@@ -141,7 +141,7 @@
             this.room.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.room.FormattingEnabled = true;
             this.room.Location = new System.Drawing.Point(355, 43);
-            this.room.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.room.Margin = new System.Windows.Forms.Padding(4);
             this.room.Name = "room";
             this.room.Size = new System.Drawing.Size(324, 33);
             this.room.TabIndex = 20;
@@ -170,7 +170,7 @@
             this.subjectcomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subjectcomboBox.FormattingEnabled = true;
             this.subjectcomboBox.Location = new System.Drawing.Point(527, 119);
-            this.subjectcomboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subjectcomboBox.Margin = new System.Windows.Forms.Padding(4);
             this.subjectcomboBox.Name = "subjectcomboBox";
             this.subjectcomboBox.Size = new System.Drawing.Size(265, 33);
             this.subjectcomboBox.TabIndex = 19;
@@ -213,7 +213,7 @@
             this.toTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.toTime.Location = new System.Drawing.Point(319, 119);
-            this.toTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.toTime.Margin = new System.Windows.Forms.Padding(4);
             this.toTime.Name = "toTime";
             this.toTime.Size = new System.Drawing.Size(175, 30);
             this.toTime.TabIndex = 17;
@@ -226,7 +226,7 @@
             this.fromTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fromTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.fromTime.Location = new System.Drawing.Point(95, 118);
-            this.fromTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fromTime.Margin = new System.Windows.Forms.Padding(4);
             this.fromTime.Name = "fromTime";
             this.fromTime.Size = new System.Drawing.Size(175, 30);
             this.fromTime.TabIndex = 17;
@@ -328,7 +328,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.section.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.section.Location = new System.Drawing.Point(27, 43);
-            this.section.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.section.Margin = new System.Windows.Forms.Padding(4);
             this.section.Name = "section";
             this.section.Size = new System.Drawing.Size(285, 30);
             this.section.TabIndex = 3;
@@ -340,7 +340,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.Location = new System.Drawing.Point(681, 347);
-            this.saveBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveBtn.Margin = new System.Windows.Forms.Padding(4);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(172, 39);
             this.saveBtn.TabIndex = 18;
@@ -358,10 +358,13 @@
             this.ClientSize = new System.Drawing.Size(888, 401);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "addClass";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADD CLASS";
             this.Load += new System.EventHandler(this.addClass_Load);
             this.panel1.ResumeLayout(false);

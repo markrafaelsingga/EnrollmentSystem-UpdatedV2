@@ -45,33 +45,29 @@
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.delete = new System.Windows.Forms.PictureBox();
-            this.add = new System.Windows.Forms.PictureBox();
-            this.edit = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.delete = new System.Windows.Forms.PictureBox();
+            this.add = new System.Windows.Forms.PictureBox();
+            this.edit = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.delete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edit)).BeginInit();
-            this.panel6.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -85,7 +81,7 @@
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(40, 37, 40, 37);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(994, 81);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(934, 78);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // label1
@@ -212,11 +208,11 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(994, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(934, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 76, 40, 37);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(409, 773);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(409, 1000);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // totalNumStud
@@ -233,21 +229,15 @@
             // 
             // flowLayoutPanel3
             // 
-            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel3.Controls.Add(this.panel2);
-            this.flowLayoutPanel3.Controls.Add(this.panel3);
             this.flowLayoutPanel3.Controls.Add(this.panel4);
-            this.flowLayoutPanel3.Controls.Add(this.panel5);
             this.flowLayoutPanel3.Controls.Add(this.panel6);
-            this.flowLayoutPanel3.Controls.Add(this.panel7);
             this.flowLayoutPanel3.Controls.Add(this.panel8);
-            this.flowLayoutPanel3.Controls.Add(this.panel9);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 80);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 78);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(80, 50, 0, 0);
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(994, 693);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(934, 922);
             this.flowLayoutPanel3.TabIndex = 4;
             // 
             // panel2
@@ -277,22 +267,13 @@
             this.textBox3.Text = "TOTAL NO. OF STUDENT";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Location = new System.Drawing.Point(474, 53);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(51, 225);
-            this.panel3.TabIndex = 0;
-            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.textBox4);
             this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Location = new System.Drawing.Point(548, 70);
+            this.panel4.Location = new System.Drawing.Point(491, 70);
             this.panel4.Margin = new System.Windows.Forms.Padding(20);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(351, 225);
@@ -325,14 +306,83 @@
             this.textBox2.Text = "0";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // panel5
+            // panel6
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.Location = new System.Drawing.Point(922, 53);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(51, 225);
-            this.panel5.TabIndex = 0;
+            this.panel6.Controls.Add(this.textBox5);
+            this.panel6.Controls.Add(this.textBox6);
+            this.panel6.Location = new System.Drawing.Point(100, 335);
+            this.panel6.Margin = new System.Windows.Forms.Padding(20);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(351, 225);
+            this.panel6.TabIndex = 1;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
+            this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox5.Enabled = false;
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBox5.Location = new System.Drawing.Point(0, 0);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(351, 82);
+            this.textBox5.TabIndex = 5;
+            this.textBox5.Text = "TOTAL NO. OF INSTRUCTOR";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBox6.Enabled = false;
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(0, 82);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(351, 143);
+            this.textBox6.TabIndex = 3;
+            this.textBox6.Text = "0";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.Controls.Add(this.textBox1);
+            this.panel8.Controls.Add(this.textBox7);
+            this.panel8.Location = new System.Drawing.Point(491, 335);
+            this.panel8.Margin = new System.Windows.Forms.Padding(20);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(351, 225);
+            this.panel8.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(351, 82);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.Text = "NO. OF PENDING ENROLLEES";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBox7.Enabled = false;
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(0, 82);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(351, 143);
+            this.textBox7.TabIndex = 3;
+            this.textBox7.Text = "0";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // delete
             // 
@@ -379,115 +429,22 @@
             this.edit.MouseLeave += new System.EventHandler(this.edit_MouseLeave);
             this.edit.MouseHover += new System.EventHandler(this.edit_MouseHover);
             // 
-            // panel6
-            // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.Controls.Add(this.textBox5);
-            this.panel6.Controls.Add(this.textBox6);
-            this.panel6.Location = new System.Drawing.Point(100, 335);
-            this.panel6.Margin = new System.Windows.Forms.Padding(20);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(351, 225);
-            this.panel6.TabIndex = 1;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
-            this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox5.Enabled = false;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox5.Location = new System.Drawing.Point(0, 0);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(351, 82);
-            this.textBox5.TabIndex = 5;
-            this.textBox5.Text = "TOTAL NO. OF INSTRUCTOR";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox6.Enabled = false;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(0, 82);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(351, 143);
-            this.textBox6.TabIndex = 3;
-            this.textBox6.Text = "0";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel7
-            // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.Location = new System.Drawing.Point(474, 318);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(51, 225);
-            this.panel7.TabIndex = 2;
-            // 
-            // panel8
-            // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.Controls.Add(this.textBox1);
-            this.panel8.Controls.Add(this.textBox7);
-            this.panel8.Location = new System.Drawing.Point(548, 335);
-            this.panel8.Margin = new System.Windows.Forms.Padding(20);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(351, 225);
-            this.panel8.TabIndex = 3;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(351, 82);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "NO. OF PENDING ENROLLEES";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox7.Enabled = false;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(0, 82);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(351, 143);
-            this.textBox7.TabIndex = 3;
-            this.textBox7.Text = "0";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel9
-            // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel9.Location = new System.Drawing.Point(922, 318);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(51, 225);
-            this.panel9.TabIndex = 4;
-            // 
             // adminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoScrollMinSize = new System.Drawing.Size(0, 1000);
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1403, 773);
+            this.ClientSize = new System.Drawing.Size(1364, 787);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "adminHome";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "adminHome";
             this.Load += new System.EventHandler(this.adminHome_Load);
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -500,13 +457,13 @@
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.delete)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.add)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edit)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.delete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -530,19 +487,15 @@
         private System.Windows.Forms.TextBox totalNumStud;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Panel panel9;
     }
 }

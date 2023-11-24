@@ -307,6 +307,12 @@
     <Compile Include="createAcc.Designer.cs">
       <DependentUpon>createAcc.cs</DependentUpon>
     </Compile>
+    <Compile Include="faceRecognition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="faceRecognition.Designer.cs">
+      <DependentUpon>faceRecognition.cs</DependentUpon>
+    </Compile>
     <Compile Include="forgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -478,6 +484,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="createAcc.resx">
       <DependentUpon>createAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="faceRecognition.resx">
+      <DependentUpon>faceRecognition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forgotPassword.resx">
       <DependentUpon>forgotPassword.cs</DependentUpon>

@@ -43,9 +43,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBtn.Location = new System.Drawing.Point(402, 270);
+            this.saveBtn.Location = new System.Drawing.Point(536, 332);
+            this.saveBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(129, 32);
+            this.saveBtn.Size = new System.Drawing.Size(172, 39);
             this.saveBtn.TabIndex = 17;
             this.saveBtn.Text = "SAVE";
             this.saveBtn.UseVisualStyleBackColor = true;
@@ -62,9 +63,10 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.colcodeTxtbox);
             this.panel1.Controls.Add(this.collegeLbl);
-            this.panel1.Location = new System.Drawing.Point(28, 20);
+            this.panel1.Location = new System.Drawing.Point(37, 25);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(503, 238);
+            this.panel1.Size = new System.Drawing.Size(671, 293);
             this.panel1.TabIndex = 16;
             // 
             // coldescTxtbox
@@ -73,10 +75,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.coldescTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.coldescTxtbox.Location = new System.Drawing.Point(18, 96);
+            this.coldescTxtbox.Location = new System.Drawing.Point(24, 118);
+            this.coldescTxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.coldescTxtbox.Multiline = true;
             this.coldescTxtbox.Name = "coldescTxtbox";
-            this.coldescTxtbox.Size = new System.Drawing.Size(469, 124);
+            this.coldescTxtbox.Size = new System.Drawing.Size(624, 152);
             this.coldescTxtbox.TabIndex = 22;
             // 
             // label9
@@ -87,9 +90,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label9.Location = new System.Drawing.Point(14, 75);
+            this.label9.Location = new System.Drawing.Point(19, 92);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 20);
+            this.label9.Size = new System.Drawing.Size(115, 25);
             this.label9.TabIndex = 21;
             this.label9.Text = "Description:";
             // 
@@ -99,9 +103,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.colcodeTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colcodeTxtbox.Location = new System.Drawing.Point(18, 34);
+            this.colcodeTxtbox.Location = new System.Drawing.Point(24, 42);
+            this.colcodeTxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.colcodeTxtbox.Name = "colcodeTxtbox";
-            this.colcodeTxtbox.Size = new System.Drawing.Size(215, 26);
+            this.colcodeTxtbox.Size = new System.Drawing.Size(285, 30);
             this.colcodeTxtbox.TabIndex = 20;
             // 
             // collegeLbl
@@ -112,23 +117,28 @@
             this.collegeLbl.AutoSize = true;
             this.collegeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.collegeLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.collegeLbl.Location = new System.Drawing.Point(14, 11);
+            this.collegeLbl.Location = new System.Drawing.Point(19, 14);
+            this.collegeLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.collegeLbl.Name = "collegeLbl";
-            this.collegeLbl.Size = new System.Drawing.Size(105, 20);
+            this.collegeLbl.Size = new System.Drawing.Size(133, 25);
             this.collegeLbl.TabIndex = 19;
             this.collegeLbl.Text = "College code:";
             // 
             // addCollege
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
-            this.ClientSize = new System.Drawing.Size(559, 323);
+            this.ClientSize = new System.Drawing.Size(745, 398);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "addCollege";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADD NEW COLLEGE";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
