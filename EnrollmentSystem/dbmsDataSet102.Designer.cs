@@ -20,17 +20,17 @@ namespace EnrollmentSystem {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dbmsDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dbmsDataSet10")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dbmsDataSet : global::System.Data.DataSet {
+    public partial class dbmsDataSet10 : global::System.Data.DataSet {
         
-        private viewEnrolleeDataTable tableviewEnrollee;
+        private showStudentDataTable tableshowStudent;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public dbmsDataSet() {
+        public dbmsDataSet10() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace EnrollmentSystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected dbmsDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dbmsDataSet10(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace EnrollmentSystem {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["viewEnrollee"] != null)) {
-                    base.Tables.Add(new viewEnrolleeDataTable(ds.Tables["viewEnrollee"]));
+                if ((ds.Tables["showStudent"] != null)) {
+                    base.Tables.Add(new showStudentDataTable(ds.Tables["showStudent"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace EnrollmentSystem {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public viewEnrolleeDataTable viewEnrollee {
+        public showStudentDataTable showStudent {
             get {
-                return this.tableviewEnrollee;
+                return this.tableshowStudent;
             }
         }
         
@@ -127,7 +127,7 @@ namespace EnrollmentSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dbmsDataSet cln = ((dbmsDataSet)(base.Clone()));
+            dbmsDataSet10 cln = ((dbmsDataSet10)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace EnrollmentSystem {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["viewEnrollee"] != null)) {
-                    base.Tables.Add(new viewEnrolleeDataTable(ds.Tables["viewEnrollee"]));
+                if ((ds.Tables["showStudent"] != null)) {
+                    base.Tables.Add(new showStudentDataTable(ds.Tables["showStudent"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace EnrollmentSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableviewEnrollee = ((viewEnrolleeDataTable)(base.Tables["viewEnrollee"]));
+            this.tableshowStudent = ((showStudentDataTable)(base.Tables["showStudent"]));
             if ((initTable == true)) {
-                if ((this.tableviewEnrollee != null)) {
-                    this.tableviewEnrollee.InitVars();
+                if ((this.tableshowStudent != null)) {
+                    this.tableshowStudent.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace EnrollmentSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dbmsDataSet";
+            this.DataSetName = "dbmsDataSet10";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dbmsDataSet.xsd";
+            this.Namespace = "http://tempuri.org/dbmsDataSet10.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableviewEnrollee = new viewEnrolleeDataTable();
-            base.Tables.Add(this.tableviewEnrollee);
+            this.tableshowStudent = new showStudentDataTable();
+            base.Tables.Add(this.tableshowStudent);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeviewEnrollee() {
+        private bool ShouldSerializeshowStudent() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace EnrollmentSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dbmsDataSet ds = new dbmsDataSet();
+            dbmsDataSet10 ds = new dbmsDataSet10();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,18 @@ namespace EnrollmentSystem {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void viewEnrolleeRowChangeEventHandler(object sender, viewEnrolleeRowChangeEvent e);
+        public delegate void showStudentRowChangeEventHandler(object sender, showStudentRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class viewEnrolleeDataTable : global::System.Data.TypedTableBase<viewEnrolleeRow> {
+        public partial class showStudentDataTable : global::System.Data.TypedTableBase<showStudentRow> {
+            
+            private global::System.Data.DataColumn columnstud_id;
+            
+            private global::System.Data.DataColumn columnstud_no;
             
             private global::System.Data.DataColumn columnstud_fname;
             
@@ -286,8 +290,6 @@ namespace EnrollmentSystem {
             private global::System.Data.DataColumn columnstud_mi;
             
             private global::System.Data.DataColumn columnstud_bday;
-            
-            private global::System.Data.DataColumn columnstud_age;
             
             private global::System.Data.DataColumn columnstud_address;
             
@@ -299,14 +301,14 @@ namespace EnrollmentSystem {
             
             private global::System.Data.DataColumn columnstud_year;
             
-            private global::System.Data.DataColumn columnstud_status;
+            private global::System.Data.DataColumn columnprog_name;
             
-            private global::System.Data.DataColumn columnprog_id;
+            private global::System.Data.DataColumn columnstud_gpa;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public viewEnrolleeDataTable() {
-                this.TableName = "viewEnrollee";
+            public showStudentDataTable() {
+                this.TableName = "showStudent";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -314,7 +316,7 @@ namespace EnrollmentSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal viewEnrolleeDataTable(global::System.Data.DataTable table) {
+            internal showStudentDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -331,9 +333,25 @@ namespace EnrollmentSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected viewEnrolleeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected showStudentDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn stud_idColumn {
+                get {
+                    return this.columnstud_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn stud_noColumn {
+                get {
+                    return this.columnstud_no;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -365,14 +383,6 @@ namespace EnrollmentSystem {
             public global::System.Data.DataColumn stud_bdayColumn {
                 get {
                     return this.columnstud_bday;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn stud_ageColumn {
-                get {
-                    return this.columnstud_age;
                 }
             }
             
@@ -418,17 +428,17 @@ namespace EnrollmentSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn stud_statusColumn {
+            public global::System.Data.DataColumn prog_nameColumn {
                 get {
-                    return this.columnstud_status;
+                    return this.columnprog_name;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn prog_idColumn {
+            public global::System.Data.DataColumn stud_gpaColumn {
                 get {
-                    return this.columnprog_id;
+                    return this.columnstud_gpa;
                 }
             }
             
@@ -443,56 +453,64 @@ namespace EnrollmentSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public viewEnrolleeRow this[int index] {
+            public showStudentRow this[int index] {
                 get {
-                    return ((viewEnrolleeRow)(this.Rows[index]));
+                    return ((showStudentRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event viewEnrolleeRowChangeEventHandler viewEnrolleeRowChanging;
+            public event showStudentRowChangeEventHandler showStudentRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event viewEnrolleeRowChangeEventHandler viewEnrolleeRowChanged;
+            public event showStudentRowChangeEventHandler showStudentRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event viewEnrolleeRowChangeEventHandler viewEnrolleeRowDeleting;
+            public event showStudentRowChangeEventHandler showStudentRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event viewEnrolleeRowChangeEventHandler viewEnrolleeRowDeleted;
+            public event showStudentRowChangeEventHandler showStudentRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddviewEnrolleeRow(viewEnrolleeRow row) {
+            public void AddshowStudentRow(showStudentRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public viewEnrolleeRow AddviewEnrolleeRow(string stud_fname, string stud_lname, string stud_mi, System.DateTime stud_bday, int stud_age, string stud_address, string stud_phone, string stud_email, string stud_gender, int stud_year, string stud_status, int prog_id) {
-                viewEnrolleeRow rowviewEnrolleeRow = ((viewEnrolleeRow)(this.NewRow()));
+            public showStudentRow AddshowStudentRow(string stud_no, string stud_fname, string stud_lname, string stud_mi, System.DateTime stud_bday, string stud_address, string stud_phone, string stud_email, string stud_gender, int stud_year, string prog_name, int stud_gpa) {
+                showStudentRow rowshowStudentRow = ((showStudentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        null,
+                        stud_no,
                         stud_fname,
                         stud_lname,
                         stud_mi,
                         stud_bday,
-                        stud_age,
                         stud_address,
                         stud_phone,
                         stud_email,
                         stud_gender,
                         stud_year,
-                        stud_status,
-                        prog_id};
-                rowviewEnrolleeRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowviewEnrolleeRow);
-                return rowviewEnrolleeRow;
+                        prog_name,
+                        stud_gpa};
+                rowshowStudentRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowshowStudentRow);
+                return rowshowStudentRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public showStudentRow FindBystud_id(int stud_id) {
+                return ((showStudentRow)(this.Rows.Find(new object[] {
+                            stud_id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                viewEnrolleeDataTable cln = ((viewEnrolleeDataTable)(base.Clone()));
+                showStudentDataTable cln = ((showStudentDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -500,29 +518,34 @@ namespace EnrollmentSystem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new viewEnrolleeDataTable();
+                return new showStudentDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnstud_id = base.Columns["stud_id"];
+                this.columnstud_no = base.Columns["stud_no"];
                 this.columnstud_fname = base.Columns["stud_fname"];
                 this.columnstud_lname = base.Columns["stud_lname"];
                 this.columnstud_mi = base.Columns["stud_mi"];
                 this.columnstud_bday = base.Columns["stud_bday"];
-                this.columnstud_age = base.Columns["stud_age"];
                 this.columnstud_address = base.Columns["stud_address"];
                 this.columnstud_phone = base.Columns["stud_phone"];
                 this.columnstud_email = base.Columns["stud_email"];
                 this.columnstud_gender = base.Columns["stud_gender"];
                 this.columnstud_year = base.Columns["stud_year"];
-                this.columnstud_status = base.Columns["stud_status"];
-                this.columnprog_id = base.Columns["prog_id"];
+                this.columnprog_name = base.Columns["prog_name"];
+                this.columnstud_gpa = base.Columns["stud_gpa"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnstud_id = new global::System.Data.DataColumn("stud_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstud_id);
+                this.columnstud_no = new global::System.Data.DataColumn("stud_no", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstud_no);
                 this.columnstud_fname = new global::System.Data.DataColumn("stud_fname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstud_fname);
                 this.columnstud_lname = new global::System.Data.DataColumn("stud_lname", typeof(string), null, global::System.Data.MappingType.Element);
@@ -531,8 +554,6 @@ namespace EnrollmentSystem {
                 base.Columns.Add(this.columnstud_mi);
                 this.columnstud_bday = new global::System.Data.DataColumn("stud_bday", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstud_bday);
-                this.columnstud_age = new global::System.Data.DataColumn("stud_age", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnstud_age);
                 this.columnstud_address = new global::System.Data.DataColumn("stud_address", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstud_address);
                 this.columnstud_phone = new global::System.Data.DataColumn("stud_phone", typeof(string), null, global::System.Data.MappingType.Element);
@@ -543,10 +564,18 @@ namespace EnrollmentSystem {
                 base.Columns.Add(this.columnstud_gender);
                 this.columnstud_year = new global::System.Data.DataColumn("stud_year", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstud_year);
-                this.columnstud_status = new global::System.Data.DataColumn("stud_status", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnstud_status);
-                this.columnprog_id = new global::System.Data.DataColumn("prog_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprog_id);
+                this.columnprog_name = new global::System.Data.DataColumn("prog_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprog_name);
+                this.columnstud_gpa = new global::System.Data.DataColumn("stud_gpa", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstud_gpa);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnstud_id}, true));
+                this.columnstud_id.AutoIncrement = true;
+                this.columnstud_id.AllowDBNull = false;
+                this.columnstud_id.ReadOnly = true;
+                this.columnstud_id.Unique = true;
+                this.columnstud_no.ReadOnly = true;
+                this.columnstud_no.MaxLength = 5;
                 this.columnstud_fname.AllowDBNull = false;
                 this.columnstud_fname.MaxLength = 2147483647;
                 this.columnstud_lname.AllowDBNull = false;
@@ -554,7 +583,6 @@ namespace EnrollmentSystem {
                 this.columnstud_mi.AllowDBNull = false;
                 this.columnstud_mi.MaxLength = 1;
                 this.columnstud_bday.AllowDBNull = false;
-                this.columnstud_age.AllowDBNull = false;
                 this.columnstud_address.AllowDBNull = false;
                 this.columnstud_address.MaxLength = 2147483647;
                 this.columnstud_phone.AllowDBNull = false;
@@ -564,35 +592,35 @@ namespace EnrollmentSystem {
                 this.columnstud_gender.AllowDBNull = false;
                 this.columnstud_gender.MaxLength = 6;
                 this.columnstud_year.AllowDBNull = false;
-                this.columnstud_status.AllowDBNull = false;
-                this.columnstud_status.MaxLength = 10;
-                this.columnprog_id.AllowDBNull = false;
+                this.columnprog_name.AllowDBNull = false;
+                this.columnprog_name.MaxLength = 2147483647;
+                this.columnstud_gpa.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public viewEnrolleeRow NewviewEnrolleeRow() {
-                return ((viewEnrolleeRow)(this.NewRow()));
+            public showStudentRow NewshowStudentRow() {
+                return ((showStudentRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new viewEnrolleeRow(builder);
+                return new showStudentRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(viewEnrolleeRow);
+                return typeof(showStudentRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.viewEnrolleeRowChanged != null)) {
-                    this.viewEnrolleeRowChanged(this, new viewEnrolleeRowChangeEvent(((viewEnrolleeRow)(e.Row)), e.Action));
+                if ((this.showStudentRowChanged != null)) {
+                    this.showStudentRowChanged(this, new showStudentRowChangeEvent(((showStudentRow)(e.Row)), e.Action));
                 }
             }
             
@@ -600,8 +628,8 @@ namespace EnrollmentSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.viewEnrolleeRowChanging != null)) {
-                    this.viewEnrolleeRowChanging(this, new viewEnrolleeRowChangeEvent(((viewEnrolleeRow)(e.Row)), e.Action));
+                if ((this.showStudentRowChanging != null)) {
+                    this.showStudentRowChanging(this, new showStudentRowChangeEvent(((showStudentRow)(e.Row)), e.Action));
                 }
             }
             
@@ -609,8 +637,8 @@ namespace EnrollmentSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.viewEnrolleeRowDeleted != null)) {
-                    this.viewEnrolleeRowDeleted(this, new viewEnrolleeRowChangeEvent(((viewEnrolleeRow)(e.Row)), e.Action));
+                if ((this.showStudentRowDeleted != null)) {
+                    this.showStudentRowDeleted(this, new showStudentRowChangeEvent(((showStudentRow)(e.Row)), e.Action));
                 }
             }
             
@@ -618,14 +646,14 @@ namespace EnrollmentSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.viewEnrolleeRowDeleting != null)) {
-                    this.viewEnrolleeRowDeleting(this, new viewEnrolleeRowChangeEvent(((viewEnrolleeRow)(e.Row)), e.Action));
+                if ((this.showStudentRowDeleting != null)) {
+                    this.showStudentRowDeleting(this, new showStudentRowChangeEvent(((showStudentRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveviewEnrolleeRow(viewEnrolleeRow row) {
+            public void RemoveshowStudentRow(showStudentRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -634,7 +662,7 @@ namespace EnrollmentSystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dbmsDataSet ds = new dbmsDataSet();
+                dbmsDataSet10 ds = new dbmsDataSet10();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -652,7 +680,7 @@ namespace EnrollmentSystem {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "viewEnrolleeDataTable";
+                attribute2.FixedValue = "showStudentDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -696,25 +724,52 @@ namespace EnrollmentSystem {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class viewEnrolleeRow : global::System.Data.DataRow {
+        public partial class showStudentRow : global::System.Data.DataRow {
             
-            private viewEnrolleeDataTable tableviewEnrollee;
+            private showStudentDataTable tableshowStudent;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal viewEnrolleeRow(global::System.Data.DataRowBuilder rb) : 
+            internal showStudentRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableviewEnrollee = ((viewEnrolleeDataTable)(this.Table));
+                this.tableshowStudent = ((showStudentDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int stud_id {
+                get {
+                    return ((int)(this[this.tableshowStudent.stud_idColumn]));
+                }
+                set {
+                    this[this.tableshowStudent.stud_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string stud_no {
+                get {
+                    try {
+                        return ((string)(this[this.tableshowStudent.stud_noColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'stud_no\' in table \'showStudent\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableshowStudent.stud_noColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string stud_fname {
                 get {
-                    return ((string)(this[this.tableviewEnrollee.stud_fnameColumn]));
+                    return ((string)(this[this.tableshowStudent.stud_fnameColumn]));
                 }
                 set {
-                    this[this.tableviewEnrollee.stud_fnameColumn] = value;
+                    this[this.tableshowStudent.stud_fnameColumn] = value;
                 }
             }
             
@@ -722,10 +777,10 @@ namespace EnrollmentSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string stud_lname {
                 get {
-                    return ((string)(this[this.tableviewEnrollee.stud_lnameColumn]));
+                    return ((string)(this[this.tableshowStudent.stud_lnameColumn]));
                 }
                 set {
-                    this[this.tableviewEnrollee.stud_lnameColumn] = value;
+                    this[this.tableshowStudent.stud_lnameColumn] = value;
                 }
             }
             
@@ -733,10 +788,10 @@ namespace EnrollmentSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string stud_mi {
                 get {
-                    return ((string)(this[this.tableviewEnrollee.stud_miColumn]));
+                    return ((string)(this[this.tableshowStudent.stud_miColumn]));
                 }
                 set {
-                    this[this.tableviewEnrollee.stud_miColumn] = value;
+                    this[this.tableshowStudent.stud_miColumn] = value;
                 }
             }
             
@@ -744,21 +799,10 @@ namespace EnrollmentSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public System.DateTime stud_bday {
                 get {
-                    return ((global::System.DateTime)(this[this.tableviewEnrollee.stud_bdayColumn]));
+                    return ((global::System.DateTime)(this[this.tableshowStudent.stud_bdayColumn]));
                 }
                 set {
-                    this[this.tableviewEnrollee.stud_bdayColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int stud_age {
-                get {
-                    return ((int)(this[this.tableviewEnrollee.stud_ageColumn]));
-                }
-                set {
-                    this[this.tableviewEnrollee.stud_ageColumn] = value;
+                    this[this.tableshowStudent.stud_bdayColumn] = value;
                 }
             }
             
@@ -766,10 +810,10 @@ namespace EnrollmentSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string stud_address {
                 get {
-                    return ((string)(this[this.tableviewEnrollee.stud_addressColumn]));
+                    return ((string)(this[this.tableshowStudent.stud_addressColumn]));
                 }
                 set {
-                    this[this.tableviewEnrollee.stud_addressColumn] = value;
+                    this[this.tableshowStudent.stud_addressColumn] = value;
                 }
             }
             
@@ -777,10 +821,10 @@ namespace EnrollmentSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string stud_phone {
                 get {
-                    return ((string)(this[this.tableviewEnrollee.stud_phoneColumn]));
+                    return ((string)(this[this.tableshowStudent.stud_phoneColumn]));
                 }
                 set {
-                    this[this.tableviewEnrollee.stud_phoneColumn] = value;
+                    this[this.tableshowStudent.stud_phoneColumn] = value;
                 }
             }
             
@@ -788,10 +832,10 @@ namespace EnrollmentSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string stud_email {
                 get {
-                    return ((string)(this[this.tableviewEnrollee.stud_emailColumn]));
+                    return ((string)(this[this.tableshowStudent.stud_emailColumn]));
                 }
                 set {
-                    this[this.tableviewEnrollee.stud_emailColumn] = value;
+                    this[this.tableshowStudent.stud_emailColumn] = value;
                 }
             }
             
@@ -799,10 +843,10 @@ namespace EnrollmentSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string stud_gender {
                 get {
-                    return ((string)(this[this.tableviewEnrollee.stud_genderColumn]));
+                    return ((string)(this[this.tableshowStudent.stud_genderColumn]));
                 }
                 set {
-                    this[this.tableviewEnrollee.stud_genderColumn] = value;
+                    this[this.tableshowStudent.stud_genderColumn] = value;
                 }
             }
             
@@ -810,33 +854,45 @@ namespace EnrollmentSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int stud_year {
                 get {
-                    return ((int)(this[this.tableviewEnrollee.stud_yearColumn]));
+                    return ((int)(this[this.tableshowStudent.stud_yearColumn]));
                 }
                 set {
-                    this[this.tableviewEnrollee.stud_yearColumn] = value;
+                    this[this.tableshowStudent.stud_yearColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string stud_status {
+            public string prog_name {
                 get {
-                    return ((string)(this[this.tableviewEnrollee.stud_statusColumn]));
+                    return ((string)(this[this.tableshowStudent.prog_nameColumn]));
                 }
                 set {
-                    this[this.tableviewEnrollee.stud_statusColumn] = value;
+                    this[this.tableshowStudent.prog_nameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int prog_id {
+            public int stud_gpa {
                 get {
-                    return ((int)(this[this.tableviewEnrollee.prog_idColumn]));
+                    return ((int)(this[this.tableshowStudent.stud_gpaColumn]));
                 }
                 set {
-                    this[this.tableviewEnrollee.prog_idColumn] = value;
+                    this[this.tableshowStudent.stud_gpaColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isstud_noNull() {
+                return this.IsNull(this.tableshowStudent.stud_noColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setstud_noNull() {
+                this[this.tableshowStudent.stud_noColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -844,22 +900,22 @@ namespace EnrollmentSystem {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class viewEnrolleeRowChangeEvent : global::System.EventArgs {
+        public class showStudentRowChangeEvent : global::System.EventArgs {
             
-            private viewEnrolleeRow eventRow;
+            private showStudentRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public viewEnrolleeRowChangeEvent(viewEnrolleeRow row, global::System.Data.DataRowAction action) {
+            public showStudentRowChangeEvent(showStudentRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public viewEnrolleeRow Row {
+            public showStudentRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -875,7 +931,7 @@ namespace EnrollmentSystem {
         }
     }
 }
-namespace EnrollmentSystem.dbmsDataSetTableAdapters {
+namespace EnrollmentSystem.dbmsDataSet10TableAdapters {
     
     
     /// <summary>
@@ -887,7 +943,7 @@ namespace EnrollmentSystem.dbmsDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class viewEnrolleeTableAdapter : global::System.ComponentModel.Component {
+    public partial class showStudentTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -901,7 +957,7 @@ namespace EnrollmentSystem.dbmsDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public viewEnrolleeTableAdapter() {
+        public showStudentTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -998,19 +1054,20 @@ namespace EnrollmentSystem.dbmsDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "viewEnrollee";
+            tableMapping.DataSetTable = "showStudent";
+            tableMapping.ColumnMappings.Add("stud_id", "stud_id");
+            tableMapping.ColumnMappings.Add("stud_no", "stud_no");
             tableMapping.ColumnMappings.Add("stud_fname", "stud_fname");
             tableMapping.ColumnMappings.Add("stud_lname", "stud_lname");
             tableMapping.ColumnMappings.Add("stud_mi", "stud_mi");
             tableMapping.ColumnMappings.Add("stud_bday", "stud_bday");
-            tableMapping.ColumnMappings.Add("stud_age", "stud_age");
             tableMapping.ColumnMappings.Add("stud_address", "stud_address");
             tableMapping.ColumnMappings.Add("stud_phone", "stud_phone");
             tableMapping.ColumnMappings.Add("stud_email", "stud_email");
             tableMapping.ColumnMappings.Add("stud_gender", "stud_gender");
             tableMapping.ColumnMappings.Add("stud_year", "stud_year");
-            tableMapping.ColumnMappings.Add("stud_status", "stud_status");
-            tableMapping.ColumnMappings.Add("prog_id", "prog_id");
+            tableMapping.ColumnMappings.Add("prog_name", "prog_name");
+            tableMapping.ColumnMappings.Add("stud_gpa", "stud_gpa");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1027,20 +1084,20 @@ namespace EnrollmentSystem.dbmsDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.viewEnrollee";
+            this._commandCollection[0].CommandText = "dbo.showStudent";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@admin_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dbmsDataSet.viewEnrolleeDataTable dataTable, global::System.Nullable<int> admin_id) {
+        public virtual int Fill(dbmsDataSet10.showStudentDataTable dataTable, global::System.Nullable<int> id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((admin_id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(admin_id.Value));
+            if ((id.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1056,15 +1113,15 @@ namespace EnrollmentSystem.dbmsDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dbmsDataSet.viewEnrolleeDataTable GetData(global::System.Nullable<int> admin_id) {
+        public virtual dbmsDataSet10.showStudentDataTable GetData(global::System.Nullable<int> id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((admin_id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(admin_id.Value));
+            if ((id.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            dbmsDataSet.viewEnrolleeDataTable dataTable = new dbmsDataSet.viewEnrolleeDataTable();
+            dbmsDataSet10.showStudentDataTable dataTable = new dbmsDataSet10.showStudentDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1138,7 +1195,7 @@ namespace EnrollmentSystem.dbmsDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(dbmsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(dbmsDataSet10 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1148,7 +1205,7 @@ namespace EnrollmentSystem.dbmsDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(dbmsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(dbmsDataSet10 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1158,7 +1215,7 @@ namespace EnrollmentSystem.dbmsDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(dbmsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(dbmsDataSet10 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1192,7 +1249,7 @@ namespace EnrollmentSystem.dbmsDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(dbmsDataSet dataSet) {
+        public virtual int UpdateAll(dbmsDataSet10 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
