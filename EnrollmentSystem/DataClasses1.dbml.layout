@@ -82,7 +82,7 @@
         <classShapeMoniker Id="db292a74-b535-45bf-a906-6ba222f68ba3" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 8.04890055338542); (6.25 : 8.04890055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.5 : 8.04890055338542); (5.88541666666667 : 8.04890055338542 : JumpStart); (6.17708333333333 : 8.04890055338542 : JumpEnd); (6.25 : 8.04890055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/admin/admin_instructor" />
       <nodes>
         <classShapeMoniker Id="462964c8-c420-4ec8-b31a-e69eb9bac37e" />
@@ -117,7 +117,7 @@
         <classShapeMoniker Id="953b3e10-7b33-4f11-83e3-5af401517d37" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 4.59699625651042); (6.01041666666667 : 4.59699625651042 : JumpStart); (6.17708333333333 : 4.59699625651042 : JumpEnd); (6.25 : 4.59699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.5 : 4.59699625651042); (5.88541666666667 : 4.59699625651042 : JumpStart); (6.17708333333333 : 4.59699625651042 : JumpEnd); (6.25 : 4.59699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/batch/batch_student" />
       <nodes>
         <classShapeMoniker Id="731d1cb7-f7c2-4275-ad85-854dbe881b19" />

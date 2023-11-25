@@ -744,4 +744,11 @@
       <Column Name="year_level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.verifyAdmin" Method="verifyAdmin">
+    <Parameter Name="full" Type="System.String" DbType="Text" />
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="verifyAdminResult">
+      <Column Name="Fullname" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
 </Database>

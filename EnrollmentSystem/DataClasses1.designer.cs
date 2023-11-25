@@ -590,6 +590,13 @@ namespace EnrollmentSystem
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), admin_id);
 			return ((ISingleResult<viewEnrolleeResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.verifyAdmin")]
+		public ISingleResult<verifyAdminResult> verifyAdmin([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string full, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), full, id);
+			return ((ISingleResult<verifyAdminResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.admins")]
@@ -7823,6 +7830,32 @@ namespace EnrollmentSystem
 				if ((this._year_level != value))
 				{
 					this._year_level = value;
+				}
+			}
+		}
+	}
+	
+	public partial class verifyAdminResult
+	{
+		
+		private string _Fullname;
+		
+		public verifyAdminResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fullname", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string Fullname
+		{
+			get
+			{
+				return this._Fullname;
+			}
+			set
+			{
+				if ((this._Fullname != value))
+				{
+					this._Fullname = value;
 				}
 			}
 		}

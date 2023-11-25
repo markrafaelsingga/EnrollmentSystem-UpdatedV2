@@ -24,7 +24,7 @@ namespace EnrollmentSystem
         {
             this.ControlBox = false;
 
-            var sy = db.schoolyears.OrderByDescending(x => x.sy_id).FirstOrDefault();
+           /* var sy = db.schoolyears.OrderByDescending(x => x.sy_id).FirstOrDefault();
 
             if (sy != null)
             {
@@ -37,7 +37,7 @@ namespace EnrollmentSystem
             else
             {
                 Console.WriteLine("No batches found in the table.");
-            }
+            }*/
         }
     }
 }
