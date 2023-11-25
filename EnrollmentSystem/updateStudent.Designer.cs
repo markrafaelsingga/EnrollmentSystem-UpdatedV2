@@ -449,10 +449,13 @@
             this.ClientSize = new System.Drawing.Size(1131, 475);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "updateStudent";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UPDATE STUDENT INFORMATION";
             this.Load += new System.EventHandler(this.updateStudent_Load);
             this.panel1.ResumeLayout(false);

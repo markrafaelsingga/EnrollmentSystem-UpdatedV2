@@ -58,7 +58,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lnameTxtbox = new System.Windows.Forms.TextBox();
             this.emailLbl = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.repword = new System.Windows.Forms.TextBox();
@@ -66,9 +65,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.uname = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,7 +88,7 @@
             // 
             this.signinBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signinBtn.Location = new System.Drawing.Point(931, 722);
-            this.signinBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.signinBtn.Margin = new System.Windows.Forms.Padding(4);
             this.signinBtn.Name = "signinBtn";
             this.signinBtn.Size = new System.Drawing.Size(172, 39);
             this.signinBtn.TabIndex = 7;
@@ -126,7 +126,7 @@
             this.panel1.Controls.Add(this.lnameTxtbox);
             this.panel1.Controls.Add(this.emailLbl);
             this.panel1.Location = new System.Drawing.Point(44, 315);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1059, 400);
             this.panel1.TabIndex = 12;
@@ -163,7 +163,7 @@
             "3",
             "4"});
             this.batch.Location = new System.Drawing.Point(787, 181);
-            this.batch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.batch.Margin = new System.Windows.Forms.Padding(4);
             this.batch.Name = "batch";
             this.batch.Size = new System.Drawing.Size(160, 24);
             this.batch.TabIndex = 28;
@@ -184,7 +184,7 @@
             // 
             this.gpa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpa.Location = new System.Drawing.Point(477, 238);
-            this.gpa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpa.Margin = new System.Windows.Forms.Padding(4);
             this.gpa.Name = "gpa";
             this.gpa.Size = new System.Drawing.Size(160, 30);
             this.gpa.TabIndex = 26;
@@ -211,7 +211,7 @@
             "3",
             "4"});
             this.program.Location = new System.Drawing.Point(205, 181);
-            this.program.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.program.Margin = new System.Windows.Forms.Padding(4);
             this.program.Name = "program";
             this.program.Size = new System.Drawing.Size(160, 24);
             this.program.TabIndex = 24;
@@ -226,7 +226,7 @@
             "3",
             "4"});
             this.yr.Location = new System.Drawing.Point(477, 181);
-            this.yr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.yr.Margin = new System.Windows.Forms.Padding(4);
             this.yr.Name = "yr";
             this.yr.Size = new System.Drawing.Size(160, 24);
             this.yr.TabIndex = 23;
@@ -251,7 +251,7 @@
             "Male",
             "Female"});
             this.gender.Location = new System.Drawing.Point(205, 240);
-            this.gender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gender.Margin = new System.Windows.Forms.Padding(4);
             this.gender.Name = "gender";
             this.gender.Size = new System.Drawing.Size(160, 24);
             this.gender.TabIndex = 21;
@@ -261,7 +261,7 @@
             this.birthdatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.birthdatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.birthdatePicker.Location = new System.Drawing.Point(787, 34);
-            this.birthdatePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.birthdatePicker.Margin = new System.Windows.Forms.Padding(4);
             this.birthdatePicker.Name = "birthdatePicker";
             this.birthdatePicker.Size = new System.Drawing.Size(235, 30);
             this.birthdatePicker.TabIndex = 16;
@@ -271,7 +271,7 @@
             // 
             this.emailtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailtextBox.Location = new System.Drawing.Point(204, 348);
-            this.emailtextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.emailtextBox.Margin = new System.Windows.Forms.Padding(4);
             this.emailtextBox.Name = "emailtextBox";
             this.emailtextBox.Size = new System.Drawing.Size(285, 30);
             this.emailtextBox.TabIndex = 11;
@@ -305,7 +305,7 @@
             // 
             this.addressTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressTxtbox.Location = new System.Drawing.Point(133, 116);
-            this.addressTxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addressTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.addressTxtbox.Name = "addressTxtbox";
             this.addressTxtbox.Size = new System.Drawing.Size(888, 30);
             this.addressTxtbox.TabIndex = 9;
@@ -326,7 +326,7 @@
             // 
             this.phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phone.Location = new System.Drawing.Point(205, 288);
-            this.phone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.phone.Margin = new System.Windows.Forms.Padding(4);
             this.phone.Name = "phone";
             this.phone.Size = new System.Drawing.Size(285, 30);
             this.phone.TabIndex = 9;
@@ -348,7 +348,7 @@
             // 
             this.miTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.miTxtbox.Location = new System.Drawing.Point(648, 34);
-            this.miTxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.miTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.miTxtbox.Name = "miTxtbox";
             this.miTxtbox.Size = new System.Drawing.Size(107, 30);
             this.miTxtbox.TabIndex = 7;
@@ -393,7 +393,7 @@
             // 
             this.fnameTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fnameTxtbox.Location = new System.Drawing.Point(336, 34);
-            this.fnameTxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fnameTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.fnameTxtbox.Name = "fnameTxtbox";
             this.fnameTxtbox.Size = new System.Drawing.Size(285, 30);
             this.fnameTxtbox.TabIndex = 5;
@@ -414,7 +414,7 @@
             // 
             this.lnameTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnameTxtbox.Location = new System.Drawing.Point(27, 34);
-            this.lnameTxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lnameTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.lnameTxtbox.Name = "lnameTxtbox";
             this.lnameTxtbox.Size = new System.Drawing.Size(285, 30);
             this.lnameTxtbox.TabIndex = 3;
@@ -431,18 +431,6 @@
             this.emailLbl.TabIndex = 2;
             this.emailLbl.Text = "Lastname:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(473, 14);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(176, 162);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
@@ -453,7 +441,7 @@
             this.panel2.Controls.Add(this.uname);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Location = new System.Drawing.Point(44, 203);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1059, 105);
             this.panel2.TabIndex = 21;
@@ -474,7 +462,7 @@
             // 
             this.repword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.repword.Location = new System.Drawing.Point(724, 42);
-            this.repword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.repword.Margin = new System.Windows.Forms.Padding(4);
             this.repword.Name = "repword";
             this.repword.Size = new System.Drawing.Size(285, 30);
             this.repword.TabIndex = 24;
@@ -484,7 +472,7 @@
             // 
             this.pword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pword.Location = new System.Drawing.Point(384, 42);
-            this.pword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pword.Margin = new System.Windows.Forms.Padding(4);
             this.pword.Name = "pword";
             this.pword.Size = new System.Drawing.Size(285, 30);
             this.pword.TabIndex = 23;
@@ -506,7 +494,7 @@
             // 
             this.uname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uname.Location = new System.Drawing.Point(32, 42);
-            this.uname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uname.Margin = new System.Windows.Forms.Padding(4);
             this.uname.Name = "uname";
             this.uname.Size = new System.Drawing.Size(285, 30);
             this.uname.TabIndex = 21;
@@ -523,6 +511,18 @@
             this.label10.TabIndex = 21;
             this.label10.Text = "Username";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(473, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(176, 162);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // signIn_student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -534,16 +534,19 @@
             this.Controls.Add(this.signinBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "signIn_student";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ENROLLMENT / SIGN IN AS STUDENT";
             this.Load += new System.EventHandler(this.signIn_student_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

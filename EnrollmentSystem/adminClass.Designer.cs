@@ -77,18 +77,17 @@
             this.flowLayoutPanel2.Controls.Add(this.edit);
             this.flowLayoutPanel2.Controls.Add(this.panel2);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 65);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 10, 40, 0);
             this.flowLayoutPanel2.Size = new System.Drawing.Size(865, 58);
             this.flowLayoutPanel2.TabIndex = 10;
             // 
-
             // delete
             // 
             this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
-
+            this.delete.Location = new System.Drawing.Point(790, 13);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(32, 35);
             this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -102,7 +101,7 @@
             // 
             this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
-
+            this.add.Location = new System.Drawing.Point(752, 13);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(32, 35);
             this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -116,7 +115,7 @@
             // 
             this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-
+            this.edit.Location = new System.Drawing.Point(711, 13);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(35, 35);
             this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -130,7 +129,7 @@
             // 
             this.panel2.Controls.Add(this.search);
             this.panel2.Controls.Add(this.searchTxtbox);
-
+            this.panel2.Location = new System.Drawing.Point(296, 13);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.panel2.Size = new System.Drawing.Size(409, 35);
@@ -140,7 +139,7 @@
             // 
             this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
-
+            this.search.Location = new System.Drawing.Point(386, 7);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(20, 20);
             this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,7 +152,7 @@
             // 
             this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
+            this.searchTxtbox.Location = new System.Drawing.Point(0, 4);
             this.searchTxtbox.Name = "searchTxtbox";
             this.searchTxtbox.Size = new System.Drawing.Size(409, 26);
             this.searchTxtbox.TabIndex = 3;
@@ -164,10 +163,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.dataGridView1);
-
+            this.panel1.Location = new System.Drawing.Point(49, 129);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(773, 387);
-            this.panel1.TabIndex = 9;
+            this.panel1.TabIndex = 12;
             // 
             // dataGridView1
             // 
@@ -205,7 +204,6 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -292,7 +290,7 @@
             this.roomnameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.roomnameDataGridViewTextBoxColumn.Name = "roomnameDataGridViewTextBoxColumn";
             this.roomnameDataGridViewTextBoxColumn.ReadOnly = true;
-
+            this.roomnameDataGridViewTextBoxColumn.ToolTipText = "Room name";
             // 
             // showClassBindingSource
             // 
@@ -313,7 +311,7 @@
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(53, 25, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 73);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(865, 73);
             this.flowLayoutPanel1.TabIndex = 11;
             // 
             // label1
@@ -323,7 +321,7 @@
             this.label1.Location = new System.Drawing.Point(57, 25);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 39);
+            this.label1.Size = new System.Drawing.Size(146, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "CLASSES";
             // 
@@ -335,12 +333,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.flowLayoutPanel2);
+            this.ClientSize = new System.Drawing.Size(865, 541);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.flowLayoutPanel2);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-
             this.Name = "adminClass";
             this.Text = "adminClass";
             this.Load += new System.EventHandler(this.adminClass_Load);
@@ -362,21 +359,23 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.PictureBox delete;
-        private System.Windows.Forms.PictureBox add;
-        private System.Windows.Forms.PictureBox edit;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox search;
-        private System.Windows.Forms.TextBox searchTxtbox;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label1;
         private dbmsDataSet26 dbmsDataSet26;
         private System.Windows.Forms.BindingSource showClassBindingSource;
         private dbmsDataSet26TableAdapters.showClassTableAdapter showClassTableAdapter;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox search;
+        private System.Windows.Forms.TextBox searchTxtbox;
+        private System.Windows.Forms.PictureBox edit;
+        private System.Windows.Forms.PictureBox add;
+        private System.Windows.Forms.PictureBox delete;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private dbmsDataSet27 dbmsDataSet27;
+        private System.Windows.Forms.BindingSource showClassBindingSource1;
+        private dbmsDataSet27TableAdapters.showClassTableAdapter showClassTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn classcodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn classsectionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn classfromTimeDataGridViewTextBoxColumn;

@@ -72,9 +72,9 @@ namespace EnrollmentSystem
                             int id = item.admin_id;
                             if (id > 0)
                             {
-                                admin_page dashboard = new admin_page(id);
-                                dashboard.FormClosed += Dashboard_FormClosed;
-                                dashboard.Show();
+                                faceRecognition face = new faceRecognition(id);
+                                face.FormClosed += FaceRecognition_FormClosed;
+                                face.Show();
                                 Visible = false;
 
                             }
@@ -88,6 +88,7 @@ namespace EnrollmentSystem
                             if (studId > 0)
                             {
                                 student_page dashboard = new student_page(studId);
+                                dashboard.FormClosed += Dashboard_FormClosed;
                                 dashboard.Show();
                                 Visible = false;
                             }
@@ -106,6 +107,13 @@ namespace EnrollmentSystem
             {
                 MessageBox.Show($"An error occured: {ex.Message}");
             }
+        }
+
+        private void FaceRecognition_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            login log = new login();
+            log.Show();
+            Visible = false;
         }
 
         private void Dashboard_FormClosed(object sender, FormClosedEventArgs e)

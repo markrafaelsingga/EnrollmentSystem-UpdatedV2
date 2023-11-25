@@ -20,19 +20,7 @@ namespace EnrollmentSystem
 
         private void proceedBtn_Click(object sender, EventArgs e)
         {
-            if(uname.Text == uname.Text)
-            {
-                var result = db.accId(uname.Text);
-
-                if(result != null)
-                {
-                    foreach(var item in result)
-                    {
-                        int id = item.u_id;
-                        MessageBox.Show($"ID: {id}");
-                    }
-                }
-            }
+           
            /* if (pword.Text == repword.Text)
             {
                 *//*  db.createAcc(uname.Text, pword.Text);*//*

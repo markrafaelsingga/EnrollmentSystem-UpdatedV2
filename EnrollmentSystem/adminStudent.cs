@@ -13,6 +13,7 @@ namespace EnrollmentSystem
     public partial class adminStudent : Form
     {
         DataClasses1DataContext db = new DataClasses1DataContext();
+
         private int verId;
         int id;
         string studNumber;
@@ -191,6 +192,7 @@ namespace EnrollmentSystem
         private void searchTxtbox_TextChanged(object sender, EventArgs e)
         {
             display();
+           dataGridView1.DataSource = db.searchStudent(searchTxtbox.Text);
         }
     }
 }
