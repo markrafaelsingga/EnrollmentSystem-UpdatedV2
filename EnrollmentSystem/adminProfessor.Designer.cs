@@ -74,7 +74,7 @@
             this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
             this.delete.Location = new System.Drawing.Point(778, 14);
-            this.delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.delete.Margin = new System.Windows.Forms.Padding(4);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(43, 43);
             this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -89,7 +89,7 @@
             this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
             this.add.Location = new System.Drawing.Point(727, 14);
-            this.add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.add.Margin = new System.Windows.Forms.Padding(4);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(43, 43);
             this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -104,7 +104,7 @@
             this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
             this.edit.Location = new System.Drawing.Point(672, 14);
-            this.edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edit.Margin = new System.Windows.Forms.Padding(4);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(47, 43);
             this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -129,7 +129,7 @@
             this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
             this.search.Location = new System.Drawing.Point(515, 9);
-            this.search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.search.Margin = new System.Windows.Forms.Padding(4);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(27, 25);
             this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

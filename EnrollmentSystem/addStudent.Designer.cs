@@ -34,6 +34,10 @@
             this.uname = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.sem = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.emailTxtbox = new System.Windows.Forms.TextBox();
             this.phLbl = new System.Windows.Forms.Label();
             this.emlLbl = new System.Windows.Forms.Label();
             this.batch = new System.Windows.Forms.ComboBox();
@@ -59,10 +63,8 @@
             this.lnameTxtbox = new System.Windows.Forms.TextBox();
             this.emailLbl = new System.Windows.Forms.Label();
             this.saveBtn = new System.Windows.Forms.Button();
-            this.emailTxtbox = new System.Windows.Forms.TextBox();
-            this.sem = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.repword = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +72,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.repword);
             this.panel2.Controls.Add(this.pword);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.uname);
@@ -153,6 +157,51 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(794, 325);
             this.panel1.TabIndex = 22;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label7.Location = new System.Drawing.Point(16, 155);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 20);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Program: ";
+            // 
+            // sem
+            // 
+            this.sem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sem.FormattingEnabled = true;
+            this.sem.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.sem.Location = new System.Drawing.Point(608, 196);
+            this.sem.Name = "sem";
+            this.sem.Size = new System.Drawing.Size(121, 28);
+            this.sem.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(512, 197);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 20);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Semester";
+            // 
+            // emailTxtbox
+            // 
+            this.emailTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTxtbox.Location = new System.Drawing.Point(154, 287);
+            this.emailTxtbox.Name = "emailTxtbox";
+            this.emailTxtbox.Size = new System.Drawing.Size(215, 26);
+            this.emailTxtbox.TabIndex = 31;
             // 
             // phLbl
             // 
@@ -424,50 +473,25 @@
             this.saveBtn.MouseLeave += new System.EventHandler(this.saveBtn_MouseLeave);
             this.saveBtn.MouseHover += new System.EventHandler(this.saveBtn_MouseHover);
             // 
-            // emailTxtbox
+            // repword
             // 
-            this.emailTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTxtbox.Location = new System.Drawing.Point(154, 287);
-            this.emailTxtbox.Name = "emailTxtbox";
-            this.emailTxtbox.Size = new System.Drawing.Size(215, 26);
-            this.emailTxtbox.TabIndex = 31;
+            this.repword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.repword.Location = new System.Drawing.Point(519, 34);
+            this.repword.Name = "repword";
+            this.repword.Size = new System.Drawing.Size(215, 26);
+            this.repword.TabIndex = 24;
+            this.repword.Text = "123456";
             // 
-            // sem
+            // label12
             // 
-            this.sem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.sem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sem.FormattingEnabled = true;
-            this.sem.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.sem.Location = new System.Drawing.Point(608, 196);
-            this.sem.Name = "sem";
-            this.sem.Size = new System.Drawing.Size(121, 28);
-            this.sem.TabIndex = 33;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(512, 197);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 20);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Semester";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label7.Location = new System.Drawing.Point(16, 155);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 20);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "Program: ";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label12.Location = new System.Drawing.Point(515, 11);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(145, 20);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Confirm Password: ";
             // 
             // addStudent
             // 
@@ -527,5 +551,7 @@
         private System.Windows.Forms.ComboBox sem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox emailTxtbox;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox repword;
     }
 }
