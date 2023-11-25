@@ -47,7 +47,7 @@ namespace EnrollmentSystem
 
         private void studName()
         {
-            var result = db.studName(studId).ToList();
+            var result = db.studFull(studId).ToList();
             if(result!=null && result.Any())
             {
                 foreach(var item in result)
