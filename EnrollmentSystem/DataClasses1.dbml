@@ -214,16 +214,6 @@
       <Column Name="ins_lname" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </ElementType>
   </Function>
-  <Function Name="dbo.checkStud" Method="checkStud">
-    <Parameter Name="fname" Type="System.String" DbType="Text" />
-    <Parameter Name="lname" Type="System.String" DbType="Text" />
-    <ElementType Name="checkStudResult">
-      <Column Name="stud_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="stud_fname" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="stud_mi" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
-      <Column Name="stud_lname" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.delClass" Method="delClass">
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
@@ -749,6 +739,27 @@
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
     <ElementType Name="verifyAdminResult">
       <Column Name="Fullname" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.checkStud" Method="checkStud">
+    <Parameter Name="fname" Type="System.String" DbType="Text" />
+    <Parameter Name="lname" Type="System.String" DbType="Text" />
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="checkStudResult">
+      <Column Name="stud_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="stud_fname" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="stud_mi" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="stud_lname" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="batch_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="stud_status" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.checkStatus" Method="checkStatus">
+    <Parameter Name="fname" Type="System.String" DbType="Text" />
+    <Parameter Name="lname" Type="System.String" DbType="Text" />
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="checkStatusResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

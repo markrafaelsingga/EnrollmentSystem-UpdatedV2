@@ -165,7 +165,9 @@ namespace EnrollmentSystem
 
         private void check()
         {
-            var studCheck = db.checkStud(fnameTxtbox.Text, lnameTxtbox.Text).ToList();
+
+            int batch_id = (int)batch.SelectedValue;
+            var studCheck = db.checkStud(fnameTxtbox.Text, lnameTxtbox.Text,batch_id).ToList();
             if (studCheck != null && studCheck.Any())
             {
                 foreach (var item in studCheck)
