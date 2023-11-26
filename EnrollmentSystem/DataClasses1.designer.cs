@@ -109,11 +109,11 @@ namespace EnrollmentSystem
 			}
 		}
 		
-		public System.Data.Linq.Table<batch> batches
+		public System.Data.Linq.Table<@class> classes
 		{
 			get
 			{
-				return this.GetTable<batch>();
+				return this.GetTable<@class>();
 			}
 		}
 		
@@ -222,8 +222,8 @@ namespace EnrollmentSystem
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.adminID")]
 		public ISingleResult<adminIDResult> adminID([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> u_id)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), u_id);
-			return ((ISingleResult<adminIDResult>)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), crs_code, crs_name, crs_desc, crs_year, sem);
+			return ((int)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.createAcc")]
@@ -289,11 +289,11 @@ namespace EnrollmentSystem
 			return ((ISingleResult<searchInstructorResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.delCrs")]
-		public int delCrs([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string name)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.showClass")]
+		public ISingleResult<showClassResult> showClass()
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name);
-			return ((int)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<showClassResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.showCrs")]
@@ -314,7 +314,7 @@ namespace EnrollmentSystem
 		public int delClass([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
-			return ((int)(result.ReturnValue));
+			return ((ISingleResult<searchInsResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.checkStud")]
@@ -4035,162 +4035,18 @@ namespace EnrollmentSystem
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_id", DbType="Int NOT NULL")]
-		public int stud_id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_desc", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string crs_desc
 		{
 			get
 			{
-				return this._stud_id;
+				return this._crs_desc;
 			}
 			set
 			{
-				if ((this._stud_id != value))
+				if ((this._crs_desc != value))
 				{
-					this._stud_id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_no", DbType="VarChar(5)")]
-		public string stud_no
-		{
-			get
-			{
-				return this._stud_no;
-			}
-			set
-			{
-				if ((this._stud_no != value))
-				{
-					this._stud_no = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_fname", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string stud_fname
-		{
-			get
-			{
-				return this._stud_fname;
-			}
-			set
-			{
-				if ((this._stud_fname != value))
-				{
-					this._stud_fname = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_lname", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string stud_lname
-		{
-			get
-			{
-				return this._stud_lname;
-			}
-			set
-			{
-				if ((this._stud_lname != value))
-				{
-					this._stud_lname = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_mi", DbType="VarChar(1)")]
-		public string stud_mi
-		{
-			get
-			{
-				return this._stud_mi;
-			}
-			set
-			{
-				if ((this._stud_mi != value))
-				{
-					this._stud_mi = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_bday", DbType="Date NOT NULL")]
-		public System.DateTime stud_bday
-		{
-			get
-			{
-				return this._stud_bday;
-			}
-			set
-			{
-				if ((this._stud_bday != value))
-				{
-					this._stud_bday = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_address", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string stud_address
-		{
-			get
-			{
-				return this._stud_address;
-			}
-			set
-			{
-				if ((this._stud_address != value))
-				{
-					this._stud_address = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_phone", DbType="VarChar(11) NOT NULL", CanBeNull=false)]
-		public string stud_phone
-		{
-			get
-			{
-				return this._stud_phone;
-			}
-			set
-			{
-				if ((this._stud_phone != value))
-				{
-					this._stud_phone = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_email", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string stud_email
-		{
-			get
-			{
-				return this._stud_email;
-			}
-			set
-			{
-				if ((this._stud_email != value))
-				{
-					this._stud_email = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_gender", DbType="VarChar(6) NOT NULL", CanBeNull=false)]
-		public string stud_gender
-		{
-			get
-			{
-				return this._stud_gender;
-			}
-			set
-			{
-				if ((this._stud_gender != value))
-				{
-					this._stud_gender = value;
+					this._crs_desc = value;
 				}
 			}
 		}
@@ -4226,19 +4082,183 @@ namespace EnrollmentSystem
 				}
 			}
 		}
+	}
+	
+	public partial class showClassResult
+	{
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_gpa", DbType="Decimal(5,1) NOT NULL")]
-		public decimal stud_gpa
+		private int _class_code;
+		
+		private string _class_section;
+		
+		private System.TimeSpan _class_fromTime;
+		
+		private System.TimeSpan _class_toTime;
+		
+		private string _class_day;
+		
+		private string _crs_name;
+		
+		private string _instructor_name;
+		
+		private string _room_name;
+		
+		public showClassResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_code", DbType="Int NOT NULL")]
+		public int class_code
 		{
 			get
 			{
-				return this._stud_gpa;
+				return this._class_code;
 			}
 			set
 			{
-				if ((this._stud_gpa != value))
+				if ((this._class_code != value))
 				{
-					this._stud_gpa = value;
+					this._class_code = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_section", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string class_section
+		{
+			get
+			{
+				return this._class_section;
+			}
+			set
+			{
+				if ((this._class_section != value))
+				{
+					this._class_section = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_fromTime", DbType="Time NOT NULL")]
+		public System.TimeSpan class_fromTime
+		{
+			get
+			{
+				return this._class_fromTime;
+			}
+			set
+			{
+				if ((this._class_fromTime != value))
+				{
+					this._class_fromTime = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_toTime", DbType="Time NOT NULL")]
+		public System.TimeSpan class_toTime
+		{
+			get
+			{
+				return this._class_toTime;
+			}
+			set
+			{
+				if ((this._class_toTime != value))
+				{
+					this._class_toTime = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_day", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string class_day
+		{
+			get
+			{
+				return this._class_day;
+			}
+			set
+			{
+				if ((this._class_day != value))
+				{
+					this._class_day = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string crs_name
+		{
+			get
+			{
+				return this._crs_name;
+			}
+			set
+			{
+				if ((this._crs_name != value))
+				{
+					this._crs_name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_instructor_name", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string instructor_name
+		{
+			get
+			{
+				return this._instructor_name;
+			}
+			set
+			{
+				if ((this._instructor_name != value))
+				{
+					this._instructor_name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_room_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string room_name
+		{
+			get
+			{
+				return this._room_name;
+			}
+			set
+			{
+				if ((this._room_name != value))
+				{
+					this._room_name = value;
+				}
+			}
+		}
+	}
+	
+	public partial class semListResult
+	{
+		
+		private int _sem_id;
+		
+		private string _sem_level;
+		
+		public semListResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sem_id", DbType="Int NOT NULL")]
+		public int sem_id
+		{
+			get
+			{
+				return this._sem_id;
+			}
+			set
+			{
+				if ((this._sem_id != value))
+				{
+					this._sem_id = value;
 				}
 			}
 		}
@@ -4282,13 +4302,13 @@ namespace EnrollmentSystem
 		{
 			get
 			{
-				return this._stud_id;
+				return this._crs_name;
 			}
 			set
 			{
-				if ((this._stud_id != value))
+				if ((this._crs_name != value))
 				{
-					this._stud_id = value;
+					this._crs_name = value;
 				}
 			}
 		}
@@ -4314,61 +4334,89 @@ namespace EnrollmentSystem
 		{
 			get
 			{
-				return this._stud_fname;
+				return this._ins_no;
 			}
 			set
 			{
-				if ((this._stud_fname != value))
+				if ((this._ins_no != value))
 				{
-					this._stud_fname = value;
+					this._ins_no = value;
+				}
+			}
+		}
+	}
+	
+	public partial class searchStudResult
+	{
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string prog_name
+		{
+			get
+			{
+				return this._prog_name;
+			}
+			set
+			{
+				if ((this._prog_name != value))
+				{
+					this._prog_name = value;
+				}
+			}
+		}
+	}
+	
+	public partial class showClassResult
+	{
+		
+		private int _class_code;
+		
+		private string _class_section;
+		
+		private System.TimeSpan _class_fromTime;
+		
+		private System.TimeSpan _class_toTime;
+		
+		private string _class_day;
+		
+		private string _crs_name;
+		
+		private string _instructor_name;
+		
+		private string _room_name;
+		
+		public showClassResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_code", DbType="Int NOT NULL")]
+		public int class_code
+		{
+			get
+			{
+				return this._class_code;
+			}
+			set
+			{
+				if ((this._class_code != value))
+				{
+					this._class_code = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_lname", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string stud_lname
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_section", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string class_section
 		{
 			get
 			{
-				return this._stud_lname;
+				return this._class_section;
 			}
 			set
 			{
-				if ((this._stud_lname != value))
+				if ((this._class_section != value))
 				{
-					this._stud_lname = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_mi", DbType="VarChar(1)")]
-		public string stud_mi
-		{
-			get
-			{
-				return this._stud_mi;
-			}
-			set
-			{
-				if ((this._stud_mi != value))
-				{
-					this._stud_mi = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_bday", DbType="Date NOT NULL")]
-		public System.DateTime stud_bday
-		{
-			get
-			{
-				return this._stud_bday;
-			}
-			set
-			{
-				if ((this._stud_bday != value))
-				{
-					this._stud_bday = value;
+					this._class_section = value;
 				}
 			}
 		}
@@ -4378,61 +4426,61 @@ namespace EnrollmentSystem
 		{
 			get
 			{
-				return this._stud_address;
+				return this._class_toTime;
 			}
 			set
 			{
-				if ((this._stud_address != value))
+				if ((this._class_toTime != value))
 				{
-					this._stud_address = value;
+					this._class_toTime = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_phone", DbType="VarChar(11) NOT NULL", CanBeNull=false)]
-		public string stud_phone
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_day", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string class_day
 		{
 			get
 			{
-				return this._stud_phone;
+				return this._class_day;
 			}
 			set
 			{
-				if ((this._stud_phone != value))
+				if ((this._class_day != value))
 				{
-					this._stud_phone = value;
+					this._class_day = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_email", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string stud_email
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string crs_name
 		{
 			get
 			{
-				return this._stud_email;
+				return this._crs_name;
 			}
 			set
 			{
-				if ((this._stud_email != value))
+				if ((this._crs_name != value))
 				{
-					this._stud_email = value;
+					this._crs_name = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_gender", DbType="VarChar(6) NOT NULL", CanBeNull=false)]
-		public string stud_gender
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_instructor_name", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string instructor_name
 		{
 			get
 			{
-				return this._stud_gender;
+				return this._instructor_name;
 			}
 			set
 			{
-				if ((this._stud_gender != value))
+				if ((this._instructor_name != value))
 				{
-					this._stud_gender = value;
+					this._instructor_name = value;
 				}
 			}
 		}
@@ -4452,19 +4500,31 @@ namespace EnrollmentSystem
 				}
 			}
 		}
+	}
+	
+	public partial class semListResult
+	{
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string prog_name
+		private int _sem_id;
+		
+		private string _sem_level;
+		
+		public semListResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sem_id", DbType="Int NOT NULL")]
+		public int sem_id
 		{
 			get
 			{
-				return this._prog_name;
+				return this._sem_id;
 			}
 			set
 			{
-				if ((this._prog_name != value))
+				if ((this._sem_id != value))
 				{
-					this._prog_name = value;
+					this._sem_id = value;
 				}
 			}
 		}
@@ -4474,13 +4534,13 @@ namespace EnrollmentSystem
 		{
 			get
 			{
-				return this._year_level;
+				return this._sem_level;
 			}
 			set
 			{
-				if ((this._year_level != value))
+				if ((this._sem_level != value))
 				{
-					this._year_level = value;
+					this._sem_level = value;
 				}
 			}
 		}
@@ -5269,7 +5329,7 @@ namespace EnrollmentSystem
 		
 		private int _admin_id;
 		
-		private decimal _stud_gpa;
+		private int _u_id;
 		
 		private int _year_id;
 		
@@ -5677,6 +5737,34 @@ namespace EnrollmentSystem
 				if ((this._stud_id != value))
 				{
 					this._stud_id = value;
+				}
+			}
+		}
+	}
+	
+	public partial class batchListResult
+	{
+		
+		private int _batch_id;
+		
+		private string _batch_year;
+		
+		public batchListResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_batch_id", DbType="Int NOT NULL")]
+		public int batch_id
+		{
+			get
+			{
+				return this._batch_id;
+			}
+			set
+			{
+				if ((this._batch_id != value))
+				{
+					this._batch_id = value;
 				}
 			}
 		}

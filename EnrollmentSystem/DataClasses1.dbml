@@ -259,7 +259,6 @@
       <Column Name="ins_mi" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="ins_lname" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="ins_dob" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="ins_gender" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
       <Column Name="ins_age" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ins_phone" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
       <Column Name="ins_email" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
@@ -308,6 +307,12 @@
   <Function Name="dbo.delClass" Method="delClass">
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
+      <Column Name="ins_mi" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+  <Function Name="dbo.searchIns" Method="searchIns">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="searchInsResult">
+      <Column Name="ins_no" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+    </ElementType>
   </Function>
   <Function Name="dbo.checkStud" Method="checkStud">
     <Parameter Name="fname" Type="System.String" DbType="Text" />
@@ -506,5 +511,10 @@
       <Column Name="stud_no" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
       <Column Name="List_of_Students" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.acceptEnroll" Method="acceptEnroll">
+    <Parameter Name="key" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>
