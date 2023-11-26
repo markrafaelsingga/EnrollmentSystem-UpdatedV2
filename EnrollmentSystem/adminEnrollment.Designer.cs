@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminEnrollment));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.studidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,15 +49,10 @@
             this.Approve = new System.Windows.Forms.DataGridViewButtonColumn();
             this.viewEnrolleeBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.dbmsDataSet5 = new EnrollmentSystem.dbmsDataSet5();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.search = new System.Windows.Forms.PictureBox();
             this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dbmsDataSet = new EnrollmentSystem.dbmsDataSet();
-            this.viewEnrolleeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.viewEnrolleeTableAdapter = new EnrollmentSystem.dbmsDataSetTableAdapters.viewEnrolleeTableAdapter();
             this.dbmsDataSet1 = new EnrollmentSystem.dbmsDataSet1();
             this.viewEnrolleeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.viewEnrolleeTableAdapter1 = new EnrollmentSystem.dbmsDataSet1TableAdapters.viewEnrolleeTableAdapter();
@@ -72,16 +66,16 @@
             this.viewEnrolleeBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.viewEnrolleeTableAdapter4 = new EnrollmentSystem.dbmsDataSet4TableAdapters.viewEnrolleeTableAdapter();
             this.viewEnrolleeTableAdapter5 = new EnrollmentSystem.dbmsDataSet5TableAdapters.viewEnrolleeTableAdapter();
+            this.dbmsDataSet = new EnrollmentSystem.dbmsDataSet();
+            this.viewEnrolleeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.viewEnrolleeTableAdapter = new EnrollmentSystem.dbmsDataSetTableAdapters.viewEnrolleeTableAdapter();
+            this.dbmsDataSet29 = new EnrollmentSystem.dbmsDataSet29();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet5)).BeginInit();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet2)).BeginInit();
@@ -90,6 +84,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet29)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -98,10 +95,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(71, 192);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Location = new System.Drawing.Point(64, 99);
+            this.panel1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(782, 354);
+            this.panel1.Size = new System.Drawing.Size(1043, 508);
             this.panel1.TabIndex = 2;
             // 
             // dataGridView1
@@ -145,12 +142,12 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(782, 354);
+            this.dataGridView1.Size = new System.Drawing.Size(1043, 508);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -305,18 +302,20 @@
             this.dbmsDataSet5.DataSetName = "dbmsDataSet5";
             this.dbmsDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // flowLayoutPanel2
+            // search
             // 
-            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel2.Controls.Add(this.panel2);
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 98);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 10, 40, 0);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(865, 56);
-            this.flowLayoutPanel2.TabIndex = 6;
+            this.search.Location = new System.Drawing.Point(0, 0);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(100, 50);
+            this.search.TabIndex = 0;
+            this.search.TabStop = false;
+            // 
+            // searchTxtbox
+            // 
+            this.searchTxtbox.Location = new System.Drawing.Point(0, 0);
+            this.searchTxtbox.Name = "searchTxtbox";
+            this.searchTxtbox.Size = new System.Drawing.Size(100, 22);
+            this.searchTxtbox.TabIndex = 0;
             // 
             // flowLayoutPanel1
             // 
@@ -324,35 +323,22 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(40, 20, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(865, 59);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(53, 25, 0, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 73);
             this.flowLayoutPanel1.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(43, 20);
+            this.label1.Location = new System.Drawing.Point(57, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 31);
+            this.label1.Size = new System.Drawing.Size(261, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "ENROLLMENT";
-            // 
-            // dbmsDataSet
-            // 
-            this.dbmsDataSet.DataSetName = "dbmsDataSet";
-            this.dbmsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // viewEnrolleeBindingSource
-            // 
-            this.viewEnrolleeBindingSource.DataMember = "viewEnrollee";
-            this.viewEnrolleeBindingSource.DataSource = this.dbmsDataSet;
-            // 
-            // viewEnrolleeTableAdapter
-            // 
-            this.viewEnrolleeTableAdapter.ClearBeforeFill = true;
             // 
             // dbmsDataSet1
             // 
@@ -414,17 +400,35 @@
             // 
             this.viewEnrolleeTableAdapter5.ClearBeforeFill = true;
             // 
+            // dbmsDataSet
+            // 
+            this.dbmsDataSet.DataSetName = "dbmsDataSet";
+            this.dbmsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // viewEnrolleeBindingSource
+            // 
+            this.viewEnrolleeBindingSource.DataMember = "viewEnrollee";
+            this.viewEnrolleeBindingSource.DataSource = this.dbmsDataSet;
+            // 
+            // viewEnrolleeTableAdapter
+            // 
+            this.viewEnrolleeTableAdapter.ClearBeforeFill = true;
+            // 
+            // dbmsDataSet29
+            // 
+            this.dbmsDataSet29.DataSetName = "dbmsDataSet29";
+            this.dbmsDataSet29.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // adminEnrollment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(865, 541);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1153, 666);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "adminEnrollment";
             this.Text = "adminEnrollment";
             this.Load += new System.EventHandler(this.adminEnrollment_Load);
@@ -432,14 +436,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet5)).EndInit();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet2)).EndInit();
@@ -448,6 +447,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet29)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -456,7 +458,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource viewEnrolleeBindingSource;
@@ -477,6 +478,9 @@
         private System.Windows.Forms.BindingSource viewEnrolleeBindingSource5;
         private dbmsDataSet5 dbmsDataSet5;
         private dbmsDataSet5TableAdapters.viewEnrolleeTableAdapter viewEnrolleeTableAdapter5;
+        private System.Windows.Forms.PictureBox search;
+        private System.Windows.Forms.TextBox searchTxtbox;
+        private dbmsDataSet29 dbmsDataSet29;
         private System.Windows.Forms.DataGridViewTextBoxColumn studidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studfnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studlnameDataGridViewTextBoxColumn;
@@ -491,8 +495,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn studstatusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prognameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Approve;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox search;
-        private System.Windows.Forms.TextBox searchTxtbox;
     }
 }

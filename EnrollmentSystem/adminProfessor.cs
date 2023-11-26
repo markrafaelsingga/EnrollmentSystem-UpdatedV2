@@ -87,31 +87,42 @@ namespace EnrollmentSystem
         {
             updateProfessor editprofessor = new updateProfessor(verId);
 
-            // Set properties before showing the form
-            editprofessor.ID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            editprofessor.FirstName = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            editprofessor.MI = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            editprofessor.LastName = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            var currentRow = dataGridView1.CurrentRow;
+
+            if (currentRow != null)
+            {
+
+                // Set properties before showing the form
+                editprofessor.ID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                editprofessor.FirstName = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                editprofessor.MI = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                editprofessor.LastName = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             
 
-            // Parse Birthdate (assuming it's stored as a DateTime in the DataGridView)
-            if (DateTime.TryParse(dataGridView1.CurrentRow.Cells[5].Value?.ToString(), out var birthdate))
-            {
-                editprofessor.Birthdate = birthdate;
+                // Parse Birthdate (assuming it's stored as a DateTime in the DataGridView)
+                if (DateTime.TryParse(dataGridView1.CurrentRow.Cells[5].Value?.ToString(), out var birthdate))
+                {
+                    editprofessor.Birthdate = birthdate;
+                }
+                else
+                {
+                    // Handle parsing failure or set a default value
+                    editprofessor.Birthdate = DateTime.MinValue;
+                }
+
+                editprofessor.Phone = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+                editprofessor.Email = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+                editprofessor.Gender = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+
+                // Now show the form
+                editprofessor.FormClosed += Editprofessor_FormClosed;
+                editprofessor.ShowDialog();
             }
             else
             {
-                // Handle parsing failure or set a default value
-                editprofessor.Birthdate = DateTime.MinValue;
+                // Handle the case when currentRow is null
+                MessageBox.Show("No selected instructor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            editprofessor.Phone = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-            editprofessor.Email = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-            editprofessor.Gender = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-
-            // Now show the form
-            editprofessor.FormClosed += Editprofessor_FormClosed;
-            editprofessor.ShowDialog();
         }
 
 
@@ -122,24 +133,41 @@ namespace EnrollmentSystem
 
         private void delete_Click(object sender, EventArgs e)
         {
-            id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            insNumber = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            var currentRow = dataGridView1.CurrentRow;
+
             try
             {
-                if (int.TryParse(id.ToString(), out int instructor_id))
+                if (currentRow != null)
                 {
-                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete \" Instructor no. " + insNumber + " \"?", "Confirmation", MessageBoxButtons.YesNo);
-
-                    if (dialogResult == DialogResult.Yes)
+                    id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                    insNumber = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                    try
                     {
-                        db.insDel(instructor_id);
-                        MessageBox.Show("Successfully deleted!!", "DELETED");
-                        display();
+                        if (int.TryParse(id.ToString(), out int instructor_id))
+                        {
+                            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete \" Instructor no. " + insNumber + " \"?", "Confirmation", MessageBoxButtons.YesNo);
+
+                            if (dialogResult == DialogResult.Yes)
+                            {
+                                db.insDel(instructor_id);
+                                MessageBox.Show("Successfully deleted!!", "DELETED");
+                                display();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid 'id' value. Please enter a valid integer.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Invalid 'id' value. Please enter a valid integer.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Handle the case when currentRow is null
+                    MessageBox.Show("No selected instructor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -179,11 +207,6 @@ namespace EnrollmentSystem
             {
                 MessageBox.Show("No Instructor Found!");
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

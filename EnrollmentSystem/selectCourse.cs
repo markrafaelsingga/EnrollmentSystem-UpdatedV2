@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EnrollmentSystem
 {
-    public partial class addEnrollment : Form
+    public partial class selectCourse : Form
     {
-        public addEnrollment()
+        public selectCourse()
         {
             InitializeComponent();
         }

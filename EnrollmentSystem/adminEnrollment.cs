@@ -18,7 +18,7 @@ namespace EnrollmentSystem
         {
             InitializeComponent();
             this.verId = verId;
-            dataGridView1.DataSource = db.viewEnrollee(verId);
+            display();
         }
         DataClasses1DataContext db = new DataClasses1DataContext();
         private void adminEnrollment_Load(object sender, EventArgs e)
@@ -45,13 +45,10 @@ namespace EnrollmentSystem
                 db.acceptEnroll(approve, id);
                 display();
             }
-
-
-
         }
         private void display()
         {
-            dataGridView1.DataSource = db.viewEnrollee(verId);
+            dataGridView1.DataSource = db.viewEnrollee();
         }
     }
 }

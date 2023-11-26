@@ -47,14 +47,14 @@ namespace EnrollmentSystem
 
         private void studName()
         {
-            var result = db.studFull(studId).ToList();
-            if(result!=null && result.Any())
-            {
-                foreach(var item in result)
-                {
-                    userFname.Text = item.Fullname;
-                }
-            }
+            //var result = db.studFull(studId).ToList();
+            //if(result!=null && result.Any())
+            //{
+            //    foreach(var item in result)
+            //    {
+            //        userFname.Text = item.Fullname;
+            //    }
+            //}
         }
 
         private void homeBtn_Click(object sender, EventArgs e)

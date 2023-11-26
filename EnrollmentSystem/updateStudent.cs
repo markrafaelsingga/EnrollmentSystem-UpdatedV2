@@ -151,46 +151,55 @@ namespace EnrollmentSystem
         {
             PopulateProgramList();
 
-            idTxtbox.Text = ID.ToString();
-            fnameTxtbox.Text = FirstName;
-            lnameTxtbox.Text = LastName;
-            miTxtbox.Text = MI;
-
-            // Check if Birthdate is not null before assigning to the DateTimePicker
-           /* if (Birthdate.HasValue)
+            try
             {
-                birthdatePicker.Value = Birthdate.Value;
-            }*/
+                idTxtbox.Text = ID.ToString();
+                fnameTxtbox.Text = FirstName;
+                lnameTxtbox.Text = LastName;
+                miTxtbox.Text = MI;
 
-            // Find the index of the item with the specified ProgName
-            int index = course.FindString(ProgName);
+                // Check if Birthdate is not null before assigning to the DateTimePicker
+                if (Birthdate.HasValue)
+                {
+                    birthdatePicker.Value = Birthdate.Value;
+                }
 
-            // Set the selected item based on the found index
-            if (index != -1)
+                // Find the index of the item with the specified ProgName
+                int index = course.FindString(ProgName);
+
+                // Set the selected item based on the found index
+                if (index != -1)
+                {
+                    course.SelectedIndex = index;
+                }
+
+                addressTxtbox.Text = Address;
+                phone.Text = Phone;
+                emailtextBox.Text = Email;
+                gender.SelectedItem = Gender;
+                yr.SelectedItem = YearLevel;
+
+                // GPA is a decimal, validate it before setting the Text property
+                if (GPA.HasValue)
+                {
+                    gpa.Text = GPA.ToString();
+                }
+                else
+                {
+                    gpa.Text = string.Empty; // or set a default value if appropriate
+                }
+            }
+            catch (Exception ex)
             {
-                course.SelectedIndex = index;
+                // Handle the exception
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            addressTxtbox.Text = Address;
-            phone.Text = Phone;
-            emailtextBox.Text = Email;
-            gender.SelectedItem = Gender;
-            yr.SelectedItem = YearLevel;
-
-            // Assuming GPA is a decimal, validate it before setting the Text property
-            if (GPA.HasValue)
-            {
-                gpa.Text = GPA.ToString();
-            }
-            else
-            {
-                gpa.Text = string.Empty; // or set a default value if appropriate
-            }
         }
 
         private void PopulateProgramList()
         {
-            course.DataSource = db.progList().ToList();
+            course.DataSource = db.programs.ToList();
             course.DisplayMember = "prog_name";
             course.ValueMember = "prog_id";
         }

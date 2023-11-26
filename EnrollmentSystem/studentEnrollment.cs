@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EnrollmentSystem
 {
@@ -22,10 +23,12 @@ namespace EnrollmentSystem
         {
             InitializeComponent();
             this.studId = studId;
+
+            fillFields();
             cBox();
          
 
-            var result = db.studwithAdmin(studId).ToList();
+            var result = db.getStud(studId).ToList();
             if (result != null && result.Any())
             {
                 foreach (var item in result)
@@ -34,38 +37,27 @@ namespace EnrollmentSystem
                 }
             }
 
-            fillFields();
         }
 
         private void cBox()
         {
-            batch.DataSource = db.batchList().ToList();
-            batch.DisplayMember = "batch_year";
-            batch.ValueMember = "batch_id";
-
-            sem.DataSource = db.semList().ToList();
-            sem.DisplayMember = "sem_level";
-            sem.ValueMember = "sem_id";
-/*
-            yr.DataSource = db.yearList().ToList();
+            yr.DataSource = db.years.ToList();
             yr.DisplayMember = "year_level";
-            yr.ValueMember = "year_id";*/
+            yr.ValueMember = "year_id";
 
-            program.DataSource = db.progList().ToList();
+            program.DataSource = db.programs.ToList();
             program.DisplayMember = "prog_name";
             program.ValueMember = "prog_id";
 
-            batch.DataSource = db.batchList().ToList();
-            batch.DisplayMember = "batch_year";
-            batch.ValueMember = "batch_id";
-
-      
+            sy.DataSource = db.getSchoolyear().ToList();
+            sy.DisplayMember = "currentSy";
+            sy.ValueMember = "sy_id";
         }
 
         private void studentEnrollment_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dbmsDataSet28.yearList' table. You can move, or remove it, as needed.
-            this.yearListTableAdapter.Fill(this.dbmsDataSet28.yearList);
+            //this.yearListTableAdapter.Fill(this.dbmsDataSet28.yearList);
             this.ControlBox = false;
         }
 
@@ -81,48 +73,71 @@ namespace EnrollmentSystem
 
         private void fillFields()
         {
-            var result = db.studName(studId).ToList();
-            if (result != null && result.Any())
+            var result = db.getStud(studId).ToList();
+            var current = db.getSchoolyear().OrderByDescending(x => x.sy_id).FirstOrDefault();
+            if (current != null)
             {
-                foreach(var item in result)
+                sy.SelectedValue = current.currentSy;
+                if (result != null && result.Any())
                 {
-                    fnameTxtbox.Text = item.stud_fname;
-                    mitextBox.Text = item.stud_mi;
-                    lnameTxtbox.Text = item.stud_lname;
-                    dateTimePicker1.Value = item.stud_bday;
-                    phoneTxtbox.Text = item.stud_phone;
-                    emailTxtbox.Text = item.stud_email;
-                    gen.Text = item.stud_gender;
-                    batch.SelectedValue = item.batch_id;
-                   /* yr.SelectedValue = item.year_id;*/
-                    /*sem.SelectedValue = item.sem_id;*/
-                    gpa.Text = item.stud_gpa.ToString();
-                    user_Id = item.u_id;
-                    /*batchId = item.batch_id;*/
+                    foreach (var item in result)
+                    {
+                        fnameTxtbox.Text = item.stud_fname;
+                        mitextBox.Text = item.stud_mi;
+                        lnameTxtbox.Text = item.stud_lname;
+                        phoneTxtbox.Text = item.stud_phone;
+                        emailTxtbox.Text = item.stud_email;
+                        yr.SelectedValue = item.year_id;
+                        gpa.Text = item.stud_gpa.ToString();
+                        program.SelectedValue = item.prog_id;
+                        user_Id = item.u_id;
+                    }
+                    
                 }
             }
+            else
+            {
+                MessageBox.Show("No school year is set", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                label1.Text = "No enrollment at the moment";
+                flowLayoutPanel4.Visible = false;
+            }
+            
         }
           
         private void saveBtn_Click(object sender, EventArgs e)
         {
             cBox();
-
+            var sem = db.schoolyears.OrderByDescending(x => x.sy_id).FirstOrDefault();
+            var check = db.enrollments.ToList();
             int progId = (int)program.SelectedValue;
             int yrId = (int)yr.SelectedValue;
-            batchId = (int)batch.SelectedValue;
-            try
+            try 
             {
-                db.enrollExisting(studId, fnameTxtbox.Text, lnameTxtbox.Text, mitextBox.Text, dateTimePicker1.Value, phoneTxtbox.Text, emailTxtbox.Text, gen.Text, yrId, Decimal.Parse(gpa.Text), progId, user_Id, adminId, batchId);
+                if (check == null && check.Any())
+                {
+                    MessageBox.Show("You already submitted the enrollment form", "Already submitted");
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Are you enrolling to a regular load?", "Regular load or not?", MessageBoxButtons.YesNo);
+                    // The student is regular so it will automatically pick the course to enroll
+                    if (result == DialogResult.Yes)
+                    {
+                        db.updateInfostud(studId, phoneTxtbox.Text, emailTxtbox.Text, Convert.ToDecimal(gpa.Text), yrId, progId);
+                        
+                    }
+                    // The student is irregular so he/she will pick the course to enroll
+                    else
+                    {
+                        selectCourse select = new selectCourse();
+                        select.ShowDialog();
+                    }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
-        }
-
-        private void flowLayoutPanel4_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

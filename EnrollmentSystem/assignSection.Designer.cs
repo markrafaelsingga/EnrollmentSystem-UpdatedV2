@@ -1,6 +1,6 @@
 ﻿namespace EnrollmentSystem
 {
-    partial class studentEnrollment
+    partial class assignSection
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.saveBtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.emailLbl = new System.Windows.Forms.Label();
             this.lnameTxtbox = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.fnameTxtbox = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.mitextBox = new System.Windows.Forms.TextBox();
@@ -50,93 +49,81 @@
             this.panel23 = new System.Windows.Forms.Panel();
             this.gpa = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.sy = new System.Windows.Forms.ComboBox();
             this.panel19 = new System.Windows.Forms.Panel();
             this.yr = new System.Windows.Forms.ComboBox();
-            this.yearListBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dbmsDataSet28 = new EnrollmentSystem.dbmsDataSet28();
             this.label8 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
             this.program = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.saveBtn = new System.Windows.Forms.Button();
-            this.yearListTableAdapter = new EnrollmentSystem.dbmsDataSet28TableAdapters.yearListTableAdapter();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.section = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel23.SuspendLayout();
-            this.panel15.SuspendLayout();
             this.panel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.yearListBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet28)).BeginInit();
             this.panel21.SuspendLayout();
-            this.panel27.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // saveBtn
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
-            this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.ForeColor = System.Drawing.SystemColors.Control;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(53, 49, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1026, 98);
-            this.flowLayoutPanel1.TabIndex = 15;
+            this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveBtn.Location = new System.Drawing.Point(665, 403);
+            this.saveBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(172, 39);
+            this.saveBtn.TabIndex = 23;
+            this.saveBtn.Text = "ASSIGN";
+            this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(57, 49);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ENROLLMENT";
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label2.Location = new System.Drawing.Point(48, 71);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(162, 25);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Select student id:";
             // 
-            // flowLayoutPanel4
+            // id
             // 
-            this.flowLayoutPanel4.AutoScroll = true;
-            this.flowLayoutPanel4.AutoScrollMinSize = new System.Drawing.Size(0, 600);
-            this.flowLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
-            this.flowLayoutPanel4.Controls.Add(this.panel2);
-            this.flowLayoutPanel4.Controls.Add(this.panel4);
-            this.flowLayoutPanel4.Controls.Add(this.panel7);
-            this.flowLayoutPanel4.Controls.Add(this.panel10);
-            this.flowLayoutPanel4.Controls.Add(this.panel12);
-            this.flowLayoutPanel4.Controls.Add(this.panel23);
-            this.flowLayoutPanel4.Controls.Add(this.panel15);
-            this.flowLayoutPanel4.Controls.Add(this.panel19);
-            this.flowLayoutPanel4.Controls.Add(this.panel21);
-            this.flowLayoutPanel4.Controls.Add(this.panel27);
-            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 98);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Padding = new System.Windows.Forms.Padding(60, 30, 0, 0);
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(1026, 568);
-            this.flowLayoutPanel4.TabIndex = 18;
+            this.id.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id.FormattingEnabled = true;
+            this.id.Location = new System.Drawing.Point(53, 100);
+            this.id.Margin = new System.Windows.Forms.Padding(4);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(284, 33);
+            this.id.TabIndex = 22;
+            this.id.SelectedIndexChanged += new System.EventHandler(this.id_SelectedIndexChanged);
             // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.Controls.Add(this.emailLbl);
             this.panel2.Controls.Add(this.lnameTxtbox);
-            this.panel2.Location = new System.Drawing.Point(70, 40);
+            this.panel2.Location = new System.Drawing.Point(53, 161);
             this.panel2.Margin = new System.Windows.Forms.Padding(10);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(248, 56);
-            this.panel2.TabIndex = 25;
+            this.panel2.Size = new System.Drawing.Size(248, 62);
+            this.panel2.TabIndex = 58;
             // 
             // emailLbl
             // 
@@ -155,7 +142,7 @@
             this.lnameTxtbox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lnameTxtbox.Enabled = false;
             this.lnameTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnameTxtbox.Location = new System.Drawing.Point(0, 26);
+            this.lnameTxtbox.Location = new System.Drawing.Point(0, 32);
             this.lnameTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.lnameTxtbox.Name = "lnameTxtbox";
             this.lnameTxtbox.Size = new System.Drawing.Size(248, 30);
@@ -164,35 +151,35 @@
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.fnameTxtbox);
-            this.panel4.Location = new System.Drawing.Point(338, 41);
+            this.panel4.Location = new System.Drawing.Point(321, 161);
             this.panel4.Margin = new System.Windows.Forms.Padding(10);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(248, 54);
-            this.panel4.TabIndex = 26;
+            this.panel4.Size = new System.Drawing.Size(248, 61);
+            this.panel4.TabIndex = 59;
             // 
-            // label2
+            // label1
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(1, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 25);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Firstname:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(1, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Firstname:";
             // 
             // fnameTxtbox
             // 
             this.fnameTxtbox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.fnameTxtbox.Enabled = false;
             this.fnameTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fnameTxtbox.Location = new System.Drawing.Point(0, 24);
+            this.fnameTxtbox.Location = new System.Drawing.Point(0, 31);
             this.fnameTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.fnameTxtbox.Name = "fnameTxtbox";
             this.fnameTxtbox.Size = new System.Drawing.Size(248, 30);
@@ -203,18 +190,18 @@
             this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel7.Controls.Add(this.mitextBox);
             this.panel7.Controls.Add(this.label3);
-            this.panel7.Location = new System.Drawing.Point(606, 42);
+            this.panel7.Location = new System.Drawing.Point(589, 161);
             this.panel7.Margin = new System.Windows.Forms.Padding(10);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(248, 52);
-            this.panel7.TabIndex = 27;
+            this.panel7.Size = new System.Drawing.Size(248, 60);
+            this.panel7.TabIndex = 60;
             // 
             // mitextBox
             // 
             this.mitextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.mitextBox.Enabled = false;
             this.mitextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mitextBox.Location = new System.Drawing.Point(0, 22);
+            this.mitextBox.Location = new System.Drawing.Point(0, 30);
             this.mitextBox.Margin = new System.Windows.Forms.Padding(4);
             this.mitextBox.Name = "mitextBox";
             this.mitextBox.Size = new System.Drawing.Size(248, 30);
@@ -237,17 +224,18 @@
             this.panel10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel10.Controls.Add(this.phoneTxtbox);
             this.panel10.Controls.Add(this.label5);
-            this.panel10.Location = new System.Drawing.Point(70, 119);
+            this.panel10.Location = new System.Drawing.Point(53, 241);
             this.panel10.Margin = new System.Windows.Forms.Padding(10);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(248, 57);
-            this.panel10.TabIndex = 29;
+            this.panel10.Size = new System.Drawing.Size(248, 62);
+            this.panel10.TabIndex = 61;
             // 
             // phoneTxtbox
             // 
             this.phoneTxtbox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.phoneTxtbox.Enabled = false;
             this.phoneTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneTxtbox.Location = new System.Drawing.Point(0, 27);
+            this.phoneTxtbox.Location = new System.Drawing.Point(0, 32);
             this.phoneTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.phoneTxtbox.Name = "phoneTxtbox";
             this.phoneTxtbox.Size = new System.Drawing.Size(248, 30);
@@ -273,17 +261,18 @@
             this.panel12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel12.Controls.Add(this.emailTxtbox);
             this.panel12.Controls.Add(this.label6);
-            this.panel12.Location = new System.Drawing.Point(338, 120);
+            this.panel12.Location = new System.Drawing.Point(321, 241);
             this.panel12.Margin = new System.Windows.Forms.Padding(10);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(248, 54);
-            this.panel12.TabIndex = 30;
+            this.panel12.Size = new System.Drawing.Size(248, 60);
+            this.panel12.TabIndex = 62;
             // 
             // emailTxtbox
             // 
             this.emailTxtbox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.emailTxtbox.Enabled = false;
             this.emailTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTxtbox.Location = new System.Drawing.Point(0, 24);
+            this.emailTxtbox.Location = new System.Drawing.Point(0, 30);
             this.emailTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.emailTxtbox.Name = "emailTxtbox";
             this.emailTxtbox.Size = new System.Drawing.Size(248, 30);
@@ -308,17 +297,18 @@
             // 
             this.panel23.Controls.Add(this.gpa);
             this.panel23.Controls.Add(this.label14);
-            this.panel23.Location = new System.Drawing.Point(606, 116);
+            this.panel23.Location = new System.Drawing.Point(589, 241);
             this.panel23.Margin = new System.Windows.Forms.Padding(10);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(248, 63);
-            this.panel23.TabIndex = 57;
+            this.panel23.Size = new System.Drawing.Size(248, 65);
+            this.panel23.TabIndex = 66;
             // 
             // gpa
             // 
             this.gpa.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gpa.Enabled = false;
             this.gpa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpa.Location = new System.Drawing.Point(0, 33);
+            this.gpa.Location = new System.Drawing.Point(0, 35);
             this.gpa.Margin = new System.Windows.Forms.Padding(4);
             this.gpa.Name = "gpa";
             this.gpa.Size = new System.Drawing.Size(248, 30);
@@ -336,62 +326,22 @@
             this.label14.TabIndex = 47;
             this.label14.Text = "GPA:";
             // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.label15);
-            this.panel15.Controls.Add(this.sy);
-            this.panel15.Location = new System.Drawing.Point(70, 199);
-            this.panel15.Margin = new System.Windows.Forms.Padding(10);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(516, 63);
-            this.panel15.TabIndex = 44;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label15.Location = new System.Drawing.Point(4, 1);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(182, 25);
-            this.label15.TabIndex = 48;
-            this.label15.Text = "Year and semester:";
-            // 
-            // sy
-            // 
-            this.sy.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.sy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.sy.Enabled = false;
-            this.sy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sy.FormattingEnabled = true;
-            this.sy.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.sy.Location = new System.Drawing.Point(0, 30);
-            this.sy.Margin = new System.Windows.Forms.Padding(4);
-            this.sy.Name = "sy";
-            this.sy.Size = new System.Drawing.Size(516, 33);
-            this.sy.TabIndex = 28;
-            // 
             // panel19
             // 
             this.panel19.Controls.Add(this.yr);
             this.panel19.Controls.Add(this.label8);
-            this.panel19.Location = new System.Drawing.Point(606, 199);
+            this.panel19.Location = new System.Drawing.Point(53, 323);
             this.panel19.Margin = new System.Windows.Forms.Padding(10);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(248, 63);
-            this.panel19.TabIndex = 53;
+            this.panel19.TabIndex = 64;
             // 
             // yr
             // 
-            this.yr.DataSource = this.yearListBindingSource;
             this.yr.DisplayMember = "year_level";
             this.yr.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.yr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.yr.Enabled = false;
             this.yr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yr.FormattingEnabled = true;
             this.yr.Location = new System.Drawing.Point(0, 30);
@@ -400,16 +350,6 @@
             this.yr.Size = new System.Drawing.Size(248, 33);
             this.yr.TabIndex = 23;
             this.yr.ValueMember = "year_id";
-            // 
-            // yearListBindingSource
-            // 
-            this.yearListBindingSource.DataMember = "yearList";
-            this.yearListBindingSource.DataSource = this.dbmsDataSet28;
-            // 
-            // dbmsDataSet28
-            // 
-            this.dbmsDataSet28.DataSetName = "dbmsDataSet28";
-            this.dbmsDataSet28.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label8
             // 
@@ -427,16 +367,17 @@
             // 
             this.panel21.Controls.Add(this.program);
             this.panel21.Controls.Add(this.label9);
-            this.panel21.Location = new System.Drawing.Point(70, 282);
+            this.panel21.Location = new System.Drawing.Point(321, 323);
             this.panel21.Margin = new System.Windows.Forms.Padding(10);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(248, 63);
-            this.panel21.TabIndex = 55;
+            this.panel21.TabIndex = 65;
             // 
             // program
             // 
             this.program.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.program.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.program.Enabled = false;
             this.program.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.program.FormattingEnabled = true;
             this.program.Items.AddRange(new object[] {
@@ -462,43 +403,69 @@
             this.label9.TabIndex = 46;
             this.label9.Text = "Course program:";
             // 
-            // panel27
+            // panel1
             // 
-            this.panel27.Controls.Add(this.saveBtn);
-            this.panel27.Location = new System.Drawing.Point(338, 282);
-            this.panel27.Margin = new System.Windows.Forms.Padding(10);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(125, 63);
-            this.panel27.TabIndex = 59;
+            this.panel1.Controls.Add(this.section);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Location = new System.Drawing.Point(589, 326);
+            this.panel1.Margin = new System.Windows.Forms.Padding(10);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(248, 63);
+            this.panel1.TabIndex = 65;
             // 
-            // saveBtn
+            // section
             // 
-            this.saveBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBtn.Location = new System.Drawing.Point(0, 28);
-            this.saveBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(125, 35);
-            this.saveBtn.TabIndex = 25;
-            this.saveBtn.Text = "SAVE";
-            this.saveBtn.UseVisualStyleBackColor = true;
-            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            this.section.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.section.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.section.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.section.FormattingEnabled = true;
+            this.section.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "1A",
+            "1B"});
+            this.section.Location = new System.Drawing.Point(0, 30);
+            this.section.Margin = new System.Windows.Forms.Padding(4);
+            this.section.Name = "section";
+            this.section.Size = new System.Drawing.Size(248, 33);
+            this.section.TabIndex = 24;
             // 
-            // yearListTableAdapter
+            // label4
             // 
-            this.yearListTableAdapter.ClearBeforeFill = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label4.Location = new System.Drawing.Point(4, 1);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 25);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "Section:";
             // 
-            // studentEnrollment
+            // assignSection
             // 
-            this.ClientSize = new System.Drawing.Size(1026, 666);
-            this.Controls.Add(this.flowLayoutPanel4);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "studentEnrollment";
-            this.Load += new System.EventHandler(this.studentEnrollment_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
-            this.flowLayoutPanel4.ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
+            this.ClientSize = new System.Drawing.Size(878, 540);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.panel12);
+            this.Controls.Add(this.panel23);
+            this.Controls.Add(this.panel19);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel21);
+            this.Controls.Add(this.saveBtn);
+            this.Controls.Add(this.id);
+            this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "assignSection";
+            this.Text = "ASSIGN SECTION TO A STUDENT:";
+            this.Load += new System.EventHandler(this.assignSection_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -511,30 +478,26 @@
             this.panel12.PerformLayout();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.yearListBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet28)).EndInit();
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
-            this.panel27.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
-
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox id;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label emailLbl;
         private System.Windows.Forms.TextBox lnameTxtbox;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox fnameTxtbox;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox mitextBox;
@@ -545,22 +508,17 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.TextBox emailTxtbox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox sy;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.TextBox gpa;
+        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.ComboBox yr;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.ComboBox program;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Panel panel27;
-        private System.Windows.Forms.Button saveBtn;
-        private System.Windows.Forms.TextBox gpa;
-        private dbmsDataSet28 dbmsDataSet28;
-        private System.Windows.Forms.BindingSource yearListBindingSource;
-        private dbmsDataSet28TableAdapters.yearListTableAdapter yearListTableAdapter;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox section;
+        private System.Windows.Forms.Label label4;
     }
 }

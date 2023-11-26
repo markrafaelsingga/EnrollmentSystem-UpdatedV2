@@ -13,7 +13,6 @@ namespace EnrollmentSystem
     public partial class studentHome : Form
     {
         DataClasses1DataContext db = new DataClasses1DataContext();
-        private int id;
         private int studId;
         public studentHome()
         {
@@ -24,7 +23,7 @@ namespace EnrollmentSystem
         {
             this.ControlBox = false;
 
-           /* var sy = db.schoolyears.OrderByDescending(x => x.sy_id).FirstOrDefault();
+            var sy = db.schoolyears.OrderByDescending(x => x.sy_id).FirstOrDefault();
 
             if (sy != null)
             {
@@ -37,7 +36,7 @@ namespace EnrollmentSystem
             else
             {
                 Console.WriteLine("No batches found in the table.");
-            }*/
+            }
         }
     }
 }

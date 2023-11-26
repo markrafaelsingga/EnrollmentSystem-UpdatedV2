@@ -16,20 +16,16 @@ namespace EnrollmentSystem
     public partial class signIn_student : Form
     {
         int adminId;
-        string insFname, insLname, studFname, studLname;
+        string studFname, studLname;
         int u_id;
         public signIn_student()
         {
             InitializeComponent();
-            program.DataSource = db.progList().ToList();
+            program.DataSource = db.programs.ToList();
             program.DisplayMember = "prog_name";
             program.ValueMember = "prog_id";
 
-            batch.DataSource = db.batchList().ToList();
-            batch.DisplayMember = "batch_year";
-            batch.ValueMember = "batch_id";
-
-            yr.DataSource = db.yearList().ToList();
+            yr.DataSource = db.years.ToList();
             yr.DisplayMember = "year_level";
             yr.ValueMember = "year_id";
 
@@ -105,7 +101,7 @@ namespace EnrollmentSystem
             }
         }
 
-      
+
 
         private void signinBtn_Click(object sender, EventArgs e)
         {
@@ -119,7 +115,7 @@ namespace EnrollmentSystem
                         string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
                         string eadd = emailtextBox.Text;
                         db.createAcc(uname.Text, repword.Text);
-                        var result = db.accId(uname.Text,repword.Text);
+                        var result = db.accId(uname.Text);
                         string phpattern = @"^(\+63|09)\d{9}$";
                         string pNo = phone.Text;
                         if (Regex.IsMatch(pNo, phpattern, RegexOptions.IgnoreCase) && Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase))
@@ -131,12 +127,11 @@ namespace EnrollmentSystem
                                 id = item.u_id;
                                 decimal grade = Convert.ToDecimal(gpa.Text);
                                 int prog_id = (int)program.SelectedValue;
-                                int batch_id = (int)batch.SelectedValue;
                                 string gen = gender.SelectedItem.ToString();
                                 int yrs = (int)yr.SelectedValue;
 
 
-                                db.pinakaNewEnrollStudent(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, birthdatePicker.Value, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, yrs, grade, prog_id, id, 1, batch_id);
+                                db.newStudent(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, birthdatePicker.Value, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, yrs, grade, prog_id, id, 1);
                                 MessageBox.Show("Successfully enrolled!", "Done");
 
                                 login back = new login();

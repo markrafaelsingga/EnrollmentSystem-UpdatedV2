@@ -46,8 +46,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.section = new System.Windows.Forms.TextBox();
             this.saveBtn = new System.Windows.Forms.Button();
+            this.section = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,7 @@
             this.panel1.Controls.Add(this.prog);
             this.panel1.Controls.Add(this.prof);
             this.panel1.Controls.Add(this.day);
+            this.panel1.Controls.Add(this.section);
             this.panel1.Controls.Add(this.room);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.subjectcomboBox);
@@ -74,7 +75,6 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.section);
             this.panel1.Location = new System.Drawing.Point(32, 30);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
@@ -321,18 +321,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Section:";
             // 
-            // section
-            // 
-            this.section.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.section.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section.Location = new System.Drawing.Point(27, 43);
-            this.section.Margin = new System.Windows.Forms.Padding(4);
-            this.section.Name = "section";
-            this.section.Size = new System.Drawing.Size(285, 30);
-            this.section.TabIndex = 3;
-            // 
             // saveBtn
             // 
             this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -349,6 +337,25 @@
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             this.saveBtn.MouseLeave += new System.EventHandler(this.saveBtn_MouseLeave);
             this.saveBtn.MouseHover += new System.EventHandler(this.saveBtn_MouseHover);
+            // 
+            // section
+            // 
+            this.section.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.section.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.section.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.section.FormattingEnabled = true;
+            this.section.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "1A",
+            "1B"});
+            this.section.Location = new System.Drawing.Point(29, 44);
+            this.section.Margin = new System.Windows.Forms.Padding(4);
+            this.section.Name = "section";
+            this.section.Size = new System.Drawing.Size(289, 33);
+            this.section.TabIndex = 20;
             // 
             // addClass
             // 
@@ -389,10 +396,10 @@
         private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox room;
-        private System.Windows.Forms.TextBox section;
         private System.Windows.Forms.TextBox day;
         private System.Windows.Forms.ComboBox prof;
         private System.Windows.Forms.ComboBox prog;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox section;
     }
 }

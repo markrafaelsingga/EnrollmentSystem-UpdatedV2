@@ -85,21 +85,32 @@ namespace EnrollmentSystem
         {
             updateClass classupdate = new updateClass(verId);
 
-            classupdate.Code = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            classupdate.Section = dataGridView1.CurrentRow.Cells[1].Value.ToString();
 
-            // Parse string values to DateTime objects
-            classupdate.from = DateTime.Parse(dataGridView1.CurrentRow.Cells[2].Value.ToString());
-            classupdate.to = DateTime.Parse(dataGridView1.CurrentRow.Cells[3].Value.ToString());
+            var currentRow = dataGridView1.CurrentRow;
 
-            classupdate.Day = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            classupdate.Course = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            classupdate.Instructor = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            classupdate.Room = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            if (currentRow != null)
+            {
+                classupdate.Code = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                classupdate.Section = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+
+                // Parse string values to DateTime objects
+                classupdate.from = DateTime.Parse(dataGridView1.CurrentRow.Cells[2].Value.ToString());
+                classupdate.to = DateTime.Parse(dataGridView1.CurrentRow.Cells[3].Value.ToString());
+
+                classupdate.Day = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                classupdate.Course = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                classupdate.Instructor = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                classupdate.Room = dataGridView1.CurrentRow.Cells[7].Value.ToString();
 
 
-            classupdate.FormClosed += Classupdate_FormClosed;
-            classupdate.ShowDialog();
+                classupdate.FormClosed += Classupdate_FormClosed;
+                classupdate.ShowDialog();
+            }
+            else
+            {
+                // Handle the case when currentRow is null
+                MessageBox.Show("No selected class.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Classupdate_FormClosed(object sender, FormClosedEventArgs e)
@@ -118,29 +129,40 @@ namespace EnrollmentSystem
 
         private void delete_Click(object sender, EventArgs e)
         {
-            int code = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            var currentRow = dataGridView1.CurrentRow;
+
             try
             {
-                if (int.TryParse(code.ToString(), out int clscode))
+                if (currentRow != null)
                 {
-                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete \" Class code: " + clscode + " \"?", "Confirmation", MessageBoxButtons.YesNo);
+                    int code = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
 
-                    if (dialogResult == DialogResult.Yes)
+                    if (int.TryParse(code.ToString(), out int clscode))
                     {
-                        db.delClass(code);
-                        MessageBox.Show("Successfully deleted!");
-                        display();
+                        DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete \" Class code: " + clscode + " \"?", "Confirmation", MessageBoxButtons.YesNo);
+
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            db.delClass(code);
+                            MessageBox.Show("Successfully deleted!");
+                            display();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid 'id' value. Please enter a valid integer.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Invalid 'id' value. Please enter a valid integer.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Handle the case when currentRow is null
+                    MessageBox.Show("No selected class.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+}
     }
 }

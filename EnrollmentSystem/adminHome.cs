@@ -7,19 +7,17 @@ namespace EnrollmentSystem
     public partial class adminHome : Form
     {
         DataClasses1DataContext db = new DataClasses1DataContext();
-        private int id;
-        private int studId;
 
         public adminHome()
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
 
-            batch.DataSource = db.batchList().ToList();
+            batch.DataSource = db.batches.ToList();
             batch.DisplayMember = "batch_year";
             batch.ValueMember = "batch_id";
 
-            sem.DataSource = db.semList().ToList(); ;
+            sem.DataSource = db.semesters.ToList(); ;
             sem.DisplayMember = "sem_level";
             sem.ValueMember = "sem_id";
         }
@@ -27,10 +25,10 @@ namespace EnrollmentSystem
         private void adminHome_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
-            int stud = db.students.Count(x => x.stud_status == "pending" || x.stud_isActive == true);
+            int stud = db.students.Count(x => x.stud_isActive == true);
             int ins = db.instructors.Count(x => x.ins_isActive == true);
-            int enroll = db.students.Count(x => x.stud_isActive == true);
-            int unenroll = db.students.Count(x => x.stud_status == "pending");
+            int enroll = db.enrollments.Count(x => x.enroll_status == "approve");
+            int unenroll = db.enrollments.Count(x => x.enroll_status == "pending");
             int crs = db.programs.Count();
 
             totalNumStud.Text = stud.ToString();
@@ -38,8 +36,14 @@ namespace EnrollmentSystem
             enrolledNum.Text = enroll.ToString();
             unenrolledNum.Text = unenroll.ToString();
             courseNum.Text = crs.ToString();
-/*
-           var sy = db.schoolyears.OrderByDescending(x => x.sy_id).FirstOrDefault();
+
+            display();
+
+        }
+
+        private void display()
+        {
+            var sy = db.schoolyears.OrderByDescending(x => x.sy_id).FirstOrDefault();
 
             if (sy != null)
             {
@@ -52,8 +56,7 @@ namespace EnrollmentSystem
             else
             {
                 Console.WriteLine("No batches found in the table.");
-            }*/
-
+            }
         }
 
         private void add_MouseLeave(object sender, EventArgs e)
@@ -70,13 +73,14 @@ namespace EnrollmentSystem
         {
             int sem_id = (int)sem.SelectedValue;
             int batch_id = (int)batch.SelectedValue;
-          /*  db.addSchoolyear(batch_id, sem_id);*/
+            db.addSchoolyear(batch_id, sem_id);
             MessageBox.Show("Successfully modify school year", "Modified success");
+            display();
         }
 
         private void addBatch_Click(object sender, EventArgs e)
         {
-          /*  db.addBatch(batchTxtbox.Text);*/
+            db.addBatch(batchTxtbox.Text);
             MessageBox.Show("Added successfully", "Successfully added");
         }
     }

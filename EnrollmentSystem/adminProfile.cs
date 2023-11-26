@@ -28,7 +28,7 @@ namespace EnrollmentSystem
 
         private void getAdmin()
         {
-            var res = db.getAdmin(adminId).ToList();
+            var res = db.admins.ToList();
             if (res != null && res.Any())
             {
                 foreach (var item in res)

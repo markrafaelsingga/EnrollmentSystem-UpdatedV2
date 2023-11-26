@@ -18,22 +18,11 @@ namespace EnrollmentSystem
         {
             InitializeComponent();
             this.studId = studId;
-            display();
         }
 
         private void studentCourse_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void display()
-        {
-            dataGridView1.DataSource = db.studCourse(studId);
         }
     }
 }

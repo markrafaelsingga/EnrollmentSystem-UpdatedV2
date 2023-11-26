@@ -41,14 +41,14 @@ namespace EnrollmentSystem
 
         private void semList()
         {
-            sem.DataSource = db.semList();
+            sem.DataSource = db.semesters;
             sem.DisplayMember = "sem_level";
             sem.ValueMember = "sem_id";
         }
 
         private void crsList()
         {
-            comboBox1.DataSource = db.yearList();
+            comboBox1.DataSource = db.programs;
             comboBox1.DisplayMember = "year_level";
             comboBox1.ValueMember = "year_id";
         }

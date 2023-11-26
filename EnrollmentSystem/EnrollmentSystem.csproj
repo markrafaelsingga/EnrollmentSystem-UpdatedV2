@@ -79,23 +79,39 @@
     <Compile Include="addClass.Designer.cs">
       <DependentUpon>addClass.cs</DependentUpon>
     </Compile>
-    <Compile Include="addCollege.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="addCollege.Designer.cs">
-      <DependentUpon>addCollege.cs</DependentUpon>
-    </Compile>
     <Compile Include="addCourse.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="addCourse.Designer.cs">
       <DependentUpon>addCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="addEnrollment.cs">
+    <Compile Include="adminSections.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addEnrollment.Designer.cs">
-      <DependentUpon>addEnrollment.cs</DependentUpon>
+    <Compile Include="adminSections.Designer.cs">
+      <DependentUpon>adminSections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assignSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="assignSection.Designer.cs">
+      <DependentUpon>assignSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbmsDataSet29.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbmsDataSet29.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="selectCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selectCourse.Designer.cs">
+      <DependentUpon>selectCourse.cs</DependentUpon>
     </Compile>
     <Compile Include="addProfessor.cs">
       <SubType>Form</SubType>
@@ -173,11 +189,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="dbmsDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbmsDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="dbmsDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -319,18 +330,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbmsDataSet9.xsd</DependentUpon>
     </Compile>
-    <Compile Include="deleteProfessor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="deleteProfessor.Designer.cs">
-      <DependentUpon>deleteProfessor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="deleteStudent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="deleteStudent.Designer.cs">
-      <DependentUpon>deleteStudent.cs</DependentUpon>
-    </Compile>
     <Compile Include="createAcc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -422,12 +421,6 @@
     <Compile Include="updateClass.Designer.cs">
       <DependentUpon>updateClass.cs</DependentUpon>
     </Compile>
-    <Compile Include="updateCollege.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="updateCollege.Designer.cs">
-      <DependentUpon>updateCollege.cs</DependentUpon>
-    </Compile>
     <Compile Include="updateCourse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -461,14 +454,17 @@
     <EmbeddedResource Include="addClass.resx">
       <DependentUpon>addClass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addCollege.resx">
-      <DependentUpon>addCollege.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="addCourse.resx">
       <DependentUpon>addCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addEnrollment.resx">
-      <DependentUpon>addEnrollment.cs</DependentUpon>
+    <EmbeddedResource Include="adminSections.resx">
+      <DependentUpon>adminSections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assignSection.resx">
+      <DependentUpon>assignSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selectCourse.resx">
+      <DependentUpon>selectCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="addProfessor.resx">
       <DependentUpon>addProfessor.cs</DependentUpon>
@@ -505,12 +501,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="changePassword.resx">
       <DependentUpon>changePassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="deleteProfessor.resx">
-      <DependentUpon>deleteProfessor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="deleteStudent.resx">
-      <DependentUpon>deleteStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="createAcc.resx">
       <DependentUpon>createAcc.cs</DependentUpon>
@@ -559,9 +549,6 @@
     <EmbeddedResource Include="updateClass.resx">
       <DependentUpon>updateClass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="updateCollege.resx">
-      <DependentUpon>updateCollege.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="updateCourse.resx">
       <DependentUpon>updateCourse.cs</DependentUpon>
     </EmbeddedResource>
@@ -589,9 +576,9 @@
       <DependentUpon>dbmsDataSet.xsd</DependentUpon>
     </None>
     <None Include="dbmsDataSet.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dbmsDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="dbmsDataSet.xss">
       <DependentUpon>dbmsDataSet.xsd</DependentUpon>
@@ -827,6 +814,17 @@
     </None>
     <None Include="dbmsDataSet28.xss">
       <DependentUpon>dbmsDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet29.xsc">
+      <DependentUpon>dbmsDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="dbmsDataSet29.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbmsDataSet29.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbmsDataSet29.xss">
+      <DependentUpon>dbmsDataSet29.xsd</DependentUpon>
     </None>
     <None Include="dbmsDataSet3.xsc">
       <DependentUpon>dbmsDataSet3.xsd</DependentUpon>

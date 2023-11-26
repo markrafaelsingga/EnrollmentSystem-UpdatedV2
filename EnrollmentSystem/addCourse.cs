@@ -73,14 +73,14 @@ namespace EnrollmentSystem
 
         private void progList()
         {
-            prog.DataSource = db.progList();
+            prog.DataSource = db.programs;
             prog.DisplayMember = "prog_name";
             prog.ValueMember = "prog_id";
         }
 
         private void semList()
         {
-            sem.DataSource = db.semList();
+            sem.DataSource = db.semesters;
             sem.DisplayMember = "sem_level";
             sem.ValueMember = "sem_id";
         }

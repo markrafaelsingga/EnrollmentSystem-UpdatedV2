@@ -34,8 +34,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.phLbl = new System.Windows.Forms.Label();
             this.emlLbl = new System.Windows.Forms.Label();
-            this.batch = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.gpa = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.program = new System.Windows.Forms.ComboBox();
@@ -101,8 +99,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
             this.panel1.Controls.Add(this.phLbl);
             this.panel1.Controls.Add(this.emlLbl);
-            this.panel1.Controls.Add(this.batch);
-            this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.gpa);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.program);
@@ -152,33 +148,6 @@
             this.emlLbl.Size = new System.Drawing.Size(87, 16);
             this.emlLbl.TabIndex = 29;
             this.emlLbl.Text = "*Invalid email";
-            // 
-            // batch
-            // 
-            this.batch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.batch.FormattingEnabled = true;
-            this.batch.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.batch.Location = new System.Drawing.Point(787, 181);
-            this.batch.Margin = new System.Windows.Forms.Padding(4);
-            this.batch.Name = "batch";
-            this.batch.Size = new System.Drawing.Size(160, 24);
-            this.batch.TabIndex = 28;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label15.Location = new System.Drawing.Point(687, 182);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(73, 25);
-            this.label15.TabIndex = 27;
-            this.label15.Text = "Batch: ";
             // 
             // gpa
             // 
@@ -587,8 +556,6 @@
         private System.Windows.Forms.ComboBox program;
         private System.Windows.Forms.TextBox gpa;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox batch;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label phLbl;
         private System.Windows.Forms.Label emlLbl;
     }

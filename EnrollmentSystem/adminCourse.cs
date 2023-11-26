@@ -7,14 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 namespace EnrollmentSystem
 {
     public partial class adminCourse : Form
     {
+        DataClasses1DataContext db = new DataClasses1DataContext();
         private int verId;
         string name;
-        DataClasses1DataContext db = new DataClasses1DataContext();
         public adminCourse(int verId)
         {
             InitializeComponent();
@@ -85,16 +86,26 @@ namespace EnrollmentSystem
         {
             updateCourse courseedit = new updateCourse(verId);
 
-            courseedit.ID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()); 
-            courseedit.Coursename = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            courseedit.Description = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            courseedit.Year = int.Parse(dataGridView1.CurrentRow.Cells[3].Value.ToString());
-            courseedit.Program = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            //courseedit.Semester = int.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString());
+            var currentRow = dataGridView1.CurrentRow;
+
+            if (currentRow != null)
+            {
+                courseedit.ID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()); 
+                courseedit.Coursename = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                courseedit.Description = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                courseedit.Year = int.Parse(dataGridView1.CurrentRow.Cells[3].Value.ToString());
+                courseedit.Program = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                //courseedit.Semester = int.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString());
 
 
-            courseedit.FormClosed += Courseedit_FormClosed;
-            courseedit.ShowDialog();
+                courseedit.FormClosed += Courseedit_FormClosed;
+                courseedit.ShowDialog();
+            }
+            else
+            {
+                // Handle the case when currentRow is null
+                MessageBox.Show("No selected course.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Courseedit_FormClosed(object sender, FormClosedEventArgs e)
@@ -108,23 +119,44 @@ namespace EnrollmentSystem
         }
 
         
-        private void delete_Click_1(object sender, EventArgs e)
+        private void delete_Click(object sender, EventArgs e)
         {
+            var currentRow = dataGridView1.CurrentRow;
+
             try
             {
-                db.delCrs(name);
-                MessageBox.Show("Deleted successfully");
-                display();
+                if (currentRow != null)
+                {
+                    name = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete \" " + name + " \"?", "Confirmation", MessageBoxButtons.YesNo);
+
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        db.delCrs(name);
+                        MessageBox.Show("Deleted successfully");
+                        display();
+                    }
+                }
+                else
+                {
+                    // Handle the case when currentRow is null
+                    MessageBox.Show("No selected course.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Can't delete that course yet.");
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             name = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+        }
+
+        private void delete_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

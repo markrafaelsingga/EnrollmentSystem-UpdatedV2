@@ -87,44 +87,54 @@ namespace EnrollmentSystem
         {
             updateStudent editstudent = new updateStudent(verId);
 
-            // Set properties before showing the form
-            editstudent.ID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            editstudent.FirstName = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            editstudent.LastName = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            editstudent.MI = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            var currentRow = dataGridView1.CurrentRow;
 
-            // Parse Birthdate (assuming it's stored as a DateTime in the DataGridView)
-            if (DateTime.TryParse(dataGridView1.CurrentRow.Cells[5].Value?.ToString(), out var birthdate))
+            if (currentRow != null)
             {
-                editstudent.Birthdate = birthdate;
+                // Set properties before showing the form
+                editstudent.ID = int.Parse(currentRow.Cells[0].Value?.ToString() ?? "0");
+                editstudent.FirstName = currentRow.Cells[2].Value?.ToString();
+                editstudent.LastName = currentRow.Cells[3].Value?.ToString();
+                editstudent.MI = currentRow.Cells[4].Value?.ToString();
+
+                // Parse Birthdate (assuming it's stored as a DateTime in the DataGridView)
+                if (DateTime.TryParse(currentRow.Cells[5].Value?.ToString(), out var birthdate))
+                {
+                    editstudent.Birthdate = birthdate;
+                }
+                else
+                {
+                    // Handle parsing failure or set a default value
+                    editstudent.Birthdate = DateTime.MinValue;
+                }
+
+                editstudent.Address = currentRow.Cells[6].Value?.ToString();
+                editstudent.Phone = currentRow.Cells[7].Value?.ToString();
+                editstudent.Email = currentRow.Cells[8].Value?.ToString();
+                editstudent.Gender = currentRow.Cells[9].Value?.ToString();
+                editstudent.YearLevel = currentRow.Cells[10].Value?.ToString();
+                editstudent.ProgName = currentRow.Cells[11].Value?.ToString();
+
+                // Parse GPA (assuming it's stored as a decimal in the DataGridView)
+                if (decimal.TryParse(currentRow.Cells[12].Value?.ToString(), out var gpa))
+                {
+                    editstudent.GPA = gpa;
+                }
+                else
+                {
+                    // Handle parsing failure or set a default value (consistent with DateTime parsing)
+                    editstudent.GPA = 0.0m;
+                }
+
+                // Now show the form
+                editstudent.FormClosed += Editstudent_FormClosed;
+                editstudent.ShowDialog();
             }
             else
             {
-                // Handle parsing failure or set a default value
-                editstudent.Birthdate = DateTime.MinValue;
+                // Handle the case when currentRow is null
+                MessageBox.Show("No selected student.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            editstudent.Address = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            editstudent.Phone = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-            editstudent.Email = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-            editstudent.Gender = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-            editstudent.YearLevel = dataGridView1.CurrentRow.Cells[10].Value.ToString();
-            editstudent.ProgName = dataGridView1.CurrentRow.Cells[11].Value.ToString();
-
-            // Parse GPA (assuming it's stored as a decimal in the DataGridView)
-            if (decimal.TryParse(dataGridView1.CurrentRow.Cells[12].Value.ToString(), out var gpa))
-            {
-                editstudent.GPA = gpa;
-            }
-            else
-            {
-                // Handle parsing failure or set a default value (consistent with DateTime parsing)
-                editstudent.GPA = 0.0m;
-            }
-
-            // Now show the form
-            editstudent.FormClosed += Editstudent_FormClosed;
-            editstudent.ShowDialog();
         }
 
 
@@ -135,24 +145,34 @@ namespace EnrollmentSystem
 
         private void delete_Click(object sender, EventArgs e)
         {
-            id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            studNumber = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            var currentRow = dataGridView1.CurrentRow;
+            
             try
             {
-                if (int.TryParse(id.ToString(), out int student_id))
+                if (currentRow != null)
                 {
-                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete \" Student no. " + studNumber + " \"?", "Confirmation", MessageBoxButtons.YesNo);
-
-                    if (dialogResult == DialogResult.Yes)
+                    id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                    studNumber = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                    if (int.TryParse(id.ToString(), out int student_id))
                     {
-                        db.studDel(student_id);
-                        MessageBox.Show("Successfully deleted!!", "DELETED");
-                        display();
+                        DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete \" Student no. " + studNumber + " \"?", "Confirmation", MessageBoxButtons.YesNo);
+
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            db.studDel(student_id);
+                            MessageBox.Show("Successfully deleted!!", "DELETED");
+                            display();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid 'id' value. Please enter a valid integer.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Invalid 'id' value. Please enter a valid integer.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Handle the case when currentRow is null
+                    MessageBox.Show("No selected student.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)

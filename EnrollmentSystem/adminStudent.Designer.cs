@@ -55,7 +55,6 @@
             this.yearlevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prognameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studgpaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.batchyearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.showStudentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dbmsDataSet17 = new EnrollmentSystem.dbmsDataSet17();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -89,7 +88,7 @@
             this.flowLayoutPanel2.Controls.Add(this.panel2);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 80);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 12, 53, 0);
             this.flowLayoutPanel2.Size = new System.Drawing.Size(1153, 79);
@@ -100,7 +99,7 @@
             this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
             this.delete.Location = new System.Drawing.Point(1053, 16);
-            this.delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.delete.Margin = new System.Windows.Forms.Padding(4);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(43, 43);
             this.delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -115,7 +114,7 @@
             this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
             this.add.Location = new System.Drawing.Point(1002, 16);
-            this.add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.add.Margin = new System.Windows.Forms.Padding(4);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(43, 43);
             this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -130,7 +129,7 @@
             this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
             this.edit.Location = new System.Drawing.Point(947, 16);
-            this.edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edit.Margin = new System.Windows.Forms.Padding(4);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(47, 43);
             this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -145,7 +144,7 @@
             this.panel2.Controls.Add(this.search);
             this.panel2.Controls.Add(this.searchTxtbox);
             this.panel2.Location = new System.Drawing.Point(394, 16);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.panel2.Size = new System.Drawing.Size(545, 43);
@@ -156,7 +155,7 @@
             this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
             this.search.Location = new System.Drawing.Point(515, 9);
-            this.search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.search.Margin = new System.Windows.Forms.Padding(4);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(27, 25);
             this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -171,7 +170,7 @@
             this.searchTxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchTxtbox.Location = new System.Drawing.Point(0, 5);
-            this.searchTxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.searchTxtbox.Name = "searchTxtbox";
             this.searchTxtbox.Size = new System.Drawing.Size(545, 30);
             this.searchTxtbox.TabIndex = 3;
@@ -184,7 +183,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(65, 166);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1029, 428);
             this.panel1.TabIndex = 7;
@@ -218,8 +217,7 @@
             this.studgenderDataGridViewTextBoxColumn,
             this.yearlevelDataGridViewTextBoxColumn,
             this.prognameDataGridViewTextBoxColumn,
-            this.studgpaDataGridViewTextBoxColumn,
-            this.batchyearDataGridViewTextBoxColumn});
+            this.studgpaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.showStudentBindingSource1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -231,7 +229,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -363,15 +361,6 @@
             this.studgpaDataGridViewTextBoxColumn.ReadOnly = true;
             this.studgpaDataGridViewTextBoxColumn.ToolTipText = "GPA";
             // 
-            // batchyearDataGridViewTextBoxColumn
-            // 
-            this.batchyearDataGridViewTextBoxColumn.DataPropertyName = "batch_year";
-            this.batchyearDataGridViewTextBoxColumn.HeaderText = "Batch year";
-            this.batchyearDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.batchyearDataGridViewTextBoxColumn.Name = "batchyearDataGridViewTextBoxColumn";
-            this.batchyearDataGridViewTextBoxColumn.ReadOnly = true;
-            this.batchyearDataGridViewTextBoxColumn.ToolTipText = "Batch year";
-            // 
             // showStudentBindingSource1
             // 
             this.showStudentBindingSource1.DataMember = "showStudent";
@@ -388,7 +377,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(53, 25, 0, 0);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 73);
@@ -433,7 +422,7 @@
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "adminStudent";
             this.Text = "adminStudent";
             this.Load += new System.EventHandler(this.adminStudent_Load);
@@ -488,6 +477,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn yearlevelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prognameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studgpaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn batchyearDataGridViewTextBoxColumn;
     }
 }

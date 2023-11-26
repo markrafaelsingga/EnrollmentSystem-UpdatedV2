@@ -19,6 +19,7 @@ namespace EnrollmentSystem
         adminCourse course;
         adminClass class1;
         adminProfile profile;
+        adminSections section;
         private int verId;
         public admin_page(int verId)
         {
@@ -130,6 +131,10 @@ namespace EnrollmentSystem
 
         private void homeBtn_Click(object sender, EventArgs e)
         {
+            if (section != null)
+            {
+                section.Close();
+            }
             if (enrollment != null)
             {
                 enrollment.Close();
@@ -185,6 +190,10 @@ namespace EnrollmentSystem
 
         private void enrollmentBtn_Click(object sender, EventArgs e)
         {
+            if (section != null)
+            {
+                section.Close();
+            }
             if (home != null)
             {
                 home.Close();
@@ -240,6 +249,10 @@ namespace EnrollmentSystem
 
         private void studentBtn_Click(object sender, EventArgs e)
         {
+            if (section != null)
+            {
+                section.Close();
+            }
             if (enrollment != null)
             {
                 enrollment.Close();
@@ -295,6 +308,10 @@ namespace EnrollmentSystem
 
         private void profBtn_Click(object sender, EventArgs e)
         {
+            if (section != null)
+            {
+                section.Close();
+            }
             if (enrollment != null)
             {
                 enrollment.Close();
@@ -350,6 +367,10 @@ namespace EnrollmentSystem
 
         private void profileBtn_Click(object sender, EventArgs e)
         {
+            if (section != null)
+            {
+                section.Close();
+            }
             if (enrollment != null)
             {
                 enrollment.Close();
@@ -405,6 +426,10 @@ namespace EnrollmentSystem
 
         private void courseBtn_Click(object sender, EventArgs e)
         {
+            if (section != null)
+            {
+                section.Close();
+            }
             if (enrollment != null)
             {
                 enrollment.Close();
@@ -460,6 +485,10 @@ namespace EnrollmentSystem
 
         private void classBtn_Click(object sender, EventArgs e)
         {
+            if (section != null)
+            {
+                section.Close();
+            }
             if (enrollment != null)
             {
                 enrollment.Close();
@@ -519,6 +548,65 @@ namespace EnrollmentSystem
             login back_login = new login();
             back_login.Show();
             Visible = false;
+        }
+
+        private void sectionBtn_Click(object sender, EventArgs e)
+        {
+            if (class1 != null)
+            {
+                class1.Close();
+            }
+            if (enrollment != null)
+            {
+                enrollment.Close();
+            }
+
+            if (student != null)
+            {
+                student.Close();
+            }
+
+            if (professor != null)
+            {
+                professor.Close();
+            }
+
+            if (home != null)
+            {
+                home.Close();
+            }
+
+            if (course != null)
+            {
+                course.Close();
+            }
+
+            if (profile != null)
+            {
+                profile.Close();
+            }
+
+            if (section == null)
+            {
+                section = new adminSections(verId);
+                section.FormClosed += Section_FormClosed; ;
+                section.MdiParent = this;
+                section.Show();
+
+                changeColor(sectionBtn);
+                section.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                section.Activate();
+
+            }
+        }
+
+        private void Section_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            origColor(sectionBtn);
+            section = null;
         }
     }
 }

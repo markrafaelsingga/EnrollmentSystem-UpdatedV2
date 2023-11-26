@@ -14,9 +14,6 @@ namespace EnrollmentSystem
     {
         DataClasses1DataContext db = new DataClasses1DataContext();
         private int verId;
-        int adminId;
-        int insId;
-        int classId;
         public addClass(int verid)
         {
             InitializeComponent();
@@ -47,25 +44,25 @@ namespace EnrollmentSystem
             return true;
         }
 
-        private bool Check()
-        {
-            DateTime selectedTime = fromTime.Value;
-            TimeSpan ftime = selectedTime.TimeOfDay;
+        //private bool Check()
+        //{
+        //    DateTime selectedTime = fromTime.Value;
+        //    TimeSpan ftime = selectedTime.TimeOfDay;
 
-            DateTime selectedTo = toTime.Value;
-            TimeSpan ttime = selectedTo.TimeOfDay;
-            var result = db.checkClass(section.Text, ftime, ttime, day.Text, Convert.ToInt32(subjectcomboBox.SelectedValue), Convert.ToInt32(room.SelectedValue)).ToList();
-            if (result != null && result.Any())
-            {
-                foreach (var item in result)
-                {
-                    classId = item.class_code;
+        //    DateTime selectedTo = toTime.Value;
+        //    TimeSpan ttime = selectedTo.TimeOfDay;
+        //    var result = db.checkClass(section.Text, ftime, ttime, day.Text, Convert.ToInt32(subjectcomboBox.SelectedValue), Convert.ToInt32(room.SelectedValue)).ToList();
+        //    if (result != null && result.Any())
+        //    {
+        //        foreach (var item in result)
+        //        {
+        //            classId = item.class_code;
 
-                }
-            }
-            return true;
+        //        }
+        //    }
+        //    return true;
 
-        }
+        //}
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
@@ -103,7 +100,7 @@ namespace EnrollmentSystem
             prof.DisplayMember = "Fullname";
             prof.ValueMember = "ins_id";
 
-            room.DataSource = db.roomList().ToList();
+            room.DataSource = db.rooms.ToList();
             room.DisplayMember = "room_name";
             room.ValueMember = "room_id";
 
@@ -116,7 +113,7 @@ namespace EnrollmentSystem
 
         private void progList()
         {
-            prog.DataSource = db.progList().ToList();
+            prog.DataSource = db.programs.ToList();
             prog.DisplayMember = "prog_name";
             prog.ValueMember = "prog_id";
         }

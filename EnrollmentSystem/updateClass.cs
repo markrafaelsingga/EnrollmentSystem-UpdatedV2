@@ -46,7 +46,7 @@ namespace EnrollmentSystem
             //// TODO: This line of code loads data into the 'dbmsDataSet11.showClass' table. You can move, or remove it, as needed.
             //this.showClassTableAdapter.Fill(this.dbmsDataSet11.showClass);
 
-            room.DataSource = db.roomList().ToList();
+            room.DataSource = db.rooms.ToList();
             room.DisplayMember = "room_name";
             room.ValueMember = "room_id";
 
