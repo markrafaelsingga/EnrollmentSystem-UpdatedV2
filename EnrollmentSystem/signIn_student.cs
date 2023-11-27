@@ -18,8 +18,6 @@ namespace EnrollmentSystem
         int adminId;
         string studFname, studLname;
         int u_id;
-        int getBatch;
-        int count = 0;
         public signIn_student()
         {
             InitializeComponent();
@@ -54,7 +52,7 @@ namespace EnrollmentSystem
         {
             string phpattern = @"^(\+63|09)\d{9}$";
             string pNo = phone.Text;
-            bool checkPhone = Regex.IsMatch(pNo, phpattern ,RegexOptions.IgnoreCase);
+            bool checkPhone = Regex.IsMatch(pNo, phpattern, RegexOptions.IgnoreCase);
 
             if (checkPhone)
             {
@@ -84,35 +82,23 @@ namespace EnrollmentSystem
 
         private void birthdatePicker_ValueChanged(object sender, EventArgs e)
         {
-            if(birthdatePicker.Value > DateTime.Now)
+            if (birthdatePicker.Value > DateTime.Now)
             {
-                MessageBox.Show("Future date is invalid!","Warning",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Future date is invalid!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void check()
         {
-
-            int batch_id = (int)batch.SelectedValue;
-            var studCheck = db.checkStud(fnameTxtbox.Text, lnameTxtbox.Text,batch_id).ToList();
-            var statusCheck = db.checkStatus(fnameTxtbox.Text, lnameTxtbox.Text, batch_id).ToList();
+            var studCheck = db.checkStud(fnameTxtbox.Text, lnameTxtbox.Text).ToList();
             if (studCheck != null && studCheck.Any())
             {
                 foreach (var item in studCheck)
                 {
                     studFname = item.stud_fname;
                     studLname = item.stud_lname;
-                    getBatch = item.batch_id;
                 }
             }
-            if (statusCheck != null && statusCheck.Any())
-            {
-                foreach (var item in statusCheck)
-                {
-                    count = Convert.ToInt32(item.Column1);
-                }
-            }
-
         }
 
 
@@ -120,10 +106,9 @@ namespace EnrollmentSystem
         private void signinBtn_Click(object sender, EventArgs e)
         {
             check();
-            int batch_id = (int)batch.SelectedValue;
             try
             {
-                if ((studFname != fnameTxtbox.Text || studLname != lnameTxtbox.Text) || getBatch != batch_id)
+                if (studFname != fnameTxtbox.Text && studLname != lnameTxtbox.Text)
                 {
                     if (pword.Text == repword.Text)
                     {
@@ -149,35 +134,31 @@ namespace EnrollmentSystem
                                 db.newStudent(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, birthdatePicker.Value, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, yrs, grade, prog_id, id, 1);
                                 MessageBox.Show("Successfully enrolled!", "Done");
 
-                                    login back = new login();
-                                    back.Show();
-                                    Visible = false;
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Error retrieving user information", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
+                                login back = new login();
+                                back.Show();
+                                Visible = false;
                             }
                             else
                             {
-                                MessageBox.Show("Unsuccessfull!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Error retrieving user information", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Password didn't match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Unsuccessfull!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("You can only submit enrollment once","Warning",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        MessageBox.Show("Password didn't match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
                     MessageBox.Show("Student already exist!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show($"{ex.Message}");
             }
@@ -185,4 +166,4 @@ namespace EnrollmentSystem
     }
 }
 
-    
+

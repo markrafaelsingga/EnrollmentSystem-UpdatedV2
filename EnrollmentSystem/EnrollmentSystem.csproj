@@ -107,11 +107,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbmsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dbmsDataSet103.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbmsDataSet10.xsd</DependentUpon>
-    </Compile>
     <Compile Include="dbmsDataSet29.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
