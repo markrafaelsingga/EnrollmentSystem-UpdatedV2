@@ -53,7 +53,7 @@ namespace EnrollmentSystem
         {
             saveBtn.BackColor = System.Drawing.Color.White;
         }
-       
+
         private void saveBtn_Click(object sender, EventArgs e)
         {
             check();
@@ -153,9 +153,7 @@ namespace EnrollmentSystem
 
         private void check()
         {
-
-            int batch_id = (int)batch.SelectedValue;
-            var studCheck = db.checkStud(fnameTxtbox.Text, lnameTxtbox.Text,batch_id).ToList();
+            var studCheck = db.checkStud(fnameTxtbox.Text, lnameTxtbox.Text).ToList();
             if (studCheck != null && studCheck.Any())
             {
                 foreach (var item in studCheck)
