@@ -118,12 +118,6 @@
     <Compile Include="editSection.Designer.cs">
       <DependentUpon>editSection.cs</DependentUpon>
     </Compile>
-    <Compile Include="selectCourse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="selectCourse.Designer.cs">
-      <DependentUpon>selectCourse.cs</DependentUpon>
-    </Compile>
     <Compile Include="addProfessor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -471,9 +465,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="editSection.resx">
       <DependentUpon>editSection.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="selectCourse.resx">
-      <DependentUpon>selectCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="addProfessor.resx">
       <DependentUpon>addProfessor.cs</DependentUpon>

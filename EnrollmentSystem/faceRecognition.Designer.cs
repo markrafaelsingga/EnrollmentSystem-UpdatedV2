@@ -43,9 +43,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(463, 280);
+            this.panel1.Size = new System.Drawing.Size(617, 345);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -53,10 +53,10 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(100, 53);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(133, 65);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(262, 214);
+            this.pictureBox1.Size = new System.Drawing.Size(349, 263);
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
             // 
@@ -65,9 +65,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(17, 27);
+            this.label1.Location = new System.Drawing.Point(23, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(373, 15);
+            this.label1.Size = new System.Drawing.Size(441, 18);
             this.label1.TabIndex = 27;
             this.label1.Text = "To verify that you are the admin, use the face recognition:";
             // 
@@ -75,9 +76,10 @@
             // 
             this.saveBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBtn.Location = new System.Drawing.Point(171, 286);
+            this.saveBtn.Location = new System.Drawing.Point(228, 352);
+            this.saveBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(129, 44);
+            this.saveBtn.Size = new System.Drawing.Size(172, 54);
             this.saveBtn.TabIndex = 26;
             this.saveBtn.Text = "DETECT";
             this.saveBtn.UseVisualStyleBackColor = true;
@@ -86,23 +88,24 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(100, 391);
+            this.label2.Location = new System.Drawing.Point(133, 481);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 27;
             this.label2.Text = "label2";
             // 
             // faceRecognition
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
-            this.ClientSize = new System.Drawing.Size(463, 491);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(10)))), ((int)(((byte)(48)))));
+            this.ClientSize = new System.Drawing.Size(617, 604);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "faceRecognition";

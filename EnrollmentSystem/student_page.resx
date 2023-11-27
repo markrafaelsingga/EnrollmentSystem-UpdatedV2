@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="userFname.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -519,7 +516,7 @@
   <data name="homeBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        tQAAALUBOdDOnwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFxSURBVEhL7dU7
+        tAAAALQB65csewAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFxSURBVEhL7dU7
         SwNBFIbhtQySwi4kwVJrQdB0Fjb2VoKCra2dINiEWAbR2n/gH7C2EsFSsbNQKzsvILp+L56Rs8NkzYak
         c+CBmTPngk5CsjzPJyoZHKdkMEWrJtum5uIzsi8HplOo84dBtNpyJRzAvmV3KxYL+oVaf0jRWpJHK/Ye
         ZFFGH6C1IW9W+CE7hj2xVzm2ffD3AK0p6VoBnmVV1gx7YuHeKx+gNS1nloxbmZNd+TTsiXEX8oLBA7Rm
@@ -546,7 +543,7 @@
   <data name="courseBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        rQAAAK0BVE7WMAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAF0SURBVEhL3dXN
+        rAAAAKwBhgk01AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAF0SURBVEhL3dXN
         K0RRHMbxmyLyslKUZC1vWVtItpL8AxaWVoislPK6UxaKKAtENhKlmFnYEin+AUpYK1ng+9x7zmk0N5xx
         ZzGe+nTvb5pzfnfuPXNu8K/Sj1Xs/pHm6MOXTOEdp4gb5CMFzTWJMGV4w3BYBUGxORYZiv3stxnFK0pV
         NOEDbSrIJbowhwV04ho+aYfmbFTRYgodlRroyisNndfCJ7pYzamLdw3WMJ+QdWQ1uMF5QjRXVgN7i5JI

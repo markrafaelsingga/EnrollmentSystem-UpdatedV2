@@ -34,6 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.crsnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classfromTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classtoTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.instructornameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studClassBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dbmsDataSet25 = new EnrollmentSystem.dbmsDataSet25();
             this.studClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -42,13 +48,6 @@
             this.studClassTableAdapter1 = new EnrollmentSystem.dbmsDataSet25TableAdapters.studClassTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.crsnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classfromTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classtoTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.instructornameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yearlevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studClassBindingSource1)).BeginInit();
@@ -67,7 +66,7 @@
             this.panel1.Location = new System.Drawing.Point(65, 106);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1034, 401);
+            this.panel1.Size = new System.Drawing.Size(1034, 485);
             this.panel1.TabIndex = 15;
             // 
             // dataGridView1
@@ -92,8 +91,7 @@
             this.classtoTimeDataGridViewTextBoxColumn,
             this.classdayDataGridViewTextBoxColumn,
             this.instructornameDataGridViewTextBoxColumn,
-            this.roomnameDataGridViewTextBoxColumn,
-            this.yearlevelDataGridViewTextBoxColumn});
+            this.roomnameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.studClassBindingSource1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -117,60 +115,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1034, 401);
+            this.dataGridView1.Size = new System.Drawing.Size(1034, 485);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // studClassBindingSource1
-            // 
-            this.studClassBindingSource1.DataMember = "studClass";
-            this.studClassBindingSource1.DataSource = this.dbmsDataSet25;
-            // 
-            // dbmsDataSet25
-            // 
-            this.dbmsDataSet25.DataSetName = "dbmsDataSet25";
-            this.dbmsDataSet25.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studClassBindingSource
-            // 
-            this.studClassBindingSource.DataMember = "studClass";
-            this.studClassBindingSource.DataSource = this.dbmsDataSet16;
-            // 
-            // dbmsDataSet16
-            // 
-            this.dbmsDataSet16.DataSetName = "dbmsDataSet16";
-            this.dbmsDataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studClassTableAdapter
-            // 
-            this.studClassTableAdapter.ClearBeforeFill = true;
-            // 
-            // studClassTableAdapter1
-            // 
-            this.studClassTableAdapter1.ClearBeforeFill = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(57, 49);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "MY CLASSES";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(53, 49, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 98);
-            this.flowLayoutPanel1.TabIndex = 14;
             // 
             // crsnameDataGridViewTextBoxColumn
             // 
@@ -226,20 +172,63 @@
             this.roomnameDataGridViewTextBoxColumn.ReadOnly = true;
             this.roomnameDataGridViewTextBoxColumn.ToolTipText = "Room name";
             // 
-            // yearlevelDataGridViewTextBoxColumn
+            // studClassBindingSource1
             // 
-            this.yearlevelDataGridViewTextBoxColumn.DataPropertyName = "year_id";
-            this.yearlevelDataGridViewTextBoxColumn.HeaderText = "Year level";
-            this.yearlevelDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.yearlevelDataGridViewTextBoxColumn.Name = "yearlevelDataGridViewTextBoxColumn";
-            this.yearlevelDataGridViewTextBoxColumn.ReadOnly = true;
-            this.yearlevelDataGridViewTextBoxColumn.ToolTipText = "Year level";
+            this.studClassBindingSource1.DataMember = "studClass";
+            this.studClassBindingSource1.DataSource = this.dbmsDataSet25;
+            // 
+            // dbmsDataSet25
+            // 
+            this.dbmsDataSet25.DataSetName = "dbmsDataSet25";
+            this.dbmsDataSet25.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studClassBindingSource
+            // 
+            this.studClassBindingSource.DataMember = "studClass";
+            this.studClassBindingSource.DataSource = this.dbmsDataSet16;
+            // 
+            // dbmsDataSet16
+            // 
+            this.dbmsDataSet16.DataSetName = "dbmsDataSet16";
+            this.dbmsDataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studClassTableAdapter
+            // 
+            this.studClassTableAdapter.ClearBeforeFill = true;
+            // 
+            // studClassTableAdapter1
+            // 
+            this.studClassTableAdapter1.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(57, 49);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(245, 39);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "MY CLASSES";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.label1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(53, 49, 0, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 98);
+            this.flowLayoutPanel1.TabIndex = 14;
             // 
             // studentClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(10)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1153, 666);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);

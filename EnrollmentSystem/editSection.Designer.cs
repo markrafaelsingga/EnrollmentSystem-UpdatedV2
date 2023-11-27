@@ -52,6 +52,7 @@
             this.yr = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.sec = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
             this.program = new System.Windows.Forms.ComboBox();
@@ -61,7 +62,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.section = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.sec = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -359,6 +359,17 @@
             this.panel1.Size = new System.Drawing.Size(248, 63);
             this.panel1.TabIndex = 75;
             // 
+            // sec
+            // 
+            this.sec.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.sec.Enabled = false;
+            this.sec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sec.Location = new System.Drawing.Point(0, 33);
+            this.sec.Margin = new System.Windows.Forms.Padding(4);
+            this.sec.Name = "sec";
+            this.sec.Size = new System.Drawing.Size(248, 30);
+            this.sec.TabIndex = 47;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -477,22 +488,11 @@
             this.label7.TabIndex = 46;
             this.label7.Text = "Edit section:";
             // 
-            // sec
-            // 
-            this.sec.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.sec.Enabled = false;
-            this.sec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sec.Location = new System.Drawing.Point(0, 33);
-            this.sec.Margin = new System.Windows.Forms.Padding(4);
-            this.sec.Name = "sec";
-            this.sec.Size = new System.Drawing.Size(248, 30);
-            this.sec.TabIndex = 47;
-            // 
             // editSection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(10)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(878, 584);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

@@ -82,7 +82,7 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(10)))), ((int)(((byte)(48)))));
             this.flowLayoutPanel1.Controls.Add(this.label1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,7 +109,7 @@
             // 
             this.flowLayoutPanel4.AutoScroll = true;
             this.flowLayoutPanel4.AutoScrollMinSize = new System.Drawing.Size(0, 600);
-            this.flowLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
+            this.flowLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(10)))), ((int)(((byte)(48)))));
             this.flowLayoutPanel4.Controls.Add(this.panel2);
             this.flowLayoutPanel4.Controls.Add(this.panel4);
             this.flowLayoutPanel4.Controls.Add(this.panel7);
@@ -483,6 +483,7 @@
             // 
             // studentEnrollment
             // 
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(10)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1026, 666);
             this.Controls.Add(this.flowLayoutPanel4);
             this.Controls.Add(this.flowLayoutPanel1);

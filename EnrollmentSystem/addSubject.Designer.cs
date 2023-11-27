@@ -44,7 +44,7 @@
             // 
             this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.Location = new System.Drawing.Point(536, 332);
-            this.saveBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveBtn.Margin = new System.Windows.Forms.Padding(4);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(172, 39);
             this.saveBtn.TabIndex = 19;
@@ -63,7 +63,7 @@
             this.panel1.Controls.Add(this.subcodeTxtbox);
             this.panel1.Controls.Add(this.subjectLbl);
             this.panel1.Location = new System.Drawing.Point(37, 25);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(671, 293);
             this.panel1.TabIndex = 18;
@@ -72,7 +72,7 @@
             // 
             this.unitTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unitTxtbox.Location = new System.Drawing.Point(412, 42);
-            this.unitTxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unitTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.unitTxtbox.Maximum = new decimal(new int[] {
             4,
             0,
@@ -108,7 +108,7 @@
             // 
             this.subdescTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subdescTxtbox.Location = new System.Drawing.Point(24, 118);
-            this.subdescTxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subdescTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.subdescTxtbox.Multiline = true;
             this.subdescTxtbox.Name = "subdescTxtbox";
             this.subdescTxtbox.Size = new System.Drawing.Size(624, 152);
@@ -130,7 +130,7 @@
             // 
             this.subcodeTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subcodeTxtbox.Location = new System.Drawing.Point(24, 42);
-            this.subcodeTxtbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subcodeTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.subcodeTxtbox.Name = "subcodeTxtbox";
             this.subcodeTxtbox.Size = new System.Drawing.Size(285, 30);
             this.subcodeTxtbox.TabIndex = 20;
@@ -151,12 +151,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(10)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(745, 398);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "addSubject";
