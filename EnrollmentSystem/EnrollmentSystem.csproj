@@ -97,6 +97,11 @@
     <Compile Include="assignSection.Designer.cs">
       <DependentUpon>assignSection.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
     <Compile Include="dbmsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -106,6 +111,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbmsDataSet29.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="editSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editSection.Designer.cs">
+      <DependentUpon>editSection.cs</DependentUpon>
     </Compile>
     <Compile Include="selectCourse.cs">
       <SubType>Form</SubType>
@@ -184,11 +195,6 @@
     </Compile>
     <Compile Include="changePassword.Designer.cs">
       <DependentUpon>changePassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataClasses1.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
     <Compile Include="dbmsDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -462,6 +468,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="assignSection.resx">
       <DependentUpon>assignSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editSection.resx">
+      <DependentUpon>editSection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="selectCourse.resx">
       <DependentUpon>selectCourse.cs</DependentUpon>

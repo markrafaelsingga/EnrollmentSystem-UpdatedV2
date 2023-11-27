@@ -24,8 +24,8 @@ namespace EnrollmentSystem
             InitializeComponent();
             this.studId = studId;
 
-            fillFields();
             cBox();
+            fillFields();
          
 
             var result = db.getStud(studId).ToList();
@@ -48,10 +48,6 @@ namespace EnrollmentSystem
             program.DataSource = db.programs.ToList();
             program.DisplayMember = "prog_name";
             program.ValueMember = "prog_id";
-
-            sy.DataSource = db.getSchoolyear().ToList();
-            sy.DisplayMember = "currentSy";
-            sy.ValueMember = "sy_id";
         }
 
         private void studentEnrollment_Load(object sender, EventArgs e)
@@ -77,7 +73,7 @@ namespace EnrollmentSystem
             var current = db.getSchoolyear().OrderByDescending(x => x.sy_id).FirstOrDefault();
             if (current != null)
             {
-                sy.SelectedValue = current.currentSy;
+                sy.Text = current.currentSy.ToString();
                 if (result != null && result.Any())
                 {
                     foreach (var item in result)
@@ -87,10 +83,14 @@ namespace EnrollmentSystem
                         lnameTxtbox.Text = item.stud_lname;
                         phoneTxtbox.Text = item.stud_phone;
                         emailTxtbox.Text = item.stud_email;
-                        yr.SelectedValue = item.year_id;
                         gpa.Text = item.stud_gpa.ToString();
-                        program.SelectedValue = item.prog_id;
                         user_Id = item.u_id;
+
+                        program.SelectedValue = item.prog_id;
+                        program.Text = program.SelectedItem?.ToString(); // Handle null value
+
+                        yr.SelectedValue = item.year_id;
+                        yr.Text = yr.SelectedItem?.ToString(); // Handle null value
                     }
                     
                 }
@@ -119,7 +119,7 @@ namespace EnrollmentSystem
                 }
                 else
                 {
-                    DialogResult result = MessageBox.Show("Are you enrolling to a regular load?", "Regular load or not?", MessageBoxButtons.YesNo);
+                    DialogResult result = MessageBox.Show("Are you enrolling to a regular load?", "Confirmation", MessageBoxButtons.YesNo);
                     // The student is regular so it will automatically pick the course to enroll
                     if (result == DialogResult.Yes)
                     {

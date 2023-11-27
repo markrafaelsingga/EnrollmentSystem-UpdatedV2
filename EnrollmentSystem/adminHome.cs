@@ -17,7 +17,7 @@ namespace EnrollmentSystem
             batch.DisplayMember = "batch_year";
             batch.ValueMember = "batch_id";
 
-            sem.DataSource = db.semesters.ToList(); ;
+            sem.DataSource = db.semesters.ToList(); 
             sem.DisplayMember = "sem_level";
             sem.ValueMember = "sem_id";
         }

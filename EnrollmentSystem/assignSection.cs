@@ -131,5 +131,15 @@ namespace EnrollmentSystem
 
         }
 
+        private void saveBtn_MouseHover(object sender, EventArgs e)
+        {
+            saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
+        }
+
+        private void saveBtn_MouseLeave(object sender, EventArgs e)
+        {
+            saveBtn.BackColor = System.Drawing.Color.White;
+        }
+
     }
 }

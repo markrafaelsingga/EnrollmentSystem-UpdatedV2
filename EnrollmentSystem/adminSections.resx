@@ -121,7 +121,7 @@
   <data name="search.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAH
-        wQAAB8EBItgVsQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAK/SURBVFhHtddN
+        wAAAB8AB8J/3VQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAK/SURBVFhHtddN
         iE1xGMfxZ8wwLAwLLNSUl9kYi2lSpCwwpch4WxApb9mxURMbNY2NlSlRygI1Kykm2ShZEXktCxsp8poQ
         knfj+9zz/5vn/u9z7pwj96nP6Z5zf//nnO499/8/V0ZGRuqiJmItTuMeXuEbXuAOTmIVJnjjx+IejKiN
         eAPdGYte0GqvTz3+QZFpOAt7gqL0k5ri9fXUHhDpxWvYpuozruEo9uA4buAL0uwz9KS9PdU7IvPxFbbZ
@@ -170,8 +170,27 @@
         +mlmnb67vYsMHD6jfMl4d3iZOFLxW5vh1TJD/XHaJDdV8cYaq5GR333nDjXHNAkeAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="refresh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAAOsAAADrASts18IAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAACOUlEQVRYR+3Xy6tOURjH8e2aCHO5lImJUgYGrsmlDkVKpofIRMnAxKWYKSbKLVImZ0IpJcp1pKSj
+        JPkHJAoDJffr98vZp2W9673stc6ZyK8+dc5+17vW3u21n2e/1f9kZArWYCv24wC2YS0mY1QyBptxDR/x
+        sw0/u4GN8DsjkuUYRGrBTh5hCYqyE1+RWqAXfvcwxqJxTiA1ae0HXg75PnQs5Qoan8AepCbzHntiKzAe
+        dfzbY6cQ7pGHcNM2ivf8G8KFdROz0S2zcAfPMMMDTeLOTW248wivuFvGoZeTbYmPWry4V95k8Xbpw+k/
+        f7bPdYSLez+zriTKQryDc+71QCpulrjInERp5uAF6jl9YragJZbXcHG5s0syDY8Rz+uFLsVfsbaHgzzT
+        CciN372FcM7QG8zDcGws4QALTEmOIJwv5SmqVbDk2mjCD1/D45qLplmPi7iETwjnfgKPH0T1CuGHKWeR
+        G1t0XKq3Yzjr0KnhPMdM5MbKGs/Zsrl3IR6kt5iPkpxDOKe3YzpacgzhwC/w0SyJNeA9wnntjsnYBwbg
+        IFttP0pi+b6NcHFZ7ttmEu7h0O//8uPiFxAv/gBdX9WmIh7kTj6OXvqCY+4iXtwWvxiN49vMZTiJ9/MM
+        lmEi6lj1VsJuFz/zNV9ysnIUqQl9dG0yVkz3TGpMzbeorCxA6UvpbhRlESydqQU6uY+se56K+2AD7G6f
+        kVpQH3AVmzBiP0zi+ESsxg7YTPbBmmFTG7WfZv9qquoXO80qIZE3QLUAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="showCrsBindingSource4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="dbmsDataSet21.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>235, 17</value>
   </metadata>
   <metadata name="dbmsDataSet21.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>235, 17</value>
@@ -182,8 +201,14 @@
   <metadata name="dbmsDataSet15.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>619, 17</value>
   </metadata>
+  <metadata name="dbmsDataSet15.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>619, 17</value>
+  </metadata>
   <metadata name="showCrsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>785, 17</value>
+  </metadata>
+  <metadata name="dbmsDataSet6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>995, 17</value>
   </metadata>
   <metadata name="dbmsDataSet6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>995, 17</value>

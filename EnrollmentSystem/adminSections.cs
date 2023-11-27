@@ -81,6 +81,7 @@ namespace EnrollmentSystem
             {
                 if (sec.stud_sec != null)
                 {
+                    label1.Text = "LIST OF STUDENTS BY SECTION";
                     search.Visible = true;
                     panel2.Visible = true;
                     panel3.Visible = true;
@@ -116,6 +117,40 @@ namespace EnrollmentSystem
             int yrs = (int)yrlevel.SelectedValue;
             label5.Text = program.Text + " "+ yrlevel.Text + "-" + section.Text;
             dataGridView1.DataSource = db.viewSection(section.Text, prog, yrs);
+        }
+
+        private void refresh_Click(object sender, EventArgs e)
+        {
+            load();
+            section.DataSource = db.assignedStud().ToList();
+            section.DisplayMember = "stud_sec";
+            section.ValueMember = "stud_sec";
+        }
+
+        private void refresh_MouseHover(object sender, EventArgs e)
+        {
+            refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
+        }
+
+        private void refresh_MouseLeave(object sender, EventArgs e)
+        {
+            refresh.BackColor = System.Drawing.Color.White;
+        }
+
+        private void edit_Click(object sender, EventArgs e)
+        {
+            editSection edit = new editSection();
+            edit.Studnum = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            edit.FormClosed += Edit_FormClosed;
+            edit.Show();
+        }
+
+        private void Edit_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            load();
+            section.DataSource = db.assignedStud().ToList();
+            section.DisplayMember = "stud_sec";
+            section.ValueMember = "stud_sec";
         }
     }
 }
