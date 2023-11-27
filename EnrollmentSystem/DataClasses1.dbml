@@ -140,6 +140,15 @@
       <Association Name="program_student" Member="program" ThisKey="prog_id" OtherKey="prog_id" Type="program" IsForeignKey="true" />
       <Association Name="user_account_student" Member="user_account" ThisKey="u_id" OtherKey="u_id" Type="user_account" IsForeignKey="true" />
       <Association Name="year_student" Member="year" ThisKey="year_id" OtherKey="year_id" Type="year" IsForeignKey="true" />
+      <Association Name="user_account_student" Member="user_account" ThisKey="u_id" OtherKey="u_id" Type="user_account" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.years" Member="years">
+    <Type Name="year">
+      <Column Name="year_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="year_level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="year_course" Member="courses" ThisKey="year_id" OtherKey="year_id" Type="course" />
+      <Association Name="year_student" Member="students" ThisKey="year_id" OtherKey="year_id" Type="student" />
     </Type>
   </Table>
   <Table Name="dbo.user_account" Member="user_accounts">
@@ -151,9 +160,9 @@
       <Association Name="user_account_student" Member="students" ThisKey="u_id" OtherKey="u_id" Type="student" />
     </Type>
   </Table>
-  <Table Name="dbo.years" Member="years">
-    <Type Name="year">
-      <Column Name="year_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+  <Function Name="dbo.yearList" Method="yearList">
+    <ElementType Name="yearListResult">
+      <Column Name="year_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="year_level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="year_course" Member="courses" ThisKey="year_id" OtherKey="year_id" Type="course" />
       <Association Name="year_student" Member="students" ThisKey="year_id" OtherKey="year_id" Type="student" />
@@ -239,7 +248,9 @@
   </Function>
   <Function Name="dbo.studDel" Method="studDel">
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
+    <ElementType Name="searchStudResult">
+      <Column Name="stud_no" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+    </ElementType>
   </Function>
   <Function Name="dbo.showStudent" Method="showStudent">
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
@@ -317,7 +328,6 @@
     <Parameter Name="key" Type="System.String" DbType="VarChar(MAX)" />
     <ElementType Name="searchInstructorResult">
       <Column Name="ins_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ins_no" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
       <Column Name="ins_fname" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="ins_mi" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="ins_lname" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
