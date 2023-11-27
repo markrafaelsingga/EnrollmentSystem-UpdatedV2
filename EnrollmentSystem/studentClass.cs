@@ -22,7 +22,9 @@ namespace EnrollmentSystem
 
         private void studentClass_Load(object sender, EventArgs e)
         {
+            var sem = db.schoolyears.OrderByDescending(x => x.sy_id).FirstOrDefault();
             this.ControlBox = false;
+            dataGridView1.DataSource = db.studClass(studId, sem.sy_id);
         }
     }
 }

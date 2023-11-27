@@ -38,8 +38,8 @@ namespace EnrollmentSystem
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            if(dataGridView1.Columns[e.ColumnIndex].Name == "Approve")
+            id = int.Parse(dataGridView1.CurrentRow.Cells[1].Value.ToString());
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Approve")
             {
                 string approve = "approve";
                 db.acceptEnroll(approve, id);

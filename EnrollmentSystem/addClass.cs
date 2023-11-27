@@ -82,6 +82,7 @@ namespace EnrollmentSystem
 
                     db.assignClass(section.Text, ftime, ttime, day.Text, crs, ins, roomId);
                     MessageBox.Show("Added!", "Successfull");
+                    this.Close();
                     Visible = false;
                 }
                 else

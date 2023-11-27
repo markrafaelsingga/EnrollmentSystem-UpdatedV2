@@ -33,19 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.studidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studfnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studlnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studmiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studbdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studaddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studemailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studgenderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studyearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studstatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prognameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Approve = new System.Windows.Forms.DataGridViewButtonColumn();
             this.viewEnrolleeBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.dbmsDataSet5 = new EnrollmentSystem.dbmsDataSet5();
@@ -105,7 +92,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -117,21 +104,7 @@
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 29;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.studidDataGridViewTextBoxColumn,
-            this.studfnameDataGridViewTextBoxColumn,
-            this.studlnameDataGridViewTextBoxColumn,
-            this.studmiDataGridViewTextBoxColumn,
-            this.studbdayDataGridViewTextBoxColumn,
-            this.studageDataGridViewTextBoxColumn,
-            this.studaddressDataGridViewTextBoxColumn,
-            this.studphoneDataGridViewTextBoxColumn,
-            this.studemailDataGridViewTextBoxColumn,
-            this.studgenderDataGridViewTextBoxColumn,
-            this.studyearDataGridViewTextBoxColumn,
-            this.studstatusDataGridViewTextBoxColumn,
-            this.prognameDataGridViewTextBoxColumn,
             this.Approve});
-            this.dataGridView1.DataSource = this.viewEnrolleeBindingSource5;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,136 +125,6 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // studidDataGridViewTextBoxColumn
-            // 
-            this.studidDataGridViewTextBoxColumn.DataPropertyName = "stud_id";
-            this.studidDataGridViewTextBoxColumn.HeaderText = "Student ID";
-            this.studidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studidDataGridViewTextBoxColumn.Name = "studidDataGridViewTextBoxColumn";
-            this.studidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.studidDataGridViewTextBoxColumn.ToolTipText = "Student ID";
-            this.studidDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // studfnameDataGridViewTextBoxColumn
-            // 
-            this.studfnameDataGridViewTextBoxColumn.DataPropertyName = "stud_fname";
-            this.studfnameDataGridViewTextBoxColumn.HeaderText = "Firstname";
-            this.studfnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studfnameDataGridViewTextBoxColumn.Name = "studfnameDataGridViewTextBoxColumn";
-            this.studfnameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.studfnameDataGridViewTextBoxColumn.ToolTipText = "Firstname";
-            this.studfnameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // studlnameDataGridViewTextBoxColumn
-            // 
-            this.studlnameDataGridViewTextBoxColumn.DataPropertyName = "stud_lname";
-            this.studlnameDataGridViewTextBoxColumn.HeaderText = "Lastname";
-            this.studlnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studlnameDataGridViewTextBoxColumn.Name = "studlnameDataGridViewTextBoxColumn";
-            this.studlnameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.studlnameDataGridViewTextBoxColumn.ToolTipText = "Lastname";
-            this.studlnameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // studmiDataGridViewTextBoxColumn
-            // 
-            this.studmiDataGridViewTextBoxColumn.DataPropertyName = "stud_mi";
-            this.studmiDataGridViewTextBoxColumn.HeaderText = "MI";
-            this.studmiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studmiDataGridViewTextBoxColumn.Name = "studmiDataGridViewTextBoxColumn";
-            this.studmiDataGridViewTextBoxColumn.ReadOnly = true;
-            this.studmiDataGridViewTextBoxColumn.ToolTipText = "MI";
-            this.studmiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // studbdayDataGridViewTextBoxColumn
-            // 
-            this.studbdayDataGridViewTextBoxColumn.DataPropertyName = "stud_bday";
-            this.studbdayDataGridViewTextBoxColumn.HeaderText = "Birthdate";
-            this.studbdayDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studbdayDataGridViewTextBoxColumn.Name = "studbdayDataGridViewTextBoxColumn";
-            this.studbdayDataGridViewTextBoxColumn.ReadOnly = true;
-            this.studbdayDataGridViewTextBoxColumn.ToolTipText = "Birthdate";
-            this.studbdayDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // studageDataGridViewTextBoxColumn
-            // 
-            this.studageDataGridViewTextBoxColumn.DataPropertyName = "stud_age";
-            this.studageDataGridViewTextBoxColumn.HeaderText = "Age";
-            this.studageDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studageDataGridViewTextBoxColumn.Name = "studageDataGridViewTextBoxColumn";
-            this.studageDataGridViewTextBoxColumn.ReadOnly = true;
-            this.studageDataGridViewTextBoxColumn.ToolTipText = "Age";
-            this.studageDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // studaddressDataGridViewTextBoxColumn
-            // 
-            this.studaddressDataGridViewTextBoxColumn.DataPropertyName = "stud_address";
-            this.studaddressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.studaddressDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studaddressDataGridViewTextBoxColumn.Name = "studaddressDataGridViewTextBoxColumn";
-            this.studaddressDataGridViewTextBoxColumn.ReadOnly = true;
-            this.studaddressDataGridViewTextBoxColumn.ToolTipText = "Address";
-            this.studaddressDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // studphoneDataGridViewTextBoxColumn
-            // 
-            this.studphoneDataGridViewTextBoxColumn.DataPropertyName = "stud_phone";
-            this.studphoneDataGridViewTextBoxColumn.HeaderText = "Phone";
-            this.studphoneDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studphoneDataGridViewTextBoxColumn.Name = "studphoneDataGridViewTextBoxColumn";
-            this.studphoneDataGridViewTextBoxColumn.ReadOnly = true;
-            this.studphoneDataGridViewTextBoxColumn.ToolTipText = "Phone";
-            this.studphoneDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // studemailDataGridViewTextBoxColumn
-            // 
-            this.studemailDataGridViewTextBoxColumn.DataPropertyName = "stud_email";
-            this.studemailDataGridViewTextBoxColumn.HeaderText = "Email address";
-            this.studemailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studemailDataGridViewTextBoxColumn.Name = "studemailDataGridViewTextBoxColumn";
-            this.studemailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.studemailDataGridViewTextBoxColumn.ToolTipText = "Email address";
-            this.studemailDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // studgenderDataGridViewTextBoxColumn
-            // 
-            this.studgenderDataGridViewTextBoxColumn.DataPropertyName = "stud_gender";
-            this.studgenderDataGridViewTextBoxColumn.HeaderText = "Gender";
-            this.studgenderDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studgenderDataGridViewTextBoxColumn.Name = "studgenderDataGridViewTextBoxColumn";
-            this.studgenderDataGridViewTextBoxColumn.ReadOnly = true;
-            this.studgenderDataGridViewTextBoxColumn.ToolTipText = "Gender";
-            this.studgenderDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // studyearDataGridViewTextBoxColumn
-            // 
-            this.studyearDataGridViewTextBoxColumn.DataPropertyName = "stud_year";
-            this.studyearDataGridViewTextBoxColumn.HeaderText = "Year";
-            this.studyearDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studyearDataGridViewTextBoxColumn.Name = "studyearDataGridViewTextBoxColumn";
-            this.studyearDataGridViewTextBoxColumn.ReadOnly = true;
-            this.studyearDataGridViewTextBoxColumn.ToolTipText = "Year";
-            this.studyearDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // studstatusDataGridViewTextBoxColumn
-            // 
-            this.studstatusDataGridViewTextBoxColumn.DataPropertyName = "stud_status";
-            this.studstatusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.studstatusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studstatusDataGridViewTextBoxColumn.Name = "studstatusDataGridViewTextBoxColumn";
-            this.studstatusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.studstatusDataGridViewTextBoxColumn.ToolTipText = "Status";
-            this.studstatusDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // prognameDataGridViewTextBoxColumn
-            // 
-            this.prognameDataGridViewTextBoxColumn.DataPropertyName = "prog_name";
-            this.prognameDataGridViewTextBoxColumn.HeaderText = "Program name";
-            this.prognameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.prognameDataGridViewTextBoxColumn.Name = "prognameDataGridViewTextBoxColumn";
-            this.prognameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.prognameDataGridViewTextBoxColumn.ToolTipText = "Program name";
-            this.prognameDataGridViewTextBoxColumn.Width = 125;
-            // 
             // Approve
             // 
             this.Approve.HeaderText = "Approve";
@@ -290,7 +133,6 @@
             this.Approve.ReadOnly = true;
             this.Approve.Text = "Approve";
             this.Approve.UseColumnTextForButtonValue = true;
-            this.Approve.Width = 125;
             // 
             // viewEnrolleeBindingSource5
             // 
@@ -481,19 +323,6 @@
         private System.Windows.Forms.PictureBox search;
         private System.Windows.Forms.TextBox searchTxtbox;
         private dbmsDataSet29 dbmsDataSet29;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studfnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studlnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studmiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studbdayDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studageDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studaddressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studphoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studemailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studgenderDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studyearDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studstatusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prognameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Approve;
     }
 }

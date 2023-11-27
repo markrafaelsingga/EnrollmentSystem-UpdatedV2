@@ -49,8 +49,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.section = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.section = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.showClassBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet11)).BeginInit();
             this.panel1.SuspendLayout();
@@ -87,6 +87,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
+            this.panel1.Controls.Add(this.section);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.prof);
             this.panel1.Controls.Add(this.day);
@@ -102,7 +103,6 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.section);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(38, 37);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -316,17 +316,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Section:";
             // 
-            // section
-            // 
-            this.section.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.section.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section.Location = new System.Drawing.Point(24, 114);
-            this.section.Margin = new System.Windows.Forms.Padding(4);
-            this.section.Name = "section";
-            this.section.Size = new System.Drawing.Size(323, 30);
-            this.section.TabIndex = 3;
-            // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -338,6 +327,25 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(216, 30);
             this.textBox1.TabIndex = 25;
+            // 
+            // section
+            // 
+            this.section.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.section.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.section.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.section.FormattingEnabled = true;
+            this.section.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "1A",
+            "1B"});
+            this.section.Location = new System.Drawing.Point(26, 114);
+            this.section.Margin = new System.Windows.Forms.Padding(4);
+            this.section.Name = "section";
+            this.section.Size = new System.Drawing.Size(321, 33);
+            this.section.TabIndex = 26;
             // 
             // updateClass
             // 
@@ -385,8 +393,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox section;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox section;
     }
 }

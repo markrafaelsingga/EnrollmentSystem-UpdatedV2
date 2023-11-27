@@ -33,6 +33,7 @@
             this.prog = new System.Windows.Forms.ComboBox();
             this.prof = new System.Windows.Forms.ComboBox();
             this.day = new System.Windows.Forms.TextBox();
+            this.section = new System.Windows.Forms.ComboBox();
             this.room = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.subjectcomboBox = new System.Windows.Forms.ComboBox();
@@ -47,7 +48,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.saveBtn = new System.Windows.Forms.Button();
-            this.section = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,6 +131,25 @@
             this.day.Name = "day";
             this.day.Size = new System.Drawing.Size(285, 30);
             this.day.TabIndex = 21;
+            // 
+            // section
+            // 
+            this.section.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.section.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.section.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.section.FormattingEnabled = true;
+            this.section.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "1A",
+            "1B"});
+            this.section.Location = new System.Drawing.Point(29, 44);
+            this.section.Margin = new System.Windows.Forms.Padding(4);
+            this.section.Name = "section";
+            this.section.Size = new System.Drawing.Size(289, 33);
+            this.section.TabIndex = 20;
             // 
             // room
             // 
@@ -337,25 +356,6 @@
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             this.saveBtn.MouseLeave += new System.EventHandler(this.saveBtn_MouseLeave);
             this.saveBtn.MouseHover += new System.EventHandler(this.saveBtn_MouseHover);
-            // 
-            // section
-            // 
-            this.section.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.section.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.section.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section.FormattingEnabled = true;
-            this.section.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "1A",
-            "1B"});
-            this.section.Location = new System.Drawing.Point(29, 44);
-            this.section.Margin = new System.Windows.Forms.Padding(4);
-            this.section.Name = "section";
-            this.section.Size = new System.Drawing.Size(289, 33);
-            this.section.TabIndex = 20;
             // 
             // addClass
             // 

@@ -34,14 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.classsectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classfromTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classtoTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.crsnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.instructornameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yearlevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studClassBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dbmsDataSet25 = new EnrollmentSystem.dbmsDataSet25();
             this.studClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -50,6 +42,13 @@
             this.studClassTableAdapter1 = new EnrollmentSystem.dbmsDataSet25TableAdapters.studClassTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.crsnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classfromTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classtoTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.instructornameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yearlevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studClassBindingSource1)).BeginInit();
@@ -88,11 +87,10 @@
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.classsectionDataGridViewTextBoxColumn,
+            this.crsnameDataGridViewTextBoxColumn,
             this.classfromTimeDataGridViewTextBoxColumn,
             this.classtoTimeDataGridViewTextBoxColumn,
             this.classdayDataGridViewTextBoxColumn,
-            this.crsnameDataGridViewTextBoxColumn,
             this.instructornameDataGridViewTextBoxColumn,
             this.roomnameDataGridViewTextBoxColumn,
             this.yearlevelDataGridViewTextBoxColumn});
@@ -121,78 +119,6 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1034, 401);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // classsectionDataGridViewTextBoxColumn
-            // 
-            this.classsectionDataGridViewTextBoxColumn.DataPropertyName = "class_section";
-            this.classsectionDataGridViewTextBoxColumn.HeaderText = "Class section";
-            this.classsectionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.classsectionDataGridViewTextBoxColumn.Name = "classsectionDataGridViewTextBoxColumn";
-            this.classsectionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.classsectionDataGridViewTextBoxColumn.ToolTipText = "Class section";
-            // 
-            // classfromTimeDataGridViewTextBoxColumn
-            // 
-            this.classfromTimeDataGridViewTextBoxColumn.DataPropertyName = "class_fromTime";
-            this.classfromTimeDataGridViewTextBoxColumn.HeaderText = "Class start";
-            this.classfromTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.classfromTimeDataGridViewTextBoxColumn.Name = "classfromTimeDataGridViewTextBoxColumn";
-            this.classfromTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.classfromTimeDataGridViewTextBoxColumn.ToolTipText = "Class start";
-            // 
-            // classtoTimeDataGridViewTextBoxColumn
-            // 
-            this.classtoTimeDataGridViewTextBoxColumn.DataPropertyName = "class_toTime";
-            this.classtoTimeDataGridViewTextBoxColumn.HeaderText = "Class end";
-            this.classtoTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.classtoTimeDataGridViewTextBoxColumn.Name = "classtoTimeDataGridViewTextBoxColumn";
-            this.classtoTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.classtoTimeDataGridViewTextBoxColumn.ToolTipText = "Class end";
-            // 
-            // classdayDataGridViewTextBoxColumn
-            // 
-            this.classdayDataGridViewTextBoxColumn.DataPropertyName = "class_day";
-            this.classdayDataGridViewTextBoxColumn.HeaderText = "Class day";
-            this.classdayDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.classdayDataGridViewTextBoxColumn.Name = "classdayDataGridViewTextBoxColumn";
-            this.classdayDataGridViewTextBoxColumn.ReadOnly = true;
-            this.classdayDataGridViewTextBoxColumn.ToolTipText = "Class day";
-            // 
-            // crsnameDataGridViewTextBoxColumn
-            // 
-            this.crsnameDataGridViewTextBoxColumn.DataPropertyName = "crs_name";
-            this.crsnameDataGridViewTextBoxColumn.HeaderText = "Course name";
-            this.crsnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.crsnameDataGridViewTextBoxColumn.Name = "crsnameDataGridViewTextBoxColumn";
-            this.crsnameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.crsnameDataGridViewTextBoxColumn.ToolTipText = "Course name";
-            // 
-            // instructornameDataGridViewTextBoxColumn
-            // 
-            this.instructornameDataGridViewTextBoxColumn.DataPropertyName = "instructor_name";
-            this.instructornameDataGridViewTextBoxColumn.HeaderText = "Instructor name";
-            this.instructornameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.instructornameDataGridViewTextBoxColumn.Name = "instructornameDataGridViewTextBoxColumn";
-            this.instructornameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.instructornameDataGridViewTextBoxColumn.ToolTipText = "Instructor name";
-            // 
-            // roomnameDataGridViewTextBoxColumn
-            // 
-            this.roomnameDataGridViewTextBoxColumn.DataPropertyName = "room_name";
-            this.roomnameDataGridViewTextBoxColumn.HeaderText = "Room name";
-            this.roomnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.roomnameDataGridViewTextBoxColumn.Name = "roomnameDataGridViewTextBoxColumn";
-            this.roomnameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.roomnameDataGridViewTextBoxColumn.ToolTipText = "Room name";
-            // 
-            // yearlevelDataGridViewTextBoxColumn
-            // 
-            this.yearlevelDataGridViewTextBoxColumn.DataPropertyName = "year_level";
-            this.yearlevelDataGridViewTextBoxColumn.HeaderText = "Year level";
-            this.yearlevelDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.yearlevelDataGridViewTextBoxColumn.Name = "yearlevelDataGridViewTextBoxColumn";
-            this.yearlevelDataGridViewTextBoxColumn.ReadOnly = true;
-            this.yearlevelDataGridViewTextBoxColumn.ToolTipText = "Year level";
             // 
             // studClassBindingSource1
             // 
@@ -246,6 +172,69 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 98);
             this.flowLayoutPanel1.TabIndex = 14;
             // 
+            // crsnameDataGridViewTextBoxColumn
+            // 
+            this.crsnameDataGridViewTextBoxColumn.DataPropertyName = "crs_name";
+            this.crsnameDataGridViewTextBoxColumn.HeaderText = "Course name";
+            this.crsnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.crsnameDataGridViewTextBoxColumn.Name = "crsnameDataGridViewTextBoxColumn";
+            this.crsnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.crsnameDataGridViewTextBoxColumn.ToolTipText = "Course name";
+            // 
+            // classfromTimeDataGridViewTextBoxColumn
+            // 
+            this.classfromTimeDataGridViewTextBoxColumn.DataPropertyName = "class_fromTime";
+            this.classfromTimeDataGridViewTextBoxColumn.HeaderText = "Class start";
+            this.classfromTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.classfromTimeDataGridViewTextBoxColumn.Name = "classfromTimeDataGridViewTextBoxColumn";
+            this.classfromTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.classfromTimeDataGridViewTextBoxColumn.ToolTipText = "Class start";
+            // 
+            // classtoTimeDataGridViewTextBoxColumn
+            // 
+            this.classtoTimeDataGridViewTextBoxColumn.DataPropertyName = "class_toTime";
+            this.classtoTimeDataGridViewTextBoxColumn.HeaderText = "Class end";
+            this.classtoTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.classtoTimeDataGridViewTextBoxColumn.Name = "classtoTimeDataGridViewTextBoxColumn";
+            this.classtoTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.classtoTimeDataGridViewTextBoxColumn.ToolTipText = "Class end";
+            // 
+            // classdayDataGridViewTextBoxColumn
+            // 
+            this.classdayDataGridViewTextBoxColumn.DataPropertyName = "class_day";
+            this.classdayDataGridViewTextBoxColumn.HeaderText = "Class day";
+            this.classdayDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.classdayDataGridViewTextBoxColumn.Name = "classdayDataGridViewTextBoxColumn";
+            this.classdayDataGridViewTextBoxColumn.ReadOnly = true;
+            this.classdayDataGridViewTextBoxColumn.ToolTipText = "Class day";
+            // 
+            // instructornameDataGridViewTextBoxColumn
+            // 
+            this.instructornameDataGridViewTextBoxColumn.DataPropertyName = "instructor_name";
+            this.instructornameDataGridViewTextBoxColumn.HeaderText = "Instructor name";
+            this.instructornameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.instructornameDataGridViewTextBoxColumn.Name = "instructornameDataGridViewTextBoxColumn";
+            this.instructornameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.instructornameDataGridViewTextBoxColumn.ToolTipText = "Instructor name";
+            // 
+            // roomnameDataGridViewTextBoxColumn
+            // 
+            this.roomnameDataGridViewTextBoxColumn.DataPropertyName = "room_name";
+            this.roomnameDataGridViewTextBoxColumn.HeaderText = "Room name";
+            this.roomnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.roomnameDataGridViewTextBoxColumn.Name = "roomnameDataGridViewTextBoxColumn";
+            this.roomnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.roomnameDataGridViewTextBoxColumn.ToolTipText = "Room name";
+            // 
+            // yearlevelDataGridViewTextBoxColumn
+            // 
+            this.yearlevelDataGridViewTextBoxColumn.DataPropertyName = "year_id";
+            this.yearlevelDataGridViewTextBoxColumn.HeaderText = "Year level";
+            this.yearlevelDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.yearlevelDataGridViewTextBoxColumn.Name = "yearlevelDataGridViewTextBoxColumn";
+            this.yearlevelDataGridViewTextBoxColumn.ReadOnly = true;
+            this.yearlevelDataGridViewTextBoxColumn.ToolTipText = "Year level";
+            // 
             // studentClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -281,15 +270,14 @@
         private System.Windows.Forms.BindingSource studClassBindingSource1;
         private dbmsDataSet25 dbmsDataSet25;
         private dbmsDataSet25TableAdapters.studClassTableAdapter studClassTableAdapter1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn classsectionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn crsnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn classfromTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn classtoTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn classdayDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn crsnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn instructornameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn roomnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn yearlevelDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

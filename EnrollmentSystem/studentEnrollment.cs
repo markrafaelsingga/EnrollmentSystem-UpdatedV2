@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,9 +24,6 @@ namespace EnrollmentSystem
         {
             InitializeComponent();
             this.studId = studId;
-
-            cBox();
-            fillFields();
          
 
             var result = db.getStud(studId).ToList();
@@ -52,9 +50,10 @@ namespace EnrollmentSystem
 
         private void studentEnrollment_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dbmsDataSet28.yearList' table. You can move, or remove it, as needed.
-            //this.yearListTableAdapter.Fill(this.dbmsDataSet28.yearList);
             this.ControlBox = false;
+
+            cBox();
+            fillFields();
         }
 
         private void saveBtn_MouseHover(object sender, EventArgs e)
@@ -69,11 +68,12 @@ namespace EnrollmentSystem
 
         private void fillFields()
         {
-            var result = db.getStud(studId).ToList();
             var current = db.getSchoolyear().OrderByDescending(x => x.sy_id).FirstOrDefault();
             if (current != null)
             {
                 sy.Text = current.currentSy.ToString();
+
+                var result = db.getStud(studId).ToList();
                 if (result != null && result.Any())
                 {
                     foreach (var item in result)
@@ -103,40 +103,79 @@ namespace EnrollmentSystem
             }
             
         }
-          
+
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            cBox();
             var sem = db.schoolyears.OrderByDescending(x => x.sy_id).FirstOrDefault();
-            var check = db.enrollments.ToList();
+            var check = db.checkEnroll(studId, sem.sy_id).ToList();
             int progId = (int)program.SelectedValue;
             int yrId = (int)yr.SelectedValue;
-            try 
+
+            try
             {
-                if (check == null && check.Any())
+                if (check != null && check.Any())
                 {
-                    MessageBox.Show("You already submitted the enrollment form", "Already submitted");
+                    MessageBox.Show("You have already submitted the enrollment form", "Already Submitted", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    DialogResult result = MessageBox.Show("Are you enrolling to a regular load?", "Confirmation", MessageBoxButtons.YesNo);
-                    // The student is regular so it will automatically pick the course to enroll
-                    if (result == DialogResult.Yes)
+                    var assignResult = db.checkAssign(studId).FirstOrDefault();
+                    int assignedClassCount = assignResult?.result ?? 0;
+
+                    if (assignedClassCount == 0)
                     {
-                        db.updateInfostud(studId, phoneTxtbox.Text, emailTxtbox.Text, Convert.ToDecimal(gpa.Text), yrId, progId);
-                        
+                        DialogResult resultDialog = MessageBox.Show($"You are enrolling in school year {sy.Text}. Is this correct?", "Confirmation", MessageBoxButtons.YesNo);
+
+                        if (resultDialog == DialogResult.Yes)
+                        {
+                            db.updateInfostud(studId, phoneTxtbox.Text, emailTxtbox.Text, Convert.ToDecimal(gpa.Text), yrId, progId);
+
+                            var stud = db.studSection(studId).FirstOrDefault();
+
+                            if (stud != null)
+                            {
+                                string section1 = stud.stud_sec;
+
+                                // Check if the section string is not empty before accessing the first letter
+                                if (!string.IsNullOrEmpty(section1))
+                                {
+                                    char firstLetter = section1[0];
+                                    var section = db.compareSec(firstLetter.ToString(), yrId, progId, sem.sem_id).ToList();
+
+                                    if (section != null && section.Any())
+                                    {
+                                        foreach (var result in section)
+                                        {
+                                            var classCode = result.class_code;
+                                            db.enroll(studId, classCode, sem.sy_id);
+                                        }
+                                        MessageBox.Show("Enrollment successful! Waiting for approval", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("No available classes for enrollment", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    }
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Student section is empty.");
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("Student not found or no section assigned.");
+                            }
+                        }
                     }
-                    // The student is irregular so he/she will pick the course to enroll
                     else
                     {
-                        selectCourse select = new selectCourse();
-                        select.ShowDialog();
+                        MessageBox.Show("You are not assigned to a class yet! Please notify the admin about your situation", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

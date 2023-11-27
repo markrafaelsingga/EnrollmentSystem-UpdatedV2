@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EnrollmentSystem
 {
@@ -80,9 +81,26 @@ namespace EnrollmentSystem
 
             int index2 = room.FindString(Room);
 
-            if (index2 != -1)
+            // Assuming comboBox is your ComboBox control
+            int desiredIndex = 5; // Replace with your desired index
+
+            // Check if the desired index is within the valid range
+            if (desiredIndex >= 0 && desiredIndex < room.Items.Count)
             {
-                room.SelectedIndex = index;
+                // Set the SelectedIndex
+                room.SelectedIndex = desiredIndex;
+            }
+            else
+            {
+                // Handle the case where the index is out of range
+                MessageBox.Show("Invalid index selected.");
+            }
+
+
+            int index3 = section.FindString(Section);
+            if (index3 != -1)
+            {
+                section.SelectedIndex = index3;
             }
 
         }
@@ -117,7 +135,7 @@ namespace EnrollmentSystem
                     DateTime selectedTo = toTime.Value;
                     TimeSpan ttime = selectedTo.TimeOfDay;
                     db.updateClass(id, section.Text, ftime, ttime, day.Text, crs, insId, roomId);
-
+                    this.Close();
                     MessageBox.Show("Updated!", "Successfull");
                 }
                 else

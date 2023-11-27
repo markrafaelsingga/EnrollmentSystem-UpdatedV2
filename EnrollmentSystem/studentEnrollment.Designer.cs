@@ -51,6 +51,7 @@
             this.gpa = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.sy = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
             this.yr = new System.Windows.Forms.ComboBox();
@@ -63,7 +64,6 @@
             this.panel27 = new System.Windows.Forms.Panel();
             this.saveBtn = new System.Windows.Forms.Button();
             this.yearListTableAdapter = new EnrollmentSystem.dbmsDataSet28TableAdapters.yearListTableAdapter();
-            this.sy = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -346,6 +346,17 @@
             this.panel15.Size = new System.Drawing.Size(248, 63);
             this.panel15.TabIndex = 44;
             // 
+            // sy
+            // 
+            this.sy.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.sy.Enabled = false;
+            this.sy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sy.Location = new System.Drawing.Point(0, 33);
+            this.sy.Margin = new System.Windows.Forms.Padding(4);
+            this.sy.Name = "sy";
+            this.sy.Size = new System.Drawing.Size(248, 30);
+            this.sy.TabIndex = 49;
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -469,17 +480,6 @@
             // yearListTableAdapter
             // 
             this.yearListTableAdapter.ClearBeforeFill = true;
-            // 
-            // sy
-            // 
-            this.sy.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.sy.Enabled = false;
-            this.sy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sy.Location = new System.Drawing.Point(0, 33);
-            this.sy.Margin = new System.Windows.Forms.Padding(4);
-            this.sy.Name = "sy";
-            this.sy.Size = new System.Drawing.Size(248, 30);
-            this.sy.TabIndex = 49;
             // 
             // studentEnrollment
             // 
