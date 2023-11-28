@@ -20,6 +20,7 @@ namespace EnrollmentSystem
         int adminId;
         int user_Id;
         int batchId;
+        int prog;
         public studentEnrollment(int studId)
         {
             InitializeComponent();
@@ -85,6 +86,7 @@ namespace EnrollmentSystem
                         emailTxtbox.Text = item.stud_email;
                         gpa.Text = item.stud_gpa.ToString();
                         user_Id = item.u_id;
+                        prog = item.prog_id;
 
                         program.SelectedValue = item.prog_id;
                         program.Text = program.SelectedItem?.ToString(); // Handle null value
@@ -144,12 +146,25 @@ namespace EnrollmentSystem
 
                                     if (section != null && section.Any())
                                     {
-                                        foreach (var result in section)
+                                        DialogResult resultDialog1 = MessageBox.Show($"Are you enrolling to a regular load?", "Confirmation", MessageBoxButtons.YesNo);
+                                        if (resultDialog1 == DialogResult.Yes)
                                         {
-                                            var classCode = result.class_code;
-                                            db.enroll(studId, classCode, sem.sy_id);
+                                            foreach (var result in section)
+                                            {
+                                                var classCode = result.class_code;
+                                                db.enroll(studId, classCode, sem.sy_id);
+                                            }
+                                            MessageBox.Show("Enrollment successful! Waiting for approval", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         }
-                                        MessageBox.Show("Enrollment successful! Waiting for approval", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        else
+                                        {
+                                            chooseClass choose = new chooseClass();
+                                            choose.ID = studId;
+                                            choose.SY = sem.sy_id;
+                                            choose.Program = prog;
+                                            choose.ShowDialog();
+                                        }
+                                        
                                     }
                                     else
                                     {

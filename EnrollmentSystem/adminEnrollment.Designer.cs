@@ -33,10 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Approve = new System.Windows.Forms.DataGridViewButtonColumn();
             this.viewEnrolleeBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.dbmsDataSet5 = new EnrollmentSystem.dbmsDataSet5();
-            this.search = new System.Windows.Forms.PictureBox();
             this.searchTxtbox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,11 +55,17 @@
             this.viewEnrolleeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.viewEnrolleeTableAdapter = new EnrollmentSystem.dbmsDataSetTableAdapters.viewEnrolleeTableAdapter();
             this.dbmsDataSet29 = new EnrollmentSystem.dbmsDataSet29();
+            this.search = new System.Windows.Forms.PictureBox();
+            this.stud_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stud_lname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stud_fname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prog_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.year_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Approve = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource1)).BeginInit();
@@ -74,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -104,6 +109,11 @@
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 29;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.stud_id,
+            this.stud_lname,
+            this.stud_fname,
+            this.prog_name,
+            this.year_id,
             this.Approve});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -125,15 +135,6 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Approve
-            // 
-            this.Approve.HeaderText = "Approve";
-            this.Approve.MinimumWidth = 6;
-            this.Approve.Name = "Approve";
-            this.Approve.ReadOnly = true;
-            this.Approve.Text = "Approve";
-            this.Approve.UseColumnTextForButtonValue = true;
-            // 
             // viewEnrolleeBindingSource5
             // 
             this.viewEnrolleeBindingSource5.DataMember = "viewEnrollee";
@@ -143,14 +144,6 @@
             // 
             this.dbmsDataSet5.DataSetName = "dbmsDataSet5";
             this.dbmsDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // search
-            // 
-            this.search.Location = new System.Drawing.Point(0, 0);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(100, 50);
-            this.search.TabIndex = 0;
-            this.search.TabStop = false;
             // 
             // searchTxtbox
             // 
@@ -261,6 +254,67 @@
             this.dbmsDataSet29.DataSetName = "dbmsDataSet29";
             this.dbmsDataSet29.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // search
+            // 
+            this.search.Location = new System.Drawing.Point(0, 0);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(100, 50);
+            this.search.TabIndex = 0;
+            this.search.TabStop = false;
+            // 
+            // stud_id
+            // 
+            this.stud_id.DataPropertyName = "stud_id";
+            this.stud_id.HeaderText = "Student ID#";
+            this.stud_id.MinimumWidth = 6;
+            this.stud_id.Name = "stud_id";
+            this.stud_id.ReadOnly = true;
+            this.stud_id.ToolTipText = "Student ID#";
+            // 
+            // stud_lname
+            // 
+            this.stud_lname.DataPropertyName = "stud_lname";
+            this.stud_lname.HeaderText = "Student lastname";
+            this.stud_lname.MinimumWidth = 6;
+            this.stud_lname.Name = "stud_lname";
+            this.stud_lname.ReadOnly = true;
+            this.stud_lname.ToolTipText = "Student lastname";
+            // 
+            // stud_fname
+            // 
+            this.stud_fname.DataPropertyName = "stud_fname";
+            this.stud_fname.HeaderText = "Student firstname";
+            this.stud_fname.MinimumWidth = 6;
+            this.stud_fname.Name = "stud_fname";
+            this.stud_fname.ReadOnly = true;
+            // 
+            // prog_name
+            // 
+            this.prog_name.DataPropertyName = "prog_name";
+            this.prog_name.HeaderText = "Program";
+            this.prog_name.MinimumWidth = 6;
+            this.prog_name.Name = "prog_name";
+            this.prog_name.ReadOnly = true;
+            this.prog_name.ToolTipText = "Program";
+            // 
+            // year_id
+            // 
+            this.year_id.DataPropertyName = "year_id";
+            this.year_id.HeaderText = "Year level";
+            this.year_id.MinimumWidth = 6;
+            this.year_id.Name = "year_id";
+            this.year_id.ReadOnly = true;
+            this.year_id.ToolTipText = "Year level";
+            // 
+            // Approve
+            // 
+            this.Approve.HeaderText = "Approve";
+            this.Approve.MinimumWidth = 6;
+            this.Approve.Name = "Approve";
+            this.Approve.ReadOnly = true;
+            this.Approve.Text = "Approve";
+            this.Approve.UseColumnTextForButtonValue = true;
+            // 
             // adminEnrollment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -278,7 +332,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet1)).EndInit();
@@ -292,6 +345,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewEnrolleeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -323,6 +377,11 @@
         private System.Windows.Forms.PictureBox search;
         private System.Windows.Forms.TextBox searchTxtbox;
         private dbmsDataSet29 dbmsDataSet29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stud_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stud_lname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stud_fname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prog_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn year_id;
         private System.Windows.Forms.DataGridViewButtonColumn Approve;
     }
 }

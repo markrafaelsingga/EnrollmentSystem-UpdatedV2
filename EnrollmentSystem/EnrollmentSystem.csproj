@@ -97,6 +97,12 @@
     <Compile Include="assignSection.Designer.cs">
       <DependentUpon>assignSection.cs</DependentUpon>
     </Compile>
+    <Compile Include="chooseClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chooseClass.Designer.cs">
+      <DependentUpon>chooseClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -462,6 +468,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="assignSection.resx">
       <DependentUpon>assignSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chooseClass.resx">
+      <DependentUpon>chooseClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="editSection.resx">
       <DependentUpon>editSection.cs</DependentUpon>
