@@ -65,6 +65,7 @@ namespace EnrollmentSystem
 
                 // Clear the list of selected rows
                 selectedRows.Clear();
+                MessageBox.Show("Enrollment successful! Waiting for approval", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
         }
