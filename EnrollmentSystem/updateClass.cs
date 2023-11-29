@@ -134,7 +134,7 @@ namespace EnrollmentSystem
 
                     DateTime selectedTo = toTime.Value;
                     TimeSpan ttime = selectedTo.TimeOfDay;
-                    db.updateClass(id, section.Text, ftime, ttime, day.Text, crs, insId, roomId);
+                    db.updateClass(Code, section.Text, ftime, ttime, day.Text, crs, insId, roomId);
                     this.Close();
                     MessageBox.Show("Updated!", "Successfull");
                 }
@@ -142,10 +142,12 @@ namespace EnrollmentSystem
                 {
                     MessageBox.Show("Input fields", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show($"An error occured: {ex.Message}");
             }
+
         }
     }
 }
