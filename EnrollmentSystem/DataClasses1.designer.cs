@@ -603,6 +603,13 @@ namespace EnrollmentSystem
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), student);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateAdmin")]
+		public int updateAdmin([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(MAX)")] string fname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(MAX)")] string lname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(1)")] string mi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(MAX)")] string address, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(MAX)")] string email, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(11)")] string phone)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fname, lname, mi, address, email, phone);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.admins")]

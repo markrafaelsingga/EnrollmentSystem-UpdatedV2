@@ -658,4 +658,13 @@
     <Parameter Name="student" Type="System.String" DbType="VarChar(MAX)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.updateAdmin" Method="updateAdmin">
+    <Parameter Name="fname" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="lname" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="mi" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="address" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="email" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="phone" Type="System.String" DbType="VarChar(11)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>
