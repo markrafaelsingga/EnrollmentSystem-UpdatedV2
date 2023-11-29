@@ -54,11 +54,11 @@ namespace EnrollmentSystem
         private void adminSections_Load(object sender, EventArgs e)
         {
             load();
-            yrlevel.DataSource = db.years.ToList();
-            yrlevel.DisplayMember = "year_level";
+            yrlevel.DataSource = db.yearList().ToList();
+            yrlevel.DisplayMember = "year_id";
             yrlevel.ValueMember = "year_id";
 
-            program.DataSource = db.programs.ToList();
+            program.DataSource = db.progList().ToList();
             program.DisplayMember = "prog_name";
             program.ValueMember = "prog_id";
 
@@ -139,10 +139,20 @@ namespace EnrollmentSystem
 
         private void edit_Click(object sender, EventArgs e)
         {
-            editSection edit = new editSection();
-            edit.Studnum = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            edit.FormClosed += Edit_FormClosed;
-            edit.Show();
+            var currentRow = dataGridView1.CurrentRow;
+
+            if (currentRow != null)
+            {
+                editSection edit = new editSection();
+                edit.Studnum = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                edit.FormClosed += Edit_FormClosed;
+                edit.Show();
+            }
+            else
+            {
+                // Handle the case when currentRow is null
+                MessageBox.Show("No selected student.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Edit_FormClosed(object sender, FormClosedEventArgs e)

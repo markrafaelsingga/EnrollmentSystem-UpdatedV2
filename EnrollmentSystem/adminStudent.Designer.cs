@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminStudent));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminStudent));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.delete = new System.Windows.Forms.PictureBox();
             this.add = new System.Windows.Forms.PictureBox();
@@ -63,6 +66,12 @@
             this.showStudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.showStudentTableAdapter = new EnrollmentSystem.dbmsDataSet12TableAdapters.showStudentTableAdapter();
             this.showStudentTableAdapter1 = new EnrollmentSystem.dbmsDataSet17TableAdapters.showStudentTableAdapter();
+            this.more = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.stud_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stud_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Activate = new System.Windows.Forms.DataGridViewButtonColumn();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.delete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.add)).BeginInit();
@@ -76,12 +85,16 @@
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.more)).BeginInit();
+            this.flowLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel2.Controls.Add(this.more);
             this.flowLayoutPanel2.Controls.Add(this.delete);
             this.flowLayoutPanel2.Controls.Add(this.add);
             this.flowLayoutPanel2.Controls.Add(this.edit);
@@ -93,12 +106,13 @@
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 12, 53, 0);
             this.flowLayoutPanel2.Size = new System.Drawing.Size(1153, 79);
             this.flowLayoutPanel2.TabIndex = 8;
+            this.flowLayoutPanel2.Click += new System.EventHandler(this.flowLayoutPanel2_Click);
             // 
             // delete
             // 
             this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
-            this.delete.Location = new System.Drawing.Point(1052, 17);
+            this.delete.Location = new System.Drawing.Point(999, 17);
             this.delete.Margin = new System.Windows.Forms.Padding(5);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(43, 43);
@@ -113,7 +127,7 @@
             // 
             this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
-            this.add.Location = new System.Drawing.Point(999, 17);
+            this.add.Location = new System.Drawing.Point(946, 17);
             this.add.Margin = new System.Windows.Forms.Padding(5);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(43, 43);
@@ -128,7 +142,7 @@
             // 
             this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-            this.edit.Location = new System.Drawing.Point(942, 17);
+            this.edit.Location = new System.Drawing.Point(889, 17);
             this.edit.Margin = new System.Windows.Forms.Padding(5);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(47, 43);
@@ -143,7 +157,7 @@
             // 
             this.panel2.Controls.Add(this.search);
             this.panel2.Controls.Add(this.searchTxtbox);
-            this.panel2.Location = new System.Drawing.Point(387, 17);
+            this.panel2.Location = new System.Drawing.Point(334, 17);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -174,6 +188,7 @@
             this.searchTxtbox.Name = "searchTxtbox";
             this.searchTxtbox.Size = new System.Drawing.Size(545, 30);
             this.searchTxtbox.TabIndex = 3;
+            this.searchTxtbox.Click += new System.EventHandler(this.searchTxtbox_Click);
             this.searchTxtbox.TextChanged += new System.EventHandler(this.searchTxtbox_TextChanged);
             // 
             // panel1
@@ -243,6 +258,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1029, 428);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // studidDataGridViewTextBoxColumn
             // 
@@ -382,6 +398,7 @@
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(53, 25, 0, 0);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 73);
             this.flowLayoutPanel1.TabIndex = 12;
+            this.flowLayoutPanel1.Click += new System.EventHandler(this.flowLayoutPanel1_Click);
             // 
             // label1
             // 
@@ -412,12 +429,118 @@
             // 
             this.showStudentTableAdapter1.ClearBeforeFill = true;
             // 
+            // more
+            // 
+            this.more.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.more.Image = ((System.Drawing.Image)(resources.GetObject("more.Image")));
+            this.more.Location = new System.Drawing.Point(1052, 17);
+            this.more.Margin = new System.Windows.Forms.Padding(5);
+            this.more.Name = "more";
+            this.more.Size = new System.Drawing.Size(43, 43);
+            this.more.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.more.TabIndex = 5;
+            this.more.TabStop = false;
+            this.more.Click += new System.EventHandler(this.more_Click);
+            this.more.DoubleClick += new System.EventHandler(this.more_DoubleClick);
+            this.more.MouseLeave += new System.EventHandler(this.more_MouseLeave);
+            this.more.MouseHover += new System.EventHandler(this.more_MouseHover);
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
+            this.flowLayoutPanel3.Controls.Add(this.dataGridView2);
+            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(616, 182);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(479, 481);
+            this.flowLayoutPanel3.TabIndex = 1;
+            this.flowLayoutPanel3.Visible = false;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.stud_id,
+            this.stud_name,
+            this.Activate});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(476, 478);
+            this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // stud_id
+            // 
+            this.stud_id.DataPropertyName = "stud_no";
+            this.stud_id.HeaderText = "Student ID";
+            this.stud_id.MinimumWidth = 6;
+            this.stud_id.Name = "stud_id";
+            this.stud_id.ReadOnly = true;
+            this.stud_id.ToolTipText = "Student ID";
+            this.stud_id.Width = 123;
+            // 
+            // stud_name
+            // 
+            this.stud_name.DataPropertyName = "List_of_Students";
+            this.stud_name.HeaderText = "Student Name";
+            this.stud_name.MinimumWidth = 6;
+            this.stud_name.Name = "stud_name";
+            this.stud_name.ReadOnly = true;
+            this.stud_name.Width = 153;
+            // 
+            // Activate
+            // 
+            this.Activate.HeaderText = "Activate";
+            this.Activate.MinimumWidth = 6;
+            this.Activate.Name = "Activate";
+            this.Activate.ReadOnly = true;
+            this.Activate.Text = "Activate";
+            this.Activate.UseColumnTextForButtonValue = true;
+            this.Activate.Width = 80;
+            // 
             // adminStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1153, 666);
+            this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.panel1);
@@ -426,6 +549,7 @@
             this.Name = "adminStudent";
             this.Text = "adminStudent";
             this.Load += new System.EventHandler(this.adminStudent_Load);
+            this.Click += new System.EventHandler(this.adminStudent_Click);
             this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.delete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.add)).EndInit();
@@ -441,6 +565,9 @@
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.more)).EndInit();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -477,5 +604,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn yearlevelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prognameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studgpaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox more;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stud_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stud_name;
+        private System.Windows.Forms.DataGridViewButtonColumn Activate;
     }
 }

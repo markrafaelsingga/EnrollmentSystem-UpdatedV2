@@ -254,13 +254,6 @@ namespace EnrollmentSystem
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.assignedStud")]
-		public ISingleResult<assignedStudResult> assignedStud()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<assignedStudResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.checkAssign")]
 		public ISingleResult<checkAssignResult> checkAssign([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> student)
 		{
@@ -527,13 +520,6 @@ namespace EnrollmentSystem
 			return ((ISingleResult<verifyAdminResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.viewSection")]
-		public ISingleResult<viewSectionResult> viewSection([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(MAX)")] string section, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> program, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> year)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), section, program, year);
-			return ((ISingleResult<viewSectionResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.viewEnrollee")]
 		public ISingleResult<viewEnrolleeResult> viewEnrollee()
 		{
@@ -567,6 +553,55 @@ namespace EnrollmentSystem
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), student);
 			return ((ISingleResult<viewCourseResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.assignedStud")]
+		public ISingleResult<assignedStudResult> assignedStud()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<assignedStudResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.viewSection")]
+		public ISingleResult<viewSectionResult> viewSection([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(MAX)")] string section, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> program, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> year)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), section, program, year);
+			return ((ISingleResult<viewSectionResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.yearList")]
+		public ISingleResult<yearListResult> yearList()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<yearListResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.progList")]
+		public ISingleResult<progListResult> progList()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<progListResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.newStudentAccount")]
+		public int newStudentAccount([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_fname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_lname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(1)")] string stud_mi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> stud_bday, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_address, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(11)")] string stud_phone, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string stud_email, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(6)")] string stud_gender, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> stud_year, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(5,1)")] System.Nullable<decimal> stud_gpa, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> prog_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> u_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> admin_id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), stud_fname, stud_lname, stud_mi, stud_bday, stud_address, stud_phone, stud_email, stud_gender, stud_year, stud_gpa, prog_id, u_id, admin_id);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.viewDeacStudent")]
+		public ISingleResult<viewDeacStudentResult> viewDeacStudent()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<viewDeacStudentResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.activate")]
+		public int activate([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(MAX)")] string student)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), student);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -4041,32 +4076,6 @@ namespace EnrollmentSystem
 		}
 	}
 	
-	public partial class assignedStudResult
-	{
-		
-		private string _stud_sec;
-		
-		public assignedStudResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_sec", DbType="Char(5)")]
-		public string stud_sec
-		{
-			get
-			{
-				return this._stud_sec;
-			}
-			set
-			{
-				if ((this._stud_sec != value))
-				{
-					this._stud_sec = value;
-				}
-			}
-		}
-	}
-	
 	public partial class checkAssignResult
 	{
 		
@@ -6419,50 +6428,6 @@ namespace EnrollmentSystem
 		}
 	}
 	
-	public partial class viewSectionResult
-	{
-		
-		private string _stud_no;
-		
-		private string _List_of_Students;
-		
-		public viewSectionResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_no", DbType="VarChar(5)")]
-		public string stud_no
-		{
-			get
-			{
-				return this._stud_no;
-			}
-			set
-			{
-				if ((this._stud_no != value))
-				{
-					this._stud_no = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_List_of_Students", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string List_of_Students
-		{
-			get
-			{
-				return this._List_of_Students;
-			}
-			set
-			{
-				if ((this._List_of_Students != value))
-				{
-					this._List_of_Students = value;
-				}
-			}
-		}
-	}
-	
 	public partial class viewEnrolleeResult
 	{
 		
@@ -6770,6 +6735,190 @@ namespace EnrollmentSystem
 				if ((this._crs_desc != value))
 				{
 					this._crs_desc = value;
+				}
+			}
+		}
+	}
+	
+	public partial class assignedStudResult
+	{
+		
+		private string _stud_sec;
+		
+		public assignedStudResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_sec", DbType="Char(5)")]
+		public string stud_sec
+		{
+			get
+			{
+				return this._stud_sec;
+			}
+			set
+			{
+				if ((this._stud_sec != value))
+				{
+					this._stud_sec = value;
+				}
+			}
+		}
+	}
+	
+	public partial class viewSectionResult
+	{
+		
+		private string _stud_no;
+		
+		private string _List_of_Students;
+		
+		public viewSectionResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_no", DbType="VarChar(5)")]
+		public string stud_no
+		{
+			get
+			{
+				return this._stud_no;
+			}
+			set
+			{
+				if ((this._stud_no != value))
+				{
+					this._stud_no = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_List_of_Students", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string List_of_Students
+		{
+			get
+			{
+				return this._List_of_Students;
+			}
+			set
+			{
+				if ((this._List_of_Students != value))
+				{
+					this._List_of_Students = value;
+				}
+			}
+		}
+	}
+	
+	public partial class yearListResult
+	{
+		
+		private int _year_id;
+		
+		public yearListResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_id", DbType="Int NOT NULL")]
+		public int year_id
+		{
+			get
+			{
+				return this._year_id;
+			}
+			set
+			{
+				if ((this._year_id != value))
+				{
+					this._year_id = value;
+				}
+			}
+		}
+	}
+	
+	public partial class progListResult
+	{
+		
+		private int _prog_id;
+		
+		private string _prog_name;
+		
+		public progListResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_id", DbType="Int NOT NULL")]
+		public int prog_id
+		{
+			get
+			{
+				return this._prog_id;
+			}
+			set
+			{
+				if ((this._prog_id != value))
+				{
+					this._prog_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_name", DbType="VarChar(MAX)")]
+		public string prog_name
+		{
+			get
+			{
+				return this._prog_name;
+			}
+			set
+			{
+				if ((this._prog_name != value))
+				{
+					this._prog_name = value;
+				}
+			}
+		}
+	}
+	
+	public partial class viewDeacStudentResult
+	{
+		
+		private string _stud_no;
+		
+		private string _List_of_Students;
+		
+		public viewDeacStudentResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_no", DbType="VarChar(5)")]
+		public string stud_no
+		{
+			get
+			{
+				return this._stud_no;
+			}
+			set
+			{
+				if ((this._stud_no != value))
+				{
+					this._stud_no = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_List_of_Students", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string List_of_Students
+		{
+			get
+			{
+				return this._List_of_Students;
+			}
+			set
+			{
+				if ((this._List_of_Students != value))
+				{
+					this._List_of_Students = value;
 				}
 			}
 		}

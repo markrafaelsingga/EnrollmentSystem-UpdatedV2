@@ -28,6 +28,7 @@ namespace EnrollmentSystem
         private void adminStudent_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
+            flowLayoutPanel3.Visible = false;
             display();
         }
 
@@ -76,6 +77,7 @@ namespace EnrollmentSystem
             addStudent addNewstudent = new addStudent();
             addNewstudent.FormClosed += AddNewstudent_FormClosed;
             addNewstudent.ShowDialog();
+            flowLayoutPanel3.Visible = false;
         }
 
         private void AddNewstudent_FormClosed(object sender, FormClosedEventArgs e)
@@ -85,6 +87,7 @@ namespace EnrollmentSystem
 
         private void edit_Click(object sender, EventArgs e)
         {
+            flowLayoutPanel3.Visible = false;
             updateStudent editstudent = new updateStudent(verId);
 
             var currentRow = dataGridView1.CurrentRow;
@@ -145,6 +148,7 @@ namespace EnrollmentSystem
 
         private void delete_Click(object sender, EventArgs e)
         {
+            flowLayoutPanel3.Visible = false;
             var currentRow = dataGridView1.CurrentRow;
             
             try
@@ -197,6 +201,7 @@ namespace EnrollmentSystem
 
         private void search_Click(object sender, EventArgs e)
         {
+            flowLayoutPanel3.Visible = false;
             var result = db.searchStudent(searchTxtbox.Text).FirstOrDefault();
 
             if (result != null)
@@ -211,8 +216,71 @@ namespace EnrollmentSystem
 
         private void searchTxtbox_TextChanged(object sender, EventArgs e)
         {
+            flowLayoutPanel3.Visible = false;
             display();
            dataGridView1.DataSource = db.searchStudent(searchTxtbox.Text);
+        }
+
+        private void more_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel3.Visible = true;
+            dataGridView2.DataSource = db.viewDeacStudent();
+        }
+
+        private void more_DoubleClick(object sender, EventArgs e)
+        {
+            flowLayoutPanel3.Visible = false;
+            display();
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string studnum = dataGridView2.CurrentRow.Cells[1].Value.ToString();
+            if (dataGridView2.Columns[e.ColumnIndex].Name == "Activate")
+            {
+                db.activate(studnum);
+                dataGridView2.DataSource = db.viewDeacStudent();
+                display();
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            flowLayoutPanel3.Visible = false;
+        }
+
+        private void adminStudent_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel3.Visible = false;
+        }
+
+        private void flowLayoutPanel2_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel3.Visible = false;
+        }
+
+        private void flowLayoutPanel1_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel3.Visible = false;
+        }
+
+        private void searchTxtbox_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel3.Visible = false;
+        }
+
+        private void more_MouseHover(object sender, EventArgs e)
+        {
+            more.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
+        }
+
+        private void more_MouseLeave(object sender, EventArgs e)
+        {
+            more.BackColor = System.Drawing.Color.White;
         }
     }
 }

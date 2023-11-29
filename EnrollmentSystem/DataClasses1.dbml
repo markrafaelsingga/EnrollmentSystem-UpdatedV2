@@ -202,11 +202,6 @@
     <Parameter Name="room_id" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.assignedStud" Method="assignedStud">
-    <ElementType Name="assignedStudResult">
-      <Column Name="stud_sec" Type="System.String" DbType="Char(5)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.checkAssign" Method="checkAssign">
     <Parameter Name="student" Type="System.Int32" DbType="Int" />
     <ElementType Name="checkAssignResult">
@@ -566,15 +561,6 @@
       <Column Name="Fullname" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.viewSection" Method="viewSection">
-    <Parameter Name="section" Type="System.String" DbType="VarChar(MAX)" />
-    <Parameter Name="program" Type="System.Int32" DbType="Int" />
-    <Parameter Name="year" Type="System.Int32" DbType="Int" />
-    <ElementType Name="viewSectionResult">
-      <Column Name="stud_no" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
-      <Column Name="List_of_Students" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.viewEnrollee" Method="viewEnrollee">
     <ElementType Name="viewEnrolleeResult">
       <Column Name="stud_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -620,5 +606,56 @@
       <Column Name="crs_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="crs_desc" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.assignedStud" Method="assignedStud">
+    <ElementType Name="assignedStudResult">
+      <Column Name="stud_sec" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.viewSection" Method="viewSection">
+    <Parameter Name="section" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="program" Type="System.Int32" DbType="Int" />
+    <Parameter Name="year" Type="System.Int32" DbType="Int" />
+    <ElementType Name="viewSectionResult">
+      <Column Name="stud_no" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="List_of_Students" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.yearList" Method="yearList">
+    <ElementType Name="yearListResult">
+      <Column Name="year_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.progList" Method="progList">
+    <ElementType Name="progListResult">
+      <Column Name="prog_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prog_name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.newStudentAccount" Method="newStudentAccount">
+    <Parameter Name="stud_fname" Type="System.String" DbType="Text" />
+    <Parameter Name="stud_lname" Type="System.String" DbType="Text" />
+    <Parameter Name="stud_mi" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="stud_bday" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="stud_address" Type="System.String" DbType="Text" />
+    <Parameter Name="stud_phone" Type="System.String" DbType="VarChar(11)" />
+    <Parameter Name="stud_email" Type="System.String" DbType="Text" />
+    <Parameter Name="stud_gender" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="stud_year" Type="System.Int32" DbType="Int" />
+    <Parameter Name="stud_gpa" Type="System.Decimal" DbType="Decimal(5,1)" />
+    <Parameter Name="prog_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="u_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="admin_id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.viewDeacStudent" Method="viewDeacStudent">
+    <ElementType Name="viewDeacStudentResult">
+      <Column Name="stud_no" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="List_of_Students" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.activate" Method="activate">
+    <Parameter Name="student" Type="System.String" DbType="VarChar(MAX)" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>

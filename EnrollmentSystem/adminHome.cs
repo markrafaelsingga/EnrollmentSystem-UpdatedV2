@@ -87,12 +87,12 @@ namespace EnrollmentSystem
 
             if (check != 0)
             {
-                MessageBox.Show("School year already exists for the selected batch and semester.", "Duplicate Entry");
+                MessageBox.Show("School year already exists.", "Duplicate Entry");
             }
             else
             {
                 // Show a confirmation message with "Yes" or "No"
-                DialogResult result = MessageBox.Show("Attempting to add new school year. Do you want to continue?", "Confirmation", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("Attempting to add new school year/semester. Do you want to continue?", "Confirmation", MessageBoxButtons.YesNo);
 
                 if (result == DialogResult.Yes)
                 {
@@ -103,9 +103,6 @@ namespace EnrollmentSystem
                 }
             }
         }
-
-
-
         private void addBatch_Click(object sender, EventArgs e)
         {
             string batchYear = batchTxtbox.Text.Trim(); // Trim to remove leading/trailing spaces

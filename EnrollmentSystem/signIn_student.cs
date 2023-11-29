@@ -131,8 +131,8 @@ namespace EnrollmentSystem
                                 int yrs = (int)yr.SelectedValue;
 
 
-                                db.newStudent(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, birthdatePicker.Value, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, yrs, grade, prog_id, id, 1);
-                                MessageBox.Show("Successfully enrolled!", "Done");
+                                db.newStudentAccount(fnameTxtbox.Text, lnameTxtbox.Text, miTxtbox.Text, birthdatePicker.Value, addressTxtbox.Text, phone.Text, emailtextBox.Text, gen, yrs, grade, prog_id, id, 1);
+                                MessageBox.Show("Successfully signed in. You can access your account once the admin activate your account", "Done");
 
                                 login back = new login();
                                 back.Show();

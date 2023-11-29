@@ -118,6 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="more.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAAOsAAADrASts18IAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAADCUlEQVRYR7WXSchOURjHX2TKtKBkyFBmdjKFbMjCUBZWLOwsLCgLIpENZcpcsrA1ZApZkHGDZCqF
+        TJkylTLPfr/7vc/X9Xpf373e61+/vvc595zz3HvO8zznfKUcGgQLYTNsh6UwEprBf1U/OAo/a3AJxsB/
+        0Th4DeHsMuyALXAWvoHtn2E2FKo+8Ap0cAuqfeUAOAP2+QLjoTDtASe+A51tqKFWcBLsewNaQN3qDj/A
+        SSfa0IR6wSew/yQb6tUccLK7iZVNB8ExaxOrTq0AJ9ufWNkUY/YlVp1aDk52ILGyaSU4Zm9i1anYgnuJ
+        lU2HwDGFbIFB+B2cMEtQmbKFBqHaDU5oIHaxoYZMw1Ng3+tQSBqq3vASnPg2jIVKeT6cA/tYiKychUqn
+        6VL8ECzHp0HH6VI8CwqXp90R+ArxEpVchFFQqZbQseFnfhmEluKohvIBXAEz4wIsgRGQPo6HgUf1fYhx
+        H8HzYh60hiY1HB5DTHAcpkFbqCW/diPEltTiAVSLpUa55O/Bzk8gS0rp3JcMJ+fBOjIUDGRPyNXwBnxu
+        vPhBf6gHPAU7XSnbWeSXO8YsmGtDDXUF7xD2fQsD4TcZbD58BN1syCD3PJZd581hBvSEtCaDKdseroH9
+        D0OjJoCNBl2eXN4GjnPZlc613b7+NqA4V7xXKOfXlr42qNjDPKefMisc554rt03nthnIm8q/JX1G3ATb
+        zIxSJzAwbMhzpbIER5oOsaEsvzydReI9Mp2uu8D29Rozy8YLyFPHffFwYLSntQbimVmVfkFlDfHZOo3F
+        ZeOYRk5ZZBybXrlFEM7flf8+g8EQsiCZigZl4z7t1MipuBGb58poD+dbwVtzxMRVqKpVYIcFiZVPBpFj
+        LTLmualmtBtwsefGhKlniVZmwfSGnw2yko0Gcziv2oDl1ZewyCRL+hdNBQuW/b1JFyJre2SRX1qt1ncA
+        L63h/AQUdnFRLqnl1cnFPDfV/EfW/yvjfAnn7aBwWdstr+GokucwH/5lq3PJ8mpwbgADbxlMAWOtQqXS
+        L16V+zqEFrdRAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
@@ -206,5 +226,14 @@
   </metadata>
   <metadata name="showStudentTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>898, 17</value>
+  </metadata>
+  <metadata name="stud_id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="stud_name.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Activate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
 </root>
