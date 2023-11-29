@@ -66,7 +66,7 @@ namespace EnrollmentSystem
                         string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
                         string eadd = emailTxtbox.Text;
                         db.createAcc(uname.Text, repword.Text);
-                        var result = db.accId(uname.Text);
+                        var result = db.accId(uname.Text, repword.Text);
                         string phpattern = @"^(\+63|09)\d{9}$";
                         string pNo = phone.Text;
                         if (Regex.IsMatch(pNo, phpattern, RegexOptions.IgnoreCase) && Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase))

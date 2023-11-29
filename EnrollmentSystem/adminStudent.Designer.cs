@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminStudent));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminStudent));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.more = new System.Windows.Forms.PictureBox();
             this.delete = new System.Windows.Forms.PictureBox();
             this.add = new System.Windows.Forms.PictureBox();
             this.edit = new System.Windows.Forms.PictureBox();
@@ -66,13 +67,13 @@
             this.showStudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.showStudentTableAdapter = new EnrollmentSystem.dbmsDataSet12TableAdapters.showStudentTableAdapter();
             this.showStudentTableAdapter1 = new EnrollmentSystem.dbmsDataSet17TableAdapters.showStudentTableAdapter();
-            this.more = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.stud_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stud_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Activate = new System.Windows.Forms.DataGridViewButtonColumn();
             this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.more)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edit)).BeginInit();
@@ -85,7 +86,6 @@
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.more)).BeginInit();
             this.flowLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +107,22 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(1153, 79);
             this.flowLayoutPanel2.TabIndex = 8;
             this.flowLayoutPanel2.Click += new System.EventHandler(this.flowLayoutPanel2_Click);
+            // 
+            // more
+            // 
+            this.more.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.more.Image = ((System.Drawing.Image)(resources.GetObject("more.Image")));
+            this.more.Location = new System.Drawing.Point(1052, 17);
+            this.more.Margin = new System.Windows.Forms.Padding(5);
+            this.more.Name = "more";
+            this.more.Size = new System.Drawing.Size(43, 43);
+            this.more.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.more.TabIndex = 5;
+            this.more.TabStop = false;
+            this.more.Click += new System.EventHandler(this.more_Click);
+            this.more.DoubleClick += new System.EventHandler(this.more_DoubleClick);
+            this.more.MouseLeave += new System.EventHandler(this.more_MouseLeave);
+            this.more.MouseHover += new System.EventHandler(this.more_MouseHover);
             // 
             // delete
             // 
@@ -429,22 +445,6 @@
             // 
             this.showStudentTableAdapter1.ClearBeforeFill = true;
             // 
-            // more
-            // 
-            this.more.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.more.Image = ((System.Drawing.Image)(resources.GetObject("more.Image")));
-            this.more.Location = new System.Drawing.Point(1052, 17);
-            this.more.Margin = new System.Windows.Forms.Padding(5);
-            this.more.Name = "more";
-            this.more.Size = new System.Drawing.Size(43, 43);
-            this.more.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.more.TabIndex = 5;
-            this.more.TabStop = false;
-            this.more.Click += new System.EventHandler(this.more_Click);
-            this.more.DoubleClick += new System.EventHandler(this.more_DoubleClick);
-            this.more.MouseLeave += new System.EventHandler(this.more_MouseLeave);
-            this.more.MouseHover += new System.EventHandler(this.more_MouseHover);
-            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -551,6 +551,7 @@
             this.Load += new System.EventHandler(this.adminStudent_Load);
             this.Click += new System.EventHandler(this.adminStudent_Click);
             this.flowLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.more)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.delete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.add)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edit)).EndInit();
@@ -565,7 +566,6 @@
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showStudentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.more)).EndInit();
             this.flowLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);

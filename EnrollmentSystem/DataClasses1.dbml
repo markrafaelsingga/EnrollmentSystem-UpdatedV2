@@ -159,12 +159,6 @@
       <Association Name="year_student" Member="students" ThisKey="year_id" OtherKey="year_id" Type="student" />
     </Type>
   </Table>
-  <Function Name="dbo.accId" Method="accId">
-    <Parameter Name="key" Type="System.String" DbType="VarChar(MAX)" />
-    <ElementType Name="accIdResult">
-      <Column Name="u_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.addBatch" Method="addBatch">
     <Parameter Name="batch_year" Type="System.String" DbType="VarChar(10)" />
     <Return Type="System.Int32" />
@@ -470,15 +464,6 @@
       <Column Name="year_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.studCourse" Method="studCourse">
-    <Parameter Name="student" Type="System.Int32" DbType="Int" />
-    <Parameter Name="sy" Type="System.Int32" DbType="Int" />
-    <ElementType Name="studCourseResult">
-      <Column Name="crs_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="crs_desc" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="year_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.studDel" Method="studDel">
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
@@ -570,11 +555,6 @@
       <Column Name="year_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.acceptEnroll" Method="acceptEnroll">
-    <Parameter Name="key" Type="System.String" DbType="VarChar(MAX)" />
-    <Parameter Name="student" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.updateClass" Method="updateClass">
     <Parameter Name="ClassCode" Parameter="classCode" Type="System.Int32" DbType="Int" />
     <Parameter Name="ClassSection" Parameter="classSection" Type="System.String" DbType="VarChar(MAX)" />
@@ -585,20 +565,6 @@
     <Parameter Name="InsID" Parameter="insID" Type="System.Int32" DbType="Int" />
     <Parameter Name="RoomID" Parameter="roomID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.viewClasstoenroll" Method="viewClasstoenroll">
-    <Parameter Name="program" Type="System.Int32" DbType="Int" />
-    <ElementType Name="viewClasstoenrollResult">
-      <Column Name="class_code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="crs_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="crs_desc" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="class_fromTime" Type="System.String" DbType="VarChar(36)" CanBeNull="true" />
-      <Column Name="class_toTime" Type="System.String" DbType="VarChar(36)" CanBeNull="true" />
-      <Column Name="class_day" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="instructor_name" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="room_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="year_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
   </Function>
   <Function Name="dbo.viewCourse" Method="viewCourse">
     <Parameter Name="student" Type="System.Int32" DbType="Int" />
@@ -666,5 +632,53 @@
     <Parameter Name="email" Type="System.String" DbType="VarChar(MAX)" />
     <Parameter Name="phone" Type="System.String" DbType="VarChar(11)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.accId" Method="accId">
+    <Parameter Name="name" Type="System.String" DbType="Text" />
+    <Parameter Name="pass" Type="System.String" DbType="Text" />
+    <ElementType Name="accIdResult">
+      <Column Name="u_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.viewEnrolleeCourse" Method="viewEnrolleeCourse">
+    <Parameter Name="student" Type="System.Int32" DbType="Int" />
+    <ElementType Name="viewEnrolleeCourseResult">
+      <Column Name="crs_name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="crs_desc" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.viewClasstoenroll" Method="viewClasstoenroll">
+    <Parameter Name="program" Type="System.Int32" DbType="Int" />
+    <ElementType Name="viewClasstoenrollResult">
+      <Column Name="class_code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="crs_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="crs_desc" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="class_fromTime" Type="System.String" DbType="VarChar(36)" CanBeNull="true" />
+      <Column Name="class_toTime" Type="System.String" DbType="VarChar(36)" CanBeNull="true" />
+      <Column Name="class_day" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="instructor_name" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="room_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="year_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.acceptEnroll_1by1" Method="acceptEnroll_1by1">
+    <Parameter Name="student" Type="System.Int32" DbType="Int" />
+    <Parameter Name="status" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="course" Type="System.String" DbType="VarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.acceptEnroll" Method="acceptEnroll">
+    <Parameter Name="key" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="student" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.studCourse" Method="studCourse">
+    <Parameter Name="student" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sy" Type="System.Int32" DbType="Int" />
+    <ElementType Name="studCourseResult">
+      <Column Name="crs_name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="crs_desc" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="year_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
 </Database>
