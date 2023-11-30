@@ -16,6 +16,7 @@ namespace EnrollmentSystem
         DataClasses1DataContext db = new DataClasses1DataContext();
         private int verId;
         string name;
+
         public adminSections(int verId)
         {
             InitializeComponent();
@@ -53,18 +54,35 @@ namespace EnrollmentSystem
 
         private void adminSections_Load(object sender, EventArgs e)
         {
-            load();
-            yrlevel.DataSource = db.yearList().ToList();
+            var sy = db.schoolyears.OrderByDescending(x => x.sy_id).FirstOrDefault();
+
+            yrlevel.DataSource = db.yearList(sy.sy_id).ToList();
             yrlevel.DisplayMember = "year_id";
             yrlevel.ValueMember = "year_id";
 
-            program.DataSource = db.progList().ToList();
+            program.DataSource = db.progList(sy.sy_id).ToList();
             program.DisplayMember = "prog_name";
             program.ValueMember = "prog_id";
 
-            section.DataSource = db.assignedStud().ToList();
+            section.DataSource = db.assignedStud(sy.sy_id).ToList();
             section.DisplayMember = "stud_sec";
             section.ValueMember = "stud_sec";
+
+            if (yrlevel.SelectedValue != null && program.SelectedValue != null & section.SelectedValue != null)
+            {
+                load();
+            }
+            else
+            {
+                MessageBox.Show("No students enrolled in this school year/ semester!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                label1.Text = "No students enrolled in this school year/ semester!";
+                search.Visible = false;
+                panel2.Visible = false;
+                panel3.Visible = false;
+                panel4.Visible = false;
+                panel1.Visible = false;
+            }
+
             this.ControlBox = false;
         }
 
@@ -121,8 +139,9 @@ namespace EnrollmentSystem
 
         private void refresh_Click(object sender, EventArgs e)
         {
+            var sy = db.schoolyears.OrderByDescending(x => x.sy_id).FirstOrDefault();
             load();
-            section.DataSource = db.assignedStud().ToList();
+            section.DataSource = db.assignedStud(sy.sy_id).ToList();
             section.DisplayMember = "stud_sec";
             section.ValueMember = "stud_sec";
         }
@@ -157,8 +176,9 @@ namespace EnrollmentSystem
 
         private void Edit_FormClosed(object sender, FormClosedEventArgs e)
         {
+            var sy = db.schoolyears.OrderByDescending(x => x.sy_id).FirstOrDefault();
             load();
-            section.DataSource = db.assignedStud().ToList();
+            section.DataSource = db.assignedStud(sy.sy_id).ToList();
             section.DisplayMember = "stud_sec";
             section.ValueMember = "stud_sec";
         }

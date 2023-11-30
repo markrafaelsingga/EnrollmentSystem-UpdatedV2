@@ -573,11 +573,6 @@
       <Column Name="crs_desc" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </ElementType>
   </Function>
-  <Function Name="dbo.assignedStud" Method="assignedStud">
-    <ElementType Name="assignedStudResult">
-      <Column Name="stud_sec" Type="System.String" DbType="Char(5)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.viewSection" Method="viewSection">
     <Parameter Name="section" Type="System.String" DbType="VarChar(MAX)" />
     <Parameter Name="program" Type="System.Int32" DbType="Int" />
@@ -585,17 +580,6 @@
     <ElementType Name="viewSectionResult">
       <Column Name="stud_no" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
       <Column Name="List_of_Students" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.yearList" Method="yearList">
-    <ElementType Name="yearListResult">
-      <Column Name="year_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.progList" Method="progList">
-    <ElementType Name="progListResult">
-      <Column Name="prog_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="prog_name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.newStudentAccount" Method="newStudentAccount">
@@ -679,6 +663,25 @@
       <Column Name="crs_name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="crs_desc" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="year_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.yearList" Method="yearList">
+    <Parameter Name="sy" Type="System.Int32" DbType="Int" />
+    <ElementType Name="yearListResult">
+      <Column Name="year_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.progList" Method="progList">
+    <Parameter Name="sy" Type="System.Int32" DbType="Int" />
+    <ElementType Name="progListResult">
+      <Column Name="prog_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prog_name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.assignedStud" Method="assignedStud">
+    <Parameter Name="sy" Type="System.Int32" DbType="Int" />
+    <ElementType Name="assignedStudResult">
+      <Column Name="stud_sec" Type="System.String" DbType="Char(5)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

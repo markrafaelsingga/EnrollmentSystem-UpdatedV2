@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminSections));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,6 +45,7 @@
             this.search = new System.Windows.Forms.PictureBox();
             this.add = new System.Windows.Forms.PictureBox();
             this.edit = new System.Windows.Forms.PictureBox();
+            this.refresh = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.showCrsBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
@@ -65,7 +66,6 @@
             this.showCrsTableAdapter3 = new EnrollmentSystem.dbmsDataSet15TableAdapters.showCrsTableAdapter();
             this.showCrsTableAdapter4 = new EnrollmentSystem.dbmsDataSet21TableAdapters.showCrsTableAdapter();
             this.label5 = new System.Windows.Forms.Label();
-            this.refresh = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -73,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.refresh)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showCrsBindingSource4)).BeginInit();
@@ -86,7 +87,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.showCrsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showCrsBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.refresh)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -245,6 +245,21 @@
             this.edit.MouseLeave += new System.EventHandler(this.edit_MouseLeave);
             this.edit.MouseHover += new System.EventHandler(this.edit_MouseHover);
             // 
+            // refresh
+            // 
+            this.refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.refresh.Image = ((System.Drawing.Image)(resources.GetObject("refresh.Image")));
+            this.refresh.Location = new System.Drawing.Point(627, 30);
+            this.refresh.Margin = new System.Windows.Forms.Padding(4);
+            this.refresh.Name = "refresh";
+            this.refresh.Size = new System.Drawing.Size(32, 32);
+            this.refresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.refresh.TabIndex = 12;
+            this.refresh.TabStop = false;
+            this.refresh.Click += new System.EventHandler(this.refresh_Click);
+            this.refresh.MouseLeave += new System.EventHandler(this.refresh_MouseLeave);
+            this.refresh.MouseHover += new System.EventHandler(this.refresh_MouseHover);
+            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -263,23 +278,23 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 29;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
@@ -392,21 +407,6 @@
             this.label5.Size = new System.Drawing.Size(0, 32);
             this.label5.TabIndex = 13;
             // 
-            // refresh
-            // 
-            this.refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.refresh.Image = ((System.Drawing.Image)(resources.GetObject("refresh.Image")));
-            this.refresh.Location = new System.Drawing.Point(627, 30);
-            this.refresh.Margin = new System.Windows.Forms.Padding(4);
-            this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(32, 32);
-            this.refresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.refresh.TabIndex = 12;
-            this.refresh.TabStop = false;
-            this.refresh.Click += new System.EventHandler(this.refresh_Click);
-            this.refresh.MouseLeave += new System.EventHandler(this.refresh_MouseLeave);
-            this.refresh.MouseHover += new System.EventHandler(this.refresh_MouseHover);
-            // 
             // adminSections
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -433,6 +433,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.add)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.refresh)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showCrsBindingSource4)).EndInit();
@@ -447,7 +448,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.showCrsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbmsDataSet14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showCrsBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.refresh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
