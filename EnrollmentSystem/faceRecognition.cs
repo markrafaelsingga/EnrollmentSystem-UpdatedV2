@@ -32,7 +32,7 @@ namespace EnrollmentSystem
             dashboard.Show();
             Visible = false;
             face.Close();
-           
+
 
             //var result = db.verifyAdmin(label2.Text, adminId).ToList();
             //if (result != null && result.Any())

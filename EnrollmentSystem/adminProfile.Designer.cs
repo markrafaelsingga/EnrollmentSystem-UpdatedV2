@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminProfile));
             this.lnameLbl = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.phLbl = new System.Windows.Forms.Label();
+            this.emlLbl = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.edit = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
@@ -54,8 +56,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.phone = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.phLbl = new System.Windows.Forms.Label();
-            this.emlLbl = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -101,6 +101,30 @@
             this.panel3.Size = new System.Drawing.Size(1153, 666);
             this.panel3.TabIndex = 6;
             // 
+            // phLbl
+            // 
+            this.phLbl.AutoSize = true;
+            this.phLbl.ForeColor = System.Drawing.Color.Red;
+            this.phLbl.Location = new System.Drawing.Point(612, 342);
+            this.phLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.phLbl.Name = "phLbl";
+            this.phLbl.Size = new System.Drawing.Size(140, 16);
+            this.phLbl.TabIndex = 32;
+            this.phLbl.Text = "*Invalid phone number";
+            this.phLbl.Visible = false;
+            // 
+            // emlLbl
+            // 
+            this.emlLbl.AutoSize = true;
+            this.emlLbl.ForeColor = System.Drawing.Color.Red;
+            this.emlLbl.Location = new System.Drawing.Point(612, 397);
+            this.emlLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.emlLbl.Name = "emlLbl";
+            this.emlLbl.Size = new System.Drawing.Size(87, 16);
+            this.emlLbl.TabIndex = 31;
+            this.emlLbl.Text = "*Invalid email";
+            this.emlLbl.Visible = false;
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -109,7 +133,7 @@
             this.flowLayoutPanel1.Controls.Add(this.cancel);
             this.flowLayoutPanel1.Controls.Add(this.Save);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(407, 404);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(407, 454);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(650, 52);
@@ -197,7 +221,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.fnameTxtbox);
-            this.panel4.Location = new System.Drawing.Point(407, 176);
+            this.panel4.Location = new System.Drawing.Point(407, 189);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(650, 34);
@@ -235,7 +259,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.Controls.Add(this.label5);
             this.panel7.Controls.Add(this.emailtextBox);
-            this.panel7.Location = new System.Drawing.Point(407, 363);
+            this.panel7.Location = new System.Drawing.Point(407, 413);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(650, 34);
@@ -274,7 +298,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.miTxtbox);
-            this.panel5.Location = new System.Drawing.Point(407, 217);
+            this.panel5.Location = new System.Drawing.Point(407, 246);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(650, 34);
@@ -312,7 +336,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.addressTxtbox);
-            this.panel1.Location = new System.Drawing.Point(407, 259);
+            this.panel1.Location = new System.Drawing.Point(407, 304);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(650, 34);
@@ -350,7 +374,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.phone);
-            this.panel6.Location = new System.Drawing.Point(407, 311);
+            this.panel6.Location = new System.Drawing.Point(407, 361);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(650, 34);
@@ -392,30 +416,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // phLbl
-            // 
-            this.phLbl.AutoSize = true;
-            this.phLbl.ForeColor = System.Drawing.Color.Red;
-            this.phLbl.Location = new System.Drawing.Point(612, 295);
-            this.phLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.phLbl.Name = "phLbl";
-            this.phLbl.Size = new System.Drawing.Size(140, 16);
-            this.phLbl.TabIndex = 32;
-            this.phLbl.Text = "*Invalid phone number";
-            this.phLbl.Visible = false;
-            // 
-            // emlLbl
-            // 
-            this.emlLbl.AutoSize = true;
-            this.emlLbl.ForeColor = System.Drawing.Color.Red;
-            this.emlLbl.Location = new System.Drawing.Point(612, 347);
-            this.emlLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.emlLbl.Name = "emlLbl";
-            this.emlLbl.Size = new System.Drawing.Size(87, 16);
-            this.emlLbl.TabIndex = 31;
-            this.emlLbl.Text = "*Invalid email";
-            this.emlLbl.Visible = false;
             // 
             // adminProfile
             // 
