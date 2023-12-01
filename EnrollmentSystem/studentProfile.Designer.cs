@@ -57,6 +57,8 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.idTxtbox = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.edit = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,6 +70,7 @@
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -99,6 +102,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(10)))), ((int)(((byte)(48)))));
+            this.panel2.Controls.Add(this.flowLayoutPanel2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.panel8);
@@ -121,9 +125,9 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 343);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 385);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1153, 291);
+            this.pictureBox1.Size = new System.Drawing.Size(1153, 249);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 53;
             this.pictureBox1.TabStop = false;
@@ -134,9 +138,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.Controls.Add(this.emailtextBox);
             this.panel9.Controls.Add(this.label5);
-            this.panel9.Location = new System.Drawing.Point(100, 290);
+            this.panel9.Location = new System.Drawing.Point(100, 273);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(900, 31);
+            this.panel9.Size = new System.Drawing.Size(900, 32);
             this.panel9.TabIndex = 52;
             // 
             // emailtextBox
@@ -172,9 +176,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.Controls.Add(this.phone);
             this.panel8.Controls.Add(this.label4);
-            this.panel8.Location = new System.Drawing.Point(100, 250);
+            this.panel8.Location = new System.Drawing.Point(100, 235);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(900, 34);
+            this.panel8.Size = new System.Drawing.Size(900, 32);
             this.panel8.TabIndex = 51;
             // 
             // phone
@@ -210,9 +214,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.Controls.Add(this.addressTxtbox);
             this.panel7.Controls.Add(this.label9);
-            this.panel7.Location = new System.Drawing.Point(100, 212);
+            this.panel7.Location = new System.Drawing.Point(100, 197);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(900, 34);
+            this.panel7.Size = new System.Drawing.Size(900, 32);
             this.panel7.TabIndex = 50;
             // 
             // addressTxtbox
@@ -248,9 +252,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.Controls.Add(this.birthdateTxtbox);
             this.panel6.Controls.Add(this.label8);
-            this.panel6.Location = new System.Drawing.Point(100, 175);
+            this.panel6.Location = new System.Drawing.Point(100, 159);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(900, 31);
+            this.panel6.Size = new System.Drawing.Size(900, 32);
             this.panel6.TabIndex = 49;
             // 
             // birthdateTxtbox
@@ -286,9 +290,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.Controls.Add(this.miTxtbox);
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Location = new System.Drawing.Point(100, 135);
+            this.panel5.Location = new System.Drawing.Point(100, 121);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(900, 34);
+            this.panel5.Size = new System.Drawing.Size(900, 32);
             this.panel5.TabIndex = 48;
             // 
             // miTxtbox
@@ -325,9 +329,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.fnameTxtbox);
-            this.panel4.Location = new System.Drawing.Point(100, 95);
+            this.panel4.Location = new System.Drawing.Point(100, 83);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(900, 34);
+            this.panel4.Size = new System.Drawing.Size(900, 32);
             this.panel4.TabIndex = 47;
             // 
             // label2
@@ -363,9 +367,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.emailLbl);
             this.panel3.Controls.Add(this.lnameTxtbox);
-            this.panel3.Location = new System.Drawing.Point(100, 56);
+            this.panel3.Location = new System.Drawing.Point(100, 45);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(900, 33);
+            this.panel3.Size = new System.Drawing.Size(900, 32);
             this.panel3.TabIndex = 46;
             // 
             // emailLbl
@@ -403,7 +407,7 @@
             this.panel10.Controls.Add(this.idTxtbox);
             this.panel10.Location = new System.Drawing.Point(100, 7);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(900, 43);
+            this.panel10.Size = new System.Drawing.Size(900, 32);
             this.panel10.TabIndex = 45;
             // 
             // label7
@@ -432,6 +436,30 @@
             this.idTxtbox.Name = "idTxtbox";
             this.idTxtbox.Size = new System.Drawing.Size(705, 30);
             this.idTxtbox.TabIndex = 31;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel2.Controls.Add(this.edit);
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(100, 311);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(914, 52);
+            this.flowLayoutPanel2.TabIndex = 54;
+            // 
+            // edit
+            // 
+            this.edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edit.Location = new System.Drawing.Point(728, 4);
+            this.edit.Margin = new System.Windows.Forms.Padding(4);
+            this.edit.Name = "edit";
+            this.edit.Size = new System.Drawing.Size(172, 39);
+            this.edit.TabIndex = 19;
+            this.edit.Text = "Edit profile";
+            this.edit.UseVisualStyleBackColor = true;
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // studentProfile
             // 
@@ -466,6 +494,7 @@
             this.panel3.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -499,5 +528,7 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox idTxtbox;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Button edit;
     }
 }

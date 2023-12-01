@@ -684,4 +684,10 @@
       <Column Name="stud_sec" Type="System.String" DbType="Char(5)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.checkUsername" Method="checkUsername">
+    <Parameter Name="user" Type="System.String" DbType="Text" />
+    <ElementType Name="checkUsernameResult">
+      <Column Name="u_name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
 </Database>

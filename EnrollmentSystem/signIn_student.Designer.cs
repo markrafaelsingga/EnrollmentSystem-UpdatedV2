@@ -57,6 +57,10 @@
             this.lnameTxtbox = new System.Windows.Forms.TextBox();
             this.emailLbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.retype = new System.Windows.Forms.Label();
+            this.usernameLbl = new System.Windows.Forms.Label();
+            this.passLbl = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.repword = new System.Windows.Forms.TextBox();
             this.pword = new System.Windows.Forms.TextBox();
@@ -403,6 +407,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(38)))), ((int)(((byte)(89)))));
+            this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.retype);
+            this.panel2.Controls.Add(this.usernameLbl);
+            this.panel2.Controls.Add(this.passLbl);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.repword);
             this.panel2.Controls.Add(this.pword);
@@ -415,12 +423,60 @@
             this.panel2.Size = new System.Drawing.Size(1059, 105);
             this.panel2.TabIndex = 21;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(381, 83);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(113, 16);
+            this.label15.TabIndex = 30;
+            this.label15.Text = "*Invalid password";
+            this.label15.Visible = false;
+            // 
+            // retype
+            // 
+            this.retype.AutoSize = true;
+            this.retype.ForeColor = System.Drawing.Color.Red;
+            this.retype.Location = new System.Drawing.Point(721, 67);
+            this.retype.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.retype.Name = "retype";
+            this.retype.Size = new System.Drawing.Size(146, 16);
+            this.retype.TabIndex = 30;
+            this.retype.Text = "*Password didn\'t match";
+            this.retype.Visible = false;
+            // 
+            // usernameLbl
+            // 
+            this.usernameLbl.AutoSize = true;
+            this.usernameLbl.ForeColor = System.Drawing.Color.Red;
+            this.usernameLbl.Location = new System.Drawing.Point(29, 67);
+            this.usernameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.usernameLbl.Name = "usernameLbl";
+            this.usernameLbl.Size = new System.Drawing.Size(154, 16);
+            this.usernameLbl.TabIndex = 30;
+            this.usernameLbl.Text = "*Username already exist";
+            this.usernameLbl.Visible = false;
+            // 
+            // passLbl
+            // 
+            this.passLbl.AutoSize = true;
+            this.passLbl.ForeColor = System.Drawing.Color.Red;
+            this.passLbl.Location = new System.Drawing.Point(381, 67);
+            this.passLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.passLbl.Name = "passLbl";
+            this.passLbl.Size = new System.Drawing.Size(113, 16);
+            this.passLbl.TabIndex = 30;
+            this.passLbl.Text = "*Invalid password";
+            this.passLbl.Visible = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label7.Location = new System.Drawing.Point(719, 14);
+            this.label7.Location = new System.Drawing.Point(719, 5);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(164, 25);
@@ -430,29 +486,31 @@
             // repword
             // 
             this.repword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.repword.Location = new System.Drawing.Point(724, 42);
+            this.repword.Location = new System.Drawing.Point(724, 33);
             this.repword.Margin = new System.Windows.Forms.Padding(4);
             this.repword.Name = "repword";
             this.repword.Size = new System.Drawing.Size(285, 30);
             this.repword.TabIndex = 24;
             this.repword.UseSystemPasswordChar = true;
+            this.repword.TextChanged += new System.EventHandler(this.repword_TextChanged);
             // 
             // pword
             // 
             this.pword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pword.Location = new System.Drawing.Point(384, 42);
+            this.pword.Location = new System.Drawing.Point(384, 33);
             this.pword.Margin = new System.Windows.Forms.Padding(4);
             this.pword.Name = "pword";
             this.pword.Size = new System.Drawing.Size(285, 30);
             this.pword.TabIndex = 23;
             this.pword.UseSystemPasswordChar = true;
+            this.pword.TextChanged += new System.EventHandler(this.pword_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label6.Location = new System.Drawing.Point(379, 14);
+            this.label6.Location = new System.Drawing.Point(379, 5);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 25);
@@ -462,18 +520,19 @@
             // uname
             // 
             this.uname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uname.Location = new System.Drawing.Point(32, 42);
+            this.uname.Location = new System.Drawing.Point(32, 33);
             this.uname.Margin = new System.Windows.Forms.Padding(4);
             this.uname.Name = "uname";
             this.uname.Size = new System.Drawing.Size(285, 30);
             this.uname.TabIndex = 21;
+            this.uname.TextChanged += new System.EventHandler(this.uname_TextChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label10.Location = new System.Drawing.Point(21, 14);
+            this.label10.Location = new System.Drawing.Point(21, 5);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(102, 25);
@@ -484,10 +543,10 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(473, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(473, 1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(176, 162);
+            this.pictureBox1.Size = new System.Drawing.Size(180, 175);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -558,5 +617,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label phLbl;
         private System.Windows.Forms.Label emlLbl;
+        private System.Windows.Forms.Label passLbl;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label retype;
+        private System.Windows.Forms.Label usernameLbl;
     }
 }

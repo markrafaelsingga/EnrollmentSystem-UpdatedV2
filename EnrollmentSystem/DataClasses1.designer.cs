@@ -624,6 +624,13 @@ namespace EnrollmentSystem
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sy);
 			return ((ISingleResult<assignedStudResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.checkUsername")]
+		public ISingleResult<checkUsernameResult> checkUsername([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string user)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), user);
+			return ((ISingleResult<checkUsernameResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.admins")]
@@ -6984,6 +6991,32 @@ namespace EnrollmentSystem
 				if ((this._stud_sec != value))
 				{
 					this._stud_sec = value;
+				}
+			}
+		}
+	}
+	
+	public partial class checkUsernameResult
+	{
+		
+		private string _u_name;
+		
+		public checkUsernameResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_u_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string u_name
+		{
+			get
+			{
+				return this._u_name;
+			}
+			set
+			{
+				if ((this._u_name != value))
+				{
+					this._u_name = value;
 				}
 			}
 		}

@@ -41,12 +41,30 @@ namespace EnrollmentSystem
                     birthdateTxtbox.Text = item.stud_bday.ToString();
                     phone.Text = item.stud_phone;
                     emailtextBox.Text = item.stud_email;
-
                 }
             }
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+            getStud();
+        }
+
+        private void edit_Click(object sender, EventArgs e)
+        {
+            updateProfile update = new updateProfile();
+            update.ID = Convert.ToInt32(idTxtbox.Text);
+            update.Lastname = lnameTxtbox.Text;
+            update.Firstname = fnameTxtbox.Text;
+            update.MI = miTxtbox.Text;
+            update.Phonenum = phone.Text;
+            update.Email = emailtextBox.Text;
+            update.Address = addressTxtbox.Text;
+            update.FormClosed += Update_FormClosed;
+            update.Show();
+        }
+
+        private void Update_FormClosed(object sender, FormClosedEventArgs e)
         {
             getStud();
         }
