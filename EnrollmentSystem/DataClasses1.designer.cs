@@ -631,6 +631,13 @@ namespace EnrollmentSystem
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), user);
 			return ((ISingleResult<checkUsernameResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.checkEmail")]
+		public ISingleResult<checkEmailResult> checkEmail([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(MAX)")] string email)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), email);
+			return ((ISingleResult<checkEmailResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.admins")]
@@ -7017,6 +7024,50 @@ namespace EnrollmentSystem
 				if ((this._u_name != value))
 				{
 					this._u_name = value;
+				}
+			}
+		}
+	}
+	
+	public partial class checkEmailResult
+	{
+		
+		private int _stud_id;
+		
+		private string _stud_email;
+		
+		public checkEmailResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_id", DbType="Int NOT NULL")]
+		public int stud_id
+		{
+			get
+			{
+				return this._stud_id;
+			}
+			set
+			{
+				if ((this._stud_id != value))
+				{
+					this._stud_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stud_email", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string stud_email
+		{
+			get
+			{
+				return this._stud_email;
+			}
+			set
+			{
+				if ((this._stud_email != value))
+				{
+					this._stud_email = value;
 				}
 			}
 		}
