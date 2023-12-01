@@ -134,22 +134,24 @@
             // phLbl
             // 
             this.phLbl.AutoSize = true;
+            this.phLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phLbl.ForeColor = System.Drawing.Color.Red;
             this.phLbl.Location = new System.Drawing.Point(205, 271);
             this.phLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.phLbl.Name = "phLbl";
-            this.phLbl.Size = new System.Drawing.Size(140, 16);
+            this.phLbl.Size = new System.Drawing.Size(161, 16);
             this.phLbl.TabIndex = 30;
             this.phLbl.Text = "*Invalid phone number";
             // 
             // emlLbl
             // 
             this.emlLbl.AutoSize = true;
+            this.emlLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emlLbl.ForeColor = System.Drawing.Color.Red;
             this.emlLbl.Location = new System.Drawing.Point(201, 329);
             this.emlLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.emlLbl.Name = "emlLbl";
-            this.emlLbl.Size = new System.Drawing.Size(87, 16);
+            this.emlLbl.Size = new System.Drawing.Size(101, 16);
             this.emlLbl.TabIndex = 29;
             this.emlLbl.Text = "*Invalid email";
             // 
@@ -426,11 +428,12 @@
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Red;
             this.label15.Location = new System.Drawing.Point(381, 83);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(113, 16);
+            this.label15.Size = new System.Drawing.Size(130, 16);
             this.label15.TabIndex = 30;
             this.label15.Text = "*Invalid password";
             this.label15.Visible = false;
@@ -438,11 +441,12 @@
             // retype
             // 
             this.retype.AutoSize = true;
+            this.retype.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.retype.ForeColor = System.Drawing.Color.Red;
             this.retype.Location = new System.Drawing.Point(721, 67);
             this.retype.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.retype.Name = "retype";
-            this.retype.Size = new System.Drawing.Size(146, 16);
+            this.retype.Size = new System.Drawing.Size(168, 16);
             this.retype.TabIndex = 30;
             this.retype.Text = "*Password didn\'t match";
             this.retype.Visible = false;
@@ -450,11 +454,12 @@
             // usernameLbl
             // 
             this.usernameLbl.AutoSize = true;
+            this.usernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLbl.ForeColor = System.Drawing.Color.Red;
             this.usernameLbl.Location = new System.Drawing.Point(29, 67);
             this.usernameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usernameLbl.Name = "usernameLbl";
-            this.usernameLbl.Size = new System.Drawing.Size(154, 16);
+            this.usernameLbl.Size = new System.Drawing.Size(177, 16);
             this.usernameLbl.TabIndex = 30;
             this.usernameLbl.Text = "*Username already exist";
             this.usernameLbl.Visible = false;
@@ -462,11 +467,12 @@
             // passLbl
             // 
             this.passLbl.AutoSize = true;
+            this.passLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passLbl.ForeColor = System.Drawing.Color.Red;
             this.passLbl.Location = new System.Drawing.Point(381, 67);
             this.passLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.passLbl.Name = "passLbl";
-            this.passLbl.Size = new System.Drawing.Size(113, 16);
+            this.passLbl.Size = new System.Drawing.Size(130, 16);
             this.passLbl.TabIndex = 30;
             this.passLbl.Text = "*Invalid password";
             this.passLbl.Visible = false;

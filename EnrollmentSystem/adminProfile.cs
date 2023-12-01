@@ -34,9 +34,12 @@ namespace EnrollmentSystem
         private void getAdmin()
         {
             var admin = db.admins.FirstOrDefault(a => a.admin_id == adminId);
-
-            if (admin != null)
+            var account = db.user_accounts.FirstOrDefault(x => x.u_id == adminId);
+            if (account != null && admin != null)
             {
+                usernameTxtbox.Text = account.u_name;
+                passTxtbox.Text = account.u_pass;
+                retypeTxtbox.Text = account.u_pass;
                 fnameTxtbox.Text = admin.admin_fname;
                 lnameTxtbox.Text = admin.admin_lname;
                 miTxtbox.Text = admin.admin_mi;
@@ -54,6 +57,14 @@ namespace EnrollmentSystem
             phone.Enabled = false;
             emailtextBox.Enabled = false;
             addressTxtbox.Enabled = false;
+            usernameTxtbox.Enabled = false;
+            passTxtbox.Enabled = false;
+
+            retype_panel.Visible = false;
+            usernameLbl.Hide();
+            label8.Hide();
+            label10.Hide();
+
         }
 
         private void EnableInputFields()
@@ -64,6 +75,9 @@ namespace EnrollmentSystem
             phone.Enabled = true;
             emailtextBox.Enabled = true;
             addressTxtbox.Enabled = true;
+            usernameTxtbox.Enabled = true;
+            passTxtbox.Enabled = true;
+            retype_panel.Visible = true;
         }
 
         private void ToggleButtons(bool editing)
@@ -94,28 +108,33 @@ namespace EnrollmentSystem
                 string eadd = emailtextBox.Text;
                 string phpattern = @"^(\+63|09)\d{9}$";
                 string pNo = phone.Text;
+
                 DisableInputFields();
                 ToggleButtons(false);
 
                 var admin = db.admins.FirstOrDefault(a => a.admin_id == adminId);
+                var account = db.user_accounts.FirstOrDefault(x => x.u_id == adminId);
+
                 if (Regex.IsMatch(pNo, phpattern, RegexOptions.IgnoreCase) && Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase))
                 {
-                    if (admin != null)
+                    if (account != null && admin != null)
                     {
+                        account.u_name = usernameTxtbox.Text;
+                        account.u_pass = retypeTxtbox.Text;
                         admin.admin_fname = fnameTxtbox.Text;
                         admin.admin_lname = lnameTxtbox.Text;
                         admin.admin_mi = miTxtbox.Text;
                         admin.admin_phone = phone.Text;
                         admin.admin_email = emailtextBox.Text;
                         admin.admin_address = addressTxtbox.Text;
-                        MessageBox.Show("Update successfully", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                        MessageBox.Show("Update successfully", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         db.SubmitChanges();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Fill tthe fields with the required case correctly!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Fill the fields with the required case correctly!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     DisableInputFields();
                     ToggleButtons(false);
                     getAdmin();
@@ -132,14 +151,20 @@ namespace EnrollmentSystem
             string phpattern = @"^(\+63|09)\d{9}$";
             string pNo = phone.Text;
             bool checkPhone = Regex.IsMatch(pNo, phpattern, RegexOptions.IgnoreCase);
-
-            if (checkPhone)
+            var admin = db.admins.FirstOrDefault(a => a.admin_id == adminId);
+            if (pNo == admin.admin_phone)
+            {
+                phLbl.Hide();
+                Save.Enabled = true;
+            }
+            else if (checkPhone)
             {
                 phLbl.Hide();
             }
             else
             {
                 phLbl.Show();
+                Save.Enabled = false;
             }
         }
 
@@ -148,14 +173,82 @@ namespace EnrollmentSystem
             string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
             string eadd = emailtextBox.Text;
             bool checkEmail = Regex.IsMatch(eadd, pattern, RegexOptions.IgnoreCase);
-
-            if (checkEmail)
+            var admin = db.admins.FirstOrDefault(a => a.admin_id == adminId);
+            if (eadd == admin.admin_phone)
+            {
+                emlLbl.Hide();
+                Save.Enabled = true;
+            }
+            else if (checkEmail)
             {
                 emlLbl.Hide();
             }
             else
             {
                 emlLbl.Show();
+                Save.Enabled = false;
+            }
+        }
+
+        private void usernameTxtbox_TextChanged(object sender, EventArgs e)
+        {
+            var admin = db.admins.FirstOrDefault(a => a.admin_id == adminId);
+            var account = db.user_accounts.FirstOrDefault(x => x.u_id == adminId);
+            var user = db.checkUsername(usernameTxtbox.Text).ToList();
+            if (usernameTxtbox.Text == account.u_name)
+            {
+                usernameLbl.Hide();
+                Save.Enabled = true;
+            }
+            else if (user != null && user.Any())
+            {
+                usernameLbl.Show();
+                Save.Enabled = false;
+            }
+            else
+            {
+                usernameLbl.Hide();
+            }
+        }
+
+        private void passTxtbox_TextChanged(object sender, EventArgs e)
+        {
+            var admin = db.admins.FirstOrDefault(a => a.admin_id == adminId);
+            var account = db.user_accounts.FirstOrDefault(x => x.u_id == adminId);
+            if (passTxtbox.Text == account.u_pass)
+            {
+                label8.Hide();
+                Save.Enabled = true;
+            }
+            else if (IsPasswordValid(passTxtbox.Text) is false)
+            {
+                label8.Show();
+                label8.Text = "Password should be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.";
+
+                Save.Enabled = false;
+            }
+            else
+            {
+                label8.Hide();
+            }
+        }
+        private bool IsPasswordValid(string password)
+        {
+            // Password should be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.
+            string pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=!])(?=.{8,})";
+            return Regex.IsMatch(password, pattern);
+        }
+
+        private void retypeTxtbox_TextChanged(object sender, EventArgs e)
+        {
+            if (passTxtbox.Text != retypeTxtbox.Text)
+            {
+                label10.Show();
+                Save.Enabled = false;
+            }
+            else
+            {
+                label10.Hide();
             }
         }
     }
