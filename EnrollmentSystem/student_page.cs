@@ -26,7 +26,18 @@ namespace EnrollmentSystem
             this.studId = studId;/*
             MessageBox.Show($"ID: {studId}");*/
             studName();
-            
+
+
+            var sName = db.getStud(studId).ToList();
+
+            if (sName != null && sName.Any())
+            {
+                foreach (var item in sName)
+                {
+                    userFname.Text = item.stud_fname.ToUpper();
+                }
+            }
+
         }
 
         private void changeColor(Button colorBtn)

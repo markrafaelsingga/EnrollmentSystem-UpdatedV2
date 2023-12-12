@@ -33,7 +33,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.userFname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnHome = new System.Windows.Forms.Panel();
             this.homeBtn = new System.Windows.Forms.Button();
@@ -47,6 +46,7 @@
             this.profileBtn = new System.Windows.Forms.Button();
             this.pnLogout = new System.Windows.Forms.Panel();
             this.logoutBtn = new System.Windows.Forms.Button();
+            this.userFname = new System.Windows.Forms.TextBox();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -112,31 +112,17 @@
             this.panel2.Size = new System.Drawing.Size(292, 54);
             this.panel2.TabIndex = 1;
             // 
-            // userFname
-            // 
-            this.userFname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.userFname.AutoSize = true;
-            this.userFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userFname.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.userFname.Location = new System.Drawing.Point(79, 26);
-            this.userFname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.userFname.Name = "userFname";
-            this.userFname.Size = new System.Drawing.Size(114, 25);
-            this.userFname.TabIndex = 0;
-            this.userFname.Text = "STUDENT";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(67, -4);
+            this.label1.Location = new System.Drawing.Point(77, -4);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 29);
+            this.label1.Size = new System.Drawing.Size(143, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "WELCOME ";
+            this.label1.Text = "WELCOME";
             // 
             // pnHome
             // 
@@ -337,6 +323,18 @@
             this.logoutBtn.UseVisualStyleBackColor = false;
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
+            // userFname
+            // 
+            this.userFname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(138)))), ((int)(((byte)(204)))));
+            this.userFname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.userFname.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.userFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userFname.Location = new System.Drawing.Point(0, 31);
+            this.userFname.Name = "userFname";
+            this.userFname.Size = new System.Drawing.Size(292, 23);
+            this.userFname.TabIndex = 3;
+            this.userFname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // student_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -383,9 +381,9 @@
         private System.Windows.Forms.Panel pnLogout;
         private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label userFname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button enrollmentBtn;
+        private System.Windows.Forms.TextBox userFname;
     }
 }
