@@ -163,6 +163,12 @@ namespace EnrollmentSystem
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-}
+        }
+
+        private void searchTxtbox_TextChanged(object sender, EventArgs e)
+        {
+            display();
+            dataGridView1.DataSource = db.searchClass(searchTxtbox.Text);
+        }
     }
 }

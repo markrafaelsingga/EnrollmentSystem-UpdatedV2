@@ -179,6 +179,7 @@
             this.searchTxtbox.Name = "searchTxtbox";
             this.searchTxtbox.Size = new System.Drawing.Size(545, 30);
             this.searchTxtbox.TabIndex = 3;
+            this.searchTxtbox.TextChanged += new System.EventHandler(this.searchTxtbox_TextChanged);
             // 
             // panel1
             // 

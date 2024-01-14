@@ -68,7 +68,7 @@
             this.signinLink.Location = new System.Drawing.Point(297, 240);
             this.signinLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.signinLink.Name = "signinLink";
-            this.signinLink.Size = new System.Drawing.Size(47, 16);
+            this.signinLink.Size = new System.Drawing.Size(51, 17);
             this.signinLink.TabIndex = 6;
             this.signinLink.TabStop = true;
             this.signinLink.Text = "Sign in";
@@ -83,7 +83,7 @@
             this.label2.Location = new System.Drawing.Point(127, 240);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 16);
+            this.label2.Size = new System.Drawing.Size(158, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Don\'t have an account?";
             // 
@@ -111,7 +111,7 @@
             this.forgotpassLink.Location = new System.Drawing.Point(316, 146);
             this.forgotpassLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.forgotpassLink.Name = "forgotpassLink";
-            this.forgotpassLink.Size = new System.Drawing.Size(115, 16);
+            this.forgotpassLink.Size = new System.Drawing.Size(121, 17);
             this.forgotpassLink.TabIndex = 3;
             this.forgotpassLink.TabStop = true;
             this.forgotpassLink.Text = "Forgot password?";

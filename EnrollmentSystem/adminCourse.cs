@@ -80,6 +80,8 @@ namespace EnrollmentSystem
         private void Courseadd_FormClosed(object sender, FormClosedEventArgs e)
         {
             display();
+
+            
         }
 
         private void edit_Click(object sender, EventArgs e)
@@ -157,6 +159,12 @@ namespace EnrollmentSystem
         private void delete_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void searchTxtbox_TextChanged(object sender, EventArgs e)
+        {
+            display();
+            dataGridView1.DataSource = db.searchCourse(searchTxtbox.Text);
         }
     }
 }

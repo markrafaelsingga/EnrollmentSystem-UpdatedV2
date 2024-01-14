@@ -345,10 +345,10 @@ namespace EnrollmentSystem
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.createAcc")]
-		public void createAcc([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string uname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string upass)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.createAcc", IsComposable=true)]
+		public object createAcc([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string uname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string upass)
 		{
-			this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), uname, upass);
+			return ((object)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), uname, upass).ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.delCrs")]
@@ -643,6 +643,20 @@ namespace EnrollmentSystem
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sy);
 			return ((ISingleResult<yearListResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.searchCourse")]
+		public ISingleResult<searchCourseResult> searchCourse([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(MAX)")] string key)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), key);
+			return ((ISingleResult<searchCourseResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.searchClass")]
+		public ISingleResult<searchClassResult> searchClass([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(MAX)")] string key)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), key);
+			return ((ISingleResult<searchClassResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -7142,6 +7156,508 @@ namespace EnrollmentSystem
 				if ((this._year_id != value))
 				{
 					this._year_id = value;
+				}
+			}
+		}
+	}
+	
+	public partial class searchCourseResult
+	{
+		
+		private int _crs_code;
+		
+		private string _crs_name;
+		
+		private string _crs_desc;
+		
+		private int _year_id;
+		
+		private int _prog_id;
+		
+		private int _sem_id;
+		
+		private int _year_id1;
+		
+		private int _year_level;
+		
+		private int _prog_id1;
+		
+		private string _prog_name;
+		
+		public searchCourseResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_code", DbType="Int NOT NULL")]
+		public int crs_code
+		{
+			get
+			{
+				return this._crs_code;
+			}
+			set
+			{
+				if ((this._crs_code != value))
+				{
+					this._crs_code = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string crs_name
+		{
+			get
+			{
+				return this._crs_name;
+			}
+			set
+			{
+				if ((this._crs_name != value))
+				{
+					this._crs_name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_desc", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string crs_desc
+		{
+			get
+			{
+				return this._crs_desc;
+			}
+			set
+			{
+				if ((this._crs_desc != value))
+				{
+					this._crs_desc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_id", DbType="Int NOT NULL")]
+		public int year_id
+		{
+			get
+			{
+				return this._year_id;
+			}
+			set
+			{
+				if ((this._year_id != value))
+				{
+					this._year_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_id", DbType="Int NOT NULL")]
+		public int prog_id
+		{
+			get
+			{
+				return this._prog_id;
+			}
+			set
+			{
+				if ((this._prog_id != value))
+				{
+					this._prog_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sem_id", DbType="Int NOT NULL")]
+		public int sem_id
+		{
+			get
+			{
+				return this._sem_id;
+			}
+			set
+			{
+				if ((this._sem_id != value))
+				{
+					this._sem_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_id1", DbType="Int NOT NULL")]
+		public int year_id1
+		{
+			get
+			{
+				return this._year_id1;
+			}
+			set
+			{
+				if ((this._year_id1 != value))
+				{
+					this._year_id1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_level", DbType="Int NOT NULL")]
+		public int year_level
+		{
+			get
+			{
+				return this._year_level;
+			}
+			set
+			{
+				if ((this._year_level != value))
+				{
+					this._year_level = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_id1", DbType="Int NOT NULL")]
+		public int prog_id1
+		{
+			get
+			{
+				return this._prog_id1;
+			}
+			set
+			{
+				if ((this._prog_id1 != value))
+				{
+					this._prog_id1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string prog_name
+		{
+			get
+			{
+				return this._prog_name;
+			}
+			set
+			{
+				if ((this._prog_name != value))
+				{
+					this._prog_name = value;
+				}
+			}
+		}
+	}
+	
+	public partial class searchClassResult
+	{
+		
+		private int _class_code;
+		
+		private string _class_section;
+		
+		private System.TimeSpan _class_fromTime;
+		
+		private System.TimeSpan _class_toTime;
+		
+		private string _class_day;
+		
+		private int _crs_id;
+		
+		private int _ins_id;
+		
+		private int _room_id;
+		
+		private int _crs_code;
+		
+		private string _crs_name;
+		
+		private string _crs_desc;
+		
+		private int _year_id;
+		
+		private int _prog_id;
+		
+		private int _sem_id;
+		
+		private string _instructor_name;
+		
+		private int _room_id1;
+		
+		private string _room_name;
+		
+		public searchClassResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_code", DbType="Int NOT NULL")]
+		public int class_code
+		{
+			get
+			{
+				return this._class_code;
+			}
+			set
+			{
+				if ((this._class_code != value))
+				{
+					this._class_code = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_section", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string class_section
+		{
+			get
+			{
+				return this._class_section;
+			}
+			set
+			{
+				if ((this._class_section != value))
+				{
+					this._class_section = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_fromTime", DbType="Time NOT NULL")]
+		public System.TimeSpan class_fromTime
+		{
+			get
+			{
+				return this._class_fromTime;
+			}
+			set
+			{
+				if ((this._class_fromTime != value))
+				{
+					this._class_fromTime = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_toTime", DbType="Time NOT NULL")]
+		public System.TimeSpan class_toTime
+		{
+			get
+			{
+				return this._class_toTime;
+			}
+			set
+			{
+				if ((this._class_toTime != value))
+				{
+					this._class_toTime = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_class_day", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string class_day
+		{
+			get
+			{
+				return this._class_day;
+			}
+			set
+			{
+				if ((this._class_day != value))
+				{
+					this._class_day = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_id", DbType="Int NOT NULL")]
+		public int crs_id
+		{
+			get
+			{
+				return this._crs_id;
+			}
+			set
+			{
+				if ((this._crs_id != value))
+				{
+					this._crs_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_id", DbType="Int NOT NULL")]
+		public int ins_id
+		{
+			get
+			{
+				return this._ins_id;
+			}
+			set
+			{
+				if ((this._ins_id != value))
+				{
+					this._ins_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_room_id", DbType="Int NOT NULL")]
+		public int room_id
+		{
+			get
+			{
+				return this._room_id;
+			}
+			set
+			{
+				if ((this._room_id != value))
+				{
+					this._room_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_code", DbType="Int NOT NULL")]
+		public int crs_code
+		{
+			get
+			{
+				return this._crs_code;
+			}
+			set
+			{
+				if ((this._crs_code != value))
+				{
+					this._crs_code = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string crs_name
+		{
+			get
+			{
+				return this._crs_name;
+			}
+			set
+			{
+				if ((this._crs_name != value))
+				{
+					this._crs_name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_crs_desc", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string crs_desc
+		{
+			get
+			{
+				return this._crs_desc;
+			}
+			set
+			{
+				if ((this._crs_desc != value))
+				{
+					this._crs_desc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year_id", DbType="Int NOT NULL")]
+		public int year_id
+		{
+			get
+			{
+				return this._year_id;
+			}
+			set
+			{
+				if ((this._year_id != value))
+				{
+					this._year_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prog_id", DbType="Int NOT NULL")]
+		public int prog_id
+		{
+			get
+			{
+				return this._prog_id;
+			}
+			set
+			{
+				if ((this._prog_id != value))
+				{
+					this._prog_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sem_id", DbType="Int NOT NULL")]
+		public int sem_id
+		{
+			get
+			{
+				return this._sem_id;
+			}
+			set
+			{
+				if ((this._sem_id != value))
+				{
+					this._sem_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_instructor_name", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string instructor_name
+		{
+			get
+			{
+				return this._instructor_name;
+			}
+			set
+			{
+				if ((this._instructor_name != value))
+				{
+					this._instructor_name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_room_id1", DbType="Int NOT NULL")]
+		public int room_id1
+		{
+			get
+			{
+				return this._room_id1;
+			}
+			set
+			{
+				if ((this._room_id1 != value))
+				{
+					this._room_id1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_room_name", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string room_name
+		{
+			get
+			{
+				return this._room_name;
+			}
+			set
+			{
+				if ((this._room_name != value))
+				{
+					this._room_name = value;
 				}
 			}
 		}

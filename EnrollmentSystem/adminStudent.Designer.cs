@@ -513,7 +513,7 @@
             this.stud_id.Name = "stud_id";
             this.stud_id.ReadOnly = true;
             this.stud_id.ToolTipText = "Student ID";
-            this.stud_id.Width = 123;
+            this.stud_id.Width = 125;
             // 
             // stud_name
             // 
@@ -522,7 +522,7 @@
             this.stud_name.MinimumWidth = 6;
             this.stud_name.Name = "stud_name";
             this.stud_name.ReadOnly = true;
-            this.stud_name.Width = 153;
+            this.stud_name.Width = 159;
             // 
             // Activate
             // 
@@ -532,7 +532,7 @@
             this.Activate.ReadOnly = true;
             this.Activate.Text = "Activate";
             this.Activate.UseColumnTextForButtonValue = true;
-            this.Activate.Width = 80;
+            this.Activate.Width = 81;
             // 
             // adminStudent
             // 

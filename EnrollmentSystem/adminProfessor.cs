@@ -193,6 +193,7 @@ namespace EnrollmentSystem
         private void searchTxtbox_TextChanged(object sender, EventArgs e)
         {
             display();
+            dataGridView1.DataSource = db.searchInstructor(searchTxtbox.Text);
         }
 
         private void search_Click(object sender, EventArgs e)
